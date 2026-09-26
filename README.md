@@ -236,7 +236,7 @@ graph LR
 
 ## 📁 Proyectos destacados
 
-### ☁️ **[P5] Google Cloud BigQuery: Fintech Analytics (v1.0.0) - Nuevo**
+### ☁️ [P5] Google Cloud BigQuery: Fintech Analytics (v1.0.0) - Nuevo
 
 *Procesamiento analítico en la nube y creación de tablas agregadas.*
 
@@ -245,7 +245,7 @@ graph LR
 * **Data Quality:** Idempotencia en la nube aplicando estándares de nomenclatura y tipado automático de esquemas.
 * **Key Skills:** Cloud Data Warehousing, Google Cloud Platform (GCP), Análisis Exploratorio de Datos.
 
-### **🛒 [P4] Global Supply Chain Analytics (v4.0.0) - Nuevo**
+### 🛒 [P4] Global Supply Chain Analytics (v4.0.0) 
 
 *Ingesta de datos reales (Kaggle) y visualización de vanguardia.*
 
@@ -333,6 +333,8 @@ Este portafolio está diseñado para ser auditable y reproducible:
    - SQL Server 2025 | SSMS 22.
    - Python 3.14 con librerías `pandas`, `sqlalchemy`, `pyodbc`, `pygwalker`.
    - Driver ODBC 17 para SQL Server.
+   
+   - Cuenta activa de Google Cloud Platform (solo para P5).
 
 ---
 
@@ -340,7 +342,8 @@ Este portafolio está diseñado para ser auditable y reproducible:
 
 Mi meta es la automatización total y la integración con la nube:
 
-- [ ] **Dockerización (Próximo proyecto):** Implementación de contenedores Docker para orquestar servicios de SQL Server y Python de forma portable.
+- [x] Cloud Analytics (Logrado): Implementación de ecosistemas de consulta serverless en Google Cloud Platform. 
+- [ ] [ ] **Dockerización (Próximo proyecto):** Implementación de contenedores Docker para orquestar servicios de SQL Server y Python de forma portable.
 - [ ] **Cloud Bridge:** Migración de pipelines hacia **Azure SQL Database** y automatización con **GitHub Actions** (CI/CD).
 - [ ] **Visualización Avanzada:** Integración de los flujos analíticos actuales con **Power BI** mediante DirectQuery.
 - [ ] **Orquestación de Procesos:** Automatización de tareas masivas mediante **Task Schedulers** y monitoreo de salud de datos.
@@ -374,7 +377,7 @@ Experto en procesos de  **Retrofitting de Datos** , transformando sistemas legac
 ⚖️ **Licencia MIT** © 2025-2026
 
 *“Construyendo sistemas que no solo procesan datos, sino que cuentan historias.”*
-**#TheDzibStandard #DataEngineering #V2.1.0**
+**#TheDzibStandard #DataEngineering #V2.2.0**
 
 🚧 En constante evolución.
 
