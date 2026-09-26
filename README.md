@@ -8,6 +8,8 @@
 ![Power BI](https://img.shields.io/badge/PowerBI-Dashboard-orange)
 ![License](https://img.shields.io/badge/License-MIT-green)
 
+![Educational Purpose](https://img.shields.io/badge/Purpose-Educational-blue)
+
 > 👨‍💻 Perfil Profesional
 >
 > 📖 ¡Bienvenido a mi portafolio!
@@ -17,7 +19,7 @@
 
 ---
 
-## 📌 Incluye:
+## 📌 Incluye:add
 
 - Tablas jerárquicas y normalizadas.
 - Diversidad temporal en registros.
@@ -112,7 +114,7 @@ Se incluyen archivos de configuración clave: `.prettierrc`, `.prettierignore`, 
 
 ```text
 SQL_Portafolio/
-├── 📂 P1_Inventario/              # Gestión de Stock y Fundamentos Relacionales
+├── 📂 P1_Inventario/             # Gestión de Stock y Fundamentos Relacionales
 │   ├── Scripts/                   # Pipeline SQL (01-05)
 │   ├── img/                       # Evidencias gráficas
 │   └── README.md
@@ -134,10 +136,16 @@ SQL_Portafolio/
 │   ├── img/                       # Evidencias de performance y BI
 │   └── README.md
 ├── 📄 README.md                   # Documentación maestra del portafolio
-├── 📄 .prettierrc                  # Reglas de estilo de código (JSON)
-├── 📄 .prettierignore              # Archivos ignorados por Prettier
-├── 📄 .editorconfig                # Reglas universales de indentación y formato
-└── 📄 .gitignore                   # Archivos ignorados por Git
+├── 📄 .prettierrc                 # Reglas de estilo de código (JSON)
+├── 📄 .prettierignore             # Archivos ignorados por Prettier
+├── 📄 .editorconfig               # Reglas universales de indentación y formato
+└── 📄 .gitignore                  # Archivos ignorados por Git
+├── 📁 Proyecto_BigQuery_Fintech
+├──📄 README.md                    # Presentación para GitHub
+├──📄 Evidencia_Proyecto.pdf       # Presentación para Drive/OneDrive
+├──📄 query_ctas.sql               # Tu script de SQL
+├──📄 loan_count_by_year.csv       # Los datos exportados
+└──img/                            # Tu captura de la consola GCP
 ```
 
 ### 📊 Diagrama de Estructura del Portafolio
