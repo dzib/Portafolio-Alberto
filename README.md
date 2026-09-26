@@ -135,7 +135,7 @@ SQL_Portafolio/
 │   ├── 05_BI_Observabilidad/      	# Vistas SQL y Dashboard PyGWalker
 │   ├── img/                       	# Evidencias de performance y BI
 │   └── README.md
-├── 📁 Proyecto_BigQuery_Fintech
+├── 📁 P5_BigQuery_Fintech/
 │   ├──📄 Evidencia_Proyecto.pdf    # Presentación para Drive/OneDrive
 │   ├──📄 query_citas.sql           # Tu script de SQL
 │   ├──📄 loan_count_by_year.csv    # Los datos exportados
@@ -158,6 +158,7 @@ graph LR
     A --> C[P2_Escolar]
     A --> D[P3_Retail_Ventas]
     A --> E[P4_Real_World_Ingestion]
+    A --> F[P5_BigQuery_Fintech]
 
     B --> B1[Scripts]
     B --> B2[img]
@@ -180,11 +181,15 @@ graph LR
     E --> E6[img]
     E --> E7[Documentacion.md]
 
-    A --> F[README.md]
-    A --> G[.prettierrc]
-    A --> H[.prettierignore]
-    A --> I[.editorconfig]
-    A --> J[.gitignore]
+	F --> F1[Evidencia_Proyecto.pdf]
+	F --> F2[query_citas.sql]
+    F --> F3[Documentacion.md]
+
+    A --> G[README.md]
+    A --> H[.prettierrc]
+    A --> I[.prettierignore]
+    A --> J[.editorconfig]
+    A --> K[.gitignore]
 
     %% Estilos ejecutivos
     style A fill:#004C99,color:#fff,stroke:#0078D4,stroke-width:2px
@@ -194,9 +199,10 @@ graph LR
     style C fill:#66A3FF,color:#000
     style D fill:#66A3FF,color:#000
     style E fill:#66A3FF,color:#000
+	style F fill:#66A3FF,color:#000
 
     %% Archivos clave
-    style F fill:#0098D4,color:#fff
+    style K fill:#0098D4,color:#fff
     style G fill:#34A853,color:#fff
     style H fill:#FF6D00,color:#fff
     style I fill:#AB47BC,color:#fff
