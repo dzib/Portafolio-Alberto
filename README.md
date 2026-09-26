@@ -114,38 +114,38 @@ Se incluyen archivos de configuración clave: `.prettierrc`, `.prettierignore`, 
 
 ```text
 SQL_Portafolio/
-├── 📂 P1_Inventario/             # Gestión de Stock y Fundamentos Relacionales
-│   ├── Scripts/                   # Pipeline SQL (01-05)
-│   ├── img/                       # Evidencias gráficas
+├── 📂 P1_Inventario/				# Gestión de Stock y Fundamentos Relacionales
+│   ├── Scripts/                   	# Pipeline SQL (01-05)
+│   ├── img/                       	# Evidencias gráficas
 │   └── README.md
-├── 📂 P2_Escolar/                 # Arquitectura Avanzada y ETL con CTEs
-│   ├── Scripts/                   # Pipeline SQL (01-05)
-│   ├── img/                       # Evidencias de métricas
+├── 📂 P2_Escolar/                	# Arquitectura Avanzada y ETL con CTEs
+│   ├── Scripts/                   	# Pipeline SQL (01-05)
+│   ├── img/                      	# Evidencias de métricas
 │   └── Documentacion.md
-├── 📂 P3_Retail_Ventas/           # Pipeline Híbrido Big Data (Python + SQL)
-│   ├── Scripts/                   # Scripts .py y .sql
-│   ├── Datos/                     # Datasets generados (50k registros)
-│   ├── img/                       # Dashboards de Analítica
+├── 📂 P3_Retail_Ventas/          	# Pipeline Híbrido Big Data (Python + SQL)
+│   ├── Scripts/                  	# Scripts .py y .sql
+│   ├── Datos/                     	# Datasets generados (50k registros)
+│   ├── img/                       	# Dashboards de Analítica
 │   └── README.md
-├── 📂 P4_Real_World_Ingestion/    # Supply Chain & Observabilidad
-│   ├── 01_Setup_DDL/              # Esquemas y constraints
-│   ├── 02_Ingesta_Pro/            # Orquestación Python (23.8k reg/seg)
-│   ├── 03_Orquestacion_Trans/     # Lógica transaccional TRY/CATCH
-│   ├── 04_ETL_Cleaning/           # Normalización y detección de anomalías
-│   ├── 05_BI_Observabilidad/      # Vistas SQL y Dashboard PyGWalker
-│   ├── img/                       # Evidencias de performance y BI
+├── 📂 P4_Real_World_Ingestion/   	# Supply Chain & Observabilidad
+│   ├── 01_Setup_DDL/              	# Esquemas y constraints
+│   ├── 02_Ingesta_Pro/            	# Orquestación Python (23.8k reg/seg)
+│   ├── 03_Orquestacion_Trans/     	# Lógica transaccional TRY/CATCH
+│   ├── 04_ETL_Cleaning/           	# Normalización y detección de anomalías
+│   ├── 05_BI_Observabilidad/      	# Vistas SQL y Dashboard PyGWalker
+│   ├── img/                       	# Evidencias de performance y BI
 │   └── README.md
+├── 📁 Proyecto_BigQuery_Fintech
+│   ├──📄 Evidencia_Proyecto.pdf    # Presentación para Drive/OneDrive
+│   ├──📄 query_citas.sql           # Tu script de SQL
+│   ├──📄 loan_count_by_year.csv    # Los datos exportados
+│   ├──img/                         # Tu captura de la consola GCP
+│   └──📄 README.md                 # Presentación para GitHub
 ├── 📄 README.md                   # Documentación maestra del portafolio
 ├── 📄 .prettierrc                 # Reglas de estilo de código (JSON)
 ├── 📄 .prettierignore             # Archivos ignorados por Prettier
 ├── 📄 .editorconfig               # Reglas universales de indentación y formato
 └── 📄 .gitignore                  # Archivos ignorados por Git
-├── 📁 Proyecto_BigQuery_Fintech
-├──📄 README.md                    # Presentación para GitHub
-├──📄 Evidencia_Proyecto.pdf       # Presentación para Drive/OneDrive
-├──📄 query_ctas.sql               # Tu script de SQL
-├──📄 loan_count_by_year.csv       # Los datos exportados
-└──img/                            # Tu captura de la consola GCP
 ```
 
 ### 📊 Diagrama de Estructura del Portafolio
