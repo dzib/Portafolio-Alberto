@@ -4,7 +4,7 @@
 -- Metodología: CTAS (Create Table As Select)
 -- ==============================================================================
 
-CREATE TABLE `fintech.loan_count_by_year` AS
+CREATE OR REPLACE TABLE `fintech.loan_count_by_year` AS
 SELECT
     issue_year, 
     COUNT(loan_id) AS total_loans
