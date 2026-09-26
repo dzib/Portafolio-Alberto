@@ -1,4 +1,4 @@
-# 📑 Proyecto 2: Arquitectura de Datos Escolar - Resiliencia, Atomicidad y Stress Testing (V2.1)
+# 📑 Proyecto 2: Sistema de Gestión Académica & ETL con CTE - Resiliencia, Atomicidad y Stress Testing (V2.2)
 
 ## 📌 Descripción general
 
