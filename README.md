@@ -13,13 +13,13 @@
 > 👨‍💻 Perfil Profesional
 >
 > 📖 ¡Bienvenido a mi portafolio!
-> **Ingeniero de Datos & Consultor Independiente** especializado en arquitecturas de alto rendimiento, resiliencia de bases de datos y migración de sistemas legacy. Experto en transformar entornos críticos y metadatos desestructurados en ecosistemas de información optimizados mediante el **Dzib Standard (V2.1.0).**
+> **Ingeniero de Datos & Consultor Independiente** especializado en arquitecturas de alto rendimiento, resiliencia de bases de datos y migración de sistemas legacy. Experto en transformar entornos críticos y metadatos desestructurados en ecosistemas de información optimizados mediante el **Dzib Standard (V2.2.0).**
 
-**Core Stack:** `SQL Server 2025` | `Python 3.13` | `Git Flow` | `Excel BI (ODBC)`
+**Core Stack:** `SQL Server 2025` | `Python 3.13` | `Git Flow` | `Excel BI (ODBC)` | `Google Cloud Platfor`
 
 ---
 
-## 📌 Incluye:
+## 📌 Incluye:add
 
 - Tablas jerárquicas y normalizadas.
 - Diversidad temporal en registros.
@@ -51,7 +51,7 @@ En este portafolio se buscó aplicar un rigor de ingeniería en cada línea de c
 - **Motores:** SQL Server 2025 | SSMS 22.
 - **Lenguajes:** T-SQL Avanzado y Python 3.13 (Pandas, SQLAlchemy).
 - **Metodología de Calidad:**
-  - **Idempotencia:** Scripts re‑ejecutables sin duplicidad de datos.
+  - **Idempotencia:** Scripts re‑ejecutables sin duplicidad de datos (CREATE OR REPLACE).
   - **Integridad:** Uso de Transacciones (`COMMIT`/`ROLLBACK`) y bloques `TRY/CATCH`.
   - **Performance:** Monitoreo de tiempos de ejecución en milisegundos para procesos masivos.
   - **Git Flow:** Gestión de ramas (`Feature` -> `Develop` -> `Main`) y `SemVer`.
@@ -75,10 +75,15 @@ graph LR
     A[Fuentes: CSV/Kaggle/Faker] -- Python Ingestion --> B[(SQL Server 2025)]
     B -- T-SQL ETL --> C{Data Warehouse}
     C -- SQL Views --> D[Power BI / PyGWalker]
+    E[Dataset Financiero] -- GCP --> F[(BigQuery)]
+    F -- CTAS --> G[Tablas Agregadas Analíticas]
     style A fill:#34A853,color:#fff
     style B fill:#0078D4,color:#fff
     style C fill:#FF6D00,color:#fff
     style D fill:#F2C811,color:#000
+    style E fill:#0f9d58,color:#fff
+    style F fill:#4285f4,color:#fff
+    style G fill:#FF6D00,color:#fff
 ```
 
 ---
@@ -95,6 +100,7 @@ graph LR
 | **Transformación (ETL)** | Limpieza y Normalización |     **644 ms** (Fase 4.4)     | **P4_SupplyChain** |        ✅        |
 | **Analítica de Negocio** |   Dashboard Interactivo   |            Latencia Cero            |   **PyGWalker**   |        📈        |
 |     **Arquitectura**     | Integridad Transaccional |      **100%** Atomicidad      |   **TRY/CATCH**   |       🛡️       |
+|    **Cloud Analytics**    |  Agregación Serverless  |        *CTAS* Idempotente        |  **P5_BigQuery**  |       ☁️       |
 
 ---
 
@@ -110,36 +116,43 @@ Se incluyen archivos de configuración clave: `.prettierrc`, `.prettierignore`, 
 - `📂 P2_Escolar`: Arquitectura avanzada, esquemas segregados y limpieza con CTEs.
 - `📂 P3_Retail_Ventas`: Pipeline híbrido (Python + SQL) y procesamiento de Big Data.
 - `📂 P4_Real_Word_Ingestion`: Soluciones con enfoque en Cadenas de Suministro y Eficiencia Logística.
+- `📁 P5_BigQuery_Fintech`: Agregación de datos y creación de tablas nativas en Google Cloud Platform.
 - `📝 README Y DOCUMENTACIÓN :` Documentación por proyecto de sus estándares y "Lineamientos de Estructura" aplicados.
 
 ```text
 SQL_Portafolio/
-├── 📂 P1_Inventario/              # Gestión de Stock y Fundamentos Relacionales
-│   ├── Scripts/                   # Pipeline SQL (01-05)
-│   ├── img/                       # Evidencias gráficas
+├── 📂 P1_Inventario/				# Gestión de Stock y Fundamentos Relacionales
+│   ├── Scripts/                   	# Pipeline SQL (01-05)
+│   ├── img/                       	# Evidencias gráficas
 │   └── README.md
-├── 📂 P2_Escolar/                 # Arquitectura Avanzada y ETL con CTEs
-│   ├── Scripts/                   # Pipeline SQL (01-05)
-│   ├── img/                       # Evidencias de métricas
+├── 📂 P2_Escolar/                	# Arquitectura Avanzada y ETL con CTEs
+│   ├── Scripts/                   	# Pipeline SQL (01-05)
+│   ├── img/                      	# Evidencias de métricas
 │   └── Documentacion.md
-├── 📂 P3_Retail_Ventas/           # Pipeline Híbrido Big Data (Python + SQL)
-│   ├── Scripts/                   # Scripts .py y .sql
-│   ├── Datos/                     # Datasets generados (50k registros)
-│   ├── img/                       # Dashboards de Analítica
+├── 📂 P3_Retail_Ventas/          	# Pipeline Híbrido Big Data (Python + SQL)
+│   ├── Scripts/                  	# Scripts .py y .sql
+│   ├── Datos/                     	# Datasets generados (50k registros)
+│   ├── img/                       	# Dashboards de Analítica
 │   └── README.md
-├── 📂 P4_Real_World_Ingestion/    # Supply Chain & Observabilidad
-│   ├── 01_Setup_DDL/              # Esquemas y constraints
-│   ├── 02_Ingesta_Pro/            # Orquestación Python (23.8k reg/seg)
-│   ├── 03_Orquestacion_Trans/     # Lógica transaccional TRY/CATCH
-│   ├── 04_ETL_Cleaning/           # Normalización y detección de anomalías
-│   ├── 05_BI_Observabilidad/      # Vistas SQL y Dashboard PyGWalker
-│   ├── img/                       # Evidencias de performance y BI
+├── 📂 P4_Real_World_Ingestion/   	# Supply Chain & Observabilidad
+│   ├── 01_Setup_DDL/              	# Esquemas y constraints
+│   ├── 02_Ingesta_Pro/            	# Orquestación Python (23.8k reg/seg)
+│   ├── 03_Orquestacion_Trans/     	# Lógica transaccional TRY/CATCH
+│   ├── 04_ETL_Cleaning/           	# Normalización y detección de anomalías
+│   ├── 05_BI_Observabilidad/      	# Vistas SQL y Dashboard PyGWalker
+│   ├── img/                       	# Evidencias de performance y BI
 │   └── README.md
+├── 📁 P5_BigQuery_Fintech/
+│   ├──📄 Evidencia_Proyecto.pdf    # Presentación para Drive/OneDrive
+│   ├──📄 query_citas.sql           # Tu script de SQL
+│   ├──📄 loan_count_by_year.csv    # Los datos exportados
+│   ├──img/                         # Tu captura de la consola GCP
+│   └──📄 README.md                 # Presentación para GitHub
 ├── 📄 README.md                   # Documentación maestra del portafolio
-├── 📄 .prettierrc                  # Reglas de estilo de código (JSON)
-├── 📄 .prettierignore              # Archivos ignorados por Prettier
-├── 📄 .editorconfig                # Reglas universales de indentación y formato
-└── 📄 .gitignore                   # Archivos ignorados por Git
+├── 📄 .prettierrc                 # Reglas de estilo de código (JSON)
+├── 📄 .prettierignore             # Archivos ignorados por Prettier
+├── 📄 .editorconfig               # Reglas universales de indentación y formato
+└── 📄 .gitignore                  # Archivos ignorados por Git
 ```
 
 ### 📊 Diagrama de Estructura del Portafolio
@@ -152,6 +165,7 @@ graph LR
     A --> C[P2_Escolar]
     A --> D[P3_Retail_Ventas]
     A --> E[P4_Real_World_Ingestion]
+    A --> F[P5_BigQuery_Fintech]
 
     B --> B1[Scripts]
     B --> B2[img]
@@ -174,11 +188,15 @@ graph LR
     E --> E6[img]
     E --> E7[Documentacion.md]
 
-    A --> F[README.md]
-    A --> G[.prettierrc]
-    A --> H[.prettierignore]
-    A --> I[.editorconfig]
-    A --> J[.gitignore]
+	F --> F1[Evidencia_Proyecto.pdf]
+	F --> F2[query_ctas.sql]
+    F --> F3[README.md]
+
+    A --> G[README.md]
+    A --> H[.prettierrc]
+    A --> I[.prettierignore]
+    A --> J[.editorconfig]
+    A --> K[.gitignore]
 
     %% Estilos ejecutivos
     style A fill:#004C99,color:#fff,stroke:#0078D4,stroke-width:2px
@@ -188,9 +206,10 @@ graph LR
     style C fill:#66A3FF,color:#000
     style D fill:#66A3FF,color:#000
     style E fill:#66A3FF,color:#000
+	style F fill:#66A3FF,color:#000
 
     %% Archivos clave
-    style F fill:#0098D4,color:#fff
+    style K fill:#0098D4,color:#fff
     style G fill:#34A853,color:#fff
     style H fill:#FF6D00,color:#fff
     style I fill:#AB47BC,color:#fff
@@ -217,7 +236,16 @@ graph LR
 
 ## 📁 Proyectos destacados
 
-### **🛒 [P4] Global Supply Chain Analytics (v4.0.0) - Nuevo**
+### ☁️ [P5] Google Cloud BigQuery: Fintech Analytics (v1.0.0) - Nuevo
+
+*Procesamiento analítico en la nube y creación de tablas agregadas.*
+
+* **Performance:** Optimización de consultas analíticas utilizando el motor serverless de BigQuery.
+* **Ingeniería:** Uso de sintaxis **CTAS** (`CREATE OR REPLACE TABLE AS SELECT`) para la consolidación de métricas financieras.
+* **Data Quality:** Idempotencia en la nube aplicando estándares de nomenclatura y tipado automático de esquemas.
+* **Key Skills:** Cloud Data Warehousing, Google Cloud Platform (GCP), Análisis Exploratorio de Datos.
+
+### 🛒 [P4] Global Supply Chain Analytics (v4.0.0) 
 
 *Ingesta de datos reales (Kaggle) y visualización de vanguardia.*
 
@@ -305,6 +333,8 @@ Este portafolio está diseñado para ser auditable y reproducible:
    - SQL Server 2025 | SSMS 22.
    - Python 3.14 con librerías `pandas`, `sqlalchemy`, `pyodbc`, `pygwalker`.
    - Driver ODBC 17 para SQL Server.
+   
+   - Cuenta activa de Google Cloud Platform (solo para P5).
 
 ---
 
@@ -312,7 +342,8 @@ Este portafolio está diseñado para ser auditable y reproducible:
 
 Mi meta es la automatización total y la integración con la nube:
 
-- [ ] **Dockerización (Próximo proyecto):** Implementación de contenedores Docker para orquestar servicios de SQL Server y Python de forma portable.
+- [x] Cloud Analytics (Logrado): Implementación de ecosistemas de consulta serverless en Google Cloud Platform. 
+- [ ] [ ] **Dockerización (Próximo proyecto):** Implementación de contenedores Docker para orquestar servicios de SQL Server y Python de forma portable.
 - [ ] **Cloud Bridge:** Migración de pipelines hacia **Azure SQL Database** y automatización con **GitHub Actions** (CI/CD).
 - [ ] **Visualización Avanzada:** Integración de los flujos analíticos actuales con **Power BI** mediante DirectQuery.
 - [ ] **Orquestación de Procesos:** Automatización de tareas masivas mediante **Task Schedulers** y monitoreo de salud de datos.
@@ -346,7 +377,7 @@ Experto en procesos de  **Retrofitting de Datos** , transformando sistemas legac
 ⚖️ **Licencia MIT** © 2025-2026
 
 *“Construyendo sistemas que no solo procesan datos, sino que cuentan historias.”*
-**#TheDzibStandard #DataEngineering #V2.1.0**
+**#TheDzibStandard #DataEngineering #V2.2.0**
 
 🚧 En constante evolución.
 
