@@ -1,4 +1,4 @@
-# **📘 Documentación Técnica – Proyecto P1_Inventario (V2.0 - Retrofitting)**
+# **📘 Documentación Técnica – Proyecto P1_Control de Inventarios & Fundamentos Relacionalesnventar (V1.0 - Retrofitting)**
 
 ---
 
