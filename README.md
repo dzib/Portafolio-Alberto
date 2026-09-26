@@ -13,9 +13,9 @@
 > 👨‍💻 Perfil Profesional
 >
 > 📖 ¡Bienvenido a mi portafolio!
-> **Ingeniero de Datos & Consultor Independiente** especializado en arquitecturas de alto rendimiento, resiliencia de bases de datos y migración de sistemas legacy. Experto en transformar entornos críticos y metadatos desestructurados en ecosistemas de información optimizados mediante el **Dzib Standard (V2.1.0).**
+> **Ingeniero de Datos & Consultor Independiente** especializado en arquitecturas de alto rendimiento, resiliencia de bases de datos y migración de sistemas legacy. Experto en transformar entornos críticos y metadatos desestructurados en ecosistemas de información optimizados mediante el **Dzib Standard (V2.2.0).**
 
-**Core Stack:** `SQL Server 2025` | `Python 3.13` | `Git Flow` | `Excel BI (ODBC)`
+**Core Stack:** `SQL Server 2025` | `Python 3.13` | `Git Flow` | `Excel BI (ODBC)` | `Google Cloud Platfor` 
 
 ---
 
@@ -51,7 +51,7 @@ En este portafolio se buscó aplicar un rigor de ingeniería en cada línea de c
 - **Motores:** SQL Server 2025 | SSMS 22.
 - **Lenguajes:** T-SQL Avanzado y Python 3.13 (Pandas, SQLAlchemy).
 - **Metodología de Calidad:**
-  - **Idempotencia:** Scripts re‑ejecutables sin duplicidad de datos.
+  - **Idempotencia:** Scripts re‑ejecutables sin duplicidad de datos (CREATE OR REPLACE).
   - **Integridad:** Uso de Transacciones (`COMMIT`/`ROLLBACK`) y bloques `TRY/CATCH`.
   - **Performance:** Monitoreo de tiempos de ejecución en milisegundos para procesos masivos.
   - **Git Flow:** Gestión de ramas (`Feature` -> `Develop` -> `Main`) y `SemVer`.
@@ -75,10 +75,15 @@ graph LR
     A[Fuentes: CSV/Kaggle/Faker] -- Python Ingestion --> B[(SQL Server 2025)]
     B -- T-SQL ETL --> C{Data Warehouse}
     C -- SQL Views --> D[Power BI / PyGWalker]
+    E[Dataset Financiero] -- GCP --> F[(BigQuery)]
+    F -- CTAS --> G[Tablas Agregadas Analíticas]
     style A fill:#34A853,color:#fff
     style B fill:#0078D4,color:#fff
     style C fill:#FF6D00,color:#fff
     style D fill:#F2C811,color:#000
+    style E fill:#0f9d58,color:#fff
+    style F fill:#4285f4,color:#fff
+    style G fill:#FF6D00,color:#fff
 ```
 
 ---
@@ -94,7 +99,8 @@ graph LR
 |    **Ingesta Masiva**    |    Velocidad de Carga    | **23.8k reg/seg** (180k tot.) | **P4_SupplyChain** |        ⚡        |
 | **Transformación (ETL)** | Limpieza y Normalización |     **644 ms** (Fase 4.4)     | **P4_SupplyChain** |        ✅        |
 | **Analítica de Negocio** |   Dashboard Interactivo   |            Latencia Cero            |   **PyGWalker**   |        📈        |
-|     **Arquitectura**     | Integridad Transaccional |      **100%** Atomicidad      |   **TRY/CATCH**   |       🛡️       |
+|     **Arquitectura**     | Integridad Transaccional |      **100%** Atomicidad      |   **TRY/CATCH**   |       🛡️       
+|     **Cloud Analytics**     | Agregación Serverless |      *CTAS* Idempotente      |   **P5_BigQuery**   |     ☁️
 
 ---
 
@@ -110,6 +116,7 @@ Se incluyen archivos de configuración clave: `.prettierrc`, `.prettierignore`, 
 - `📂 P2_Escolar`: Arquitectura avanzada, esquemas segregados y limpieza con CTEs.
 - `📂 P3_Retail_Ventas`: Pipeline híbrido (Python + SQL) y procesamiento de Big Data.
 - `📂 P4_Real_Word_Ingestion`: Soluciones con enfoque en Cadenas de Suministro y Eficiencia Logística.
+- `📁 P5_BigQuery_Fintech`: Agregación de datos y creación de tablas nativas en Google Cloud Platform.
 - `📝 README Y DOCUMENTACIÓN :` Documentación por proyecto de sus estándares y "Lineamientos de Estructura" aplicados.
 
 ```text
