@@ -15,7 +15,7 @@
 > 📖 ¡Bienvenido a mi portafolio!
 > **Ingeniero de Datos & Consultor Independiente** especializado en arquitecturas de alto rendimiento, resiliencia de bases de datos y migración de sistemas legacy. Experto en transformar entornos críticos y metadatos desestructurados en ecosistemas de información optimizados mediante el **Dzib Standard (V2.2.0).**
 
-**Core Stack:** `SQL Server 2025` | `Python 3.13` | `Git Flow` | `Excel BI (ODBC)` | `Google Cloud Platfor` 
+**Core Stack:** `SQL Server 2025` | `Python 3.13` | `Git Flow` | `Excel BI (ODBC)` | `Google Cloud Platfor`
 
 ---
 
@@ -99,8 +99,8 @@ graph LR
 |    **Ingesta Masiva**    |    Velocidad de Carga    | **23.8k reg/seg** (180k tot.) | **P4_SupplyChain** |        ⚡        |
 | **Transformación (ETL)** | Limpieza y Normalización |     **644 ms** (Fase 4.4)     | **P4_SupplyChain** |        ✅        |
 | **Analítica de Negocio** |   Dashboard Interactivo   |            Latencia Cero            |   **PyGWalker**   |        📈        |
-|     **Arquitectura**     | Integridad Transaccional |      **100%** Atomicidad      |   **TRY/CATCH**   |       🛡️       
-|     **Cloud Analytics**     | Agregación Serverless |      *CTAS* Idempotente      |   **P5_BigQuery**   |     ☁️
+|     **Arquitectura**     | Integridad Transaccional |      **100%** Atomicidad      |   **TRY/CATCH**   |       🛡️       |
+|    **Cloud Analytics**    |  Agregación Serverless  |        *CTAS* Idempotente        |  **P5_BigQuery**  |       ☁️       |
 
 ---
 
@@ -165,6 +165,7 @@ graph LR
     A --> C[P2_Escolar]
     A --> D[P3_Retail_Ventas]
     A --> E[P4_Real_World_Ingestion]
+    A --> F[P5_BigQuery_Fintech]
 
     B --> B1[Scripts]
     B --> B2[img]
@@ -187,11 +188,15 @@ graph LR
     E --> E6[img]
     E --> E7[Documentacion.md]
 
-    A --> F[README.md]
-    A --> G[.prettierrc]
-    A --> H[.prettierignore]
-    A --> I[.editorconfig]
-    A --> J[.gitignore]
+	F --> F1[Evidencia_Proyecto.pdf]
+	F --> F2[query_ctas.sql]
+    F --> F3[README.md]
+
+    A --> G[README.md]
+    A --> H[.prettierrc]
+    A --> I[.prettierignore]
+    A --> J[.editorconfig]
+    A --> K[.gitignore]
 
     %% Estilos ejecutivos
     style A fill:#004C99,color:#fff,stroke:#0078D4,stroke-width:2px
@@ -201,9 +206,10 @@ graph LR
     style C fill:#66A3FF,color:#000
     style D fill:#66A3FF,color:#000
     style E fill:#66A3FF,color:#000
+	style F fill:#66A3FF,color:#000
 
     %% Archivos clave
-    style F fill:#0098D4,color:#fff
+    style K fill:#0098D4,color:#fff
     style G fill:#34A853,color:#fff
     style H fill:#FF6D00,color:#fff
     style I fill:#AB47BC,color:#fff
@@ -229,6 +235,15 @@ graph LR
 ---
 
 ## 📁 Proyectos destacados
+
+### ☁️ **[P5] Google Cloud BigQuery: Fintech Analytics (v1.0.0) - Nuevo**
+
+*Procesamiento analítico en la nube y creación de tablas agregadas.*
+
+* **Performance:** Optimización de consultas analíticas utilizando el motor serverless de BigQuery.
+* **Ingeniería:** Uso de sintaxis **CTAS** (`CREATE OR REPLACE TABLE AS SELECT`) para la consolidación de métricas financieras.
+* **Data Quality:** Idempotencia en la nube aplicando estándares de nomenclatura y tipado automático de esquemas.
+* **Key Skills:** Cloud Data Warehousing, Google Cloud Platform (GCP), Análisis Exploratorio de Datos.
 
 ### **🛒 [P4] Global Supply Chain Analytics (v4.0.0) - Nuevo**
 
