@@ -19,7 +19,131 @@
 
 ---
 
-## 📌 Incluye:add
+## 📌 Incluye
+
+```drawio width=800
+<mxfile>
+  <diagram id="1622d65d-c77d-c4b6-e0e7-3c11208c8684" name="Página-1">
+    <mxGraphModel dx="1408" dy="748" grid="1" gridSize="10" guides="1" tooltips="0" connect="1" arrows="1" fold="1" page="1" pageScale="1.5" pageWidth="1169" pageHeight="826" background="none" math="0" shadow="0">
+      <root>
+        <mxCell id="0" style=";html=1;" />
+        <mxCell id="1" parent="0" style=";html=1;" />
+        <mxCell id="869962fe87da545-3" parent="1" style="whiteSpace=wrap;html=1;rounded=0;shadow=0;dashed=0;strokeWidth=1;fontFamily=Tahoma;fontSize=10;fontColor=#FFFFFF;strokeColor=none;fillColor=#7FB61A;gradientColor=#1B622A;gradientDirection=west;" value="" vertex="1">
+          <mxGeometry height="180" width="240" x="1360" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="869962fe87da545-4" parent="1" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;strokeWidth=1;shape=mxgraph.basic.orthogonal_triangle;rounded=0;shadow=0;dashed=0;fontFamily=Tahoma;fontSize=10;fontColor=#FFFFFF;flipV=1;fillColor=#000000;strokeColor=none;opacity=50;" value="" vertex="1">
+          <mxGeometry height="40" width="140" x="1360" y="350" as="geometry" />
+        </mxCell>
+        <mxCell id="869962fe87da545-6" parent="1" style="whiteSpace=wrap;html=1;rounded=0;shadow=0;dashed=0;strokeWidth=1;fontFamily=Tahoma;fontSize=10;fontColor=#FFFFFF;strokeColor=none;fillColor=#5398DB;gradientColor=#1247B9;gradientDirection=west;" value="" vertex="1">
+          <mxGeometry height="180" width="240" x="1370" y="470" as="geometry" />
+        </mxCell>
+        <mxCell id="869962fe87da545-7" parent="1" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;strokeWidth=1;shape=mxgraph.basic.orthogonal_triangle;rounded=0;shadow=0;dashed=0;fontFamily=Tahoma;fontSize=10;fontColor=#FFFFFF;flipV=1;fillColor=#000000;strokeColor=none;opacity=50;" value="" vertex="1">
+          <mxGeometry height="40" width="140" x="1370" y="610" as="geometry" />
+        </mxCell>
+        <mxCell id="869962fe87da545-9" parent="1" style="whiteSpace=wrap;html=1;rounded=0;shadow=0;dashed=0;strokeWidth=1;fontFamily=Tahoma;fontSize=10;fontColor=#FFFFFF;strokeColor=none;fillColor=#8D029D;gradientColor=#65009E;gradientDirection=west;" value="" vertex="1">
+          <mxGeometry height="180" width="240" x="1370" y="720" as="geometry" />
+        </mxCell>
+        <mxCell id="869962fe87da545-10" parent="1" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;strokeWidth=1;shape=mxgraph.basic.orthogonal_triangle;rounded=0;shadow=0;dashed=0;fontFamily=Tahoma;fontSize=10;fontColor=#FFFFFF;flipV=1;fillColor=#000000;strokeColor=none;opacity=50;" value="" vertex="1">
+          <mxGeometry height="40" width="140" x="1370" y="860" as="geometry" />
+        </mxCell>
+        <mxCell id="869962fe87da545-12" parent="1" style="whiteSpace=wrap;html=1;rounded=0;shadow=0;dashed=0;strokeWidth=1;fontFamily=Tahoma;fontSize=10;fontColor=#FFFFFF;strokeColor=none;fillColor=#F19001;gradientColor=#C23603;gradientDirection=west;" value="" vertex="1">
+          <mxGeometry height="180" width="240" x="1370" y="970" as="geometry" />
+        </mxCell>
+        <mxCell id="869962fe87da545-13" parent="1" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;strokeWidth=1;shape=mxgraph.basic.orthogonal_triangle;rounded=0;shadow=0;dashed=0;fontFamily=Tahoma;fontSize=10;fontColor=#FFFFFF;flipV=1;fillColor=#000000;strokeColor=none;opacity=50;" value="" vertex="1">
+          <mxGeometry height="40" width="140" x="1370" y="1110" as="geometry" />
+        </mxCell>
+        <mxCell id="869962fe87da545-15" parent="1" style="whiteSpace=wrap;html=1;rounded=0;shadow=0;dashed=0;strokeWidth=1;fontFamily=Tahoma;fontSize=10;fontColor=#FFFFFF;strokeColor=none;fillColor=#EA0001;gradientColor=#AD0002;gradientDirection=west;" value="" vertex="1">
+          <mxGeometry height="180" width="240" x="1370" y="1220" as="geometry" />
+        </mxCell>
+        <mxCell id="869962fe87da545-16" parent="1" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;strokeWidth=1;shape=mxgraph.basic.orthogonal_triangle;rounded=0;shadow=0;dashed=0;fontFamily=Tahoma;fontSize=10;fontColor=#FFFFFF;flipV=1;fillColor=#000000;strokeColor=none;opacity=50;" value="" vertex="1">
+          <mxGeometry height="40" width="140" x="1370" y="1360" as="geometry" />
+        </mxCell>
+        <mxCell id="869962fe87da545-5" parent="1" style="whiteSpace=wrap;html=1;rounded=0;shadow=0;dashed=0;strokeWidth=1;fillColor=#E6E6E6;fontFamily=Verdana;fontSize=70;strokeColor=none;verticalAlign=top;spacingTop=10;" value="MAIN TITLE" vertex="1">
+          <mxGeometry height="1410" width="1360" x="60" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="869962fe87da545-2" parent="1" style="html=1;shadow=0;dashed=0;align=center;verticalAlign=middle;shape=mxgraph.arrows2.arrow;dy=0;dx=0;notch=30;rounded=0;strokeColor=none;strokeWidth=1;fillColor=#7FB61A;fontFamily=Tahoma;fontSize=10;fontColor=#FFFFFF;gradientColor=#1B622A;gradientDirection=east;" value="" vertex="1">
+          <mxGeometry height="180" width="1210" x="290" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="869962fe87da545-8" parent="1" style="html=1;shadow=0;dashed=0;align=center;verticalAlign=middle;shape=mxgraph.arrows2.arrow;dy=0;dx=0;notch=30;rounded=0;strokeColor=none;strokeWidth=1;fillColor=#5398DB;fontFamily=Tahoma;fontSize=10;fontColor=#FFFFFF;gradientColor=#1247B9;gradientDirection=east;" value="" vertex="1">
+          <mxGeometry height="180" width="1210" x="300" y="430" as="geometry" />
+        </mxCell>
+        <mxCell id="869962fe87da545-11" parent="1" style="html=1;shadow=0;dashed=0;align=center;verticalAlign=middle;shape=mxgraph.arrows2.arrow;dy=0;dx=0;notch=30;rounded=0;strokeColor=none;strokeWidth=1;fillColor=#8D029D;fontFamily=Tahoma;fontSize=10;fontColor=#FFFFFF;gradientColor=#65009E;gradientDirection=east;" value="" vertex="1">
+          <mxGeometry height="180" width="1210" x="300" y="680" as="geometry" />
+        </mxCell>
+        <mxCell id="869962fe87da545-14" parent="1" style="html=1;shadow=0;dashed=0;align=center;verticalAlign=middle;shape=mxgraph.arrows2.arrow;dy=0;dx=0;notch=30;rounded=0;strokeColor=none;strokeWidth=1;fillColor=#F19001;fontFamily=Tahoma;fontSize=10;fontColor=#FFFFFF;gradientColor=#C23603;gradientDirection=east;" value="" vertex="1">
+          <mxGeometry height="180" width="1210" x="300" y="930" as="geometry" />
+        </mxCell>
+        <mxCell id="869962fe87da545-17" parent="1" style="html=1;shadow=0;dashed=0;align=center;verticalAlign=middle;shape=mxgraph.arrows2.arrow;dy=0;dx=0;notch=30;rounded=0;strokeColor=none;strokeWidth=1;fillColor=#EA0001;fontFamily=Tahoma;fontSize=10;fontColor=#FFFFFF;gradientColor=#AD0002;gradientDirection=east;" value="" vertex="1">
+          <mxGeometry height="180" width="1210" x="300" y="1180" as="geometry" />
+        </mxCell>
+        <mxCell id="869962fe87da545-18" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;shadow=0;dashed=0;fontFamily=Verdana;fontSize=70;horizontal=0;" value="Additional text" vertex="1">
+          <mxGeometry height="1190" width="130" x="110" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="869962fe87da545-19" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;whiteSpace=wrap;rounded=0;shadow=0;dashed=0;fontFamily=Helvetica;fontSize=150;fontColor=#FFFFFF;" value="1" vertex="1">
+          <mxGeometry height="180" width="200" x="320" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="869962fe87da545-20" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;whiteSpace=wrap;rounded=0;shadow=0;dashed=0;fontFamily=Helvetica;fontSize=150;fontColor=#FFFFFF;" value="2" vertex="1">
+          <mxGeometry height="180" width="200" x="330" y="430" as="geometry" />
+        </mxCell>
+        <mxCell id="869962fe87da545-21" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;whiteSpace=wrap;rounded=0;shadow=0;dashed=0;fontFamily=Helvetica;fontSize=150;fontColor=#FFFFFF;" value="3" vertex="1">
+          <mxGeometry height="180" width="200" x="330" y="680" as="geometry" />
+        </mxCell>
+        <mxCell id="869962fe87da545-22" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;whiteSpace=wrap;rounded=0;shadow=0;dashed=0;fontFamily=Helvetica;fontSize=150;fontColor=#FFFFFF;" value="4" vertex="1">
+          <mxGeometry height="180" width="200" x="330" y="930" as="geometry" />
+        </mxCell>
+        <mxCell id="869962fe87da545-23" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;whiteSpace=wrap;rounded=0;shadow=0;dashed=0;fontFamily=Helvetica;fontSize=150;fontColor=#FFFFFF;" value="5" vertex="1">
+          <mxGeometry height="180" width="200" x="330" y="1180" as="geometry" />
+        </mxCell>
+        <mxCell id="869962fe87da545-24" parent="1" style="line;strokeWidth=4;direction=south;html=1;rounded=0;shadow=0;dashed=0;fillColor=none;gradientColor=#AD0002;fontFamily=Helvetica;fontSize=150;fontColor=#FFFFFF;align=right;strokeColor=#FFFFFF;" value="" vertex="1">
+          <mxGeometry height="160" width="10" x="540" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="869962fe87da545-25" parent="1" style="line;strokeWidth=4;direction=south;html=1;rounded=0;shadow=0;dashed=0;fillColor=none;gradientColor=#AD0002;fontFamily=Helvetica;fontSize=150;fontColor=#FFFFFF;align=right;strokeColor=#FFFFFF;" value="" vertex="1">
+          <mxGeometry height="160" width="10" x="540" y="440" as="geometry" />
+        </mxCell>
+        <mxCell id="869962fe87da545-26" parent="1" style="line;strokeWidth=4;direction=south;html=1;rounded=0;shadow=0;dashed=0;fillColor=none;gradientColor=#AD0002;fontFamily=Helvetica;fontSize=150;fontColor=#FFFFFF;align=right;strokeColor=#FFFFFF;" value="" vertex="1">
+          <mxGeometry height="160" width="10" x="540" y="690" as="geometry" />
+        </mxCell>
+        <mxCell id="869962fe87da545-27" parent="1" style="line;strokeWidth=4;direction=south;html=1;rounded=0;shadow=0;dashed=0;fillColor=none;gradientColor=#AD0002;fontFamily=Helvetica;fontSize=150;fontColor=#FFFFFF;align=right;strokeColor=#FFFFFF;" value="" vertex="1">
+          <mxGeometry height="160" width="10" x="540" y="940" as="geometry" />
+        </mxCell>
+        <mxCell id="869962fe87da545-28" parent="1" style="line;strokeWidth=4;direction=south;html=1;rounded=0;shadow=0;dashed=0;fillColor=none;gradientColor=#AD0002;fontFamily=Helvetica;fontSize=150;fontColor=#FFFFFF;align=right;strokeColor=#FFFFFF;" value="" vertex="1">
+          <mxGeometry height="160" width="10" x="540" y="1190" as="geometry" />
+        </mxCell>
+        <mxCell id="869962fe87da545-29" parent="1" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;shadow=0;dashed=0;fontFamily=Helvetica;fontSize=12;fontColor=#FFFFFF;align=left;" value="<h1>Heading</h1><p>L<span>orem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span></p>" vertex="1">
+          <mxGeometry height="140" width="670" x="580" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="869962fe87da545-30" parent="1" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;shadow=0;dashed=0;fontFamily=Helvetica;fontSize=12;fontColor=#FFFFFF;align=left;" value="<h1>Heading</h1><p>L<span>orem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span></p>" vertex="1">
+          <mxGeometry height="140" width="670" x="580" y="450" as="geometry" />
+        </mxCell>
+        <mxCell id="869962fe87da545-31" parent="1" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;shadow=0;dashed=0;fontFamily=Helvetica;fontSize=12;fontColor=#FFFFFF;align=left;" value="<h1>Heading</h1><p>L<span>orem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span></p>" vertex="1">
+          <mxGeometry height="140" width="670" x="580" y="700" as="geometry" />
+        </mxCell>
+        <mxCell id="869962fe87da545-32" parent="1" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;shadow=0;dashed=0;fontFamily=Helvetica;fontSize=12;fontColor=#FFFFFF;align=left;" value="<h1>Heading</h1><p>L<span>orem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span></p>" vertex="1">
+          <mxGeometry height="140" width="670" x="580" y="950" as="geometry" />
+        </mxCell>
+        <mxCell id="869962fe87da545-33" parent="1" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;shadow=0;dashed=0;fontFamily=Helvetica;fontSize=12;fontColor=#FFFFFF;align=left;" value="<h1>Heading</h1><p>L<span>orem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span></p>" vertex="1">
+          <mxGeometry height="140" width="670" x="580" y="1200" as="geometry" />
+        </mxCell>
+        <mxCell id="869962fe87da545-34" parent="1" style="shadow=0;dashed=0;html=1;strokeColor=none;fillColor=#FFFFFF;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;shape=mxgraph.office.users.users;rounded=0;fontFamily=Helvetica;fontSize=12;fontColor=#FFFFFF;align=left;" value="" vertex="1">
+          <mxGeometry height="100" width="92" x="1354.9999999999995" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="869962fe87da545-35" parent="1" style="shadow=0;dashed=0;html=1;strokeColor=none;fillColor=#FFFFFF;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;shape=mxgraph.office.security.token;rounded=0;fontFamily=Helvetica;fontSize=12;fontColor=#FFFFFF;align=left;" value="" vertex="1">
+          <mxGeometry height="106" width="84" x="1358.9999999999993" y="467" as="geometry" />
+        </mxCell>
+        <mxCell id="869962fe87da545-36" parent="1" style="shadow=0;dashed=0;html=1;strokeColor=none;fillColor=#FFFFFF;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;shape=mxgraph.office.concepts.best_practices;rounded=0;fontFamily=Helvetica;fontSize=12;fontColor=#FFFFFF;align=left;" value="" vertex="1">
+          <mxGeometry height="97" width="97" x="1352.5" y="716" as="geometry" />
+        </mxCell>
+        <mxCell id="869962fe87da545-37" parent="1" style="shadow=0;dashed=0;html=1;strokeColor=none;fillColor=#FFFFFF;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;shape=mxgraph.office.concepts.maintenance;rounded=0;fontFamily=Helvetica;fontSize=12;fontColor=#FFFFFF;align=left;" value="" vertex="1">
+          <mxGeometry height="100" width="70" x="1366" y="970" as="geometry" />
+        </mxCell>
+        <mxCell id="869962fe87da545-38" parent="1" style="shadow=0;dashed=0;html=1;strokeColor=none;fillColor=#FFFFFF;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;shape=mxgraph.office.concepts.on_premises;rounded=0;fontFamily=Helvetica;fontSize=12;fontColor=#FFFFFF;align=left;" value="" vertex="1">
+          <mxGeometry height="95" width="59" x="1381" y="1220" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
+```
 
 - Tablas jerárquicas y normalizadas.
 - Diversidad temporal en registros.
@@ -58,12 +182,13 @@ En este portafolio se buscó aplicar un rigor de ingeniería en cada línea de c
 
 ### Matriz de Competencias Técnicas (Key Skills)
 
+
 |   Tecnología   |                                                           Badges                                                           |                                           Especialidad y Dominio                                           |
-| :-------------: | :------------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------: |
-|   SQL Server   | ![SQL](https://learn.microsoft.com/en-us/training/achievements/configure-sql-server-resources-for-optimal-performance.svg) |         Arquitecturas de alto rendimiento,**Single-Pass Processing** , y normalización 1NF.         |
+| :---------------: | :--------------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------: |
+|   SQL Server   | ![SQL](https://learn.microsoft.com/en-us/training/achievements/configure-sql-server-resources-for-optimal-performance.svg) |            Arquitecturas de alto rendimiento,**Single-Pass Processing** , y normalización 1NF.            |
 |     Python     |                           ![Python](https://img.icons8.com/?size=128&id=OhhCHl3xDHfn&format=png)                           | Orquestación de pipelines, manipulación de grandes volúmenes de datos y automatización de procesos ETL. |
 |    Data Viz    |                          ![Dashboard](https://cdn-icons-png.flaticon.com/512/10397/10397128.png)                          |     Creación de dashboards interactivos, análisis exploratorio de datos (EDA) y reportes ejecutivos.     |
-|  Data Quality  |                         ![Data Quality](https://cdn-icons-png.flaticon.com/512/10179/10179085.png)                         |     **Data Cleansing** avanzado: corrección de acentos, capitalización y atomicidad semántica.     |
+|  Data Quality  |                         ![Data Quality](https://cdn-icons-png.flaticon.com/512/10179/10179085.png)                         |        **Data Cleansing** avanzado: corrección de acentos, capitalización y atomicidad semántica.        |
 | Infraestructura |               ![Tropy](https://learn.microsoft.com/en-us/training/achievements/understand-data-concepts.svg)               | Gestión de versiones, automatización de servicios de SO y configuración de entornos de alto rendimiento. |
 
 ---
@@ -92,15 +217,16 @@ graph LR
 
 > *Benchmarks ejecutados en entorno local optimizado (SSD Expansion & Write Caching).*
 
-|      **Categoría**      |    **Métrica**    |         **Benchmark**         | **Proyecto Clave** | **Estado** |
-| :-----------------------------: | :-----------------------: | :---------------------------------: | :----------------------: | :--------------: |
-|  **Optimización T-SQL**  |    Velocidad de Carga    |  **120 ms (5k+ registros)**  |   **P2_Escolar**   |        🚀        |
-|    **Normalización**    |     Limpieza Atómica     |      **Single-Pass ETL**      | **P1_Inventario** |        📦        |
-|    **Ingesta Masiva**    |    Velocidad de Carga    | **23.8k reg/seg** (180k tot.) | **P4_SupplyChain** |        ⚡        |
-| **Transformación (ETL)** | Limpieza y Normalización |     **644 ms** (Fase 4.4)     | **P4_SupplyChain** |        ✅        |
-| **Analítica de Negocio** |   Dashboard Interactivo   |            Latencia Cero            |   **PyGWalker**   |        📈        |
-|     **Arquitectura**     | Integridad Transaccional |      **100%** Atomicidad      |   **TRY/CATCH**   |       🛡️       |
-|    **Cloud Analytics**    |  Agregación Serverless  |        *CTAS* Idempotente        |  **P5_BigQuery**  |       ☁️       |
+
+|      **Categoría**      |       **Métrica**       |         **Benchmark**         | **Proyecto Clave** | **Estado** |
+| :-------------------------: | :-------------------------: | :-----------------------------: | :------------------: | :----------: |
+|  **Optimización T-SQL**  |    Velocidad de Carga    |  **120 ms (5k+ registros)**  |   **P2_Escolar**   |     🚀     |
+|    **Normalización**    |     Limpieza Atómica     |      **Single-Pass ETL**      | **P1_Inventario** |     📦     |
+|    **Ingesta Masiva**    |    Velocidad de Carga    | **23.8k reg/seg** (180k tot.) | **P4_SupplyChain** |     ⚡     |
+| **Transformación (ETL)** | Limpieza y Normalización |     **644 ms** (Fase 4.4)     | **P4_SupplyChain** |     ✅     |
+| **Analítica de Negocio** |   Dashboard Interactivo   |         Latencia Cero         |   **PyGWalker**   |     📈     |
+|     **Arquitectura**     | Integridad Transaccional |      **100%** Atomicidad      |   **TRY/CATCH**   |    🛡️    |
+|    **Cloud Analytics**    |  Agregación Serverless  |      *CTAS* Idempotente      |  **P5_BigQuery**  |    ☁️    |
 
 ---
 
@@ -287,12 +413,13 @@ Ecosistema escolar resiliente con triple extracción y analítica presupuestaria
 
 *Simulación de migración de un sistema Legacy con datos no atómicos a una arquitectura optimizada para BI.*
 
-|      Dimensión      |   Estado Legacy (Origen)   |                        Estado Optimizado                        |
-| :------------------: | :-------------------------: | :-------------------------------------------------------------: |
-| **Atomicidad** |     `Prod_Ref_3 \| V3`     |  **Nombre:** `Prod_Ref_3` \| **Modelo:** `V3`  |
-| **Geografía** |     `queretaro \| QRO`     |           `Querétaro` (Capitalización y Acentos)           |
-|  **Estatus**  |   `PAGADO \| COMPLETADO`   |              `Pagado` (Unificación Semántica)              |
-| **Ubicación** | `Sucursal Norte \| Merida` | **Sucursal:** `Norte` \| **Región:** `Mérida` |
+
+|   Dimensión   |  Estado Legacy (Origen)  |                Estado Optimizado                |
+| :--------------: | :-------------------------: | :-----------------------------------------------: |
+| **Atomicidad** |     `Prod_Ref_3 | V3`     |  **Nombre:** `Prod_Ref_3` \| **Modelo:** `V3`  |
+| **Geografía** |     `queretaro | QRO`     |    `Querétaro` (Capitalización y Acentos)    |
+|  **Estatus**  |   `PAGADO | COMPLETADO`   |       `Pagado` (Unificación Semántica)       |
+| **Ubicación** | `Sucursal Norte | Merida` | **Sucursal:** `Norte` \| **Región:** `Mérida` |
 
 > **Impacto:** Esta normalización eliminó el 100% de los registros duplicados en los reportes de ventas y redujo el tiempo de procesamiento de limpieza a **309ms**.
 
@@ -341,11 +468,11 @@ Este portafolio está diseñado para ser auditable y reproducible:
 
 Mi meta es la automatización total y la integración con la nube:
 
-- [X] Cloud Analytics (Logrado): Implementación de ecosistemas de consulta serverless en Google Cloud Platform.
-- [ ] [ ] **Dockerización (Próximo proyecto):** Implementación de contenedores Docker para orquestar servicios de SQL Server y Python de forma portable.
-- [ ] **Cloud Bridge:** Migración de pipelines hacia **Azure SQL Database** y automatización con **GitHub Actions** (CI/CD).
-- [ ] **Visualización Avanzada:** Integración de los flujos analíticos actuales con **Power BI** mediante DirectQuery.
-- [ ] **Orquestación de Procesos:** Automatización de tareas masivas mediante **Task Schedulers** y monitoreo de salud de datos.
+- [X]  Cloud Analytics (Logrado): Implementación de ecosistemas de consulta serverless en Google Cloud Platform.
+- [ ]  [ ] **Dockerización (Próximo proyecto):** Implementación de contenedores Docker para orquestar servicios de SQL Server y Python de forma portable.
+- [ ]  **Cloud Bridge:** Migración de pipelines hacia **Azure SQL Database** y automatización con **GitHub Actions** (CI/CD).
+- [ ]  **Visualización Avanzada:** Integración de los flujos analíticos actuales con **Power BI** mediante DirectQuery.
+- [ ]  **Orquestación de Procesos:** Automatización de tareas masivas mediante **Task Schedulers** y monitoreo de salud de datos.
 
 ## 🌍 Impacto Comunitario
 
@@ -366,8 +493,9 @@ Experto en procesos de  **Retrofitting de Datos** , transformando sistemas legac
 
 ¿Tienes un reto de datos o buscas optimizar tus pipelines? Estoy listo para colaborar.
 
+
 | [LinkedIn](https://www.linkedin.com/in/jesusalberto-dzib-ku/) | **[✉️ Email](dzibjesusalberto@gmail.com)** | **Portafolio Web** |
-| ------------------------------------------------------------ | ------------------------------------------------- | ------------------------ |
+| --------------------------------------------------------------- | ---------------------------------------------- | -------------------- |
 
 ---
 
@@ -376,7 +504,7 @@ Experto en procesos de  **Retrofitting de Datos** , transformando sistemas legac
 ⚖️ **Licencia MIT** © 2025-2026
 
 *“Construyendo sistemas que no solo procesan datos, sino que cuentan historias.”*
-**#TheDzibStandard #DataEngineering #V.2.2.0**
+**#TheDzibStandard#TheDzibStandard #DataEngineering#DataEngineering #V#V.2.2.0**
 
 🚧 En constante evolución.
 
