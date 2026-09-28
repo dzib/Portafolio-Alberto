@@ -33,6 +33,7 @@
 - Tablas jerárquicas y normalizadas.
 - Diversidad temporal en registros.
 - Ejemplos prácticos para dashboards y BI.
+- Pipelines validados mediante pruebas automatizadas (`pytest`).
 - Este portafolio aporta valor como base técnica para proyectos de
   transformación digital y ciencia de datos.
 
@@ -56,7 +57,7 @@ Su objetivo es servir como **biblioteca abierta de ejercicios**
 y como referencia de portafolio profesional para quienes buscan
 demostrar habilidades en BI, ETL y visualización de datos.
 
-- **Desarrollo de arquitecturas de grado empresarial aplicadas**
+- Desarrollo de arquitecturas de grado empresarial aplicadas
   a casos de uso de negocio reales.
 - 🗂️ **Modelado de Datos:** Diseño de esquemas relacionales robustos con
   integridad referencial y reglas de negocio complejas.
@@ -66,6 +67,8 @@ demostrar habilidades en BI, ETL y visualización de datos.
   cronológica para análisis de tendencias de negocio.
 - 🔍 **Disponibilidad Analítica:** Creación de vistas analíticas optimizadas
   para herramientas de BI y toma de decisiones.
+- 🧪 **Calidad y CI/CD:** Validación automatizada de esquemas e integridad
+  mediante pruebas unitarias y flujos de integración continua.
 
 ---
 
@@ -75,12 +78,11 @@ En este portafolio se buscó aplicar un rigor de ingeniería en cada línea de c
 
 - **Motores:** SQL Server 2025 | SSMS 22.
 - **Lenguajes:** T-SQL Avanzado y Python 3.13 (Pandas, SQLAlchemy).
+- **Orquestación y Calidad:** Apache Airflow, Pytest, GitHub Actions.
 - **Metodología de Calidad:**
   - **Idempotencia:** Scripts re-ejecutables sin duplicidad de datos
     (CREATE OR REPLACE).
   - **Integridad:** Uso de Transacciones (`COMMIT`/`ROLLBACK`) y bloques `TRY/CATCH`.
-  - **Performance:** Monitoreo de tiempos de ejecución en milisegundos
-    para procesos masivos.
   - **Git Flow:** Gestión de ramas (`Feature` -> `Develop` -> `Main`) y `SemVer`.
 
 ---
@@ -88,21 +90,21 @@ En este portafolio se buscó aplicar un rigor de ingeniería en cada línea de c
 ## 🛠️ Estándares y Prácticas de Ingeniería Aplicadas
 
 - **Integración Continua (CI/CD):** Workflows automatizados en
-  `GitHub Actions` para validación de código y pruebas en entornos limpios.
+  `GitHub Actions` (`ci.yml`) para validación de código y pruebas en entornos limpios.
 - **Calidad de Datos (Data Quality):** Pruebas unitarias automatizadas con
-  `pytest` tanto a nivel global como específico por proyecto.
-- **Motores:** SQL Server 2025 | SSMS 22.
+  `pytest` tanto a nivel global (`/tests`) como específico por proyecto (`P5`).
+  - **Metodología de Calidad:**
+    - **Idempotencia:** Scripts re‑ejecutables sin duplicidad de datos
+      (CREATE OR REPLACE).
+    - **Integridad:** Uso de Transacciones (`COMMIT`/`ROLLBACK`) y bloques `TRY/CATCH`.
+    - **Performance:** Monitoreo de tiempos de ejecución en milisegundos
+      para procesos masivos.
 - **Lenguajes:** T-SQL Avanzado y Python 3.13 (Pandas, SQLAlchemy).
 - **Arquitectura Modular:** Separación clara de responsabilidades
   en los flujos de extracción, transformación y carga (ETL/ELT).
+- **Motores:** SQL Server 2025 | SSMS 22.
 - **Control de Versiones Profesional:** Estrategia de ramas estructurada
   mediante `feature branches -> develop -> main` **(Git Flow)**.
-- **Metodología de Calidad:**
-  - **Idempotencia:** Scripts re‑ejecutables sin duplicidad de datos
-    (CREATE OR REPLACE).
-  - **Integridad:** Uso de Transacciones (`COMMIT`/`ROLLBACK`) y bloques `TRY/CATCH`.
-  - **Performance:** Monitoreo de tiempos de ejecución en milisegundos
-    para procesos masivos.
 
 ### Matriz de Competencias Técnicas (Key Skills)
 
@@ -130,6 +132,7 @@ graph LR
     C -- SQL Views --> D[Power BI / PyGWalker]
     E[Dataset Financiero] -- GCP --> F[(BigQuery)]
     F -- CTAS --> G[Tablas Agregadas Analíticas]
+    H[Orquestación Airflow] --> A
     style A fill:#34A853,color:#fff
     style B fill:#0078D4,color:#fff
     style C fill:#FF6D00,color:#fff
@@ -137,6 +140,7 @@ graph LR
     style E fill:#0f9d58,color:#fff
     style F fill:#4285f4,color:#fff
     style G fill:#FF6D00,color:#fff
+    style H fill:#00acee,color:#fff
 ```
 
 ---
@@ -148,14 +152,14 @@ graph LR
 <!-- markdownlint-disable MD013 -->
 
 
-|   **Categoría**   |  **Métrica**  |         **Benchmark**         |    **Proyecto**    | **Estado** |
-| :------------------: | :---------------: | :-----------------------------: | :------------------: | :----------: |
-|     **T-SQL**     |    **Carga**    |       **120 ms (5k+)**       |   **P2_Escolar**   |     🚀     |
-| **Normalización** |  **Limpieza**  |      **Single-Pass ETL**      | **P1_Inventario** |     📦     |
-|    **Ingesta**    |    **Carga**    | **23.8k reg/seg (180k tot.)** | **P4_SupplyChain** |     ⚡     |
-|       **BI**       |  **Dashboard**  |       **Latencia Cero**       |   **PyGWalker**   |     📈     |
-|  **Arquitectura**  | **Integridad** |      **100% atomicidad**      |   **TRY/CATCH**   |    🛡️    |
-|     **Cloud**     | **Agregación** |     **CTAS idempotente**     |  **P5_BigQuery**  |    ☁️    |
+|    **Categoría**    |  **Métrica**  |         **Benchmark**         |    **Proyecto**    | **Estado** |
+| :--------------------: | :---------------: | :-----------------------------: | :------------------: | :----------: |
+|      **T-SQL**      |    **Carga**    |       **120 ms (5k+)**       |   **P2_Escolar**   |     🚀     |
+|  **Normalización**  |  **Limpieza**  |      **Single-Pass ETL**      | **P1_Inventario** |     📦     |
+|     **Ingesta**     |    **Carga**    | **23.8k reg/seg (180k tot.)** | **P4_SupplyChain** |     ⚡     |
+|  **Orquestación**  |    **DAGs**    |  **Automatización Robusta**  |   **P6_Airflow**   |     🔄     |
+| **Calidad de Datos** | **Validación** |      **PyTest + CI/CD**      |  **Global / P5**  |     🧪     |
+|      **Cloud**      | **Agregación** |     **CTAS idempotente**     |  **P5_BigQuery**  |    ☁️    |
 
 <!-- markdownlint-enable MD013 -->
 
@@ -164,7 +168,8 @@ graph LR
 ## 📇 Estructura del repositorio
 
 El repositorio está organizado por proyectos independientes, cada uno con su
-propio ciclo de vida (DDL, DML, ETL y BI):
+propio ciclo de vida (DDL, DML, ETL y BI), bajo principios de arquitectura
+modular y CI/CD.
 
 Este portafolio está diseñado para ser reproducible y mantener un estilo
 consistente en todo el código y la documentación.
@@ -180,14 +185,25 @@ Se incluyen archivos de configuración clave: `.prettierrc`, `.prettierignore`,
   Suministro y Eficiencia Logística.
 - `📁 P5_BigQuery_Fintech`: Agregación de datos y creación de tablas nativas
   en Google Cloud Platform.
+- `📂 P6_Orquestacion_Airflow`: Orquestación de flujos de trabajo con Apache Airflow.
+- `📂 .github`: Contiene flujos de trabajo de CI/CD y plantillas de issues.
+- `📂 .venv`: Entorno virtual de Python para reproducibilidad de dependencias.
+- `📂 .vscode`: Configuración de entorno de desarrollo para VS Code.
+- `📂 .github/workflows`: Contiene los flujos de integración continua (CI/CD)
+  para validación de código y pruebas unitarias.
+- `📂 tests`: Pruebas unitarias automatizadas para cada proyecto.
+- `📂 Scripts`: Contiene scripts SQL y Python para cada proyecto.
+- `📂 img`: Evidencias gráficas y dashboards de cada proyecto.
 - `📝 README Y DOCUMENTACIÓN :` Documentación por proyecto de sus
   estándares y "Lineamientos de Estructura" aplicados.
 
 ```text
 SQL_Portafolio/
-├── 📂 P1_Inventario/    # Gestión de Stock y Fundamentos Relacionales
-│   ├── Scripts/                    # Pipeline SQL (01-05)
-│   ├── img/                        # Evidencias gráficas
+├── 📂 .github/workflows/          # Pipeline de Integración Continua (ci.yml)
+├── 📂 tests/                      # Pruebas unitarias globales y calidad de datos
+├── 📂 P1_Inventario/              # Gestión de Stock y Fundamentos Relacionales
+│   ├── Scripts/                   # Pipeline SQL (01-05)
+│   ├── img/                       # Evidencias gráficas
 │   └── 📄 README.md
 ├── 📂 P2_Escolar/                 # Arquitectura Avanzada y ETL con CTEs
 │   ├── Scripts/                    # Pipeline SQL (01-05)
@@ -205,14 +221,24 @@ SQL_Portafolio/
 │   ├── 04_ETL_Cleaning/            # Normalización y detección de anomalías
 │   ├── 05_BI_Observabilidad/       # Vistas SQL y Dashboard PyGWalker
 │   ├── img/                        # Evidencias de performance y BI
-│   └──📄 README.md
+│   └──📄 README.md                 # Documentación de la ingesta
 ├── 📁 P5_BigQuery_Fintech/
+│   ├── tests/                    # Pruebas unitarias específicas para BigQuery
 │   ├── Evidencia_Proyecto.pdf    # Presentación para Drive/OneDrive
-│   ├── query_citas.sql           # Tu script de SQL
+│   ├── query_citas.sql           # Script de SQL
 │   ├── loan_count_by_year.csv    # Los datos exportados
+│   ├── Sccript_BigQuery.sql        # El script de SQL para BigQuery
 │   ├──img/                         # Tu captura de la consola GCP
 │   └──📄 README.md                 # Presentación para GitHub
-├── 📄 README.md                   # Documentación maestra del portafolio
+├── 📁 P6_Orquestacion_Airflow/     # Orquestación de pipelines y DAGs
+│   ├── dags/                       # Flujos de trabajo automatizados
+│   ├── image/                      # Evidencias visuales de Airflow
+│   ├── logs/                       # Logs de ejecución de Airflow
+│   ├── plugins/                    # Plugins personalizados de Airflow
+│   ├── docker-compose.yml          # Configuración de contenedores para Airflow
+│   │                                  Despliegue de infraestructura local
+│   └──📄 README.md                 # Documentación de orquestación
+├── 📄 README.md                 # Documentación maestra del portafolio
 ├──  .prettierrc                 # Reglas de estilo de código (JSON)
 ├──  .prettierignore             # Archivos ignorados por Prettier
 ├──  .editorconfig               # Reglas universales de indentación y formato
@@ -308,6 +334,15 @@ graph LR
 
 ## 📁 Proyectos destacados
 
+### 🔄 \[P6\] Orquestación de Procesos con Apache Airflow
+
+*Automatización y gestión de flujos de trabajo orientados a datos.*
+
+* **Orquestación:** Diseño y estructuración de DAGs para la ejecución
+  secuencial de tareas ETL.
+* **Resiliencia:** Manejo de reintentos automáticos ante fallos de conexión
+  y alertas operativas.
+
 ### ☁️ \[P5\] Google Cloud BigQuery: Fintech Analytics (v1.0.0) - Nuevo
 
 *Procesamiento analítico en la nube y creación de tablas agregadas.*
@@ -318,7 +353,9 @@ graph LR
   (`CREATE OR REPLACE TABLE AS SELECT`) para la consolidación de métricas
   financieras.
 * **Data Quality:** Idempotencia en la nube aplicando estándares de
-  nomenclatura y tipado automático de esquemas.
+  nomenclatura, convención de nombres y tipado automático de esquemas.
+  Pruebas unitarias específicas (`test_pipeline_fintech.py`) para
+  validar esquemas e idempotencia.
 * **Key Skills:** Cloud Data Warehousing, Google Cloud Platform (GCP),
   Análisis Exploratorio de Datos.
 
@@ -372,6 +409,19 @@ Ecosistema escolar resiliente con triple extracción y analítica presupuestaria
 * **Stress Testing:** Simulación de carga masiva de 5,000 registros con
   blindaje proactivo contra nulos.
 
+### 🧪 Ejecución Local de Pruebas (Pytest)
+
+Para verificar la integridad del repositorio y ejecutar el motor de pruebas
+unitarias localmente:
+
+```bash
+# Instalar dependencias del entorno de pruebas
+pip install pytest
+
+# Ejecutar pruebas globales y específicas de proyectos
+pytest -v
+```
+
 ---
 
 #### 💎 El Valor de la Ingeniería: Transformación de Datos (ETL)
@@ -401,11 +451,14 @@ En cada proyecto aplico rigor de ingeniería para asegurar código de nivel empr
    corromper datos mediante `DROP IF EXISTS` y `DBCC CHECKIDENT`.
 2. **Seguridad Transaccional:** Garantía de integridad mediante bloques
    `TRY/CATCH` y `ROLLBACK` ante fallos críticos.
-3. **Métricas de Performance:** Optimización I/O, documentación obligatoria de
+3. **CI/CD Automatizado:** Validación de sintaxis y pruebas en cada
+   actualización mediante GitHub Actions.
+4. **Git Flow:** Estrategia de branching profesional (feature -> develop -> main).
+5. **Métricas de Performance:** Optimización I/O, documentación obligatoria de
    tiempos de ejecución y carga de CPU.
-4. **Documentación de Retos:** Enfoque en la resolución de problemas técnicos
+6. **Documentación de Retos:** Enfoque en la resolución de problemas técnicos
    (Bug fixes & Refactoring).
-5. **Middleware:** Integración vía ODBC Driver 17 y SQLAlchemy para flujos híbridos.
+7. **Middleware:** Integración vía ODBC Driver 17 y SQLAlchemy para flujos híbridos.
 
 ---
 
@@ -461,6 +514,7 @@ Mi meta es la automatización total y la integración con la nube:
   serverless en Google Cloud Platform.
 - [X]  **Cloud Bridge:** Migración de pipelines hacia **Azure SQL Database**
   y automatización con **GitHub Actions** (CI/CD).
+
 - []  **Orquestación de Procesos:** Automatización de tareas masivas mediante
   **Task Schedulers** y monitoreo de salud de datos.
 - []  **Dockerización (Próximo proyecto):** Implementación de contenedores
@@ -498,7 +552,7 @@ Intelligence.
 
 
 | [LinkedIn](https://www.linkedin.com/in/jesusalberto-dzib-ku/) | **[✉️ Email](mailto:dzibjesusalberto@gmail.com)** | **Portafolio Web** |
-| --- | --- | --- |
+| --------------------------------------------------------------- | ----------------------------------------------------- | -------------------- |
 
 ---
 
