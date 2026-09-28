@@ -1,36 +1,24 @@
-# 📘 Documentación Técnica
-
-## Proyecto P1: Control de Inventarios & Fundamentos Relacionales (V1.0 - Retrofitting)
+# **📘 Documentación Técnica – Proyecto P1_Inventario (V2.0 - Retrofitting)**
 
 ---
 
 ## 📌 Descripción general
 
-Este proyecto fundamenta el rigor transaccional y la lógica de
-normalización, manejando deliberadamente datos **no atómicos**
-para simular entornos legacy. Se enfoca en la remediación
-mediante un pipeline ETL que transforma ruido en
-**Inteligencia de Negocio**.
+Este proyecto fundamenta el rigor transaccional y la lógica de normalización, manejando deliberadamente datos **no atómicos** para simular entornos legacy. Se enfoca en la remediación mediante un pipeline ETL que transforma ruido en **Inteligencia de Negocio**.
 
 ---
 
 ### 🎯 Objetivo
 
-*Generar un ecosistema capaz de ingerir y procesar un volumen de
-transacciones, demostrando eficiencia con una integración híbrida entre
-lenguajes de programación y motores de base de datos.
+*Generar un ecosistema capaz de ingerir y procesar un volumen de transacciones, demostrando eficiencia con una integración híbrida entre lenguajes de programación y motores de base de datos.
 
 ```mermaid
 %%{init: {'theme': 'dark'}}%%
 graph LR
-A[Generación Batch: T-SQL/Faker] -- "Stress Test (Script 03)" -->
-B[(SQL Server 2025)]
-B -- "Pipeline ETL: Script 04 (Normalización)" -->
-C[Tablas Producción / Vistas BI]
-C -- "Puente ODBC / Power Query" -->
-D[Excel Dashboard: Modo Oscuro]
-C -- "Puente Híbrido (Analítica)" -->
-E[Python: Matplotlib/Pandas]
+A[Generación Batch: T-SQL/Faker] -- "Stress Test (Script 03)" --> B[(SQL Server 2025)]
+B -- "Pipeline ETL: Script 04 (Normalización)" --> C[Tablas Producción / Vistas BI]
+C -- "Puente ODBC / Power Query" --> D[Excel Dashboard: Modo Oscuro]
+C -- "Puente Híbrido (Analítica)" --> E[Python: Matplotlib/Pandas]
 ```
 
 ---
@@ -39,24 +27,17 @@ E[Python: Matplotlib/Pandas]
 
 - **Fase 1: Arquitectura & Esquemas (Script 01)**
 
-  - Segmentación por esquemas: `Inventario` (Maestros) y
-    `Operaciones` (Transacciones).
-  - Implementación de integridad referencial (`PK`, `FK`) y
-    restricciones `CHECK` para calidad de origen.
+  - Segmentación por esquemas: `Inventario` (Maestros) y `Operaciones` (Transacciones).
+  - Implementación de integridad referencial (`PK`, `FK`) y restricciones `CHECK` para calidad de origen.
 - **Fase 2 y 3: Simulación de Carga Masiva (Scripts 02 y 03)**
 
   - Poblado de 500+ registros bajo estrés en < 2 segundos.
-  - **Inyección de Datos Legacy:** Simulación intencional de
-    datos compuestos (ej. `Mérida | YUC`) para probar el
-    pipeline de limpieza.
+  - **Inyección de Datos Legacy:** Simulación intencional de datos compuestos (ej. `Mérida | YUC`) para probar el pipeline de limpieza.
 - **Fase 4: Pipeline ETL & Data Grooming (Script 04) 💎**
 
-  - **Normalización 1NF:** Extracción atómica de atributos mediante
-  `SUBSTRING` y `CHARINDEX`.
-  - **Data Grooming:** Estandarización de capitalización (Formato
-    Título) y corrección universal de acentos.
-  - **Idempotencia:** Script diseñado para correr múltiples veces
-    sin degradar la calidad del dato.
+  - **Normalización 1NF:** Extracción atómica de atributos mediante `SUBSTRING` y `CHARINDEX`.
+  - **Data Grooming:** Estandarización de capitalización (Formato Título) y corrección universal de acentos.
+  - **Idempotencia:** Script diseñado para correr múltiples veces sin degradar la calidad del dato.
 - **Fase 5: Conectividad BI & Dashboard (Script 05)**
 
   - Vistas analíticas conectadas vía **ODBC** a Excel.
