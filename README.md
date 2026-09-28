@@ -21,130 +21,6 @@
 
 ## 📌 Incluy
 
-```drawio width=800
-<mxfile>
-  <diagram id="1622d65d-c77d-c4b6-e0e7-3c11208c8684" name="Página-1">
-    <mxGraphModel dx="1408" dy="748" grid="1" gridSize="10" guides="1" tooltips="0" connect="1" arrows="1" fold="1" page="1" pageScale="1.5" pageWidth="1169" pageHeight="826" background="none" math="0" shadow="0">
-      <root>
-        <mxCell id="0" style=";html=1;" />
-        <mxCell id="1" parent="0" style=";html=1;" />
-        <mxCell id="869962fe87da545-3" parent="1" style="whiteSpace=wrap;html=1;rounded=0;shadow=0;dashed=0;strokeWidth=1;fontFamily=Tahoma;fontSize=10;fontColor=#FFFFFF;strokeColor=none;fillColor=#7FB61A;gradientColor=#1B622A;gradientDirection=west;" value="" vertex="1">
-          <mxGeometry height="180" width="240" x="1360" y="210" as="geometry" />
-        </mxCell>
-        <mxCell id="869962fe87da545-4" parent="1" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;strokeWidth=1;shape=mxgraph.basic.orthogonal_triangle;rounded=0;shadow=0;dashed=0;fontFamily=Tahoma;fontSize=10;fontColor=#FFFFFF;flipV=1;fillColor=#000000;strokeColor=none;opacity=50;" value="" vertex="1">
-          <mxGeometry height="40" width="140" x="1360" y="350" as="geometry" />
-        </mxCell>
-        <mxCell id="869962fe87da545-6" parent="1" style="whiteSpace=wrap;html=1;rounded=0;shadow=0;dashed=0;strokeWidth=1;fontFamily=Tahoma;fontSize=10;fontColor=#FFFFFF;strokeColor=none;fillColor=#5398DB;gradientColor=#1247B9;gradientDirection=west;" value="" vertex="1">
-          <mxGeometry height="180" width="240" x="1370" y="470" as="geometry" />
-        </mxCell>
-        <mxCell id="869962fe87da545-7" parent="1" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;strokeWidth=1;shape=mxgraph.basic.orthogonal_triangle;rounded=0;shadow=0;dashed=0;fontFamily=Tahoma;fontSize=10;fontColor=#FFFFFF;flipV=1;fillColor=#000000;strokeColor=none;opacity=50;" value="" vertex="1">
-          <mxGeometry height="40" width="140" x="1370" y="610" as="geometry" />
-        </mxCell>
-        <mxCell id="869962fe87da545-9" parent="1" style="whiteSpace=wrap;html=1;rounded=0;shadow=0;dashed=0;strokeWidth=1;fontFamily=Tahoma;fontSize=10;fontColor=#FFFFFF;strokeColor=none;fillColor=#8D029D;gradientColor=#65009E;gradientDirection=west;" value="" vertex="1">
-          <mxGeometry height="180" width="240" x="1370" y="720" as="geometry" />
-        </mxCell>
-        <mxCell id="869962fe87da545-10" parent="1" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;strokeWidth=1;shape=mxgraph.basic.orthogonal_triangle;rounded=0;shadow=0;dashed=0;fontFamily=Tahoma;fontSize=10;fontColor=#FFFFFF;flipV=1;fillColor=#000000;strokeColor=none;opacity=50;" value="" vertex="1">
-          <mxGeometry height="40" width="140" x="1370" y="860" as="geometry" />
-        </mxCell>
-        <mxCell id="869962fe87da545-12" parent="1" style="whiteSpace=wrap;html=1;rounded=0;shadow=0;dashed=0;strokeWidth=1;fontFamily=Tahoma;fontSize=10;fontColor=#FFFFFF;strokeColor=none;fillColor=#F19001;gradientColor=#C23603;gradientDirection=west;" value="" vertex="1">
-          <mxGeometry height="180" width="240" x="1370" y="970" as="geometry" />
-        </mxCell>
-        <mxCell id="869962fe87da545-13" parent="1" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;strokeWidth=1;shape=mxgraph.basic.orthogonal_triangle;rounded=0;shadow=0;dashed=0;fontFamily=Tahoma;fontSize=10;fontColor=#FFFFFF;flipV=1;fillColor=#000000;strokeColor=none;opacity=50;" value="" vertex="1">
-          <mxGeometry height="40" width="140" x="1370" y="1110" as="geometry" />
-        </mxCell>
-        <mxCell id="869962fe87da545-15" parent="1" style="whiteSpace=wrap;html=1;rounded=0;shadow=0;dashed=0;strokeWidth=1;fontFamily=Tahoma;fontSize=10;fontColor=#FFFFFF;strokeColor=none;fillColor=#EA0001;gradientColor=#AD0002;gradientDirection=west;" value="" vertex="1">
-          <mxGeometry height="180" width="240" x="1370" y="1220" as="geometry" />
-        </mxCell>
-        <mxCell id="869962fe87da545-16" parent="1" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;strokeWidth=1;shape=mxgraph.basic.orthogonal_triangle;rounded=0;shadow=0;dashed=0;fontFamily=Tahoma;fontSize=10;fontColor=#FFFFFF;flipV=1;fillColor=#000000;strokeColor=none;opacity=50;" value="" vertex="1">
-          <mxGeometry height="40" width="140" x="1370" y="1360" as="geometry" />
-        </mxCell>
-        <mxCell id="869962fe87da545-5" parent="1" style="whiteSpace=wrap;html=1;rounded=0;shadow=0;dashed=0;strokeWidth=1;fillColor=#E6E6E6;fontFamily=Verdana;fontSize=70;strokeColor=none;verticalAlign=top;spacingTop=10;" value="MAIN TITLE" vertex="1">
-          <mxGeometry height="1410" width="1360" x="60" y="30" as="geometry" />
-        </mxCell>
-        <mxCell id="869962fe87da545-2" parent="1" style="html=1;shadow=0;dashed=0;align=center;verticalAlign=middle;shape=mxgraph.arrows2.arrow;dy=0;dx=0;notch=30;rounded=0;strokeColor=none;strokeWidth=1;fillColor=#7FB61A;fontFamily=Tahoma;fontSize=10;fontColor=#FFFFFF;gradientColor=#1B622A;gradientDirection=east;" value="" vertex="1">
-          <mxGeometry height="180" width="1210" x="290" y="170" as="geometry" />
-        </mxCell>
-        <mxCell id="869962fe87da545-8" parent="1" style="html=1;shadow=0;dashed=0;align=center;verticalAlign=middle;shape=mxgraph.arrows2.arrow;dy=0;dx=0;notch=30;rounded=0;strokeColor=none;strokeWidth=1;fillColor=#5398DB;fontFamily=Tahoma;fontSize=10;fontColor=#FFFFFF;gradientColor=#1247B9;gradientDirection=east;" value="" vertex="1">
-          <mxGeometry height="180" width="1210" x="300" y="430" as="geometry" />
-        </mxCell>
-        <mxCell id="869962fe87da545-11" parent="1" style="html=1;shadow=0;dashed=0;align=center;verticalAlign=middle;shape=mxgraph.arrows2.arrow;dy=0;dx=0;notch=30;rounded=0;strokeColor=none;strokeWidth=1;fillColor=#8D029D;fontFamily=Tahoma;fontSize=10;fontColor=#FFFFFF;gradientColor=#65009E;gradientDirection=east;" value="" vertex="1">
-          <mxGeometry height="180" width="1210" x="300" y="680" as="geometry" />
-        </mxCell>
-        <mxCell id="869962fe87da545-14" parent="1" style="html=1;shadow=0;dashed=0;align=center;verticalAlign=middle;shape=mxgraph.arrows2.arrow;dy=0;dx=0;notch=30;rounded=0;strokeColor=none;strokeWidth=1;fillColor=#F19001;fontFamily=Tahoma;fontSize=10;fontColor=#FFFFFF;gradientColor=#C23603;gradientDirection=east;" value="" vertex="1">
-          <mxGeometry height="180" width="1210" x="300" y="930" as="geometry" />
-        </mxCell>
-        <mxCell id="869962fe87da545-17" parent="1" style="html=1;shadow=0;dashed=0;align=center;verticalAlign=middle;shape=mxgraph.arrows2.arrow;dy=0;dx=0;notch=30;rounded=0;strokeColor=none;strokeWidth=1;fillColor=#EA0001;fontFamily=Tahoma;fontSize=10;fontColor=#FFFFFF;gradientColor=#AD0002;gradientDirection=east;" value="" vertex="1">
-          <mxGeometry height="180" width="1210" x="300" y="1180" as="geometry" />
-        </mxCell>
-        <mxCell id="869962fe87da545-18" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;shadow=0;dashed=0;fontFamily=Verdana;fontSize=70;horizontal=0;" value="Additional text" vertex="1">
-          <mxGeometry height="1190" width="130" x="110" y="170" as="geometry" />
-        </mxCell>
-        <mxCell id="869962fe87da545-19" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;whiteSpace=wrap;rounded=0;shadow=0;dashed=0;fontFamily=Helvetica;fontSize=150;fontColor=#FFFFFF;" value="1" vertex="1">
-          <mxGeometry height="180" width="200" x="320" y="170" as="geometry" />
-        </mxCell>
-        <mxCell id="869962fe87da545-20" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;whiteSpace=wrap;rounded=0;shadow=0;dashed=0;fontFamily=Helvetica;fontSize=150;fontColor=#FFFFFF;" value="2" vertex="1">
-          <mxGeometry height="180" width="200" x="330" y="430" as="geometry" />
-        </mxCell>
-        <mxCell id="869962fe87da545-21" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;whiteSpace=wrap;rounded=0;shadow=0;dashed=0;fontFamily=Helvetica;fontSize=150;fontColor=#FFFFFF;" value="3" vertex="1">
-          <mxGeometry height="180" width="200" x="330" y="680" as="geometry" />
-        </mxCell>
-        <mxCell id="869962fe87da545-22" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;whiteSpace=wrap;rounded=0;shadow=0;dashed=0;fontFamily=Helvetica;fontSize=150;fontColor=#FFFFFF;" value="4" vertex="1">
-          <mxGeometry height="180" width="200" x="330" y="930" as="geometry" />
-        </mxCell>
-        <mxCell id="869962fe87da545-23" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;whiteSpace=wrap;rounded=0;shadow=0;dashed=0;fontFamily=Helvetica;fontSize=150;fontColor=#FFFFFF;" value="5" vertex="1">
-          <mxGeometry height="180" width="200" x="330" y="1180" as="geometry" />
-        </mxCell>
-        <mxCell id="869962fe87da545-24" parent="1" style="line;strokeWidth=4;direction=south;html=1;rounded=0;shadow=0;dashed=0;fillColor=none;gradientColor=#AD0002;fontFamily=Helvetica;fontSize=150;fontColor=#FFFFFF;align=right;strokeColor=#FFFFFF;" value="" vertex="1">
-          <mxGeometry height="160" width="10" x="540" y="180" as="geometry" />
-        </mxCell>
-        <mxCell id="869962fe87da545-25" parent="1" style="line;strokeWidth=4;direction=south;html=1;rounded=0;shadow=0;dashed=0;fillColor=none;gradientColor=#AD0002;fontFamily=Helvetica;fontSize=150;fontColor=#FFFFFF;align=right;strokeColor=#FFFFFF;" value="" vertex="1">
-          <mxGeometry height="160" width="10" x="540" y="440" as="geometry" />
-        </mxCell>
-        <mxCell id="869962fe87da545-26" parent="1" style="line;strokeWidth=4;direction=south;html=1;rounded=0;shadow=0;dashed=0;fillColor=none;gradientColor=#AD0002;fontFamily=Helvetica;fontSize=150;fontColor=#FFFFFF;align=right;strokeColor=#FFFFFF;" value="" vertex="1">
-          <mxGeometry height="160" width="10" x="540" y="690" as="geometry" />
-        </mxCell>
-        <mxCell id="869962fe87da545-27" parent="1" style="line;strokeWidth=4;direction=south;html=1;rounded=0;shadow=0;dashed=0;fillColor=none;gradientColor=#AD0002;fontFamily=Helvetica;fontSize=150;fontColor=#FFFFFF;align=right;strokeColor=#FFFFFF;" value="" vertex="1">
-          <mxGeometry height="160" width="10" x="540" y="940" as="geometry" />
-        </mxCell>
-        <mxCell id="869962fe87da545-28" parent="1" style="line;strokeWidth=4;direction=south;html=1;rounded=0;shadow=0;dashed=0;fillColor=none;gradientColor=#AD0002;fontFamily=Helvetica;fontSize=150;fontColor=#FFFFFF;align=right;strokeColor=#FFFFFF;" value="" vertex="1">
-          <mxGeometry height="160" width="10" x="540" y="1190" as="geometry" />
-        </mxCell>
-        <mxCell id="869962fe87da545-29" parent="1" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;shadow=0;dashed=0;fontFamily=Helvetica;fontSize=12;fontColor=#FFFFFF;align=left;" value="<h1>Heading</h1><p>L<span>orem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span></p>" vertex="1">
-          <mxGeometry height="140" width="670" x="580" y="190" as="geometry" />
-        </mxCell>
-        <mxCell id="869962fe87da545-30" parent="1" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;shadow=0;dashed=0;fontFamily=Helvetica;fontSize=12;fontColor=#FFFFFF;align=left;" value="<h1>Heading</h1><p>L<span>orem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span></p>" vertex="1">
-          <mxGeometry height="140" width="670" x="580" y="450" as="geometry" />
-        </mxCell>
-        <mxCell id="869962fe87da545-31" parent="1" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;shadow=0;dashed=0;fontFamily=Helvetica;fontSize=12;fontColor=#FFFFFF;align=left;" value="<h1>Heading</h1><p>L<span>orem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span></p>" vertex="1">
-          <mxGeometry height="140" width="670" x="580" y="700" as="geometry" />
-        </mxCell>
-        <mxCell id="869962fe87da545-32" parent="1" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;shadow=0;dashed=0;fontFamily=Helvetica;fontSize=12;fontColor=#FFFFFF;align=left;" value="<h1>Heading</h1><p>L<span>orem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span></p>" vertex="1">
-          <mxGeometry height="140" width="670" x="580" y="950" as="geometry" />
-        </mxCell>
-        <mxCell id="869962fe87da545-33" parent="1" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;shadow=0;dashed=0;fontFamily=Helvetica;fontSize=12;fontColor=#FFFFFF;align=left;" value="<h1>Heading</h1><p>L<span>orem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span></p>" vertex="1">
-          <mxGeometry height="140" width="670" x="580" y="1200" as="geometry" />
-        </mxCell>
-        <mxCell id="869962fe87da545-34" parent="1" style="shadow=0;dashed=0;html=1;strokeColor=none;fillColor=#FFFFFF;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;shape=mxgraph.office.users.users;rounded=0;fontFamily=Helvetica;fontSize=12;fontColor=#FFFFFF;align=left;" value="" vertex="1">
-          <mxGeometry height="100" width="92" x="1354.9999999999995" y="210" as="geometry" />
-        </mxCell>
-        <mxCell id="869962fe87da545-35" parent="1" style="shadow=0;dashed=0;html=1;strokeColor=none;fillColor=#FFFFFF;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;shape=mxgraph.office.security.token;rounded=0;fontFamily=Helvetica;fontSize=12;fontColor=#FFFFFF;align=left;" value="" vertex="1">
-          <mxGeometry height="106" width="84" x="1358.9999999999993" y="467" as="geometry" />
-        </mxCell>
-        <mxCell id="869962fe87da545-36" parent="1" style="shadow=0;dashed=0;html=1;strokeColor=none;fillColor=#FFFFFF;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;shape=mxgraph.office.concepts.best_practices;rounded=0;fontFamily=Helvetica;fontSize=12;fontColor=#FFFFFF;align=left;" value="" vertex="1">
-          <mxGeometry height="97" width="97" x="1352.5" y="716" as="geometry" />
-        </mxCell>
-        <mxCell id="869962fe87da545-37" parent="1" style="shadow=0;dashed=0;html=1;strokeColor=none;fillColor=#FFFFFF;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;shape=mxgraph.office.concepts.maintenance;rounded=0;fontFamily=Helvetica;fontSize=12;fontColor=#FFFFFF;align=left;" value="" vertex="1">
-          <mxGeometry height="100" width="70" x="1366" y="970" as="geometry" />
-        </mxCell>
-        <mxCell id="869962fe87da545-38" parent="1" style="shadow=0;dashed=0;html=1;strokeColor=none;fillColor=#FFFFFF;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;shape=mxgraph.office.concepts.on_premises;rounded=0;fontFamily=Helvetica;fontSize=12;fontColor=#FFFFFF;align=left;" value="" vertex="1">
-          <mxGeometry height="95" width="59" x="1381" y="1220" as="geometry" />
-        </mxCell>
-      </root>
-    </mxGraphModel>
-  </diagram>
-</mxfile>
-```
-
 - Tablas jerárquicas y normalizadas.
 - Diversidad temporal en registros.
 - Ejemplos prácticos para dashboards y BI.
@@ -233,7 +109,7 @@ graph LR
 
 El repositorio está organizado por proyectos independientes, cada uno con su propio ciclo de vida (DDL, DML, ETL y BI):
 
-Este portafolio está diseñado para ser reproducible y mantener un estilo consistente en todo el código y documentación. 
+Este portafolio está diseñado para ser reproducible y mantener un estilo consistente en todo el código y la documentación. 
 
 Se incluyen archivos de configuración clave: `.prettierrc`, `.prettierignore`, `.editorconfig`y `.gitignore`.
 
@@ -249,7 +125,7 @@ SQL_Portafolio/
 ├── 📂 P1_Inventario/				# Gestión de Stock y Fundamentos Relacionales
 │   ├── Scripts/                   	# Pipeline SQL (01-05)
 │   ├── img/                       	# Evidencias gráficas
-│   └── README.md
+│   └── 📄 README.md
 ├── 📂 P2_Escolar/                	# Arquitectura Avanzada y ETL con CTEs
 │   ├── Scripts/                   	# Pipeline SQL (01-05)
 │   ├── img/                      	# Evidencias de métricas
@@ -258,7 +134,7 @@ SQL_Portafolio/
 │   ├── Scripts/                  	# Scripts .py y .sql
 │   ├── Datos/                     	# Datasets generados (50k registros)
 │   ├── img/                       	# Dashboards de Analítica
-│   └── README.md
+│   └── 📄 README.md
 ├── 📂 P4_Real_World_Ingestion/   	# Supply Chain & Observabilidad
 │   ├── 01_Setup_DDL/              	# Esquemas y constraints
 │   ├── 02_Ingesta_Pro/            	# Orquestación Python (23.8k reg/seg)
@@ -266,18 +142,18 @@ SQL_Portafolio/
 │   ├── 04_ETL_Cleaning/           	# Normalización y detección de anomalías
 │   ├── 05_BI_Observabilidad/      	# Vistas SQL y Dashboard PyGWalker
 │   ├── img/                       	# Evidencias de performance y BI
-│   └── README.md
+│   └──📄 README.md
 ├── 📁 P5_BigQuery_Fintech/
-│   ├──📄 Evidencia_Proyecto.pdf    # Presentación para Drive/OneDrive
-│   ├──📄 query_citas.sql           # Tu script de SQL
-│   ├──📄 loan_count_by_year.csv    # Los datos exportados
+│   ├── Evidencia_Proyecto.pdf    # Presentación para Drive/OneDrive
+│   ├── query_citas.sql           # Tu script de SQL
+│   ├── loan_count_by_year.csv    # Los datos exportados
 │   ├──img/                         # Tu captura de la consola GCP
 │   └──📄 README.md                 # Presentación para GitHub
 ├── 📄 README.md                   # Documentación maestra del portafolio
-├── 📄 .prettierrc                 # Reglas de estilo de código (JSON)
-├── 📄 .prettierignore             # Archivos ignorados por Prettier
-├── 📄 .editorconfig               # Reglas universales de indentación y formato
-└── 📄 .gitignore                  # Archivos ignorados por Git
+├──  .prettierrc                 # Reglas de estilo de código (JSON)
+├──  .prettierignore             # Archivos ignorados por Prettier
+├──  .editorconfig               # Reglas universales de indentación y formato
+└──  .gitignore                  # Archivos ignorados por Git
 ```
 
 ### 📊 Diagrama de Estructura del Portafolio
@@ -348,14 +224,14 @@ graph LR
 ### **🛒 Retail & Global Supply Chain (Inspiración: Corporación multinacional enfoque retail )**
 
 - **Problema:** Inconsistencias en el estatus de entrega y pérdidas financieras ocultas por datos mal tipados.
-- **Solución:** Pipeline híbrido que ingesta 180,000 registros, detecta anomalías financieras mediante **SQL Dinámico** y normaliza el riesgo de entrega.
+- **Solución:** Pipeline híbrido que ingesta 180,000 registros, detecta anomalías financieras mediante **SQL dinámico** y normaliza el riesgo de entrega.
 - **Impacto:** Visibilidad total del 100% de la cadena de suministro con métricas de eficiencia por región en tiempo real.
 
 ### **🏭 Manufactura y Logística (Inspiración: AB InBev)**
 
 - **Problema:** Cuellos de botella en la carga de inventarios masivos que retrasan la toma de decisiones operativa.
-- **Solución:** Optimización de I/O a nivel hardware y uso de `fast_executemany` en Python para reducir tiempos de carga en un 90%.
-- **Impacto:** Reducción del tiempo de procesamiento de minutos a segundos, permitiendo reportes de inventario sub-segundo.
+- **Solución:** Optimización de I/O a nivel de hardware y uso de `fast_executemany` en Python para reducir tiempos de carga en un 90%.
+- **Impacto:** Reducción del tiempo de procesamiento de minutos a segundos, permitiendo reportes de inventario subsegundo.
 
 ---
 
@@ -503,7 +379,11 @@ Experto en procesos de  **Retrofitting de Datos** , transformando sistemas legac
 ⚖️ **Licencia MIT** © 2025-2026
 
 *“Construyendo sistemas que no solo procesan datos, sino que cuentan historias.”*
+<<<<<<< HEAD
 **#TheDzibStandard#TheDzibStandard#TheDzibStandard#TheDzibStandard#TheDzibStandard#TheDzibStandard#TheDzibStandard#TheDzibStandard #DataEngineering#DataEngineering#DataEngineering#DataEngineering#DataEngineering#DataEngineering#DataEngineering#DataEngineering #V#V#V#V#V#V#V#V.2.2.0**
+=======
+**#TheDzibStandard#TheDzibStandard #DataEngineering#DataEngineering #V3.0.0**
+>>>>>>> 4ef4b069c63f73461614b6322388367c201906ca
 
 🚧 En constante evolución.
 
