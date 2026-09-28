@@ -19,7 +19,7 @@
 
 ---
 
-## 📌 Incluye
+## 📌 Incluy
 
 ```drawio width=800
 <mxfile>
@@ -219,12 +219,11 @@ graph LR
 
 
 |      **Categoría**      |       **Métrica**       |         **Benchmark**         | **Proyecto Clave** | **Estado** |
-| :-------------------------: | :-------------------------: | :-----------------------------: | :------------------: | :----------: |
+| :-------------------------: | :------------------------: | :-----------------------------: | :------------------: | :----------: |
 |  **Optimización T-SQL**  |    Velocidad de Carga    |  **120 ms (5k+ registros)**  |   **P2_Escolar**   |     🚀     |
-|    **Normalización**    |     Limpieza Atómica     |      **Single-Pass ETL**      | **P1_Inventario** |     📦     |
+|    **Normalización**    |    Limpieza Atómica    |      **Single-Pass ETL**      | **P1_Inventario** |     📦     |
 |    **Ingesta Masiva**    |    Velocidad de Carga    | **23.8k reg/seg** (180k tot.) | **P4_SupplyChain** |     ⚡     |
-| **Transformación (ETL)** | Limpieza y Normalización |     **644 ms** (Fase 4.4)     | **P4_SupplyChain** |     ✅     |
-| **Analítica de Negocio** |   Dashboard Interactivo   |         Latencia Cero         |   **PyGWalker**   |     📈     |
+| **Analítica de Negocio** |  Dashboard Interactivo  |         Latencia Cero         |   **PyGWalker**   |     📈     |
 |     **Arquitectura**     | Integridad Transaccional |      **100%** Atomicidad      |   **TRY/CATCH**   |    🛡️    |
 |    **Cloud Analytics**    |  Agregación Serverless  |      *CTAS* Idempotente      |  **P5_BigQuery**  |    ☁️    |
 
@@ -414,12 +413,12 @@ Ecosistema escolar resiliente con triple extracción y analítica presupuestaria
 *Simulación de migración de un sistema Legacy con datos no atómicos a una arquitectura optimizada para BI.*
 
 
-|   Dimensión   |  Estado Legacy (Origen)  |                Estado Optimizado                |
-| :--------------: | :-------------------------: | :-----------------------------------------------: |
-| **Atomicidad** |     `Prod_Ref_3 | V3`     |  **Nombre:** `Prod_Ref_3` \| **Modelo:** `V3`  |
-| **Geografía** |     `queretaro | QRO`     |    `Querétaro` (Capitalización y Acentos)    |
-|  **Estatus**  |   `PAGADO | COMPLETADO`   |       `Pagado` (Unificación Semántica)       |
-| **Ubicación** | `Sucursal Norte | Merida` | **Sucursal:** `Norte` \| **Región:** `Mérida` |
+|   Dimensión   | Estado Legacy (Origen) | Estado Optimizado |
+| :--------------: | :----------------------: | :-----------------: |
+| **Atomicidad** |      `Prod_Ref_3      |        V3`        |
+| **Geografía** |       `queretaro       |       QRO`       |
+|  **Estatus**  |        `PAGADO        |    COMPLETADO`    |
+| **Ubicación** |    `Sucursal Norte    |      Merida`      |
 
 > **Impacto:** Esta normalización eliminó el 100% de los registros duplicados en los reportes de ventas y redujo el tiempo de procesamiento de limpieza a **309ms**.
 
@@ -504,7 +503,7 @@ Experto en procesos de  **Retrofitting de Datos** , transformando sistemas legac
 ⚖️ **Licencia MIT** © 2025-2026
 
 *“Construyendo sistemas que no solo procesan datos, sino que cuentan historias.”*
-**#TheDzibStandard#TheDzibStandard #DataEngineering#DataEngineering #V#V.2.2.0**
+**#TheDzibStandard#TheDzibStandard#TheDzibStandard#TheDzibStandard#TheDzibStandard#TheDzibStandard#TheDzibStandard#TheDzibStandard #DataEngineering#DataEngineering#DataEngineering#DataEngineering#DataEngineering#DataEngineering#DataEngineering#DataEngineering #V#V#V#V#V#V#V#V.2.2.0**
 
 🚧 En constante evolución.
 
