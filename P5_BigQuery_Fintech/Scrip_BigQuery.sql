@@ -4,9 +4,10 @@
 -- Metodología: CTAS (Create Table As Select)
 -- ==============================================================================
 
+-- Motor: Google Cloud BigQuery (Standard SQL)
 CREATE OR REPLACE TABLE `fintech.loan_count_by_year` AS
-SELECT
-    issue_year, 
+SELECT 
+    issue_year,
     COUNT(loan_id) AS total_loans
 FROM 
     fintech.loan
