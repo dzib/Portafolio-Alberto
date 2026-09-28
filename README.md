@@ -19,7 +19,7 @@
 
 ---
 
-## 📌 Incluye:add
+## 📌 Incluy
 
 - Tablas jerárquicas y normalizadas.
 - Diversidad temporal en registros.
@@ -58,12 +58,13 @@ En este portafolio se buscó aplicar un rigor de ingeniería en cada línea de c
 
 ### Matriz de Competencias Técnicas (Key Skills)
 
+
 |   Tecnología   |                                                           Badges                                                           |                                           Especialidad y Dominio                                           |
-| :-------------: | :------------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------: |
-|   SQL Server   | ![SQL](https://learn.microsoft.com/en-us/training/achievements/configure-sql-server-resources-for-optimal-performance.svg) |         Arquitecturas de alto rendimiento,**Single-Pass Processing** , y normalización 1NF.         |
+| :---------------: | :--------------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------: |
+|   SQL Server   | ![SQL](https://learn.microsoft.com/en-us/training/achievements/configure-sql-server-resources-for-optimal-performance.svg) |            Arquitecturas de alto rendimiento,**Single-Pass Processing** , y normalización 1NF.            |
 |     Python     |                           ![Python](https://img.icons8.com/?size=128&id=OhhCHl3xDHfn&format=png)                           | Orquestación de pipelines, manipulación de grandes volúmenes de datos y automatización de procesos ETL. |
 |    Data Viz    |                          ![Dashboard](https://cdn-icons-png.flaticon.com/512/10397/10397128.png)                          |     Creación de dashboards interactivos, análisis exploratorio de datos (EDA) y reportes ejecutivos.     |
-|  Data Quality  |                         ![Data Quality](https://cdn-icons-png.flaticon.com/512/10179/10179085.png)                         |     **Data Cleansing** avanzado: corrección de acentos, capitalización y atomicidad semántica.     |
+|  Data Quality  |                         ![Data Quality](https://cdn-icons-png.flaticon.com/512/10179/10179085.png)                         |        **Data Cleansing** avanzado: corrección de acentos, capitalización y atomicidad semántica.        |
 | Infraestructura |               ![Tropy](https://learn.microsoft.com/en-us/training/achievements/understand-data-concepts.svg)               | Gestión de versiones, automatización de servicios de SO y configuración de entornos de alto rendimiento. |
 
 ---
@@ -92,15 +93,15 @@ graph LR
 
 > *Benchmarks ejecutados en entorno local optimizado (SSD Expansion & Write Caching).*
 
-|      **Categoría**      |    **Métrica**    |         **Benchmark**         | **Proyecto Clave** | **Estado** |
-| :-----------------------------: | :-----------------------: | :---------------------------------: | :----------------------: | :--------------: |
-|  **Optimización T-SQL**  |    Velocidad de Carga    |  **120 ms (5k+ registros)**  |   **P2_Escolar**   |        🚀        |
-|    **Normalización**    |     Limpieza Atómica     |      **Single-Pass ETL**      | **P1_Inventario** |        📦        |
-|    **Ingesta Masiva**    |    Velocidad de Carga    | **23.8k reg/seg** (180k tot.) | **P4_SupplyChain** |        ⚡        |
-| **Transformación (ETL)** | Limpieza y Normalización |     **644 ms** (Fase 4.4)     | **P4_SupplyChain** |        ✅        |
-| **Analítica de Negocio** |   Dashboard Interactivo   |            Latencia Cero            |   **PyGWalker**   |        📈        |
-|     **Arquitectura**     | Integridad Transaccional |      **100%** Atomicidad      |   **TRY/CATCH**   |       🛡️       |
-|    **Cloud Analytics**    |  Agregación Serverless  |        *CTAS* Idempotente        |  **P5_BigQuery**  |       ☁️       |
+
+|      **Categoría**      |       **Métrica**       |         **Benchmark**         | **Proyecto Clave** | **Estado** |
+| :-------------------------: | :------------------------: | :-----------------------------: | :------------------: | :----------: |
+|  **Optimización T-SQL**  |    Velocidad de Carga    |  **120 ms (5k+ registros)**  |   **P2_Escolar**   |     🚀     |
+|    **Normalización**    |    Limpieza Atómica    |      **Single-Pass ETL**      | **P1_Inventario** |     📦     |
+|    **Ingesta Masiva**    |    Velocidad de Carga    | **23.8k reg/seg** (180k tot.) | **P4_SupplyChain** |     ⚡     |
+| **Analítica de Negocio** |  Dashboard Interactivo  |         Latencia Cero         |   **PyGWalker**   |     📈     |
+|     **Arquitectura**     | Integridad Transaccional |      **100%** Atomicidad      |   **TRY/CATCH**   |    🛡️    |
+|    **Cloud Analytics**    |  Agregación Serverless  |      *CTAS* Idempotente      |  **P5_BigQuery**  |    ☁️    |
 
 ---
 
@@ -108,7 +109,7 @@ graph LR
 
 El repositorio está organizado por proyectos independientes, cada uno con su propio ciclo de vida (DDL, DML, ETL y BI):
 
-Este portafolio está diseñado para ser reproducible y mantener un estilo consistente en todo el código y documentación. 
+Este portafolio está diseñado para ser reproducible y mantener un estilo consistente en todo el código y la documentación. 
 
 Se incluyen archivos de configuración clave: `.prettierrc`, `.prettierignore`, `.editorconfig`y `.gitignore`.
 
@@ -124,7 +125,7 @@ SQL_Portafolio/
 ├── 📂 P1_Inventario/				# Gestión de Stock y Fundamentos Relacionales
 │   ├── Scripts/                   	# Pipeline SQL (01-05)
 │   ├── img/                       	# Evidencias gráficas
-│   └── README.md
+│   └── 📄 README.md
 ├── 📂 P2_Escolar/                	# Arquitectura Avanzada y ETL con CTEs
 │   ├── Scripts/                   	# Pipeline SQL (01-05)
 │   ├── img/                      	# Evidencias de métricas
@@ -133,7 +134,7 @@ SQL_Portafolio/
 │   ├── Scripts/                  	# Scripts .py y .sql
 │   ├── Datos/                     	# Datasets generados (50k registros)
 │   ├── img/                       	# Dashboards de Analítica
-│   └── README.md
+│   └── 📄 README.md
 ├── 📂 P4_Real_World_Ingestion/   	# Supply Chain & Observabilidad
 │   ├── 01_Setup_DDL/              	# Esquemas y constraints
 │   ├── 02_Ingesta_Pro/            	# Orquestación Python (23.8k reg/seg)
@@ -141,18 +142,18 @@ SQL_Portafolio/
 │   ├── 04_ETL_Cleaning/           	# Normalización y detección de anomalías
 │   ├── 05_BI_Observabilidad/      	# Vistas SQL y Dashboard PyGWalker
 │   ├── img/                       	# Evidencias de performance y BI
-│   └── README.md
+│   └──📄 README.md
 ├── 📁 P5_BigQuery_Fintech/
-│   ├──📄 Evidencia_Proyecto.pdf    # Presentación para Drive/OneDrive
-│   ├──📄 query_citas.sql           # Tu script de SQL
-│   ├──📄 loan_count_by_year.csv    # Los datos exportados
+│   ├── Evidencia_Proyecto.pdf    # Presentación para Drive/OneDrive
+│   ├── query_citas.sql           # Tu script de SQL
+│   ├── loan_count_by_year.csv    # Los datos exportados
 │   ├──img/                         # Tu captura de la consola GCP
 │   └──📄 README.md                 # Presentación para GitHub
 ├── 📄 README.md                   # Documentación maestra del portafolio
-├── 📄 .prettierrc                 # Reglas de estilo de código (JSON)
-├── 📄 .prettierignore             # Archivos ignorados por Prettier
-├── 📄 .editorconfig               # Reglas universales de indentación y formato
-└── 📄 .gitignore                  # Archivos ignorados por Git
+├──  .prettierrc                 # Reglas de estilo de código (JSON)
+├──  .prettierignore             # Archivos ignorados por Prettier
+├──  .editorconfig               # Reglas universales de indentación y formato
+└──  .gitignore                  # Archivos ignorados por Git
 ```
 
 ### 📊 Diagrama de Estructura del Portafolio
@@ -223,14 +224,14 @@ graph LR
 ### **🛒 Retail & Global Supply Chain (Inspiración: Corporación multinacional enfoque retail )**
 
 - **Problema:** Inconsistencias en el estatus de entrega y pérdidas financieras ocultas por datos mal tipados.
-- **Solución:** Pipeline híbrido que ingesta 180,000 registros, detecta anomalías financieras mediante **SQL Dinámico** y normaliza el riesgo de entrega.
+- **Solución:** Pipeline híbrido que ingesta 180,000 registros, detecta anomalías financieras mediante **SQL dinámico** y normaliza el riesgo de entrega.
 - **Impacto:** Visibilidad total del 100% de la cadena de suministro con métricas de eficiencia por región en tiempo real.
 
 ### **🏭 Manufactura y Logística (Inspiración: AB InBev)**
 
 - **Problema:** Cuellos de botella en la carga de inventarios masivos que retrasan la toma de decisiones operativa.
-- **Solución:** Optimización de I/O a nivel hardware y uso de `fast_executemany` en Python para reducir tiempos de carga en un 90%.
-- **Impacto:** Reducción del tiempo de procesamiento de minutos a segundos, permitiendo reportes de inventario sub-segundo.
+- **Solución:** Optimización de I/O a nivel de hardware y uso de `fast_executemany` en Python para reducir tiempos de carga en un 90%.
+- **Impacto:** Reducción del tiempo de procesamiento de minutos a segundos, permitiendo reportes de inventario subsegundo.
 
 ---
 
@@ -287,12 +288,13 @@ Ecosistema escolar resiliente con triple extracción y analítica presupuestaria
 
 *Simulación de migración de un sistema Legacy con datos no atómicos a una arquitectura optimizada para BI.*
 
-|      Dimensión      |   Estado Legacy (Origen)   |                        Estado Optimizado                        |
-| :------------------: | :-------------------------: | :-------------------------------------------------------------: |
-| **Atomicidad** |     `Prod_Ref_3 \| V3`     |  **Nombre:** `Prod_Ref_3` \| **Modelo:** `V3`  |
-| **Geografía** |     `queretaro \| QRO`     |           `Querétaro` (Capitalización y Acentos)           |
-|  **Estatus**  |   `PAGADO \| COMPLETADO`   |              `Pagado` (Unificación Semántica)              |
-| **Ubicación** | `Sucursal Norte \| Merida` | **Sucursal:** `Norte` \| **Región:** `Mérida` |
+
+|   Dimensión   | Estado Legacy (Origen) | Estado Optimizado |
+| :--------------: | :----------------------: | :-----------------: |
+| **Atomicidad** |      `Prod_Ref_3      |        V3`        |
+| **Geografía** |       `queretaro       |       QRO`       |
+|  **Estatus**  |        `PAGADO        |    COMPLETADO`    |
+| **Ubicación** |    `Sucursal Norte    |      Merida`      |
 
 > **Impacto:** Esta normalización eliminó el 100% de los registros duplicados en los reportes de ventas y redujo el tiempo de procesamiento de limpieza a **309ms**.
 
@@ -341,11 +343,11 @@ Este portafolio está diseñado para ser auditable y reproducible:
 
 Mi meta es la automatización total y la integración con la nube:
 
-- [X] Cloud Analytics (Logrado): Implementación de ecosistemas de consulta serverless en Google Cloud Platform.
-- [ ] [ ] **Dockerización (Próximo proyecto):** Implementación de contenedores Docker para orquestar servicios de SQL Server y Python de forma portable.
-- [ ] **Cloud Bridge:** Migración de pipelines hacia **Azure SQL Database** y automatización con **GitHub Actions** (CI/CD).
-- [ ] **Visualización Avanzada:** Integración de los flujos analíticos actuales con **Power BI** mediante DirectQuery.
-- [ ] **Orquestación de Procesos:** Automatización de tareas masivas mediante **Task Schedulers** y monitoreo de salud de datos.
+- [X]  Cloud Analytics (Logrado): Implementación de ecosistemas de consulta serverless en Google Cloud Platform.
+- [ ]  [ ] **Dockerización (Próximo proyecto):** Implementación de contenedores Docker para orquestar servicios de SQL Server y Python de forma portable.
+- [ ]  **Cloud Bridge:** Migración de pipelines hacia **Azure SQL Database** y automatización con **GitHub Actions** (CI/CD).
+- [ ]  **Visualización Avanzada:** Integración de los flujos analíticos actuales con **Power BI** mediante DirectQuery.
+- [ ]  **Orquestación de Procesos:** Automatización de tareas masivas mediante **Task Schedulers** y monitoreo de salud de datos.
 
 ## 🌍 Impacto Comunitario
 
@@ -366,8 +368,9 @@ Experto en procesos de  **Retrofitting de Datos** , transformando sistemas legac
 
 ¿Tienes un reto de datos o buscas optimizar tus pipelines? Estoy listo para colaborar.
 
+
 | [LinkedIn](https://www.linkedin.com/in/jesusalberto-dzib-ku/) | **[✉️ Email](dzibjesusalberto@gmail.com)** | **Portafolio Web** |
-| ------------------------------------------------------------ | ------------------------------------------------- | ------------------------ |
+| --------------------------------------------------------------- | ---------------------------------------------- | -------------------- |
 
 ---
 
@@ -376,7 +379,11 @@ Experto en procesos de  **Retrofitting de Datos** , transformando sistemas legac
 ⚖️ **Licencia MIT** © 2025-2026
 
 *“Construyendo sistemas que no solo procesan datos, sino que cuentan historias.”*
-**#TheDzibStandard #DataEngineering #V.2.2.0**
+<<<<<<< HEAD
+**#TheDzibStandard#TheDzibStandard#TheDzibStandard#TheDzibStandard#TheDzibStandard#TheDzibStandard#TheDzibStandard#TheDzibStandard #DataEngineering#DataEngineering#DataEngineering#DataEngineering#DataEngineering#DataEngineering#DataEngineering#DataEngineering #V#V#V#V#V#V#V#V.2.2.0**
+=======
+**#TheDzibStandard#TheDzibStandard #DataEngineering#DataEngineering #V3.0.0**
+>>>>>>> 4ef4b069c63f73461614b6322388367c201906ca
 
 🚧 En constante evolución.
 
