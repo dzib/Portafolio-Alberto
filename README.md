@@ -552,7 +552,7 @@ Intelligence.
 
 
 | [LinkedIn](https://www.linkedin.com/in/jesusalberto-dzib-ku/) | **[✉️ Email](mailto:dzibjesusalberto@gmail.com)** | **Portafolio Web** |
-| --------------------------------------------------------------- | ----------------------------------------------------- | -------------------- |
+| --- | --- | --- |
 
 ---
 
