@@ -199,18 +199,18 @@ Se incluyen archivos de configuración clave: `.prettierrc`, `.prettierignore`,
 
 ```text
 SQL_Portafolio/
-├── 📂 .github/workflows/          # Pipeline de Integración Continua (ci.yml)
-├── 📂 tests/                      # Pruebas unitarias globales y calidad de datos
-├── 📂 P1_Inventario/              # Gestión de Stock y Fundamentos Relacionales
+├── 📂 .github/workflows/         # Pipeline de Integración Continua (ci.yml)
+├── 📂 tests/                     # Pruebas unitarias globales y calidad de datos
+├── 📂 P1_Inventario/             # Gestión de Stock y Fundamentos Relacionales
 │   ├── Scripts/                   # Pipeline SQL (01-05)
 │   ├── img/                       # Evidencias gráficas
 │   └── 📄 README.md
 ├── 📂 P2_Escolar/                 # Arquitectura Avanzada y ETL con CTEs
 │   ├── Scripts/                    # Pipeline SQL (01-05)
-│   ├── img/                       # Evidencias de métricas
+│   ├── img/                        # Evidencias de métricas
 │   └── Documentacion.md
 ├── 📂 P3_Retail_Ventas/           # Pipeline Híbrido Big Data (Python + SQL)
-│   ├── Scripts/                   # Scripts .py y .sql
+│   ├── Scripts/                    # Scripts .py y .sql
 │   ├── Datos/                      # Datasets generados (50k registros)
 │   ├── img/                        # Dashboards de Analítica
 │   └── 📄 README.md
@@ -221,13 +221,13 @@ SQL_Portafolio/
 │   ├── 04_ETL_Cleaning/            # Normalización y detección de anomalías
 │   ├── 05_BI_Observabilidad/       # Vistas SQL y Dashboard PyGWalker
 │   ├── img/                        # Evidencias de performance y BI
-│   └──📄 README.md                 # Documentación de la ingesta
+│   └──📄 README.md                # Documentación de la ingesta
 ├── 📁 P5_BigQuery_Fintech/
-│   ├── tests/                    # Pruebas unitarias específicas para BigQuery
-│   ├── Evidencia_Proyecto.pdf    # Presentación para Drive/OneDrive
-│   ├── query_citas.sql           # Script de SQL
-│   ├── loan_count_by_year.csv    # Los datos exportados
-│   ├── Sccript_BigQuery.sql        # El script de SQL para BigQuery
+│   ├── tests/                      # Pruebas unitarias específicas para BigQuery
+│   ├── Evidencia_Proyecto.pdf      # Presentación para Drive/OneDrive
+│   ├── query_citas.sql             # Script de SQL
+│   ├── loan_count_by_year.csv      # Los datos exportados
+│   ├── Script_BigQuery.sql         # El script de SQL para BigQuery
 │   ├──img/                         # Tu captura de la consola GCP
 │   └──📄 README.md                 # Presentación para GitHub
 ├── 📁 P6_Orquestacion_Airflow/     # Orquestación de pipelines y DAGs
@@ -552,7 +552,7 @@ Intelligence.
 
 
 | [LinkedIn](https://www.linkedin.com/in/jesusalberto-dzib-ku/) | **[✉️ Email](mailto:dzibjesusalberto@gmail.com)** | **Portafolio Web** |
-| --- | --- | --- |
+| :---: | :---: | :---: |
 
 ---
 
