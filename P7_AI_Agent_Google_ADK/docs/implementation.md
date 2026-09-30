@@ -9,12 +9,12 @@ Gemini Live.
 Se automatizó el aprovisionamiento de infraestructura en Google Cloud
 Platform (GCP) mediante scripts de Bash en Cloud Shell, habilitando las APIs
 de Vertex AI, configurando entornos virtuales optimizados con `uv` y
-ejecutando pruebas de conectividad (*preflight*) para garantizar la
+ejecutando pruebas de conectividad (_preflight_) para garantizar la
 disponibilidad de Gemini Live en tiempo real.
 
 ---
 
-## Configuración del Entorno (*Environment Setup*)
+## Configuración del Entorno (_Environment Setup_)
 
 ### Entorno de Desarrollo
 
@@ -27,7 +27,7 @@ disponibilidad de Gemini Live en tiempo real.
 
 ---
 
-## Creación del Proyecto (*Project Creation*)
+## Creación del Proyecto (_Project Creation_)
 
 Se creó y configuró un proyecto dedicado en Google Cloud para aislar los
 recursos del agente.
@@ -88,7 +88,7 @@ bash valley.sh
 
 Endpoints de la aplicación:
 
-- Interfaz web:  `http://localhost:3450`
+- Interfaz web: `http://localhost:3450`
 - Panel de desarrollo: `http://localhost:3450/workbench/dev-ui/?app=stage`
 
 ## Retos Superados (Challenges Encountered)
@@ -96,7 +96,7 @@ Endpoints de la aplicación:
 ### Incidencia de Autenticación
 
 - Error detectado: `RefreshError: service account info is missing 'email' field`
-- Solución aplicada: Reconfiguración de las credenciales por defecto (*Application Default Credentials*) y reejecución limpia del script de aprovisionamiento en Cloud Shell.
+- Solución aplicada: Reconfiguración de las credenciales por defecto (_Application Default Credentials_) y reejecución limpia del script de aprovisionamiento en Cloud Shell.
 
 ## Resultados y Convalidación (Outcomes)
 
