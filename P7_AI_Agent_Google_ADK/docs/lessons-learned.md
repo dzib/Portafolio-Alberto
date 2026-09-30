@@ -4,13 +4,15 @@
 
 ### Google Cloud Project Configuration
 
-Learned how to create and configure cloud projects programmatically using setup scripts.
+Learned how to create and configure cloud projects
+programmatically using setup scripts.
 
 ---
 
 ### Vertex AI Integration
 
-Understood how Vertex AI serves as the orchestration layer between applications and Gemini models.
+Understood how Vertex AI serves as the orchestration layer between
+applications and Gemini models.
 
 ---
 

@@ -2,7 +2,9 @@
 
 ## Overview
 
-This project demonstrates the implementation of a real-time conversational AI agent using Google Agent Development Kit (ADK), Vertex AI, and Gemini Live.
+This project demonstrates the implementation of a real-time
+conversational AI agent using Google Agent Development Kit
+(ADK), Vertex AI, and Gemini Live.
 
 ---
 
@@ -55,7 +57,8 @@ aiplatform.googleapis.com enabled
 
 ## Authentication
 
-The project required configuring Google Cloud authentication and Application Default Credentials (ADC).
+The project required configuring Google Cloud authentication and
+Application Default Credentials (ADC).
 
 Main commands used:
 

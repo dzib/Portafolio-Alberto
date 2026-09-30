@@ -205,15 +205,18 @@ SQL_Portafolio/
 │   ├── Scripts/                   # Pipeline SQL (01-05)
 │   ├── img/                       # Evidencias gráficas
 │   └── 📄 README.md
+│
 ├── 📂 P2_Escolar/                 # Arquitectura Avanzada y ETL con CTEs
 │   ├── Scripts/                    # Pipeline SQL (01-05)
 │   ├── img/                        # Evidencias de métricas
 │   └── Documentacion.md
+│
 ├── 📂 P3_Retail_Ventas/           # Pipeline Híbrido Big Data (Python + SQL)
 │   ├── Scripts/                    # Scripts .py y .sql
 │   ├── Datos/                      # Datasets generados (50k registros)
 │   ├── img/                        # Dashboards de Analítica
 │   └── 📄 README.md
+│
 ├── 📂 P4_Real_World_Ingestion/    # Supply Chain & Observabilidad
 │   ├── 01_Setup_DDL/               # Esquemas y constraints
 │   ├── 02_Ingesta_Pro/             # Orquestación Python (23.8k reg/seg)
@@ -222,6 +225,7 @@ SQL_Portafolio/
 │   ├── 05_BI_Observabilidad/       # Vistas SQL y Dashboard PyGWalker
 │   ├── img/                        # Evidencias de performance y BI
 │   └──📄 README.md                # Documentación de la ingesta
+│
 ├── 📁 P5_BigQuery_Fintech/
 │   ├── tests/                      # Pruebas unitarias específicas para BigQuery
 │   ├── Evidencia_Proyecto.pdf      # Presentación para Drive/OneDrive
@@ -230,6 +234,7 @@ SQL_Portafolio/
 │   ├── Script_BigQuery.sql         # El script de SQL para BigQuery
 │   ├──img/                         # Tu captura de la consola GCP
 │   └──📄 README.md                 # Presentación para GitHub
+│
 ├── 📁 P6_Orquestacion_Airflow/     # Orquestación de pipelines y DAGs
 │   ├── dags/                       # Flujos de trabajo automatizados
 │   ├── image/                      # Evidencias visuales de Airflow
@@ -238,6 +243,21 @@ SQL_Portafolio/
 │   ├── docker-compose.yml          # Configuración de contenedores para Airflow
 │   │                                  Despliegue de infraestructura local
 │   └──📄 README.md                 # Documentación de orquestación
+│
+├── 📁P7_AI_Agent_Google_ADK/               # Implementación agent-valley-nightmarke
+│   ├── docs/
+│   │   ├── architecture/
+│   │   │   └── architecture.md              # Documentación profunda de diseño
+│   │   ├── screenshots/
+│   │   │   └── architecture-diagram.png     # Evidencia visual
+│   │   ├── implementation.md                # Bitácora técnica y retos superados
+│   │   └── lessons-learned.md               # Conclusiones y optimización
+│   │                                        de costos en Cloud
+│   ├── scripts/
+│   │   ├── setup_codelab.sh             # Scripts de configuración
+│   │   └── setup_project.sh
+│   └── 📄 README.md                     # Caso de estudio y resumen ejecutivo
+│
 ├── 📄 README.md                 # Documentación maestra del portafolio
 ├──  .prettierrc                 # Reglas de estilo de código (JSON)
 ├──  .prettierignore             # Archivos ignorados por Prettier
@@ -550,9 +570,8 @@ Intelligence.
 
 ¿Tienes un reto de datos o buscas optimizar tus pipelines? Estoy listo para colaborar.
 
-
-| [LinkedIn](https://www.linkedin.com/in/jesusalberto-dzib-ku/) | **[✉️ Email](mailto:dzibjesusalberto@gmail.com)** | **Portafolio Web** |
-| :---: | :---: | :---: |
+- [LinkedIn](https://www.linkedin.com/in/jesusalberto-dzib-ku/)
+- [✉️ Email](mailto:dzibjesusalberto@gmail.com)
 
 ---
 
