@@ -1,16 +1,22 @@
-# Implementation Journey
+# Bitácora de Implementación
 
-## Overview
+## Resumen
 
-This project demonstrates the implementation of a real-time
-conversational AI agent using Google Agent Development Kit
-(ADK), Vertex AI, and Gemini Live.
+Este proyecto demuestra la implementación de un agente conversacional
+en tiempo real utilizando el Google Agent Development Kit (ADK), Vertex AI y
+Gemini Live.
+
+Se automatizó el aprovisionamiento de infraestructura en Google Cloud
+Platform (GCP) mediante scripts de Bash en Cloud Shell, habilitando las APIs
+de Vertex AI, configurando entornos virtuales optimizados con `uv` y
+ejecutando pruebas de conectividad (*preflight*) para garantizar la
+disponibilidad de Gemini Live en tiempo real.
 
 ---
 
-## Environment Setup
+## Configuración del Entorno (*Environment Setup*)
 
-### Development Environment
+### Entorno de Desarrollo
 
 - Google Cloud Shell
 - Python 3.12
@@ -21,138 +27,84 @@ conversational AI agent using Google Agent Development Kit
 
 ---
 
-## Project Creation
+## Creación del Proyecto (*Project Creation*)
 
-A dedicated Google Cloud project was created.
+Se creó y configuró un proyecto dedicado en Google Cloud para aislar los
+recursos del agente.
 
-Project ID:
+- **ID del Proyecto:** `agent-valley-8393`
+- **Script de automatización:**
 
-```text
-agent-valley-8393
-```
+  ```bash
+  ./setup_project.sh
+  ```
 
-The project was automatically configured using:
+## Servicios Habilitados (Services Enabled)
 
-```bash
-./setup_project.sh
-```
+El proceso de configuración habilitó automáticamente los servicios necesarios en GCP:
 
----
-
-## Services Enabled
-
-The setup process enabled the required Google Cloud services:
-
-- Vertex AI API
+- Vertex AI API ( `aiplatform.googleapis.com`)
 - AI Platform API
 - Google Authentication Services
 
-Verification:
+## Autenticación (Authentication)
 
-```text
-aiplatform.googleapis.com enabled
-```
-
----
-
-## Authentication
-
-The project required configuring Google Cloud authentication and
-Application Default Credentials (ADC).
-
-Main commands used:
+Se configuraron las credenciales de autenticación y los permisos por defecto de la aplicación (ADC) en Cloud Shell:
 
 ```bash
 gcloud auth login
-```
-
-```bash
 gcloud auth application-default login
 ```
 
----
+## Entorno Python (Python Environment)
 
-## Python Environment
-
-A virtual environment was created automatically.
-
-Key packages installed:
+Se gestionó un entorno virtual aislado de alta velocidad utilizando uv, instalando las dependencias clave del ecosistema:
 
 - google-adk
 - google-genai
 - fastapi
 - uvicorn
 
----
+## Configuración del Agente (Agent Configuration)
 
-## Agent Configuration
+Se integró el modelo de voz y audio nativo para la interacción conversacional:
 
-The project uses:
+- Modelo: Gemini Live 2.5 Flash Native Audio
 
-```text
-Gemini Live 2.5 Flash Native Audio
-```
+Validación de conexión:
 
-to provide real-time conversational interaction.
-
-Validation output:
-
-```text
+```plaintext
 the line opens
 gemini-live-2.5-flash-native-audio
 ```
 
----
+## Ejecución de la Aplicación (Application Execution)
 
-## Application Execution
-
-The project is launched through:
+El entorno local del mercado nocturno se despliega ejecutando:
 
 ```bash
 bash valley.sh
 ```
 
-Application endpoints:
+Endpoints de la aplicación:
 
-```text
-http://localhost:3450
-```
+- Interfaz web:  `http://localhost:3450`
+- Panel de desarrollo: `http://localhost:3450/workbench/dev-ui/?app=stage`
 
-```text
-http://localhost:3450/workbench/dev-ui/?app=stage
-```
+## Retos Superados (Challenges Encountered)
 
----
+### Incidencia de Autenticación
 
-## Challenges Encountered
+- Error detectado: `RefreshError: service account info is missing 'email' field`
+- Solución aplicada: Reconfiguración de las credenciales por defecto (*Application Default Credentials*) y reejecución limpia del script de aprovisionamiento en Cloud Shell.
 
-### Authentication Issue
+## Resultados y Convalidación (Outcomes)
 
-Error:
+Se validó exitosamente la integración completa de:
 
-```text
-RefreshError:
-service account info is missing 'email' field
-```
+- Google ADK y Vertex AI
+- Gemini Live (Audio nativo)
+- FastAPI y flujos Cloud Shell
 
-Resolution:
-
-- Configured Application Default Credentials.
-- Verified project configuration.
-- Re-ran setup successfully.
-
----
-
-## Outcome
-
-Successfully implemented and validated:
-
-- Google ADK
-- Vertex AI
-- Gemini Live
-- FastAPI Integration
-- Cloud Shell Workflow
-
-Result:
-
-✅ Conversational AI Agent running successfully.
+Resultado final:
+✅ Agente conversacional de Inteligencia Artificial desplegado y operando correctamente.
