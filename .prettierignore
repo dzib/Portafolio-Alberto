@@ -11,6 +11,9 @@ P1_Inventario/img
 P2_Escolar/img
 P3_Retail_Ventas/img
 P4_Real_World_Ingestion/img
+P5_BigQuery_Fintech/
+P6_Orquestacion_Airflow/img
+P7_AI_Agent_Google_ADK/img
 
 # Ignorar dependencias y builds
 node_modules
