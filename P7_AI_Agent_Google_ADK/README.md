@@ -24,6 +24,39 @@ F --> G[Voice Response]
 F --> H[Text Response]
 ```
 
+```text
+agent-valley-nightmarket
+│
+├── README.md
+├── pyproject.toml
+├── uv.lock
+├── valley.sh
+├── setup_codelab.sh
+├── setup_project.sh
+│
+├── docs
+│   │
+│   ├── architecture
+│   │   └── architecture.md
+│   │
+│   ├── screenshots
+│   │   ├── cloudshell.png
+│   │   ├── setup.png
+│   │   ├── setup-complete.png
+│   │   ├── project-created.png
+│   │   ├── vertex-ai-enabled.png
+│   │   ├── gemini-connected.png
+│   │   └── demo.png
+│   │
+│   ├── implementation.md
+│   └── lessons-learned.md
+│
+├── forge
+├── scripts
+├── site
+└── stage
+```
+
 ## Documentation
 
 | Document | Description |
