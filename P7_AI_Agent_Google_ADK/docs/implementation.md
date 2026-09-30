@@ -41,7 +41,8 @@ recursos del agente.
 
 ## Servicios Habilitados (Services Enabled)
 
-El proceso de configuración habilitó automáticamente los servicios necesarios en GCP:
+El proceso de configuración habilitó automáticamente
+ los servicios necesarios en GCP:
 
 - Vertex AI API ( `aiplatform.googleapis.com`)
 - AI Platform API
@@ -49,7 +50,8 @@ El proceso de configuración habilitó automáticamente los servicios necesarios
 
 ## Autenticación (Authentication)
 
-Se configuraron las credenciales de autenticación y los permisos por defecto de la aplicación (ADC) en Cloud Shell:
+Se configuraron las credenciales de autenticación
+ y los permisos por defecto de la aplicación (ADC) en Cloud Shell:
 
 ```bash
 gcloud auth login
@@ -58,7 +60,8 @@ gcloud auth application-default login
 
 ## Entorno Python (Python Environment)
 
-Se gestionó un entorno virtual aislado de alta velocidad utilizando uv, instalando las dependencias clave del ecosistema:
+Se gestionó un entorno virtual aislado de alta
+ velocidad utilizando uv, instalando las dependencias clave del ecosistema:
 
 - google-adk
 - google-genai
@@ -96,7 +99,9 @@ Endpoints de la aplicación:
 ### Incidencia de Autenticación
 
 - Error detectado: `RefreshError: service account info is missing 'email' field`
-- Solución aplicada: Reconfiguración de las credenciales por defecto (_Application Default Credentials_) y reejecución limpia del script de aprovisionamiento en Cloud Shell.
+- Solución aplicada: Reconfiguración de las credenciales
+ por defecto (_Application Default Credentials_)
+ y reejecución limpia del script de aprovisionamiento en Cloud Shell.
 
 ## Resultados y Convalidación (Outcomes)
 
