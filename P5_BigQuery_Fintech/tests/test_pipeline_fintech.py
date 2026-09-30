@@ -1,4 +1,4 @@
-import pytest
+import pytest # pyright: ignore[reportMissingImports]
 
 def test_ctas_idempotency_logic():
     """Valida que las consultas CTAS (Create Table As Select) utilicen patrones idempotentes."""
