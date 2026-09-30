@@ -125,13 +125,22 @@ agent-valley-nightmarket
 
 ### Environment Setup
 
-![Cloud Shell](screenshots/cloudshellct Deployment
+![Google Cloud Shell terminal showing the Agent Valley Night Market project setup in a command-line environment](docs/screenshots/cloudshell.png)
 
-screenshots/setup-complete.png
+### Deployment
+
+![Google Cloud Shell terminal showing that the Agent Valley Night Market deployment setup completed successfully](docs/screenshots/vertex-ai-enabled.png)
+
+### Setup Completed
+
+![Google Cloud Shell terminal confirming successful completion of the Agent Valley Night Market setup](docs/screenshots/setup-complete.png)
+
+"El código fuente completo y los scripts de despliegue se ejecutaron en Google
+Cloud Shell a través del repositorio oficial de Agent Valley Night Market."
 
 ### Application Running
 
-screenshots/demo.png
+![Running Agent Valley Night Market application with its conversational interface displayed in a web browser](docs/screenshots/project-created.png)
 
 ## Author
 
@@ -139,22 +148,20 @@ Jesús Alberto Dzib Ku
 
 Mérida, Yucatán, México
 
-LinkedIn:
-https://linkedin.com/in/jesusalberto-dzib-ku
+LinkedIn: [Jesús Alberto Dzib Ku](https://linkedin.com/in/jesusalberto-dzib-ku)
 
-Portfolio:
-https://github.com/dzib/Portafolio-Alberto
+Portfolio: [Portafolio-Alberto](https://github.com/dzib/Portafolio-Alberto)
 
 ## Evidencias
 
 ## Configuración del entorno
 
-screenshots/cloudshell.png
+![Google Cloud Shell terminal showing the project environment and setup commands](docs/screenshots/cloudshell.png)
 
 ## Setup completado
 
-![Setup](screenshots/setup.png)
+![Google Cloud setup screen showing configuration progress for the Agent Valley Night Market project](docs/screenshots/setup-complete.png)
 
 ## Demonstración
 
-![Demo](screenshots/demo.png)
+![Agent Valley Night Market demonstration running in a web browser with the conversational interface visible](docs/screenshots/demo.png)
