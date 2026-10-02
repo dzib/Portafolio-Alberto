@@ -61,9 +61,9 @@ graph LR
 ### 📊 Evidencias de Rendimiento y Analítica
 
 * 📑 Métricas de Ingesta: Carga masiva completada en 1.84 segundos.
-  ![CARGA DE DATOS PYTHON](./img/P3PY_Scrip01IngestaDatos.png)
+  ![CARGA DE DATOS PYTHON](./assets/img/P3PY_Scrip01IngestaDatos.png)
 * 📈 Métricas de Analítica: Reporte generado en 0.537 segundos.
-  ![EJECUCIÓN DEL REPORTE BI](./img/EsteticaDatosEjecPYScrip03AnaliticaVentas.png)
+  ![EJECUCIÓN DEL REPORTE BI](./assets/img/EsteticaDatosEjecPYScrip03AnaliticaVentas.png)
 
 ---
 
@@ -72,7 +72,7 @@ graph LR
 > Análisis de desempeño basado en un volumen de 50,000 transacciones
 
 | # | Vendedor | Ventas Totales | Cant. Transacciones | Ticket Promedio |
-| :-: | :------: | :------------: | :----------------: | :-------------: |
+| :-: | :-: | :-: | :-: | :-: |
 | 1 | Daniel Smith | $44,820.80 | 15 | $2,988.05 |
 | 2 | James Johnson | $43,332.19 | 14 | $3,095.16 |
 | 3 | David Smith | $42,933.17 | 15 | $2,862.21 |

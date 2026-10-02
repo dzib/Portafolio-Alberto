@@ -1,0 +1,31 @@
+<mxfile host="65bd71144e">
+    <diagram id="lXiJcNnPuUgn3tI-5LLR" name="Página-1">
+        <mxGraphModel dx="410" dy="1828" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="l45A85gSiQ2ZgadUMbAV-4" parent="1" style="whiteSpace=wrap;html=1;" value="&#xa;&lt;span style=&quot;color: rgb(63, 63, 63); font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(236, 236, 236); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;&quot;&gt;Local&lt;/span&gt;&#xa;&#xa;" vertex="1">
+                    <mxGeometry height="60" width="120" x="395" y="-200" as="geometry"/>
+                </mxCell>
+                <mxCell id="l45A85gSiQ2ZgadUMbAV-5" parent="1" style="whiteSpace=wrap;html=1;" value="&lt;div style=&quot;color: rgb(63, 63, 63); scrollbar-color: rgba(121, 121, 121, 0.4) rgb(40, 42, 54); text-align: left;&quot;&gt;&lt;span style=&quot;scrollbar-color: rgba(121, 121, 121, 0.4) rgb(40, 42, 54); background-color: transparent; color: rgb(63, 63, 63);&quot;&gt;GitHub&lt;/span&gt;&lt;/div&gt;" vertex="1">
+                    <mxGeometry height="60" width="120" x="395" y="-120" as="geometry"/>
+                </mxCell>
+                <mxCell id="l45A85gSiQ2ZgadUMbAV-7" parent="1" style="whiteSpace=wrap;html=1;" value="&lt;div style=&quot;color: rgb(63, 63, 63); scrollbar-color: rgba(121, 121, 121, 0.4) rgb(40, 42, 54); text-align: left;&quot;&gt;&lt;span style=&quot;color: rgb(63, 63, 63);&quot;&gt;Docker&lt;/span&gt;&lt;/div&gt;" vertex="1">
+                    <mxGeometry height="60" width="120" x="395" y="-40" as="geometry"/>
+                </mxCell>
+                <mxCell id="l45A85gSiQ2ZgadUMbAV-8" parent="1" style="whiteSpace=wrap;html=1;" value="&lt;div style=&quot;color: rgb(63, 63, 63); scrollbar-color: rgba(121, 121, 121, 0.4) rgb(40, 42, 54); text-align: left;&quot;&gt;&lt;div style=&quot;color: rgb(63, 63, 63); scrollbar-color: rgba(121, 121, 121, 0.4) rgb(40, 42, 54);&quot;&gt;&lt;span style=&quot;scrollbar-color: rgba(121, 121, 121, 0.4) rgb(40, 42, 54); background-color: transparent; color: rgb(63, 63, 63);&quot;&gt;Google Cloud&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" vertex="1">
+                    <mxGeometry height="60" width="120" x="395" y="45" as="geometry"/>
+                </mxCell>
+                <mxCell id="l45A85gSiQ2ZgadUMbAV-9" parent="1" style="whiteSpace=wrap;html=1;" value="&lt;div style=&quot;color: rgb(63, 63, 63); scrollbar-color: rgba(121, 121, 121, 0.4) rgb(40, 42, 54); text-align: left;&quot;&gt;&lt;div style=&quot;color: rgb(63, 63, 63); scrollbar-color: rgba(121, 121, 121, 0.4) rgb(40, 42, 54);&quot;&gt;&lt;div style=&quot;color: rgb(63, 63, 63); scrollbar-color: rgba(121, 121, 121, 0.4) rgb(40, 42, 54);&quot;&gt;&lt;span style=&quot;scrollbar-color: rgba(121, 121, 121, 0.4) rgb(40, 42, 54); background-color: transparent; color: rgb(63, 63, 63);&quot;&gt;BigQuery&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" vertex="1">
+                    <mxGeometry height="60" width="120" x="395" y="123" as="geometry"/>
+                </mxCell>
+                <mxCell id="l45A85gSiQ2ZgadUMbAV-10" parent="1" style="whiteSpace=wrap;html=1;" value="&lt;div style=&quot;font-family:&#39;Segoe UI&#39;;font-size:14px;font-style:normal;font-weight:400;line-height:20px&quot;&gt;&lt;div class=&quot;ZFBmb0dx enMwc1pv&quot;&gt;Airflow&lt;/div&gt;&lt;/div&gt;" vertex="1">
+                    <mxGeometry height="60" width="120" x="395" y="201" as="geometry"/>
+                </mxCell>
+                <mxCell id="l45A85gSiQ2ZgadUMbAV-11" parent="1" style="whiteSpace=wrap;html=1;" value="&lt;div style=&quot;color: rgb(63, 63, 63); scrollbar-color: rgba(121, 121, 121, 0.4) rgb(40, 42, 54); text-align: left;&quot;&gt;&lt;div style=&quot;color: rgb(63, 63, 63); scrollbar-color: rgba(121, 121, 121, 0.4) rgb(40, 42, 54);&quot;&gt;&lt;div style=&quot;color: rgb(63, 63, 63); scrollbar-color: rgba(121, 121, 121, 0.4) rgb(40, 42, 54);&quot;&gt;&lt;div style=&quot;color: rgb(0, 0, 0); font-family: &amp;quot;Segoe UI&amp;quot;; font-size: 14px; line-height: 20px;&quot;&gt;Power BI&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" vertex="1">
+                    <mxGeometry height="60" width="120" x="395" y="279" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

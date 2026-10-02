@@ -10,7 +10,7 @@
 ![SQL Server](https://img.shields.io/badge/SQL_Server-2025-blue)
 ![Power BI](https://img.shields.io/badge/PowerBI-Dashboard-orange)
 ![Google Cloud Platform](https://img.shields.io/badge/Google_Cloud_Platform-2025-blue)
-![Standard: Senior](https://img.shields.io/badge/Standard-Production%20Ready-success.svg)
+![Standard: Senior](<https://img.shields.io/badge/Standard-Production%20Ready-success.svg>)
 
 ![Educational Purpose](https://img.shields.io/badge/Purpose-Educational-blue)
 
@@ -110,13 +110,12 @@ En este portafolio se buscó aplicar un rigor de ingeniería en cada línea de c
 
 <!-- markdownlint-disable MD013 -->
 
-
 |   Tecnología   |                                                           Badges                                                           |                                           Especialidad y Dominio                                           |
-| :---------------: | :--------------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------: |
-|   SQL Server   | ![SQL](https://learn.microsoft.com/en-us/training/achievements/configure-sql-server-resources-for-optimal-performance.svg) |            Arquitecturas de alto rendimiento,**Single-Pass Processing** , y normalización 1NF.            |
+| :-------------: | :------------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------: |
+|   SQL Server   | ![SQL](https://learn.microsoft.com/en-us/training/achievements/configure-sql-server-resources-for-optimal-performance.svg) |         Arquitecturas de alto rendimiento,**Single-Pass Processing** , y normalización 1NF.         |
 |     Python     |                           ![Python](https://img.icons8.com/?size=128&id=OhhCHl3xDHfn&format=png)                           | Orquestación de pipelines, manipulación de grandes volúmenes de datos y automatización de procesos ETL. |
 |    Data Viz    |                          ![Dashboard](https://cdn-icons-png.flaticon.com/512/10397/10397128.png)                          |     Creación de dashboards interactivos, análisis exploratorio de datos (EDA) y reportes ejecutivos.     |
-|  Data Quality  |                         ![Data Quality](https://cdn-icons-png.flaticon.com/512/10179/10179085.png)                         |        **Data Cleansing** avanzado: corrección de acentos, capitalización y atomicidad semántica.        |
+|  Data Quality  |                         ![Data Quality](https://cdn-icons-png.flaticon.com/512/10179/10179085.png)                         |     **Data Cleansing** avanzado: corrección de acentos, capitalización y atomicidad semántica.     |
 | Infraestructura |               ![Tropy](https://learn.microsoft.com/en-us/training/achievements/understand-data-concepts.svg)               | Gestión de versiones, automatización de servicios de SO y configuración de entornos de alto rendimiento. |
 
 <!-- markdownlint-enable MD013 -->
@@ -151,15 +150,14 @@ graph LR
 
 <!-- markdownlint-disable MD013 -->
 
-
 |    **Categoría**    |  **Métrica**  |         **Benchmark**         |    **Proyecto**    | **Estado** |
-| :--------------------: | :---------------: | :-----------------------------: | :------------------: | :----------: |
-|      **T-SQL**      |    **Carga**    |       **120 ms (5k+)**       |   **P2_Escolar**   |     🚀     |
-|  **Normalización**  |  **Limpieza**  |      **Single-Pass ETL**      | **P1_Inventario** |     📦     |
-|     **Ingesta**     |    **Carga**    | **23.8k reg/seg (180k tot.)** | **P4_SupplyChain** |     ⚡     |
-|  **Orquestación**  |    **DAGs**    |  **Automatización Robusta**  |   **P6_Airflow**   |     🔄     |
-| **Calidad de Datos** | **Validación** |      **PyTest + CI/CD**      |  **Global / P5**  |     🧪     |
-|      **Cloud**      | **Agregación** |     **CTAS idempotente**     |  **P5_BigQuery**  |    ☁️    |
+| :------------------------: | :-------------------: | :---------------------------------: | :----------------------: | :--------------: |
+|      **T-SQL**      |    **Carga**    |       **120 ms (5k+)**       |   **P2_Escolar**   |        🚀        |
+|  **Normalización**  |  **Limpieza**  |      **Single-Pass ETL**      | **P1_Inventario** |        📦        |
+|     **Ingesta**     |    **Carga**    | **23.8k reg/seg (180k tot.)** | **P4_SupplyChain** |        ⚡        |
+|  **Orquestación**  |    **DAGs**    |  **Automatización Robusta**  |   **P6_Airflow**   |        🔄        |
+| **Calidad de Datos** | **Validación** |      **PyTest + CI/CD**      |  **Global / P5**  |        🧪        |
+|      **Cloud**      | **Agregación** |     **CTAS idempotente**     |  **P5_BigQuery**  |       ☁️       |
 
 <!-- markdownlint-enable MD013 -->
 
@@ -205,15 +203,18 @@ SQL_Portafolio/
 │   ├── Scripts/                   # Pipeline SQL (01-05)
 │   ├── img/                       # Evidencias gráficas
 │   └── 📄 README.md
+│
 ├── 📂 P2_Escolar/                 # Arquitectura Avanzada y ETL con CTEs
 │   ├── Scripts/                    # Pipeline SQL (01-05)
 │   ├── img/                        # Evidencias de métricas
 │   └── Documentacion.md
+│
 ├── 📂 P3_Retail_Ventas/           # Pipeline Híbrido Big Data (Python + SQL)
 │   ├── Scripts/                    # Scripts .py y .sql
 │   ├── Datos/                      # Datasets generados (50k registros)
 │   ├── img/                        # Dashboards de Analítica
 │   └── 📄 README.md
+│
 ├── 📂 P4_Real_World_Ingestion/    # Supply Chain & Observabilidad
 │   ├── 01_Setup_DDL/               # Esquemas y constraints
 │   ├── 02_Ingesta_Pro/             # Orquestación Python (23.8k reg/seg)
@@ -222,6 +223,7 @@ SQL_Portafolio/
 │   ├── 05_BI_Observabilidad/       # Vistas SQL y Dashboard PyGWalker
 │   ├── img/                        # Evidencias de performance y BI
 │   └──📄 README.md                # Documentación de la ingesta
+│
 ├── 📁 P5_BigQuery_Fintech/
 │   ├── tests/                      # Pruebas unitarias específicas para BigQuery
 │   ├── Evidencia_Proyecto.pdf      # Presentación para Drive/OneDrive
@@ -230,6 +232,7 @@ SQL_Portafolio/
 │   ├── Script_BigQuery.sql         # El script de SQL para BigQuery
 │   ├──img/                         # Tu captura de la consola GCP
 │   └──📄 README.md                 # Presentación para GitHub
+│
 ├── 📁 P6_Orquestacion_Airflow/     # Orquestación de pipelines y DAGs
 │   ├── dags/                       # Flujos de trabajo automatizados
 │   ├── image/                      # Evidencias visuales de Airflow
@@ -238,6 +241,21 @@ SQL_Portafolio/
 │   ├── docker-compose.yml          # Configuración de contenedores para Airflow
 │   │                                  Despliegue de infraestructura local
 │   └──📄 README.md                 # Documentación de orquestación
+│
+├── 📁P7_AI_Agent_Google_ADK/               # Implementación agent-valley-nightmarke
+│   ├── docs/
+│   │   ├── architecture/
+│   │   │   └── architecture.md              # Documentación profunda de diseño
+│   │   ├── screenshots/
+│   │   │   └── architecture-diagram.png     # Evidencia visual
+│   │   ├── implementation.md                # Bitácora técnica y retos superados
+│   │   └── lessons-learned.md               # Conclusiones y optimización
+│   │                                        de costos en Cloud
+│   ├── scripts/
+│   │   ├── setup_codelab.sh             # Scripts de configuración
+│   │   └── setup_project.sh
+│   └── 📄 README.md                     # Caso de estudio y resumen ejecutivo
+│
 ├── 📄 README.md                 # Documentación maestra del portafolio
 ├──  .prettierrc                 # Reglas de estilo de código (JSON)
 ├──  .prettierignore             # Archivos ignorados por Prettier
@@ -429,9 +447,8 @@ pytest -v
 *Simulación de migración de un sistema Legacy con datos no atómicos a una
 arquitectura optimizada para BI.*
 
-
-|   Dimensión   | Estado Legacy (Origen) | Estado Optimizado |
-| :--------------: | :----------------------: | :-----------------: |
+|      Dimensión      | Estado Legacy (Origen) | Estado Optimizado |
+| :------------------: | :--------------------: | :---------------: |
 | **Atomicidad** |      `Prod_Ref_3      |        V3`        |
 | **Geografía** |       `queretaro       |       QRO`       |
 |  **Estatus**  |        `PAGADO        |    COMPLETADO`    |
@@ -510,9 +527,9 @@ Este portafolio está diseñado para ser auditable y reproducible:
 
 Mi meta es la automatización total y la integración con la nube:
 
-- [X]  Cloud Analytics (Logrado): Implementación de ecosistemas de consulta
+- [X] Cloud Analytics (Logrado): Implementación de ecosistemas de consulta
   serverless en Google Cloud Platform.
-- [X]  **Cloud Bridge:** Migración de pipelines hacia **Azure SQL Database**
+- [X] **Cloud Bridge:** Migración de pipelines hacia **Azure SQL Database**
   y automatización con **GitHub Actions** (CI/CD).
 
 - []  **Orquestación de Procesos:** Automatización de tareas masivas mediante
@@ -550,9 +567,8 @@ Intelligence.
 
 ¿Tienes un reto de datos o buscas optimizar tus pipelines? Estoy listo para colaborar.
 
-
-| [LinkedIn](https://www.linkedin.com/in/jesusalberto-dzib-ku/) | **[✉️ Email](mailto:dzibjesusalberto@gmail.com)** | **Portafolio Web** |
-| :---: | :---: | :---: |
+- [LinkedIn](https://www.linkedin.com/in/jesusalberto-dzib-ku/)
+- [✉️ Email](mailto:dzibjesusalberto@gmail.com)
 
 ---
 
