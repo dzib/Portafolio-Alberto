@@ -10,7 +10,7 @@
 ![SQL Server](https://img.shields.io/badge/SQL_Server-2025-blue)
 ![Power BI](https://img.shields.io/badge/PowerBI-Dashboard-orange)
 ![Google Cloud Platform](https://img.shields.io/badge/Google_Cloud_Platform-2025-blue)
-![Standard: Senior](https://img.shields.io/badge/Standard-Production%20Ready-success.svg)
+![Standard: Senior](<https://img.shields.io/badge/Standard-Production%20Ready-success.svg>)
 
 ![Educational Purpose](https://img.shields.io/badge/Purpose-Educational-blue)
 
@@ -110,13 +110,12 @@ En este portafolio se buscó aplicar un rigor de ingeniería en cada línea de c
 
 <!-- markdownlint-disable MD013 -->
 
-
 |   Tecnología   |                                                           Badges                                                           |                                           Especialidad y Dominio                                           |
-| :---------------: | :--------------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------: |
-|   SQL Server   | ![SQL](https://learn.microsoft.com/en-us/training/achievements/configure-sql-server-resources-for-optimal-performance.svg) |            Arquitecturas de alto rendimiento,**Single-Pass Processing** , y normalización 1NF.            |
+| :-------------: | :------------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------: |
+|   SQL Server   | ![SQL](https://learn.microsoft.com/en-us/training/achievements/configure-sql-server-resources-for-optimal-performance.svg) |         Arquitecturas de alto rendimiento,**Single-Pass Processing** , y normalización 1NF.         |
 |     Python     |                           ![Python](https://img.icons8.com/?size=128&id=OhhCHl3xDHfn&format=png)                           | Orquestación de pipelines, manipulación de grandes volúmenes de datos y automatización de procesos ETL. |
 |    Data Viz    |                          ![Dashboard](https://cdn-icons-png.flaticon.com/512/10397/10397128.png)                          |     Creación de dashboards interactivos, análisis exploratorio de datos (EDA) y reportes ejecutivos.     |
-|  Data Quality  |                         ![Data Quality](https://cdn-icons-png.flaticon.com/512/10179/10179085.png)                         |        **Data Cleansing** avanzado: corrección de acentos, capitalización y atomicidad semántica.        |
+|  Data Quality  |                         ![Data Quality](https://cdn-icons-png.flaticon.com/512/10179/10179085.png)                         |     **Data Cleansing** avanzado: corrección de acentos, capitalización y atomicidad semántica.     |
 | Infraestructura |               ![Tropy](https://learn.microsoft.com/en-us/training/achievements/understand-data-concepts.svg)               | Gestión de versiones, automatización de servicios de SO y configuración de entornos de alto rendimiento. |
 
 <!-- markdownlint-enable MD013 -->
@@ -151,15 +150,14 @@ graph LR
 
 <!-- markdownlint-disable MD013 -->
 
-
 |    **Categoría**    |  **Métrica**  |         **Benchmark**         |    **Proyecto**    | **Estado** |
-| :--------------------: | :---------------: | :-----------------------------: | :------------------: | :----------: |
-|      **T-SQL**      |    **Carga**    |       **120 ms (5k+)**       |   **P2_Escolar**   |     🚀     |
-|  **Normalización**  |  **Limpieza**  |      **Single-Pass ETL**      | **P1_Inventario** |     📦     |
-|     **Ingesta**     |    **Carga**    | **23.8k reg/seg (180k tot.)** | **P4_SupplyChain** |     ⚡     |
-|  **Orquestación**  |    **DAGs**    |  **Automatización Robusta**  |   **P6_Airflow**   |     🔄     |
-| **Calidad de Datos** | **Validación** |      **PyTest + CI/CD**      |  **Global / P5**  |     🧪     |
-|      **Cloud**      | **Agregación** |     **CTAS idempotente**     |  **P5_BigQuery**  |    ☁️    |
+| :------------------------: | :-------------------: | :---------------------------------: | :----------------------: | :--------------: |
+|      **T-SQL**      |    **Carga**    |       **120 ms (5k+)**       |   **P2_Escolar**   |        🚀        |
+|  **Normalización**  |  **Limpieza**  |      **Single-Pass ETL**      | **P1_Inventario** |        📦        |
+|     **Ingesta**     |    **Carga**    | **23.8k reg/seg (180k tot.)** | **P4_SupplyChain** |        ⚡        |
+|  **Orquestación**  |    **DAGs**    |  **Automatización Robusta**  |   **P6_Airflow**   |        🔄        |
+| **Calidad de Datos** | **Validación** |      **PyTest + CI/CD**      |  **Global / P5**  |        🧪        |
+|      **Cloud**      | **Agregación** |     **CTAS idempotente**     |  **P5_BigQuery**  |       ☁️       |
 
 <!-- markdownlint-enable MD013 -->
 
@@ -449,9 +447,8 @@ pytest -v
 *Simulación de migración de un sistema Legacy con datos no atómicos a una
 arquitectura optimizada para BI.*
 
-
-|   Dimensión   | Estado Legacy (Origen) | Estado Optimizado |
-| :--------------: | :----------------------: | :-----------------: |
+|      Dimensión      | Estado Legacy (Origen) | Estado Optimizado |
+| :------------------: | :--------------------: | :---------------: |
 | **Atomicidad** |      `Prod_Ref_3      |        V3`        |
 | **Geografía** |       `queretaro       |       QRO`       |
 |  **Estatus**  |        `PAGADO        |    COMPLETADO`    |
@@ -530,9 +527,9 @@ Este portafolio está diseñado para ser auditable y reproducible:
 
 Mi meta es la automatización total y la integración con la nube:
 
-- [X]  Cloud Analytics (Logrado): Implementación de ecosistemas de consulta
+- [X] Cloud Analytics (Logrado): Implementación de ecosistemas de consulta
   serverless en Google Cloud Platform.
-- [X]  **Cloud Bridge:** Migración de pipelines hacia **Azure SQL Database**
+- [X] **Cloud Bridge:** Migración de pipelines hacia **Azure SQL Database**
   y automatización con **GitHub Actions** (CI/CD).
 
 - []  **Orquestación de Procesos:** Automatización de tareas masivas mediante
