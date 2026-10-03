@@ -36,7 +36,6 @@
    inscripción de acuerdo a su estatus académico.
 
    > 🔎 **Tabla de referencia** (estatus → rango de materias)
-   >
 
    | Estatus     | Rango de materias |           Justificación           |
   | :------------ | :-----------------: | :---------------------------------: |
@@ -58,6 +57,10 @@
 5. **05_Executive_BI:** Dashboard visual en consola con barras de progreso
    y analítica de **Eficiencia Presupuestaria**.
 
+- Arquitectura Lógica
+- Arquitectura Física
+- Arquitectura Despliegue
+
 ---
 
 ## 🛠️ Tecnologías y Estándares industriales
@@ -72,7 +75,7 @@
 ## 📊 Evidencias de Ejecución
 
 > Métricas finales obtenidas del Script 05.
-> ![Resumen de Ejecución](./img/05-MetriEjecu-ReporteBI.png)
+ > ![Resumen de Ejecución](P2_Escolar\assets\img\05-MetriEjecu-ReporteBI.png)
 
 ## 📊 Fase 5: Analytics & Business Intelligence (Executive View)
 
