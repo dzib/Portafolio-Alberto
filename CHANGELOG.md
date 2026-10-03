@@ -1,23 +1,22 @@
-# Changelog
+# 🗂️ Changelog - Enterprise Data Engineering Portfolio
 
-## Unreleased
+Todos los cambios notables de este repositorio serán documentados en este archivo.
 
-### Added
+## \[V2.3.0\] - 2026-10-03
 
-### Changed
+Añadido
 
-### Fixed
+- Auditoría global de enlaces y blindaje al 100% de integridad mediante scripts
+ automatizados.
+- Documentación transversal completa en la carpeta `docs/` (Standards, Architecture,
+ Decisions, Functional, Learning, Operations, Technical).
+- Integración de diagramas nativos en Mermaid y referencia a esquemas en Draw.io.
 
----
+## \[V2.0.0\] - 2025-2026
 
-## 1.0.0
+Añadido
 
-### Added in 1.0.0
+- Reestructuración modular de los proyectos del P1 al P7.
+- Implementación de pipelines híbridos (Python + SQL Server 2025) y analítica
+ en Google Cloud BigQuery.
 
-- Proyecto P1
-- Proyecto P2
-- Proyecto P3
-- Proyecto P4
-- Proyecto P5
-- Proyecto P6
-- Proyecto P7
