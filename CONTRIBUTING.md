@@ -1,18 +1,11 @@
-# Contributing
+# 🤝 Guía de Contribución
 
-## Git Workflow
+¡Gracias por tu interés en contribuir a este portafolio de ingeniería de datos!
 
-main
-develop
-feature/_
-fix/_
-docs/\*
+## Flujo de Trabajo (Git Flow)
 
-## Commit Convention
+1. Bifurca el repositorio y crea tu rama de características a partir de `develop`:
 
-feat:
-fix:
-docs:
-chore:
-refactor:
-test:
+   ```bash
+   git checkout -b feature/nueva-mejora
+   ```
