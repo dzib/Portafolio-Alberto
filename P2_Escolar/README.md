@@ -57,9 +57,11 @@
 5. **05_Executive_BI:** Dashboard visual en consola con barras de progreso
    y analítica de **Eficiencia Presupuestaria**.
 
-- Arquitectura Lógica
-- Arquitectura Física
-- Arquitectura Despliegue
+## Arquitectura
+
+- architecture/01_logical_architecture.drawio
+- architecture/02_physical_architecture.drawio
+- architecture/03_deployment_architecture.drawio
 
 ---
 
@@ -75,7 +77,7 @@
 ## 📊 Evidencias de Ejecución
 
 > Métricas finales obtenidas del Script 05.
- > ![Resumen de Ejecución](P2_Escolar\assets\img\05-MetriEjecu-ReporteBI.png)
+ > ![Resumen de Ejecución](assets/img/05-MetriEjecu-ReporteBI.png)
 
 ## 📊 Fase 5: Analytics & Business Intelligence (Executive View)
 
