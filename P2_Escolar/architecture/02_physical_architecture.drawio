@@ -1,0 +1,25 @@
+<mxfile host="app.diagrams.net" modified="2026-10-02T00:00:00.000Z" agent="Mozilla/5.0" version="21.1.2">
+  <diagram name="Arquitectura Fisica P2" id="physical_p2">
+    <mxGraphModel dx="1000" dy="600" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="db" value="SQL Server 2025 Instance&lt;br&gt;(Database: P2_Escolar)" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="260" y="80" width="220" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="odbc" value="Capas de Vistas y Procedimientos Almacenados" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="250" y="280" width="240" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="excel" value="Dashboard Ejecutivo Excel / Consola BI" style="shape=document;whiteSpace=wrap;html=1;boundedLbl=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="270" y="400" width="200" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="l1" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="db" target="odbc">
+          <mxGeometry width="50" height="50" relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="l2" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="odbc" target="excel">
+          <mxGeometry width="50" height="50" relative="1" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

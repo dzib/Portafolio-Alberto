@@ -1,0 +1,36 @@
+name: Portfolio Audit
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Run Link Validation
+        run: |
+          python tools/validate_markdown_links.py
+
+      - name: Export Link Errors
+        run: |
+          python tools/export_link_errors_csv.py
+
+      - name: Portfolio Compliance
+        run: |
+          python tools/portfolio_compliance_report.py
+
+      - name: Upload Reports
+        uses: actions/upload-artifact@v4
+        with:
+          name: audit-reports
+          path: reports/

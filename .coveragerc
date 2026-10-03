@@ -1,0 +1,6 @@
+# pyright: reportUndefinedVariable=false
+[run]
+source = tools
+
+[report]
+show_missing = True
