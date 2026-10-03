@@ -10,8 +10,8 @@
 ![SQL Server](https://img.shields.io/badge/SQL_Server-2025-blue)
 ![Power BI](https://img.shields.io/badge/PowerBI-Dashboard-orange)
 ![Google Cloud Platform](https://img.shields.io/badge/Google_Cloud_Platform-2025-blue)
-![Standard: Senior](<https://img.shields.io/badge/Standard-Production%20Ready-success.svg>)
-
+![Standard: Senior](https://img.shields.io/badge/Standard-Production%20Ready-success.svg)
+![Quality: Production Ready](https://img.shields.io/badge/Quality-Production%20Ready-success.svg)
 ![Educational Purpose](https://img.shields.io/badge/Purpose-Educational-blue)
 
 > 👨‍💻 Perfil Profesional
@@ -532,7 +532,7 @@ Mi meta es la automatización total y la integración con la nube:
 - [X] **Cloud Bridge:** Migración de pipelines hacia **Azure SQL Database**
   y automatización con **GitHub Actions** (CI/CD).
 
-- []  **Orquestación de Procesos:** Automatización de tareas masivas mediante
+- [X]  **Orquestación de Procesos:** Automatización de tareas masivas mediante
   **Task Schedulers** y monitoreo de salud de datos.
 - []  **Dockerización (Próximo proyecto):** Implementación de contenedores
   Docker para orquestar servicios de SQL Server y Python de forma portable.

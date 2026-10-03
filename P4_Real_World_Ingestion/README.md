@@ -61,13 +61,13 @@ graph TD
 ## 📸 Galería de Hitos
 
 + Figura 1: Registro de performance en Python durante la carga masiva.
-  ![PERFORMANCE CARGA MASIVA][def]
+  ![PERFORMANCE CARGA MASIVA](../assets/P4/img/Query_Resultados_Procesamiento_P4.png)
 
 + Figura 2: Dashboard interactivo de eficiencia logística (PyGWalker).
-  ![DASHBOARD EN PYGWALKER](./assets/img/Grafico_Barras_PyWalker_OrdenesTotal_Grupo_P4.png)
+  ![DASHBOARD EN PYGWALKER](../assets/P4/img/Grafico_Barras_PyGWalker_OrdenesTotal_Grupo_P4.png)
 
 + Figura 3: Ejecución de carga transaccional en SQL Server.
-  ![EJECUCIÓN TRANSACCIONAL SQL SERVER](./assets/img/Org_Tran_SQL_de_Staging_Analytics.png)
+  ![EJECUCIÓN TRANSACCIONAL SQL SERVER](../assets/P4/img/Orq_Tran_SQL_de_Staging_Analytics.png)
 
 ---
 

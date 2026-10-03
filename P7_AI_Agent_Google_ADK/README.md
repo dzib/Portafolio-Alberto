@@ -125,22 +125,22 @@ agent-valley-nightmarket
 
 ### Environment Setup
 
-![Google Cloud Shell terminal showing the Agent Valley Night Market project setup in a command-line environment](./assets/img/screenshots/cloudshell.png)
+![Google Cloud Shell terminal showing the Agent Valley Night Market project setup in a command-line environment](../assets/P7/img/screenshots/cloudshell.png)
 
 ### Deployment
 
-![Google Cloud Shell terminal showing that the Agent Valley Night Market deployment setup completed successfully](./assets/img/screenshots/vertex-ai-enabled.png)
+![Google Cloud Shell terminal showing that the Agent Valley Night Market deployment setup completed successfully](../assets/P7/img/screenshots/vertex-ai-enabled.png)
 
 ### Setup Completed
 
-![Google Cloud Shell terminal confirming successful completion of the Agent Valley Night Market setup](./assets/img/screenshots/setup-complete.png)
+![Google Cloud Shell terminal confirming successful completion of the Agent Valley Night Market setup](../assets/P7/img/screenshots/setup-complete.png)
 
 "El código fuente completo y los scripts de despliegue se ejecutaron en Google
 Cloud Shell a través del repositorio oficial de Agent Valley Night Market."
 
 ### Application Running
 
-![Running Agent Valley Night Market application with its conversational interface displayed in a web browser](./assets/img/screenshots/project-created.png)
+![Running Agent Valley Night Market application with its conversational interface displayed in a web browser](../assets/P7/img/screenshots/project-created.png)
 
 ## Author
 
@@ -156,12 +156,12 @@ Portfolio: [Portafolio-Alberto](https://github.com/dzib/Portafolio-Alberto)
 
 ## Configuración del entorno
 
-![Google Cloud Shell terminal showing the project environment and setup commands](./assets/img/screenshots/cloudshell.png)
+![Google Cloud Shell terminal showing the project environment and setup commands](../assets/P7/img/screenshots/cloudshell.png)
 
 ## Setup completado
 
-![Google Cloud setup screen showing configuration progress for the Agent Valley Night Market project](./assets/img/screenshots/setup-complete.png)
+![Google Cloud setup screen showing configuration progress for the Agent Valley Night Market project](../assets/P7/img/screenshots/setup-complete.png)
 
 ## Demonstración
 
-![Agent Valley Night Market demonstration running in a web browser with the conversational interface visible](./assets/img/screenshots/demo.png)
+![Agent Valley Night Market demonstration running in a web browser with the conversational interface visible](../assets/P7/img/screenshots/demo.png)
