@@ -532,7 +532,7 @@ Mi meta es la automatización total y la integración con la nube:
 - [X] **Cloud Bridge:** Migración de pipelines hacia **Azure SQL Database**
   y automatización con **GitHub Actions** (CI/CD).
 
-- []  **Orquestación de Procesos:** Automatización de tareas masivas mediante
+- [X]  **Orquestación de Procesos:** Automatización de tareas masivas mediante
   **Task Schedulers** y monitoreo de salud de datos.
 - []  **Dockerización (Próximo proyecto):** Implementación de contenedores
   Docker para orquestar servicios de SQL Server y Python de forma portable.
