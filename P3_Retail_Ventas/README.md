@@ -61,9 +61,9 @@ graph LR
 ### 📊 Evidencias de Rendimiento y Analítica
 
 * 📑 Métricas de Ingesta: Carga masiva completada en 1.84 segundos.
-  ![CARGA DE DATOS PYTHON](./assets/img/P3PY_Scrip01IngestaDatos.png)
+  ![CARGA DE DATOS PYTHON](../assets/P3/img/P3PY_Scrip01IngestaDatos.png)
 * 📈 Métricas de Analítica: Reporte generado en 0.537 segundos.
-  ![EJECUCIÓN DEL REPORTE BI](./assets/img/EsteticaDatosEjecPYScrip03AnaliticaVentas.png)
+  ![EJECUCIÓN DEL REPORTE BI](../assets/P3/img/EsteticaDatosEjecPYScrip03AnaliticaVentas.png)
 
 ---
 

@@ -77,7 +77,7 @@
 ## 📊 Evidencias de Ejecución
 
 > Métricas finales obtenidas del Script 05.
- > ![Resumen de Ejecución](assets/img/05-MetriEjecu-ReporteBI.png)
+ > ![Resumen de Ejecución](../assets/P2/img/05-MetriEjecu-ReporteBI.png)
 
 ## 📊 Fase 5: Analytics & Business Intelligence (Executive View)
 
