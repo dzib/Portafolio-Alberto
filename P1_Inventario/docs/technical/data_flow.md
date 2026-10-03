@@ -12,17 +12,3 @@ graph TD
     vw_ReporteGlobalVentas]
     E -->|Puente ODBC / Power Query| F[Dashboard Ejecutivo
     en Excel]
-
-```drawio width=800
-<mxfile>
-  <diagram id="default" name="Page-1">
-    <mxGraphModel>
-      <root>
-        <mxCell id="0"/>
-        <mxCell id="1" parent="0"/>
-      </root>
-    </mxGraphModel>
-  </diagram>
-</mxfile>
-```
-

@@ -6,6 +6,7 @@
 - SQL Server Management Studio (SSMS) o VS Code con extensión mssql.
 - Microsoft Excel con controlador ODBC (Driver 17 para SQL Server)
   configurado.
+- Excel
 
 ## Secuencia de Despliegue de Scripts
 
@@ -21,3 +22,8 @@ secuencial:
    (*Single-Pass Processing*).
 5. `05_BI_Analytics.sql` ➔ Despliega las vistas ejecutivas y KPIs
    logísticos para consumo de BI.
+
+## Validación
+
+1.  Ejecutar scripts QA.
+2. Actualizar dashboard.

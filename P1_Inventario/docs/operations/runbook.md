@@ -1,5 +1,7 @@
 # Runbook Operativo - Pipeline P1 Inventario
 
+---
+
 ## Procedimiento de Reinicio Total (Hard Reset / Idempotency Check)
 
 Si por alguna razón el entorno de pruebas presenta inconsistencias por
@@ -12,3 +14,22 @@ ejecuciones parciales:
    para restablecer el volumen masivo y los datos con ruido legacy.
 3. Valide la limpieza ejecutando `04_ETL_Limpieza.sql`.
 4. Compruebe la disponibilidad de las vistas con `05_BI_Analytics.sql`.
+
+---
+
+## Reinicio Completo
+
+1. Ejecutar limpieza de tablas.
+2. Reiniciar identidades.
+3. Ejecutar scripts 01 al 05.
+4. Ejecutar validaciones QA.
+5. Actualizar Dashboard.
+
+---
+
+## Resultado Esperado
+
+- Sin errores.
+- Sin duplicados.
+- Integridad referencial correcta.
+

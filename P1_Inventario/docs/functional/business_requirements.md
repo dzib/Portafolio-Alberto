@@ -1,4 +1,3 @@
-
 # Requerimientos de Negocio - Sistema de Control de Inventarios (P1)
 
 ## 1. Visión General
@@ -23,3 +22,33 @@ consumo de datos operativos de inventario y ventas en mostrador
   manera automática los niveles de stock para identificar productos
   con riesgo de desabastecimiento.
 
+---
+
+## Objetivo
+
+
+Proveer una solución capaz de gestionar y analizar inventario y
+operaciones comerciales bajo condiciones similares a sistemas legacy.
+
+## Stakeholders
+
+- Gerencia Operativa
+- Analistas de Inventario
+- Analistas de Datos
+- Dirección de Negocio
+
+## Alcance
+
+Incluye:
+
+- Administración de productos.
+- Gestión de pedidos.
+- Gestión de clientes.
+- Transformación ETL.
+- Dashboard de monitoreo.
+
+## Fuera de Alcance
+
+- Integraciones en tiempo real.
+- Arquitecturas distribuidas.
+- Machine Learning.
