@@ -22,3 +22,14 @@ consumo analítico y automatización avanzada:
    visualización (Power BI, PyGWalker) y toma de decisiones ejecutivas.
 6. **Agentes Inteligentes y Orquestación:** Automatización de flujos mediante
    Apache Airflow e integración de casos de IA.
+
+## 🔄 Technical Data Flow
+
+Detalle de la ejecución de los pipelines a nivel de código y motor transaccional.
+
+## ⚙️ Etapas del Pipeline
+
+1. **Extracción:** Lectura masiva por lotes mediante subprocesos en Python (`fast_executemany`).
+2. **Transformación:** Aplicación de CTEs, funciones de ventana (`RANK`), y bloques
+ `TRY/CATCH` para resiliencia en T-SQL.
+3. **Carga:** Persistencia idempotente y ejecución de CTAS en BigQuery.
