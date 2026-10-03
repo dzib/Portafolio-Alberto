@@ -1,0 +1,24 @@
+projects:
+  - P1_Inventario
+  - P2_Escolar
+  - P3_Retail_Ventas
+  - P4_Real_World_Ingestion
+  - P5_BigQuery_Fintech
+  - P6_Orquestacion_Airflow
+  - P7_AI_Agent_Google_ADK
+
+compliance:
+  required_files:
+    - README.md
+
+  required_adrs:
+    - ADR-001.md
+    - ADR-002.md
+    - ADR-003.md
+    - ADR-004.md
+
+  required_tests:
+    - test_nulls.sql
+    - test_duplicates.sql
+    - test_business_rules.sql
+    - test_referential_integrity.sql
