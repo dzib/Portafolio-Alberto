@@ -3,22 +3,21 @@
 PROYECTO: P4_Real_World_Ingestion
 FASE: 4.2.2 - Ingesta de Alta Velocidad (Kaggle a SQL)
 AUTOR: Alberto Dzib
-DESCRIPCIÓN: 
+DESCRIPCIÓN:
     - Carga masiva del dataset DataCo (~180k registros) usando fast_executemany.
     - Optimización de rendimiento para alcanzar velocidades cercanas a 27k registros/segundo.
     - Manejo robusto de errores y reportes detallados de tiempos y velocidades.
 =======================================================================================================================================
 """
 
-import pandas as pd
+import pandas as pd  # pyright: ignore[reportMissingModuleSource]
 import time
-from sqlalchemy import text
 from db_connect import get_engine  # Reutilizamos la conexión Python-SQL Server optimizada para cargas masivas.
 
 def bulk_load():
     engine = get_engine()
     file_path = "data/DataCoSupplyChainDataset.csv"
-    
+
     print("📖 Leyendo dataset de Kaggle...")
     # Usamos el latin-1 porque estos datasets suelen traer caracteres especiales.
     df = pd.read_csv(file_path, encoding='latin-1')
@@ -50,8 +49,8 @@ def bulk_load():
     try:
         with engine.begin() as conn:
             # Limpiamos staging antes de cargar (Idempotencia)
-            conn.execute(text("TRUNCATE TABLE Staging.Kaggle_SupplyChain_Raw"))
-            
+            conn.exec_driver_sql("TRUNCATE TABLE Staging.Kaggle_SupplyChain_Raw")
+
             # Ejecución de la carga masiva
             df_staging.to_sql(
                 name='Kaggle_SupplyChain_Raw',
