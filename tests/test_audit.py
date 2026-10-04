@@ -12,4 +12,3 @@ def test_tools_exist():
     for tool in tools:
 
         assert Path(tool).exists()
-

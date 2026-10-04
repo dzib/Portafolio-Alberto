@@ -1,4 +1,25 @@
+# ==========================================
+# Configuración de Módulo - Dzib Standard V2.3.0
+# Módulo: P2_Escolar
+# ==========================================
+
 project: P2_Escolar
+
+environment:
+  name: "development"
+  version: "2.3.0"
+  module_target: "P2_Escolar"
+
+database:
+  driver: "ODBC Driver 17 for SQL Server"
+  server: "localhost"
+  port: 1433
+  trusted_connection: true
+
+execution:
+  batch_size: 10000
+  fast_executemany: true
+  log_level: "INFO"
 
 score_weight:
   architecture: 20

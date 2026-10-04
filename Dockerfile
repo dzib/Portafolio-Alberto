@@ -1,3 +1,7 @@
-from models import *
+FROM python:3.11-slim AS app
 
-model = db.Model(db ForeignKey('Control', db foreign_key='my_control'))
+WORKDIR /app
+
+COPY . .
+
+CMD ["python", "-m", "models"]

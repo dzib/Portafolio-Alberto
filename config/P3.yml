@@ -1,0 +1,20 @@
+# ==========================================
+# Configuración de Módulo - Dzib Standard V2.3.0
+# Módulo: P3_Retail_Ventas
+# ==========================================
+
+environment:
+  name: "development"
+  version: "2.3.0"
+  module_target: "P3_Retail_Ventas"
+
+database:
+  driver: "ODBC Driver 17 for SQL Server"
+  server: "localhost"
+  port: 1433
+  trusted_connection: true
+
+execution:
+  batch_size: 10000
+  fast_executemany: true
+  log_level: "INFO"
