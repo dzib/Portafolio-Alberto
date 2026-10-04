@@ -1,0 +1,37 @@
+<mxfile host="65bd71144e">
+    <diagram name="Logical_Architecture_P4" id="logical_p4">
+        <mxGraphModel dx="2046" dy="657" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="log_1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontStyle=1" value="Kaggle Dataset: DataCo CSV (180k+ Registros)" vertex="1">
+                    <mxGeometry height="60" width="280" x="154" y="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="log_2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1" value="Python 3.13 + SQLAlchemy (fast_executemany)" vertex="1">
+                    <mxGeometry height="60" width="280" x="154" y="220" as="geometry"/>
+                </mxCell>
+                <mxCell id="log_3" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1" value="SQL Server 2025: Staging (Raw Data)" vertex="1">
+                    <mxGeometry height="80" width="160" x="494" y="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="log_4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1" value="Orquestación Transaccional: BEGIN TRY...CATCH" vertex="1">
+                    <mxGeometry height="60" width="200" x="474" y="220" as="geometry"/>
+                </mxCell>
+                <mxCell id="log_5" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#e1d5e7;strokeColor=#9673a6;fontStyle=1" value="Analytics: Supply Chain Shipments &amp; PyGWalker" vertex="1">
+                    <mxGeometry height="80" width="180" x="484" y="330" as="geometry"/>
+                </mxCell>
+                <mxCell id="edge_1" edge="1" parent="1" source="log_1" target="log_2">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="edge_2" edge="1" parent="1" source="log_2" target="log_3">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="edge_3" edge="1" parent="1" source="log_3" target="log_4">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="edge_4" edge="1" parent="1" source="log_4" target="log_5">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
