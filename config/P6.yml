@@ -3,18 +3,37 @@
 # Módulo: P6_Orquestacion_Airflow
 # ==========================================
 
+project: "P6_Orquestacion_Airflow"
+
 environment:
   name: "development"
   version: "2.3.0"
   module_target: "P6_Orquestacion_Airflow"
 
-database:
-  driver: "ODBC Driver 17 for SQL Server"
-  server: "localhost"
-  port: 1433
-  trusted_connection: true
+orchestration:
+  tool: "Apache Airflow"
+  execution_mode: "DAG Sequential / Parallel"
+  scheduler_interval: "@daily"
 
-execution:
-  batch_size: 10000
-  fast_executemany: true
-  log_level: "INFO"
+score_weight:
+  architecture: 20
+  documentation: 25
+  qa: 25
+  evidence: 15
+  performance: 15
+
+required_docs:
+  - business_requirements.md
+  - business_rules.md
+  - kpis.md
+
+required_technical:
+  - components.md
+  - data_dictionary.md
+  - data_flow.md
+  - dependencies.md
+
+required_reports:
+  - benchmark_results.md
+  - performance_metrics.md
+  - qa_execution_results.md

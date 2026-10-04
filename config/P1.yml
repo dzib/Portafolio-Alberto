@@ -1,26 +1,45 @@
 # ==========================================
-# Configuración Global de Pipeline - Dzib Standard V2.3.0
-# Módulo: Enterprise Data Engineering Portfolio
+# Configuración de Módulo - Dzib Standard V2.3.0
+# Módulo: P1_Inventario
 # ==========================================
+
+project: "P1_Inventario"
 
 environment:
   name: "development"
   version: "2.3.0"
-  author: "Jesús Alberto Dzib Ku"
+  module_target: "P1_Inventario"
 
 database:
   driver: "ODBC Driver 17 for SQL Server"
   server: "localhost"
   port: 1433
   trusted_connection: true
-  encrypt: false
-
-storage:
-  local_path: "D:/Dev/Portafolio-Alberto/"
-  cloud_warehouse: "Google Cloud BigQuery"
-  dataset_region: "US"
 
 execution:
   batch_size: 10000
   fast_executemany: true
   log_level: "INFO"
+
+score_weight:
+  architecture: 20
+  documentation: 25
+  qa: 25
+  evidence: 15
+  performance: 15
+
+required_docs:
+  - business_requirements.md
+  - business_rules.md
+  - kpis.md
+
+required_technical:
+  - components.md
+  - data_dictionary.md
+  - data_flow.md
+  - dependencies.md
+
+required_reports:
+  - benchmark_results.md
+  - performance_metrics.md
+  - qa_execution_results.md

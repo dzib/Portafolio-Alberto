@@ -3,18 +3,38 @@
 # Módulo: P5_BigQuery_Fintech
 # ==========================================
 
+project: "P5_BigQuery_Fintech"
+
 environment:
   name: "development"
   version: "2.3.0"
   module_target: "P5_BigQuery_Fintech"
 
-database:
-  driver: "ODBC Driver 17 for SQL Server"
-  server: "localhost"
-  port: 1433
-  trusted_connection: true
+cloud_warehouse:
+  provider: "Google Cloud Platform"
+  service: "BigQuery"
+  dataset_region: "US"
+  query_execution: "Serverless"
 
-execution:
-  batch_size: 10000
-  fast_executemany: true
-  log_level: "INFO"
+score_weight:
+  architecture: 20
+  documentation: 25
+  qa: 25
+  evidence: 15
+  performance: 15
+
+required_docs:
+  - business_requirements.md
+  - business_rules.md
+  - kpis.md
+
+required_technical:
+  - components.md
+  - data_dictionary.md
+  - data_flow.md
+  - dependencies.md
+
+required_reports:
+  - benchmark_results.md
+  - performance_metrics.md
+  - qa_execution_results.md

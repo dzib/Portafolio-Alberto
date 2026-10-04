@@ -1,18 +1,39 @@
 # ==========================================
 # Configuración de Módulo - Dzib Standard V2.3.0
-# Módulo: P7_AI_Agents_Gooogle_ADK
+# Módulo: P7_AI_Agent_Google_ADK
+# ==========================================
+
+project: "P7_AI_Agent_Google_ADK"
+
 environment:
   name: "development"
   version: "2.3.0"
-  module_target: "P7_AI_Agents_Gooogle_ADK"
+  module_target: "P7_AI_Agent_Google_ADK"
 
-database:
-  driver: "ODBC Driver 17 for SQL Server"
-  server: "localhost"
-  port: 1433
-  trusted_connection: true
+ai_integration:
+  framework: "Google AI / LLM Tools"
+  execution_mode: "Prompt Engineering & Automation"
+  logging: "Enabled"
 
-execution:
-  batch_size: 10000
-  fast_executemany: true
-  log_level: "INFO"
+score_weight:
+  architecture: 20
+  documentation: 25
+  qa: 25
+  evidence: 15
+  performance: 15
+
+required_docs:
+  - business_requirements.md
+  - business_rules.md
+  - kpis.md
+
+required_technical:
+  - components.md
+  - data_dictionary.md
+  - data_flow.md
+  - dependencies.md
+
+required_reports:
+  - benchmark_results.md
+  - performance_metrics.md
+  - qa_execution_results.md
