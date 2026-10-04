@@ -3,3 +3,5 @@ sqlalchemy
 pyodbc
 python-dotenv
 faker
+pygwalker
+jupyter
