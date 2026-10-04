@@ -1,0 +1,25 @@
+<mxfile host="65bd71144e">
+    <diagram name="Deployment_Architecture_P4" id="deployment_p4">
+        <mxGraphModel dx="2046" dy="657" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="dep_1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontStyle=1" value="Capa de Ingesta &amp; ETL (Scripts Python / T-SQL)" vertex="1">
+                    <mxGeometry height="80" width="220" x="24" y="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="dep_2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1" value="Capa de Persistencia (SQL Server 2025)" vertex="1">
+                    <mxGeometry height="80" width="220" x="304" y="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="dep_3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontStyle=1" value="Capa de Consumo y BI (Jupyter + PyGWalker)" vertex="1">
+                    <mxGeometry height="80" width="220" x="584" y="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="dep_edge1" edge="1" parent="1" source="dep_1" target="dep_2">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="dep_edge2" edge="1" parent="1" source="dep_2" target="dep_3">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
