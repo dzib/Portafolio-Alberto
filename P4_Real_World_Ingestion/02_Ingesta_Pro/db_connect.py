@@ -12,7 +12,7 @@ DESCRIPCIÓN:
 
 import os # Para acceder a variables de entorno.
 import importlib
-import urllib # Para construir la cadena de conexión de manera segura y compatible con SQL Server.
+from urllib.parse import quote_plus # Para construir la cadena de conexión de manera segura y compatible con SQL Server.
 
 
 def _load_environment():
@@ -51,7 +51,7 @@ def get_engine():
     driver = "ODBC Driver 17 for SQL Server"
 
     # String de conexión para Windows Authentication (Trusted Connection).
-    params = urllib.parse.quote_plus(
+    params = quote_plus(
         f"DRIVER={{{driver}}};"
         f"SERVER={server};"
         f"DATABASE={database};"
@@ -76,6 +76,8 @@ def test_connection():
     if engine:
         try:
             _, text = _get_sqlalchemy()
+            if text is None:
+                return
             with engine.connect() as conn:
                 result = conn.execute(text("SELECT @@VERSION")).fetchone()
                 print("=====================================================")
