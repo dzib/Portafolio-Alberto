@@ -64,6 +64,7 @@ if (PROJECT_ROOT / "data").exists():
         print(file.name)
 
 print("=" * 80)
+
 # =============================================================================
 # DATA CONTRACT (CSV -> SQL)
 # =============================================================================
@@ -255,6 +256,22 @@ def bulk_load() -> None:
     inplace=True
     )
 
+    numeric_columns = [
+      "Days_for_shipping_real",
+      "Days_for_shipment_scheduled",
+      "Benefit_per_order",
+      "Sales_per_customer",
+      "Late_delivery_risk",
+      "Category_ID",
+      "Order_Item_Total"
+    ]
+
+    for col in numeric_columns:
+        df_staging[col] = pd.to_numeric(
+            df_staging[col],
+            errors="coerce"
+    )
+
     print(f"📊 Registros para carga : {len(df_staging):,}")
 
     engine = get_engine()
@@ -287,14 +304,19 @@ def bulk_load() -> None:
 
             print("⬆️ Ejecutando carga masiva...")
 
+            print("\nTIPOS DETECTADOS")
+            print(df_staging.dtypes)
+
+            print("\nNULLS POR COLUMNA")
+            print(df_staging.isnull().sum())
+
             df_staging.to_sql(
                 name=TARGET_TABLE,
                 schema=TARGET_SCHEMA,
                 con=conn,
                 if_exists="append",
                 index=False,
-                chunksize=10000,
-                method="multi",
+                chunksize=1000,
             )
 
         elapsed_time = time.time() - start_time
@@ -315,18 +337,25 @@ def bulk_load() -> None:
 
         print("=" * 80)
 
+"""
     except Exception as exc:
 
         print("\n" + "!" * 80)
         print("❌ ERROR DE INGESTA")
         print("!" * 80)
 
-        print(exc)
+        print(type(exc))
+        print(str(exc))
+
+        import traceback
+
+        print("\nTRACEBACK COMPLETO:")
+        traceback.print_exc()
 
         print("!" * 80)
 
         raise
-
+"""
 
 # =============================================================================
 # ENTRYPOINT
