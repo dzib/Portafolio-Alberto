@@ -28,25 +28,42 @@ from db_connect import get_engine
 # CONFIGURACIÓN GLOBAL
 # =============================================================================
 
-PROJECT_ROOT = Path(__file__).resolve().parents[2]
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
 
 CSV_FILE = (
-    PROJECT_ROOT
-    / "data"
-    / "DataCoSupplyChainDataset.csv"
+PROJECT_ROOT
+/ "data"
+/ "DataCoSupplyChainDataset.csv"
 )
 
 TARGET_SCHEMA = "Staging"
 TARGET_TABLE = "Kaggle_SupplyChain_Raw"
 
 
-print("\nCONFIGURACIÓN DETECTADA")
-print(f"PROJECT_ROOT = {PROJECT_ROOT}")
+print("\nVALIDACIÓN DE RUTAS")
+print("=" * 80)
+
+print("PROJECT_ROOT:")
+print(PROJECT_ROOT)
+
+print("\nDATA DIR:")
+print(PROJECT_ROOT / "data")
+
+print("\nEXISTE DATA DIR:")
+print((PROJECT_ROOT / "data").exists())
+
 print(f"CSV_FILE = {CSV_FILE}")
 print(f"SCHEMA = {TARGET_SCHEMA}")
 print(f"TABLE = {TARGET_TABLE}")
 
+print("\nARCHIVOS EN DATA:")
 
+if (PROJECT_ROOT / "data").exists():
+
+    for file in (PROJECT_ROOT / "data").iterdir():
+        print(file.name)
+
+print("=" * 80)
 # =============================================================================
 # DATA CONTRACT (CSV -> SQL)
 # =============================================================================
@@ -63,9 +80,9 @@ COLUMN_MAPPING = {
     "Category Name": "Category_Name",
     "Customer City": "Customer_City",
     "Customer Country": "Customer_Country",
-    "order date (DateOrders)": "Order_Date",
+    "order date (DateOrders)": "Order_Date_Raw",
     "Order Region": "Order_Region",
-    "Order Item Total": "Order_Item_Total"
+    "Order Item Total": "Order_Item_Total",
 }
 
 
