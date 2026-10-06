@@ -38,6 +38,9 @@ $tf/
 **/*.csv
 *.parquet
 
+# EXCEPCIÓN DZIB V13.0: Permitir explícitamente el sample de 100 filas
+!P4_Real_World_Ingestion/data_sample/sample_data.csv
+
 # Archivos de sistema
 .DS_Store
 Thumbs.db
@@ -55,3 +58,4 @@ build/
 # *.jpeg
 # *.png
 # *.gif
+
