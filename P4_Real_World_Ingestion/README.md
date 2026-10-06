@@ -1,4 +1,4 @@
-# 💎 P4: Real-Supply Chain & Ingesta Masiva 🧮
+# 💎 P4: Global Supply Chain & Data Ingestion 🧮
 
 ## Estado: ✅ Finalizado (FASE V4.5)
 
@@ -39,13 +39,64 @@ graph TD
 - **Observabilidad:** Implementación de logs narrativos y métricas de
   performance en tiempo real.
 
-## 🏗️ Estructura del Proyecto (Pipeline 01-05)
+## 🏗️ Estructura Completa del Proyecto (Modular & Production-Ready)
 
-1. **01_Setup_DDL:** Esquemas y constraints nominados.
-2. **02_Ingesta_Pro:** Orquestación con `SQLAlchemy` + `fast_executemany`.
-3. **03_Orquestacion_Transacciones:** Manejo de atomicidad con `TRY`/`CATCH`.
-4. **04_ETL_Cleaning:** Normalización, estandarización y auditoría financiera.
-5. **05_BI_Observabilidad:** Análisis de desempeño logístico interactivo.
+El proyecto está diseñado bajo una arquitectura desacoplada y modular:
+
+* **`01_Setup_DDL/`**: Contrato de base de datos y esquemas
+  iniciales.
+* **`02_Ingesta_Pro/`**: Módulo de Python para ingesta masiva de alta
+  velocidad (`fast_executemany`).
+* **`03_Orquestacion_Transacciones/`**: Scripts transaccionales en T-SQL
+  operados mediante `sqlcmd`.
+* **`04_ETL_Cleaning/`**: Normalización con *Single-Pass Processing*
+  (CTEs), blindaje contra nulos y validación de QA.
+* **`05_BI_Observabilidad/`**: Capa semántica con esquemas dedicados
+  (`BI`), vistas seguras contra división por cero (`NULLIF`),
+  configuraciones centralizadas (`config/settings.py`) y dashboards
+  interactivos.
+* **`Run_Pipeline.ps1`**: Orquestador maestro automatizado para ejecución
+  secuencial de extremo a extremo con validación estricta de errores (`-b`).
+
+### 📂 Mapa Estructural
+
+´´´text
+P4_Real_World_Ingestion/
+│
+├── 01_Setup_DDL/                   # Creación de esquemas y contratos iniciales
+├── 02_Ingesta_Pro/                 # Ingesta masiva (Python + SQLAlchemy)
+│   └── 02_bulk_load_kaggle.py
+├── 03_Orquestacion_Transacciones/  # Cargas transaccionales y control con SQLcmd
+│   ├── 01_load_analytics.sql
+│   └── 02_Consulta_a_StagingExecution_Logs.sql
+├── 04_ETL_Cleaning/                # Procesamiento Single-Pass, limpieza y QA matemático
+│   ├── 01_clean_shipments.sql
+│   ├── 02_QA_Anomaly_Check.sql
+│   ├── 02_Verificacion_reg.sql
+│   └── 03_upgrade_execution_logs.sql
+├── 05_BI_Observabilidad/           # Capa semántica y observabilidad
+│   ├── config/
+│   │   └── settings.py             # Configuración centralizada de entorno y conexión
+│   ├── logs/
+│   │   └── .gitkeep                # Trazabilidad de ejecución y auditoría
+│   ├── 01_business_vistas.sql      # Vistas corporativas para Power BI / PyGWalker
+│   ├── 02_Interactive_Dashboard.ipynb
+│   ├── dashboard.py
+│   └── requirements.txt
+├── architecture/                   # Diagramas y modelos conceptuales
+├── assets/                         # Evidencias visuales y capturas
+├── data/                           # Almacenamiento local de datasets de trabajo
+├── data_sample/                    # Muestras de prueba rápida (sample_data.csv)
+├── docs/                           # Documentación técnica y bitácoras
+├── notebooks/                      # Jupyter Notebooks experimentales y de análisis
+├── scripts/                        # Utilidades y automatizaciones auxiliares
+├── tests/                          # Pruebas unitarias e integración de pipelines
+├── .env                            # Configuración de entorno
+├── .env.example                    # Plantilla pública de configuración
+├── Run_Pipeline.ps1                # Orquestador maestro automatizado (PowerShell)
+├── requirements.txt                # Dependencias de Python del módulo
+└── README.md                       # Documentación principal del proyecto
+´´´
 
 ---
 
