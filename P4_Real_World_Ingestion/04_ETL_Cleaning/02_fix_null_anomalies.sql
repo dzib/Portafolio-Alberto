@@ -15,6 +15,14 @@ USE P4_Global_SupplyChain;
 GO
 
 -- FIX DE INTEGRIDAD: Asegurar que registros existentes no queden como NULL
-UPDATE Analytics.SupplyChain_Shipments
-SET Is_Anomaly = 0
-WHERE Is_Anomaly IS NULL;
+IF COL_LENGTH(N'Analytics.SupplyChain_Shipments', N'Is_Anomaly') IS NULL
+BEGIN
+    ALTER TABLE Analytics.SupplyChain_Shipments
+    ADD Is_Anomaly BIT NULL;
+END;
+
+-- Ejecutar dinámicamente para que SQL Server valide la columna después del ALTER TABLE.
+EXEC sys.sp_executesql N'
+    UPDATE Analytics.SupplyChain_Shipments
+    SET Is_Anomaly = CAST(0 AS BIT)
+    WHERE Is_Anomaly IS NULL;';
