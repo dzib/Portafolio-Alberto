@@ -1,0 +1,4 @@
+´´´mermaid
+Carpeta P5_BigQuery_Fintech/assets/diagrams/
+Qué poner: Un diagrama de arquitectura en formato Markdown con Mermaid (o un placeholder documentado) que visualice el flujo de datos desde el dataset raw hasta la tabla agregada loan_count_by_year.
+´´´
