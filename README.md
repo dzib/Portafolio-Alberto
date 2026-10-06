@@ -21,7 +21,7 @@
 > arquitecturas de alto rendimiento, resiliencia de bases de datos y
 > migración de sistemas legacy. Experto en transformar entornos críticos y
 > metadatos desestructurados en ecosistemas de información optimizados
-> mediante el **Dzib Standard (V2.3.0).**
+> mediante el **Dzib Standard (V3.0.0).**
 
 **Core Stack:** `SQL Server 2025` | `Python 3.13` | `Git Flow` |
 `Excel BI (ODBC)` | `Google Cloud Platfor`
@@ -110,12 +110,13 @@ En este portafolio se buscó aplicar un rigor de ingeniería en cada línea de c
 
 <!-- markdownlint-disable MD013 -->
 
+
 |   Tecnología   |                                                           Badges                                                           |                                           Especialidad y Dominio                                           |
-| :-------------: | :------------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------: |
-|   SQL Server   | ![SQL](https://learn.microsoft.com/en-us/training/achievements/configure-sql-server-resources-for-optimal-performance.svg) |         Arquitecturas de alto rendimiento,**Single-Pass Processing** , y normalización 1NF.         |
+| :---------------: | :--------------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------: |
+|   SQL Server   | ![SQL](https://learn.microsoft.com/en-us/training/achievements/configure-sql-server-resources-for-optimal-performance.svg) |            Arquitecturas de alto rendimiento,**Single-Pass Processing** , y normalización 1NF.            |
 |     Python     |                           ![Python](https://img.icons8.com/?size=128&id=OhhCHl3xDHfn&format=png)                           | Orquestación de pipelines, manipulación de grandes volúmenes de datos y automatización de procesos ETL. |
 |    Data Viz    |                          ![Dashboard](https://cdn-icons-png.flaticon.com/512/10397/10397128.png)                          |     Creación de dashboards interactivos, análisis exploratorio de datos (EDA) y reportes ejecutivos.     |
-|  Data Quality  |                         ![Data Quality](https://cdn-icons-png.flaticon.com/512/10179/10179085.png)                         |     **Data Cleansing** avanzado: corrección de acentos, capitalización y atomicidad semántica.     |
+|  Data Quality  |                         ![Data Quality](https://cdn-icons-png.flaticon.com/512/10179/10179085.png)                         |        **Data Cleansing** avanzado: corrección de acentos, capitalización y atomicidad semántica.        |
 | Infraestructura |               ![Tropy](https://learn.microsoft.com/en-us/training/achievements/understand-data-concepts.svg)               | Gestión de versiones, automatización de servicios de SO y configuración de entornos de alto rendimiento. |
 
 <!-- markdownlint-enable MD013 -->
@@ -127,11 +128,13 @@ En este portafolio se buscó aplicar un rigor de ingeniería en cada línea de c
 ```mermaid
 graph LR
     A[Fuentes: CSV/Kaggle/Faker] -- Python Ingestion --> B[(SQL Server 2025)]
-    B -- T-SQL ETL --> C{Data Warehouse}
+    B -- T-SQL ETL --> C{Data Warehouse Local}
     C -- SQL Views --> D[Power BI / PyGWalker]
-    E[Dataset Financiero] -- GCP --> F[(BigQuery)]
+    E[Dataset Financiero] -- GCP --> F[(BigQuery Serverless)]
     F -- CTAS --> G[Tablas Agregadas Analíticas]
-    H[Orquestación Airflow] --> A
+    H[Apache Airflow] --> A
+    H --> B
+    I[Google ADK AI Agent] --> F
     style A fill:#34A853,color:#fff
     style B fill:#0078D4,color:#fff
     style C fill:#FF6D00,color:#fff
@@ -140,6 +143,7 @@ graph LR
     style F fill:#4285f4,color:#fff
     style G fill:#FF6D00,color:#fff
     style H fill:#00acee,color:#fff
+    style I fill:#AB47BC,color:#fff
 ```
 
 ---
@@ -150,14 +154,10 @@ graph LR
 
 <!-- markdownlint-disable MD013 -->
 
-|    **Categoría**    |  **Métrica**  |         **Benchmark**         |    **Proyecto**    | **Estado** |
-| :------------------------: | :-------------------: | :---------------------------------: | :----------------------: | :--------------: |
-|      **T-SQL**      |    **Carga**    |       **120 ms (5k+)**       |   **P2_Escolar**   |        🚀        |
-|  **Normalización**  |  **Limpieza**  |      **Single-Pass ETL**      | **P1_Inventario** |        📦        |
-|     **Ingesta**     |    **Carga**    | **23.8k reg/seg (180k tot.)** | **P4_SupplyChain** |        ⚡        |
-|  **Orquestación**  |    **DAGs**    |  **Automatización Robusta**  |   **P6_Airflow**   |        🔄        |
-| **Calidad de Datos** | **Validación** |      **PyTest + CI/CD**      |  **Global / P5**  |        🧪        |
-|      **Cloud**      | **Agregación** |     **CTAS idempotente**     |  **P5_BigQuery**  |       ☁️       |
+
+| **Categoría** |  **Métrica**   |       **Benchmark**        |  **Proyecto**   | **Estado** |
+| :-----------: | :------------: | :------------------------: | :-------------: | :--------: |
+| **AI Agent**  | **Deployment** | **Google ADK Integration** | **P7_AI_Agent** |     🤖      |
 
 <!-- markdownlint-enable MD013 -->
 
@@ -184,6 +184,8 @@ Se incluyen archivos de configuración clave: `.prettierrc`, `.prettierignore`,
 - `📁 P5_BigQuery_Fintech`: Agregación de datos y creación de tablas nativas
   en Google Cloud Platform.
 - `📂 P6_Orquestacion_Airflow`: Orquestación de flujos de trabajo con Apache Airflow.
+- `📁 P7_AI_Agent_Google_ADK`: Implementación de un agente de IA para
+  automatización de procesos en la nube.
 - `📂 .github`: Contiene flujos de trabajo de CI/CD y plantillas de issues.
 - `📂 .venv`: Entorno virtual de Python para reproducibilidad de dependencias.
 - `📂 .vscode`: Configuración de entorno de desarrollo para VS Code.
@@ -265,15 +267,17 @@ SQL_Portafolio/
 
 ### 📊 Diagrama de Estructura del Portafolio
 
-``````mermaid
+```mermaid
 graph LR
-    A[SQL_Portafolio]
+    A[Portafolio-Alberto]
 
     A --> B[P1_Inventario]
     A --> C[P2_Escolar]
     A --> D[P3_Retail_Ventas]
     A --> E[P4_Real_World_Ingestion]
     A --> F[P5_BigQuery_Fintech]
+    A --> G[P6_Orquestacion_Airflow]
+    A --> H[P7_AI_Agent_Google_ADK]
 
     B --> B1[Scripts]
     B --> B2[img]
@@ -300,29 +304,40 @@ graph LR
     F --> F2[query_ctas.sql]
     F --> F3[README.md]
 
-    A --> G[README.md]
-    A --> H[.prettierrc]
-    A --> I[.prettierignore]
-    A --> J[.editorconfig]
-    A --> K[.gitignore]
+    G --> G1[dags]
+    G --> G2[plugins]
+    G --> G3[docker-compose.yml]
+    G --> G4[README.md]
+
+    H --> H1[docs]
+    H --> H2[scripts]
+    H --> H3[README.md]
+
+    A --> I[README.md]
+    A --> J[.prettierrc]
+    A --> K[.prettierignore]
+    A --> L[.editorconfig]
+    A --> M[.gitignore]
 
     %% Estilos ejecutivos
     style A fill:#004C99,color:#fff,stroke:#0078D4,stroke-width:2px
 
-    %% Degradado por proyectos
+    %% Degradado por proyectos (P1 a P7)
     style B fill:#66A3FF,color:#000
     style C fill:#66A3FF,color:#000
     style D fill:#66A3FF,color:#000
     style E fill:#66A3FF,color:#000
     style F fill:#66A3FF,color:#000
+    style G fill:#66A3FF,color:#000
+    style H fill:#66A3FF,color:#000
 
     %% Archivos clave
-    style K fill:#0098D4,color:#fff
-    style G fill:#34A853,color:#fff
-    style H fill:#FF6D00,color:#fff
-    style I fill:#AB47BC,color:#fff
-    style J fill:#F2C811,color:#000
-``````
+    style M fill:#0098D4,color:#fff
+    style I fill:#34A853,color:#fff
+    style J fill:#FF6D00,color:#fff
+    style K fill:#AB47BC,color:#fff
+    style L fill:#F2C811,color:#000
+```
 
 ---
 
@@ -352,6 +367,14 @@ graph LR
 
 ## 📁 Proyectos destacados
 
+### 🤖 \[P7\] AI Agent with Google ADK (v1.0.0) - Nuevo
+
+*Implementación de agentes inteligentes y analítica avanzada asistida por IA.*
+
+* **Arquitectura:** Diseño modular bajo Google ADK con flujos estructurados de gobernanza.
+* **Integración:** Coordinación de respuestas orientadas a datos operativos
+  y de nube.
+
 ### 🔄 \[P6\] Orquestación de Procesos con Apache Airflow
 
 *Automatización y gestión de flujos de trabajo orientados a datos.*
@@ -359,7 +382,7 @@ graph LR
 * **Orquestación:** Diseño y estructuración de DAGs para la ejecución
   secuencial de tareas ETL.
 * **Resiliencia:** Manejo de reintentos automáticos ante fallos de conexión
-  y alertas operativas.
+  y alertas operativas mediante Docker Compose local.
 
 ### ☁️ \[P5\] Google Cloud BigQuery: Fintech Analytics (v1.0.0) - Nuevo
 
@@ -404,9 +427,10 @@ graph LR
 
 ### 🎓 \[P2\] Sistema de Gestión Académica (P2_Escolar / v2.1.0)
 
-Ecosistema escolar resiliente con triple extracción y analítica presupuestaria.
+*Ecosistema escolar resiliente con triple extracción y analítica presupuestaria.*
 
-- **Estructura:** Diseño de esquemas segregados (`Catálogos`, `Operaciones`).
+- **Estructura:** Diseño de esquemas segregados (`Catálogos`, `Operaciones`)
+  aplicando control transaccional estricto.
 - **Calidad:** Implementación de bloques **TRY/CATCH**, transacciones y
   manejo de desbordamientos decimales.
 - **ETL:** Transformación de strings complejos en datos tipados (`DATETIME2`, `DECIMAL`).
@@ -447,8 +471,9 @@ pytest -v
 *Simulación de migración de un sistema Legacy con datos no atómicos a una
 arquitectura optimizada para BI.*
 
-|      Dimensión      | Estado Legacy (Origen) | Estado Optimizado |
-| :------------------: | :--------------------: | :---------------: |
+
+|   Dimensión   | Estado Legacy (Origen) | Estado Optimizado |
+| :--------------: | :----------------------: | :-----------------: |
 | **Atomicidad** |      `Prod_Ref_3      |        V3`        |
 | **Geografía** |       `queretaro       |       QRO`       |
 |  **Estatus**  |        `PAGADO        |    COMPLETADO`    |
@@ -509,9 +534,8 @@ ingeniería que simulan entornos de producción real:
 
 Este portafolio está diseñado para ser auditable y reproducible:
 
-1. **Exploración por Proyectos:** Cada carpeta (`P1` a `P5`) contiene una
-   secuencia numerada (01-05 o subcarpeta Scripts/) que representa el ciclo de
-   vida del pipeline.
+1. **Exploración por Proyectos:** Cada carpeta (`P1` a `P7`) contiene
+   su respectiva estructura de código y documentación técnica.
 2. **Documentación de Proyecto:** Cada subcarpeta incluye su propio
    `README.md`, detallando métricas de performance específicas y evidencias
    visuales (`/img`).
@@ -519,7 +543,8 @@ Este portafolio está diseñado para ser auditable y reproducible:
    - SQL Server 2025 | SSMS 22.
    - Python 3.14 con librerías `pandas`, `sqlalchemy`, `pyodbc`, `pygwalker`.
    - Driver ODBC 17 para SQL Server.
-   - Cuenta activa de Google Cloud Platform (solo para P5).
+   - Apache Airflow (Docker local para P6).
+   - Cuenta activa de Google Cloud Platform (para P5 y P7).
 
 ---
 
@@ -527,13 +552,15 @@ Este portafolio está diseñado para ser auditable y reproducible:
 
 Mi meta es la automatización total y la integración con la nube:
 
-- [X] Cloud Analytics (Logrado): Implementación de ecosistemas de consulta
-  serverless en Google Cloud Platform.
-- [X] **Cloud Bridge:** Migración de pipelines hacia **Azure SQL Database**
+- [X]  Cloud Analytics (Logrado): Implementación de ecosistemas de consulta
+  serverless en Google Cloud Platform (P5).
+- [X]  **Cloud Bridge:** Migración de pipelines hacia **Azure SQL Database**
   y automatización con **GitHub Actions** (CI/CD).
-
-- [X]  **Orquestación de Procesos:** Automatización de tareas masivas mediante
+- [X]  **Orquestación de Procesos:** Automatización de tareas masivas
+  mediante Apache Airflow (P6).
   **Task Schedulers** y monitoreo de salud de datos.
+- [X]  **AI Integration:** Agentes inteligentes con Google ADK (P7).
+
 - []  **Dockerización (Próximo proyecto):** Implementación de contenedores
   Docker para orquestar servicios de SQL Server y Python de forma portable.
 - []  **Visualización Avanzada:** Integración de los flujos analíticos actuales
