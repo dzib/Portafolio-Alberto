@@ -1,6 +1,6 @@
 # 💎 P4: Real-Supply Chain & Ingesta Masiva 🧮
 
-## Estado: ✅ Finalizado (FASE V4.6) 🏆
+## Estado: ✅ Finalizado (FASE V4.3)
 
 ## 🎯 Objetivo
 
@@ -51,14 +51,17 @@ graph TD
 
 ## Arquitectura
 
-![Pipelinegrams/P4_pipeline.png](assets/diagrams/P4_pipeline.png)
+![Arquitectura del pipeline](assets/diagrams/P4_pipeline.png)
+
+Fuente editable:
+
+assets/diagrams/P4_pipeline.drawio
 
 ---
 
 ## 📊 Evidencia Cuantitativa y Visual
 
-## Benchmark de Rendimiento
-
+### Benchmark de Rendimiento
 
 | Ejecución | Tiempo |  Velocidad   |
 | :-------: | :----: | :----------: |
@@ -73,7 +76,7 @@ Las diferencias de rendimiento se atribuyen a:
 - Logging ampliado
 
 La versión actual prioriza gobernanza y trazabilidad sobre la velocidad máxima.
- V2.4.0 incorpora validaciones adicionales:
+V2.4.0 incorpora validaciones adicionales:
 
 - Data Contract
 - Schema Validation
@@ -120,55 +123,51 @@ Staging.Kaggle_SupplyChain_Raw
 | Tiempo total       | 9.68 segundos    |
 | Velocidad          | 18,651 filas/seg |
 
+---
+
 ### Evidencias
 
 ## Evidencia 01 - Base de datos creada
 
 ![Base de datos creada](assets/evidence/01_database_created.png)
 
----
-
 ## Evidencia 02 - Schemas creados
 
 ![Schemas creados](assets/evidence/02_schemas_created.png)
-
----
 
 ## Evidencia 03 - Estructura de tabla
 
 ![Estructura de tabla](assets/evidence/03_table_structure.png)
 
----
-
 ## Evidencia 04 - Ingesta completada
 
-![Ingesta completada](assets/evidence/04_bulk_load_completed.png)
+![Evidencia 04](assets/evidence/04_bulk_load_completed.png)
 
----
 
 ## Evidencia 05 - Validación de registros
 
 ![Validación de registros](assets/evidence/05_row_count_validation.png)
 
----
-
 ## Evidencia 06 - Muestra de registros
 
 ![Muestra de registros](assets/evidence/06_sample_records.png)
 
-### Validaciones implementadas
+## Evidencia 07 - Dashboard de eficiencia logística
 
-- Validación de rutas
-- Validación de archivo CSV
-- Validación de esquema SQL
-- Data Contract CSV → SQL
-- Validación de tipos
-- Validación de nulos
-- Carga idempotente mediante TRUNCATE + INSERT
+![Dashboard de eficiencia logística](assets/evidence/07_transaction_load_success.png)
+
+
+## Evidencia 08
+
+![Dashboard de eficiencia logística](assets/evidence/08_execution_logs.png)
+
+## Evidencia 09
+
+![Dashboard de eficiencia logística](assets/evidence/09_analytics_sample.png)
 
 ---
 
-### Validaciones
+### Validaciones implementadas
 
 - Data Contract
 - Schema Validation
@@ -176,6 +175,7 @@ Staging.Kaggle_SupplyChain_Raw
 - Null Validation
 - SQL Type Validation
 - Idempotent Load
+- Performance Monitoring
 
 ---
 
