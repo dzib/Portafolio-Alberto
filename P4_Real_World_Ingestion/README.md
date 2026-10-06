@@ -1,6 +1,6 @@
 # 💎 P4: Real-Supply Chain & Ingesta Masiva 🧮
 
-## Estado: ✅ Finalizado (FASE V4.3)
+## Estado: ✅ Finalizado (FASE V4.5)
 
 ## 🎯 Objetivo
 
@@ -62,6 +62,7 @@ assets/diagrams/P4_pipeline.drawio
 ## 📊 Evidencia Cuantitativa y Visual
 
 ### Benchmark de Rendimiento
+
 
 | Ejecución | Tiempo |  Velocidad   |
 | :-------: | :----: | :----------: |
@@ -143,7 +144,6 @@ Staging.Kaggle_SupplyChain_Raw
 
 ![Evidencia 04](assets/evidence/04_bulk_load_completed.png)
 
-
 ## Evidencia 05 - Validación de registros
 
 ![Validación de registros](assets/evidence/05_row_count_validation.png)
@@ -155,7 +155,6 @@ Staging.Kaggle_SupplyChain_Raw
 ## Evidencia 07 - Dashboard de eficiencia logística
 
 ![Dashboard de eficiencia logística](assets/evidence/07_transaction_load_success.png)
-
 
 ## Evidencia 08
 
