@@ -607,7 +607,7 @@ Intelligence.
 
 ### Identidad profesional
 
-> #TheDzibStandard #DataEngineering #V2.3.0
+> #TheDzibStandard #DataEngineering #V3.0.0
 
 🚧 En constante evolución.
 
