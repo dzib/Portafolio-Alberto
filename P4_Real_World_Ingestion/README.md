@@ -67,6 +67,34 @@ graph TD
 + Figura 3: Ejecución de carga transaccional en SQL Server.
   ![EJECUCIÓN TRANSACCIONAL SQL SERVER](../assets/P4/img/Orq_Tran_SQL_de_Staging_Analytics.png)
 
+## Resultados de Ingesta V4.5
+
+### Dataset
+
+DataCo Supply Chain Dataset
+
+### Tabla destino
+
+Staging.Kaggle_SupplyChain_Raw
+
+### Métricas de rendimiento
+
+| Métrica   | Resultado            |
+| --------- | -------------------- |
+| Registros | 180,519              |
+| Tiempo    | 9.68 segundos        |
+| Velocidad | 18,651 registros/seg |
+
+### Validaciones implementadas
+
+- Validación de rutas
+- Validación de archivo CSV
+- Validación de esquema SQL
+- Data Contract CSV → SQL
+- Validación de tipos
+- Validación de nulos
+- Carga idempotente mediante TRUNCATE + INSERT
+
 ---
 
 ## 📝 Bitácora de Troubleshooting (🧠 Retos Superados)

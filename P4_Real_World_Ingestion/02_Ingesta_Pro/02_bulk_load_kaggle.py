@@ -338,9 +338,15 @@ def bulk_load() -> None:
         print("=" * 80)
 
     except Exception as error:
-        print(f"❌ Error durante la carga masiva: {error}")
-        raise
 
+        print("\n" + "!" * 80)
+        print("❌ ERROR DE INGESTA")
+        print("!" * 80)
+
+        print(error)
+
+        import traceback
+        traceback.print_exc()
 # =============================================================================
 # ENTRYPOINT
 # =============================================================================
