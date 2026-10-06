@@ -94,20 +94,24 @@ BEGIN TRY
     -- 4. REGISTRO DE AUDITORÍA
     -------------------------------------------------------------------------------------
 
-    INSERT INTO Staging.Execution_Logs
-    (
+INSERT INTO Staging.Execution_Logs
+(
     PhaseName,
     RowsAffected,
     ExecutionTime_MS,
-    Status
-    )
-    VALUES
-    (
+    Status,
+    ServerName,
+    DatabaseName
+)
+VALUES
+(
     'FASE 4.4 ETL CLEANING',
     @RowsAffected,
     DATEDIFF(MILLISECOND,@StartTime,SYSUTCDATETIME()),
-    'SUCCESS'
-    );
+    'SUCCESS',
+    CAST(SERVERPROPERTY('ServerName') AS NVARCHAR(255)),
+    DB_NAME()
+);
 
     PRINT '================================================================';
     PRINT '✅ ETL completado exitosamente';
