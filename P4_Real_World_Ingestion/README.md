@@ -49,13 +49,60 @@ graph TD
 
 ---
 
-## Arquitectura
+## 🚀 Arquitectura y Trazabilidad (DaaS / Data as a Service)
+
+Este proyecto opera bajo un modelo de despliegue continuo y arquitectura de
+capas estricta (Estándar Dzib V13.0), diseñado para integrarse como un backend
+analítico escalable (PaaS) para herramientas de Business Intelligence.
 
 ![Arquitectura del pipeline](assets/diagrams/P4_pipeline.png)
 
 Fuente editable:
 
 assets/diagrams/P4_pipeline.drawio
+
+### 🏗️ Diseño de Capas (Single Source of Truth)
+
+1. **Staging:** Ingesta masiva (High-Speed `fast_executemany` vía
+   Python). Datos crudos y logs de auditoría (`ExecutionGUID`).
+2. **Analytics:** Capa física de almacenamiento limpio. Construida mediante
+   **Single-Pass Processing** en memoria (CTEs) para garantizar atomicidad y
+   latencia sub-segundo (< 1s para +180k registros).
+3. **BI (Capa Semántica):** Vistas virtualizadas
+   (`vw_Shipping_Efficiency`, `vw_Category_Performance`). Resuelven reglas de
+   negocio financieras (ej. "Bug del Negativo" vía `ABS()`) y blindan contra
+   nulos visuales, descargando el motor DAX en la capa de presentación.
+
+---
+
+## 📦 Changelog & Release Management
+
+### v1.2.0-rc.1 - 2026-10-06 (Pre-Release / Staging)
+
+#### Capa Semántica y Refactorización Atómica
+
+* **Added (Características Añadidas):**
+
+  * Despliegue del esquema segmentado `BI` para consumo exclusivo de Power BI
+    / ODBC.
+  * Implementación de vista `BI.vw_Shipping_Efficiency` para cálculo SARGable
+    de riesgo logístico por región.
+  * Implementación de vista `BI.vw_Category_Performance` con blindaje contra
+    división por cero (`NULLIF`).
+  * Script de auditoría matemática de anomalías
+    (`02_QA_Anomaly_Check.sql`) integrado al pipeline de QA.
+* **Changed (Modificaciones de Arquitectura):**
+
+  * Refactorización total de `01_clean_shipments.sql` hacia el estándar
+    **Single-Pass Processing**.
+  * Idempotencia destructiva implementada: el pipeline ahora realiza
+    `DROP TABLE` condicional para garantizar la integridad exacta de las 16
+    columnas analíticas requeridas.
+* **Removed (Depreciaciones):**
+
+  * Eliminación del script de parches post-ingesta
+    (`02_fix_null_anomalies.sql`). La inserción atómica garantiza la
+    inexistencia de nulos desde la raíz.
 
 ---
 

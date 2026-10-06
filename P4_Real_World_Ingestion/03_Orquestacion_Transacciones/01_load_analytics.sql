@@ -42,16 +42,22 @@ BEGIN TRY
 --- -- ---------------------------------------------------------------------------------------------------------------------
     -- 2. CARGA DE DATOS CON TRANSFORMACIÓN BÁSICA (TRY_CAST para fechas)
 --- -- ---------------------------------------------------------------------------------------------------------------------
+
     INSERT INTO Analytics.SupplyChain_Shipments (
-        Type, Delivery_Status, Late_delivery_risk, Category_Name, 
-        Customer_City, Order_Region, Order_Date, Total_Sales, Profit
-    )
-    SELECT 
-        Type, Delivery_Status, Late_delivery_risk, Category_Name,
-        Customer_City, Order_Region, 
-        TRY_CAST(Order_Date_Raw AS DATETIME2), -- Intento de conversión de fecha
-        Order_Item_Total, Benefit_per_order
-    FROM Staging.Kaggle_SupplyChain_Raw;
+            Type, Delivery_Status, Late_delivery_risk, Category_Name, 
+            Customer_City, Order_Region, Order_Date, Total_Sales, Profit
+        )
+        SELECT 
+            Type, 
+            Delivery_Status, 
+            Late_delivery_risk, 
+            Category_Name,
+            Customer_City, 
+            Order_Region, 
+            TRY_CAST(Order_Date_Raw AS DATETIME2), -- 👈 Cambiar por Order_Date_Raw
+            Order_Item_Total,                     -- 👈 Cambiar por Order_Item_Total
+            Benefit_per_order                     -- 👈 Cambiar por Benefit_per_order
+        FROM Staging.Kaggle_SupplyChain_Raw;
 
     SET @RowsAffected = @@ROWCOUNT;
 
