@@ -7,7 +7,8 @@
 Orquestar un pipeline híbrido de alto rendimiento para procesar
 datasets reales de DataCo Global Supply Chain, integrando Python
 3.13 para la carga masiva y SQL Server 2025 para la
-transformación y analítica avanzada.
+transformación y analítica avanzada. (Implementado desde DataCo
+ Supply Chain Dataset hacia SQL Server utilizando SQLAlchemy y PyODBC.)
 
 ```mermaid
 graph TD
@@ -48,15 +49,48 @@ graph TD
 
 ---
 
+## Arquitectura
+
+![Pipelinegrams/P4_pipeline.png](assets/diagrams/P4_pipeline.png)
+
+---
+
 ## 📊 Evidencia Cuantitativa y Visual
 
-*Resumen de la ingesta.
+## Benchmark de Rendimiento
 
-|       **Métrica**       | **Resultado** |
-| :-----------------------------: | :-----------------: |
-|     **Volumen Total**     |  180,519 registros  |
-|   **Tiempo de Ingesta**   |    7.56 segundos    |
-| **Tasa de Transferencia** |  23,866.62 reg/seg  |
+
+| Ejecución | Tiempo |  Velocidad   |
+| :-------: | :----: | :----------: |
+|    V1     | 7.56 s | 23,866 reg/s |
+|    V2     | 9.68 s | 18,651 reg/s |
+
+Las diferencias de rendimiento se atribuyen a:
+
+- Instrumentación adicional
+- Validaciones de contrato
+- Validaciones de esquema
+- Logging ampliado
+
+La versión actual prioriza gobernanza y trazabilidad sobre la velocidad máxima.
+ V2.4.0 incorpora validaciones adicionales:
+
+- Data Contract
+- Schema Validation
+- Null Validation
+- SQL Type Validation
+- Idempotent Load
+
+## Resultados de Ingesta V1.0.0
+
+*Resumen de la ingesta. Prueba de performance en Python 3.13 con SQLAlchemy y PyODBC.*
+
+
+|       **Métrica**       |   **Resultado**   |
+| :-------------------------: | :-----------------: |
+|     **Volumen Total**     | 180,519 registros |
+|   **Tiempo de Ingesta**   |   7.56 segundos   |
+| **Tasa de Transferencia** | 23,866.62 reg/seg |
 
 ## 📸 Galería de Hitos
 
@@ -67,7 +101,7 @@ graph TD
 + Figura 3: Ejecución de carga transaccional en SQL Server.
   ![EJECUCIÓN TRANSACCIONAL SQL SERVER](../assets/P4/img/Orq_Tran_SQL_de_Staging_Analytics.png)
 
-## Resultados de Ingesta V4.5
+## Resultados de Ingesta V2.4.0
 
 ### Dataset
 
@@ -77,13 +111,50 @@ DataCo Supply Chain Dataset
 
 Staging.Kaggle_SupplyChain_Raw
 
-### Métricas de rendimiento
+### Resultados de Ingesta
 
-| Métrica   | Resultado            |
-| --------- | -------------------- |
-| Registros | 180,519              |
-| Tiempo    | 9.68 segundos        |
-| Velocidad | 18,651 registros/seg |
+
+| Métrica           | Resultado        |
+| -------------------- | ------------------ |
+| Registros cargados | 180,519          |
+| Tiempo total       | 9.68 segundos    |
+| Velocidad          | 18,651 filas/seg |
+
+### Evidencias
+
+## Evidencia 01 - Base de datos creada
+
+![Base de datos creada](assets/evidence/01_database_created.png)
+
+---
+
+## Evidencia 02 - Schemas creados
+
+![Schemas creados](assets/evidence/02_schemas_created.png)
+
+---
+
+## Evidencia 03 - Estructura de tabla
+
+![Estructura de tabla](assets/evidence/03_table_structure.png)
+
+---
+
+## Evidencia 04 - Ingesta completada
+
+![Ingesta completada](assets/evidence/04_bulk_load_completed.png)
+
+---
+
+## Evidencia 05 - Validación de registros
+
+![Validación de registros](assets/evidence/05_row_count_validation.png)
+
+---
+
+## Evidencia 06 - Muestra de registros
+
+![Muestra de registros](assets/evidence/06_sample_records.png)
 
 ### Validaciones implementadas
 
@@ -96,6 +167,30 @@ Staging.Kaggle_SupplyChain_Raw
 - Carga idempotente mediante TRUNCATE + INSERT
 
 ---
+
+### Validaciones
+
+- Data Contract
+- Schema Validation
+- Route Validation
+- Null Validation
+- SQL Type Validation
+- Idempotent Load
+
+---
+
+### Query de Validación
+
+```sql
+SELECT COUNT(*)
+FROM Staging.Kaggle_SupplyChain_Raw;
+```
+
+Resultado esperado:
+
+```text
+180519
+```
 
 ## 📝 Bitácora de Troubleshooting (🧠 Retos Superados)
 
@@ -170,4 +265,4 @@ Staging.Kaggle_SupplyChain_Raw
 ---
 
 *Autor:* Alberto Dzib
-*Versión:* 1.0.0
+*Versión:* 2.4.0

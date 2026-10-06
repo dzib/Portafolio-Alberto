@@ -1,0 +1,80 @@
+<mxfile host="65bd71144e">
+    <diagram name="P4 Pipeline" id="0">
+        <mxGraphModel dx="3092" dy="1570" grid="1" gridSize="11" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="1654" background="light-dark(#ffffff, #121212)" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="csv" parent="1" style="rounded=1;fillColor=#FCE4EC;strokeColor=#AD1457;" value="DataCo CSV" vertex="1">
+                    <mxGeometry height="60" width="180" x="495" y="88" as="geometry"/>
+                </mxCell>
+                <mxCell id="python" parent="1" style="rounded=1;fillColor=#E3F2FD;strokeColor=#1565C0;" value="Python ETL" vertex="1">
+                    <mxGeometry height="60" width="180" x="495" y="188" as="geometry"/>
+                </mxCell>
+                <mxCell id="alchemy" parent="1" style="rounded=1;fillColor=#E3F2FD;strokeColor=#1565C0;" value="SQLAlchemy" vertex="1">
+                    <mxGeometry height="60" width="180" x="495" y="288" as="geometry"/>
+                </mxCell>
+                <mxCell id="sql" parent="1" style="rounded=1;fillColor=#E8F5E9;strokeColor=#2E7D32;" value="SQL Server" vertex="1">
+                    <mxGeometry height="60" width="180" x="495" y="388" as="geometry"/>
+                </mxCell>
+                <mxCell id="staging" parent="1" style="rounded=1;fillColor=#E8F5E9;strokeColor=#2E7D32;" value="Staging.Kaggle_SupplyChain_Raw" vertex="1">
+                    <mxGeometry height="60" width="340" x="415" y="498" as="geometry"/>
+                </mxCell>
+                <mxCell id="dimcat" parent="1" style="rounded=1;fillColor=#FFF8E1;strokeColor=#F9A825;" value="Analytics.DimCategory" vertex="1">
+                    <mxGeometry height="60" width="220" x="245" y="616" as="geometry"/>
+                </mxCell>
+                <mxCell id="dimcust" parent="1" style="rounded=1;fillColor=#FFF8E1;strokeColor=#F9A825;" value="Analytics.DimCustomer" vertex="1">
+                    <mxGeometry height="60" width="220" x="475" y="616" as="geometry"/>
+                </mxCell>
+                <mxCell id="dimreg" parent="1" style="rounded=1;fillColor=#FFF8E1;strokeColor=#F9A825;" value="Analytics.DimRegion" vertex="1">
+                    <mxGeometry height="60" width="220" x="705" y="612" as="geometry"/>
+                </mxCell>
+                <mxCell id="fact" parent="1" style="rounded=1;fillColor=#E8F5E9;strokeColor=#2E7D32;" value="Analytics.Fact_SupplyChain" vertex="1">
+                    <mxGeometry height="60" width="280" x="445" y="726" as="geometry"/>
+                </mxCell>
+                <mxCell id="bi" parent="1" style="rounded=1;fillColor=#FFF3E0;strokeColor=#EF6C00;" value="PyGWalker Dashboard" vertex="1">
+                    <mxGeometry height="60" width="320" x="425" y="836" as="geometry"/>
+                </mxCell>
+                <mxCell id="Lk52vpVahvG6b54kKNXe-1" edge="1" parent="1" source="csv" style="edgeStyle=none;html=1;" target="python" value="">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="Lk52vpVahvG6b54kKNXe-2" edge="1" parent="1" source="python" style="edgeStyle=none;html=1;" target="alchemy" value="">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="Lk52vpVahvG6b54kKNXe-3" edge="1" parent="1" source="alchemy" style="edgeStyle=none;html=1;" target="sql" value="">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="Lk52vpVahvG6b54kKNXe-4" edge="1" parent="1" source="sql" style="edgeStyle=none;html=1;" target="staging" value="">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="Lk52vpVahvG6b54kKNXe-7" edge="1" parent="1" source="staging" style="edgeStyle=orthogonalEdgeStyle;html=1;" target="dimcust" value="">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="Lk52vpVahvG6b54kKNXe-17" edge="1" parent="1" source="staging" style="edgeStyle=elbowEdgeStyle;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;elbow=vertical;" target="dimreg">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="Lk52vpVahvG6b54kKNXe-18" edge="1" parent="1" source="staging" style="edgeStyle=elbowEdgeStyle;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;elbow=vertical;" target="dimcat">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="Lk52vpVahvG6b54kKNXe-16" edge="1" parent="1" source="dimcat" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="fact">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="Lk52vpVahvG6b54kKNXe-14" edge="1" parent="1" source="dimcust" style="edgeStyle=none;html=1;" target="fact" value="">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="585" y="726"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="Lk52vpVahvG6b54kKNXe-15" edge="1" parent="1" source="dimreg" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="fact">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="Lk52vpVahvG6b54kKNXe-13" edge="1" parent="1" source="fact" style="edgeStyle=none;html=1;" target="bi" value="">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="Lk52vpVahvG6b54kKNXe-19" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;div style=&quot;color: rgb(0, 0, 0); text-align: start; font-family: &amp;quot;Segoe UI&amp;quot;; line-height: 20px;&quot;&gt;&lt;div class=&quot;bzRWN1NE NHBQYXB6&quot; style=&quot;&quot;&gt;&lt;b style=&quot;&quot;&gt;&lt;font&gt;P4 Real World Ingestion&lt;/font&gt;&lt;/b&gt;&lt;/div&gt;&lt;div class=&quot;YVBtTjBx&quot; style=&quot;&quot;&gt;&lt;/div&gt;&lt;div class=&quot;bzRWN1NE NHBQYXB6&quot; style=&quot;&quot;&gt;&lt;b style=&quot;&quot;&gt;&lt;font&gt;End-to-End Data Pipeline&lt;/font&gt;&lt;/b&gt;&lt;/div&gt;&lt;/div&gt;" vertex="1">
+                    <mxGeometry height="44" width="968" x="101" y="22" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
