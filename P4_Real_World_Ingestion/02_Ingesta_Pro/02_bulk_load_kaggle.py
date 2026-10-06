@@ -2,73 +2,55 @@
 =======================================================================================================================================
 PROYECTO: P4_Real_World_Ingestion
 FASE: 4.2.2 - Ingesta de Alta Velocidad (Kaggle a SQL)
-
-AUTOR:
-    Alberto Dzib
-
+AUTOR: Alberto Dzib
+ESTÁNDAR: Dzib V13.0 (Resiliencia y Atomicidad)
 DESCRIPCIÓN:
     - Carga masiva del dataset DataCo a SQL Server.
-    - Uso de SQLAlchemy + fast_executemany.
-    - Validación de rutas.
-    - Validación de estructura.
-    - Validación de tabla destino.
-    - Métricas de rendimiento.
-    - Patrón idempotente.
+    - Cero Credenciales Quemadas: Uso estricto de variables de entorno (.env).
+    - Patrón Idempotente y Fail-Fast.
+    - Manejo atómico de transacciones con rollback automático ante fallos de red.
 =======================================================================================================================================
 """
 
-from pathlib import Path
+import os
+import sys
 import time
+from pathlib import Path
 
 import pandas as pd
+from dotenv import load_dotenv
+from sqlalchemy.exc import SQLAlchemyError
+
+# Importamos tu conector (Asegúrate de que db_connect.py use os.getenv para las credenciales y fast_executemany=True)
 from db_connect import get_engine
 
-
 # =============================================================================
-# CONFIGURACIÓN GLOBAL
+# CONFIGURACIÓN GLOBAL Y FAIL-FAST DE ENTORNO
 # =============================================================================
-
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
-
-CSV_FILE = (
-PROJECT_ROOT
-/ "data"
-/ "DataCoSupplyChainDataset.csv"
-)
-
+CSV_FILE = PROJECT_ROOT / "data_sample" / "sample_data.csv" # Apuntamos a la muestra segura
 TARGET_SCHEMA = "Staging"
 TARGET_TABLE = "Kaggle_SupplyChain_Raw"
 
+# 1. Carga Atómica de Credenciales
+env_path = PROJECT_ROOT / ".env"
+if not env_path.exists():
+    print(f"❌ ERROR CRÍTICO: Archivo de configuración no encontrado en {env_path}")
+    sys.exit(1)
 
-print("\nVALIDACIÓN DE RUTAS")
+load_dotenv(dotenv_path=env_path)
+
+print("\nVALIDACIÓN DE RUTAS E INFRAESTRUCTURA")
+print("=" * 80)
+print(f"PROJECT_ROOT : {PROJECT_ROOT}")
+print(f"CSV_FILE     : {CSV_FILE}")
+print(f"TARGET       : {TARGET_SCHEMA}.{TARGET_TABLE}")
 print("=" * 80)
 
-print("PROJECT_ROOT:")
-print(PROJECT_ROOT)
-
-print("\nDATA DIR:")
-print(PROJECT_ROOT / "data")
-
-print("\nEXISTE DATA DIR:")
-print((PROJECT_ROOT / "data").exists())
-
-print(f"CSV_FILE = {CSV_FILE}")
-print(f"SCHEMA = {TARGET_SCHEMA}")
-print(f"TABLE = {TARGET_TABLE}")
-
-print("\nARCHIVOS EN DATA:")
-
-if (PROJECT_ROOT / "data").exists():
-
-    for file in (PROJECT_ROOT / "data").iterdir():
-        print(file.name)
-
-print("=" * 80)
 
 # =============================================================================
 # DATA CONTRACT (CSV -> SQL)
 # =============================================================================
-
 COLUMN_MAPPING = {
     "Type": "Type",
     "Days for shipping (real)": "Days_for_shipping_real",
@@ -86,24 +68,17 @@ COLUMN_MAPPING = {
     "Order Item Total": "Order_Item_Total",
 }
 
-
 # =============================================================================
 # VALIDACIONES
 # =============================================================================
-
-
 def validate_csv_file() -> None:
     """Verifica existencia del dataset."""
-
     if not CSV_FILE.exists():
-        raise FileNotFoundError(
-            f"\n❌ Dataset no encontrado:\n{CSV_FILE}"
-        )
-
+        print(f"\n❌ Dataset no encontrado:\n{CSV_FILE}")
+        sys.exit(1)
 
 def validate_target_table(conn) -> None:
-    """Valida existencia de tabla destino."""
-
+    """Valida existencia de tabla destino de forma atómica."""
     result = conn.exec_driver_sql(
         f"""
         SELECT COUNT(*)
@@ -112,85 +87,37 @@ def validate_target_table(conn) -> None:
         AND TABLE_NAME = '{TARGET_TABLE}'
         """
     )
-
     exists = result.scalar()
-
     if not exists:
-        raise ValueError(
-            f"""
-            ❌ La tabla destino no existe.
+        raise ValueError(f"❌ La tabla destino {TARGET_SCHEMA}.{TARGET_TABLE} no existe. Ejecuta el DDL primero.")
 
-            Schema : {TARGET_SCHEMA}
-            Tabla  : {TARGET_TABLE}
-
-            Ejecuta primero:
-
-            P4_Real_World_Ingestion/
-            └── 01_Setup_DDL/
-                └── 01_db_creation.sql
-            """
-        )
-
-def validate_schema_alignment(
-    conn,
-    dataframe
-):
-    """
-    Verifica que las columnas
-    coincidan con SQL Server.
-    """
-
+def validate_schema_alignment(conn, dataframe) -> None:
+    """Verifica que las columnas coincidan con SQL Server."""
     query = f"""
     SELECT COLUMN_NAME
     FROM INFORMATION_SCHEMA.COLUMNS
     WHERE TABLE_SCHEMA = '{TARGET_SCHEMA}'
       AND TABLE_NAME   = '{TARGET_TABLE}'
     """
-
-    sql_columns = {
-        row[0]
-        for row in conn.exec_driver_sql(query)
-    }
-
-    dataframe_columns = set(
-        dataframe.columns
-    )
-
-    missing_in_sql = (
-        dataframe_columns - sql_columns
-    )
+    sql_columns = {row[0] for row in conn.exec_driver_sql(query)}
+    dataframe_columns = set(dataframe.columns)
+    missing_in_sql = dataframe_columns - sql_columns
 
     if missing_in_sql:
+        raise ValueError(f"❌ Columnas no encontradas en SQL: {missing_in_sql}")
+    print("✅ Contrato de esquema validado contra SQL Server.")
 
-        raise ValueError(
-            f"""
-❌ Columnas no encontradas en SQL:
-
-{missing_in_sql}
-"""
-        )
-
-    print(
-        "✅ Contrato de esquema validado."
-    )
 
 # =============================================================================
-# INGESTA PRINCIPAL
+# INGESTA PRINCIPAL (TRANSACCIÓN ATÓMICA)
 # =============================================================================
-
-
 def bulk_load() -> None:
-
     print("\n" + "=" * 80)
-    print("🚀 INICIO DE PROCESO DE INGESTA")
+    print("🚀 INICIO DE PROCESO DE INGESTA V13.0")
     print("=" * 80)
 
-    print(f"\n📂 Proyecto : {PROJECT_ROOT}")
-    print(f"📄 Dataset  : {CSV_FILE}")
-
     validate_csv_file()
-
-    print("\n📖 Leyendo dataset...")
+    print("\n📖 Leyendo dataset en memoria...")
 
     df = pd.read_csv(
         CSV_FILE,
@@ -200,115 +127,49 @@ def bulk_load() -> None:
         on_bad_lines="skip",
     )
 
-    # -------------------------------------------------------------------------
     # Limpieza de cabeceras
-    # -------------------------------------------------------------------------
+    df.columns = df.columns.str.encode("ascii", "ignore").str.decode("ascii").str.strip()
+    print(f"\n✅ Registros leídos en crudo : {len(df):,}")
 
-    df.columns = (
-        df.columns
-        .str.encode("ascii", "ignore")
-        .str.decode("ascii")
-        .str.strip()
-    )
-
-    print(f"\n✅ Registros leídos : {len(df):,}")
-
-    expected_columns = [
-        "Type",
-        "Days for shipping (real)",
-        "Days for shipment (scheduled)",
-        "Benefit per order",
-        "Sales per customer",
-        "Delivery Status",
-        "Late_delivery_risk",
-        "Category Id",
-        "Category Name",
-        "Customer City",
-        "Customer Country",
-        "order date (DateOrders)",
-        "Order Region",
-        "Order Item Total",
-    ]
-
-    missing_columns = [
-        col
-        for col in expected_columns
-        if col not in df.columns
-    ]
+    expected_columns = list(COLUMN_MAPPING.keys())
+    missing_columns = [col for col in expected_columns if col not in df.columns]
 
     if missing_columns:
-        raise ValueError(
-            f"""
-❌ Columnas faltantes en CSV:
+        print(f"\n❌ Columnas faltantes en el origen CSV: {missing_columns}")
+        sys.exit(1)
 
-{missing_columns}
-"""
-        )
-
-    # -------------------------------------------------------------------------
     # DataFrame Staging
-    # -------------------------------------------------------------------------
-
     df_staging = df[expected_columns].copy()
-
-    df_staging.rename(
-    columns=COLUMN_MAPPING,
-    inplace=True
-    )
+    df_staging.rename(columns=COLUMN_MAPPING, inplace=True)
 
     numeric_columns = [
-      "Days_for_shipping_real",
-      "Days_for_shipment_scheduled",
-      "Benefit_per_order",
-      "Sales_per_customer",
-      "Late_delivery_risk",
-      "Category_ID",
-      "Order_Item_Total"
+      "Days_for_shipping_real", "Days_for_shipment_scheduled", "Benefit_per_order",
+      "Sales_per_customer", "Late_delivery_risk", "Category_ID", "Order_Item_Total"
     ]
 
     for col in numeric_columns:
-        df_staging[col] = pd.to_numeric(
-            df_staging[col],
-            errors="coerce"
-    )
+        df_staging[col] = pd.to_numeric(df_staging[col], errors="coerce")
 
-    print(f"📊 Registros para carga : {len(df_staging):,}")
+    print(f"📊 Registros listos para ingesta : {len(df_staging):,}")
 
     engine = get_engine()
-
     if engine is None:
-        raise RuntimeError(
-            "No se pudo obtener la conexión a la base de datos."
-        )
+        print("❌ ERROR: No se pudo instanciar el motor de base de datos.")
+        sys.exit(1)
 
     start_time = time.time()
 
+    # 2. Bloque Transaccional Atómico
     try:
-
+        # engine.begin() maneja el COMMIT automático al final o el ROLLBACK si hay excepción
         with engine.begin() as conn:
-
             validate_target_table(conn)
+            validate_schema_alignment(conn, df_staging)
 
-            validate_schema_alignment(
-            conn,
-            df_staging
-            )
+            print(f"\n🧹 Limpiando tabla destino ({TARGET_SCHEMA}.{TARGET_TABLE}) de forma idempotente...")
+            conn.exec_driver_sql(f"TRUNCATE TABLE {TARGET_SCHEMA}.{TARGET_TABLE}")
 
-            print(
-                f"\n🧹 Limpiando tabla {TARGET_SCHEMA}.{TARGET_TABLE}"
-            )
-
-            conn.exec_driver_sql(
-                f"TRUNCATE TABLE {TARGET_SCHEMA}.{TARGET_TABLE}"
-            )
-
-            print("⬆️ Ejecutando carga masiva...")
-
-            print("\nTIPOS DETECTADOS")
-            print(df_staging.dtypes)
-
-            print("\nNULLS POR COLUMNA")
-            print(df_staging.isnull().sum())
+            print("⬆️ Ejecutando carga masiva de alta velocidad (fast_executemany)...")
 
             df_staging.to_sql(
                 name=TARGET_TABLE,
@@ -320,36 +181,33 @@ def bulk_load() -> None:
             )
 
         elapsed_time = time.time() - start_time
-
-        rows_per_second = (
-            len(df_staging) / elapsed_time
-            if elapsed_time > 0
-            else 0
-        )
+        rows_per_second = len(df_staging) / elapsed_time if elapsed_time > 0 else 0
 
         print("\n" + "=" * 80)
-        print("✅ INGESTA COMPLETADA")
+        print("✅ INGESTA ATÓMICA COMPLETADA")
+        print("=" * 80)
+        print(f"📊 Registros persistidos : {len(df_staging):,}")
+        print(f"⏱️ Tiempo de latencia    : {elapsed_time:.2f} s")
+        print(f"🚀 Tasa de transferencia : {rows_per_second:,.2f} reg/s")
         print("=" * 80)
 
-        print(f"📊 Registros cargados : {len(df_staging):,}")
-        print(f"⏱️ Tiempo total      : {elapsed_time:.2f} s")
-        print(f"🚀 Velocidad         : {rows_per_second:,.2f} reg/s")
-
-        print("=" * 80)
-
-    except Exception as error:
-
+    except SQLAlchemyError as sql_err:
         print("\n" + "!" * 80)
-        print("❌ ERROR DE INGESTA")
+        print("❌ FALLO DE RED O BASE DE DATOS (SE EJECUTÓ ROLLBACK)")
         print("!" * 80)
-
-        print(error)
-
+        print(f"Detalle Técnico: {sql_err}")
+        sys.exit(1)
+    except Exception as err:
+        print("\n" + "!" * 80)
+        print("❌ ERROR FATAL DE PROCESAMIENTO INESPERADO")
+        print("!" * 80)
+        print(f"Excepción: {err}")
         import traceback
         traceback.print_exc()
+        sys.exit(1)
+
 # =============================================================================
 # ENTRYPOINT
 # =============================================================================
-
 if __name__ == "__main__":
     bulk_load()
