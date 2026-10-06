@@ -1,13 +1,14 @@
-# 💎 P4: Real-Supply Chain & Ingesta Masiva 🧮
+# 💎 P4: Global Supply Chain & Data Ingestion 🧮
 
-## Estado: ✅ Finalizado (FASE V4.6) 🏆
+## Estado: ✅ Finalizado (FASE V4.5)
 
 ## 🎯 Objetivo
 
 Orquestar un pipeline híbrido de alto rendimiento para procesar
 datasets reales de DataCo Global Supply Chain, integrando Python
 3.13 para la carga masiva y SQL Server 2025 para la
-transformación y analítica avanzada.
+transformación y analítica avanzada. (Implementado desde DataCo
+ Supply Chain Dataset hacia SQL Server utilizando SQLAlchemy y PyODBC.)
 
 ```mermaid
 graph TD
@@ -38,36 +39,255 @@ graph TD
 - **Observabilidad:** Implementación de logs narrativos y métricas de
   performance en tiempo real.
 
-## 🏗️ Estructura del Proyecto (Pipeline 01-05)
+## 🏗️ Estructura Completa del Proyecto (Modular & Production-Ready)
 
-1. **01_Setup_DDL:** Esquemas y constraints nominados.
-2. **02_Ingesta_Pro:** Orquestación con `SQLAlchemy` + `fast_executemany`.
-3. **03_Orquestacion_Transacciones:** Manejo de atomicidad con `TRY`/`CATCH`.
-4. **04_ETL_Cleaning:** Normalización, estandarización y auditoría financiera.
-5. **05_BI_Observabilidad:** Análisis de desempeño logístico interactivo.
+El proyecto está diseñado bajo una arquitectura desacoplada y modular:
+
+* **`01_Setup_DDL/`**: Contrato de base de datos y esquemas
+  iniciales.
+* **`02_Ingesta_Pro/`**: Módulo de Python para ingesta masiva de alta
+  velocidad (`fast_executemany`).
+* **`03_Orquestacion_Transacciones/`**: Scripts transaccionales en T-SQL
+  operados mediante `sqlcmd`.
+* **`04_ETL_Cleaning/`**: Normalización con *Single-Pass Processing*
+  (CTEs), blindaje contra nulos y validación de QA.
+* **`05_BI_Observabilidad/`**: Capa semántica con esquemas dedicados
+  (`BI`), vistas seguras contra división por cero (`NULLIF`),
+  configuraciones centralizadas (`config/settings.py`) y dashboards
+  interactivos.
+* **`Run_Pipeline.ps1`**: Orquestador maestro automatizado para ejecución
+  secuencial de extremo a extremo con validación estricta de errores (`-b`).
+
+### 📂 Mapa Estructural
+
+´´´text
+P4_Real_World_Ingestion/
+│
+├── 01_Setup_DDL/                   # Creación de esquemas y contratos iniciales
+├── 02_Ingesta_Pro/                 # Ingesta masiva (Python + SQLAlchemy)
+│   └── 02_bulk_load_kaggle.py
+├── 03_Orquestacion_Transacciones/  # Cargas transaccionales y control con SQLcmd
+│   ├── 01_load_analytics.sql
+│   └── 02_Consulta_a_StagingExecution_Logs.sql
+├── 04_ETL_Cleaning/                # Procesamiento Single-Pass, limpieza y QA matemático
+│   ├── 01_clean_shipments.sql
+│   ├── 02_QA_Anomaly_Check.sql
+│   ├── 02_Verificacion_reg.sql
+│   └── 03_upgrade_execution_logs.sql
+├── 05_BI_Observabilidad/           # Capa semántica y observabilidad
+│   ├── config/
+│   │   └── settings.py             # Configuración centralizada de entorno y conexión
+│   ├── logs/
+│   │   └── .gitkeep                # Trazabilidad de ejecución y auditoría
+│   ├── 01_business_vistas.sql      # Vistas corporativas para Power BI / PyGWalker
+│   ├── 02_Interactive_Dashboard.ipynb
+│   ├── dashboard.py
+│   └── requirements.txt
+├── architecture/                   # Diagramas y modelos conceptuales
+├── assets/                         # Evidencias visuales y capturas
+├── data/                           # Almacenamiento local de datasets de trabajo
+├── data_sample/                    # Muestras de prueba rápida (sample_data.csv)
+├── docs/                           # Documentación técnica y bitácoras
+├── notebooks/                      # Jupyter Notebooks experimentales y de análisis
+├── scripts/                        # Utilidades y automatizaciones auxiliares
+├── tests/                          # Pruebas unitarias e integración de pipelines
+├── .env                            # Configuración de entorno
+├── .env.example                    # Plantilla pública de configuración
+├── Run_Pipeline.ps1                # Orquestador maestro automatizado (PowerShell)
+├── requirements.txt                # Dependencias de Python del módulo
+└── README.md                       # Documentación principal del proyecto
+´´´
+
+---
+
+## 🚀 Arquitectura y Trazabilidad (DaaS / Data as a Service)
+
+Este proyecto opera bajo un modelo de despliegue continuo y arquitectura de
+capas estricta (Estándar Dzib V13.0), diseñado para integrarse como un backend
+analítico escalable (PaaS) para herramientas de Business Intelligence.
+
+![Arquitectura del pipeline](assets/diagrams/P4_pipeline.png)
+
+Fuente editable:
+
+assets/diagrams/P4_pipeline.drawio
+
+### 🏗️ Diseño de Capas (Single Source of Truth)
+
+1. **Staging:** Ingesta masiva (High-Speed `fast_executemany` vía
+   Python). Datos crudos y logs de auditoría (`ExecutionGUID`).
+2. **Analytics:** Capa física de almacenamiento limpio. Construida mediante
+   **Single-Pass Processing** en memoria (CTEs) para garantizar atomicidad y
+   latencia sub-segundo (< 1s para +180k registros).
+3. **BI (Capa Semántica):** Vistas virtualizadas
+   (`vw_Shipping_Efficiency`, `vw_Category_Performance`). Resuelven reglas de
+   negocio financieras (ej. "Bug del Negativo" vía `ABS()`) y blindan contra
+   nulos visuales, descargando el motor DAX en la capa de presentación.
+
+---
+
+## 📦 Changelog & Release Management
+
+### v1.2.0-rc.1 - 2026-10-06 (Pre-Release / Staging)
+
+#### Capa Semántica y Refactorización Atómica
+
+* **Added (Características Añadidas):**
+
+  * Despliegue del esquema segmentado `BI` para consumo exclusivo de Power BI
+    / ODBC.
+  * Implementación de vista `BI.vw_Shipping_Efficiency` para cálculo SARGable
+    de riesgo logístico por región.
+  * Implementación de vista `BI.vw_Category_Performance` con blindaje contra
+    división por cero (`NULLIF`).
+  * Script de auditoría matemática de anomalías
+    (`02_QA_Anomaly_Check.sql`) integrado al pipeline de QA.
+* **Changed (Modificaciones de Arquitectura):**
+
+  * Refactorización total de `01_clean_shipments.sql` hacia el estándar
+    **Single-Pass Processing**.
+  * Idempotencia destructiva implementada: el pipeline ahora realiza
+    `DROP TABLE` condicional para garantizar la integridad exacta de las 16
+    columnas analíticas requeridas.
+* **Removed (Depreciaciones):**
+
+  * Eliminación del script de parches post-ingesta
+    (`02_fix_null_anomalies.sql`). La inserción atómica garantiza la
+    inexistencia de nulos desde la raíz.
 
 ---
 
 ## 📊 Evidencia Cuantitativa y Visual
 
-*Resumen de la ingesta.
+### Benchmark de Rendimiento
 
-|       **Métrica**       | **Resultado** |
-| :-----------------------------: | :-----------------: |
-|     **Volumen Total**     |  180,519 registros  |
-|   **Tiempo de Ingesta**   |    7.56 segundos    |
-| **Tasa de Transferencia** |  23,866.62 reg/seg  |
+
+| Ejecución | Tiempo |  Velocidad   |
+| :-------: | :----: | :----------: |
+|    V1     | 7.56 s | 23,866 reg/s |
+|    V2     | 9.68 s | 18,651 reg/s |
+
+Las diferencias de rendimiento se atribuyen a:
+
+- Instrumentación adicional
+- Validaciones de contrato
+- Validaciones de esquema
+- Logging ampliado
+
+La versión actual prioriza gobernanza y trazabilidad sobre la velocidad máxima.
+V2.4.0 incorpora validaciones adicionales:
+
+- Data Contract
+- Schema Validation
+- Null Validation
+- SQL Type Validation
+- Idempotent Load
+
+## Resultados de Ingesta V1.0.0
+
+*Resumen de la ingesta. Prueba de performance en Python 3.13 con SQLAlchemy y PyODBC.*
+
+
+|       **Métrica**       |   **Resultado**   |
+| :-------------------------: | :-----------------: |
+|     **Volumen Total**     | 180,519 registros |
+|   **Tiempo de Ingesta**   |   7.56 segundos   |
+| **Tasa de Transferencia** | 23,866.62 reg/seg |
 
 ## 📸 Galería de Hitos
 
 + Figura 1: Registro de performance en Python durante la carga masiva.
-  ![PERFORMANCE CARGA MASIVA](./img/Evi_Cuantitativa_Ingesta_P4.png)
+  ![PERFORMANCE CARGA MASIVA](../assets/P4/img/Query_Resultados_Procesamiento_P4.png)
 + Figura 2: Dashboard interactivo de eficiencia logística (PyGWalker).
-  ![DASHBOARD EN PYGWALKER](./img/Grafico_Barras_PyGWalker_OrdenesTotal_Grupo_P4.png)
+  ![DASHBOARD EN PYGWALKER](../assets/P4/img/Grafico_Barras_PyGWalker_OrdenesTotal_Grupo_P4.png)
 + Figura 3: Ejecución de carga transaccional en SQL Server.
-  ![DASHBOARD EN PYGWALKER](./img/Orq_Tran_SQL_de_Staging_Analytics.png)
+  ![EJECUCIÓN TRANSACCIONAL SQL SERVER](../assets/P4/img/Orq_Tran_SQL_de_Staging_Analytics.png)
+
+## Resultados de Ingesta V2.4.0
+
+### Dataset
+
+DataCo Supply Chain Dataset
+
+### Tabla destino
+
+Staging.Kaggle_SupplyChain_Raw
+
+### Resultados de Ingesta
+
+
+| Métrica           | Resultado        |
+| -------------------- | ------------------ |
+| Registros cargados | 180,519          |
+| Tiempo total       | 9.68 segundos    |
+| Velocidad          | 18,651 filas/seg |
 
 ---
+
+### Evidencias
+
+## Evidencia 01 - Base de datos creada
+
+![Base de datos creada](assets/evidence/01_database_created.png)
+
+## Evidencia 02 - Schemas creados
+
+![Schemas creados](assets/evidence/02_schemas_created.png)
+
+## Evidencia 03 - Estructura de tabla
+
+![Estructura de tabla](assets/evidence/03_table_structure.png)
+
+## Evidencia 04 - Ingesta completada
+
+![Evidencia 04](assets/evidence/04_bulk_load_completed.png)
+
+## Evidencia 05 - Validación de registros
+
+![Validación de registros](assets/evidence/05_row_count_validation.png)
+
+## Evidencia 06 - Muestra de registros
+
+![Muestra de registros](assets/evidence/06_sample_records.png)
+
+## Evidencia 07 - Dashboard de eficiencia logística
+
+![Dashboard de eficiencia logística](assets/evidence/07_transaction_load_success.png)
+
+## Evidencia 08
+
+![Dashboard de eficiencia logística](assets/evidence/08_execution_logs.png)
+
+## Evidencia 09
+
+![Dashboard de eficiencia logística](assets/evidence/09_analytics_sample.png)
+
+---
+
+### Validaciones implementadas
+
+- Data Contract
+- Schema Validation
+- Route Validation
+- Null Validation
+- SQL Type Validation
+- Idempotent Load
+- Performance Monitoring
+
+---
+
+### Query de Validación
+
+```sql
+SELECT COUNT(*)
+FROM Staging.Kaggle_SupplyChain_Raw;
+```
+
+Resultado esperado:
+
+```text
+180519
+```
 
 ## 📝 Bitácora de Troubleshooting (🧠 Retos Superados)
 
@@ -142,4 +362,4 @@ graph TD
 ---
 
 *Autor:* Alberto Dzib
-*Versión:* 1.0.0
+*Versión:* 2.4.0

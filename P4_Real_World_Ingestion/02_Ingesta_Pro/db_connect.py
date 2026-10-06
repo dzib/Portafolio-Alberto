@@ -11,33 +11,55 @@ DESCRIPCIÓN:
 """
 
 import os # Para acceder a variables de entorno.
-from dotenv import load_dotenv # Para cargar variables de entorno desde un archivo .env.
-from sqlalchemy import create_engine, text # create_engine para establecer la conexión, text para ejecutar consultas SQL de prueba.
-import urllib # Para construir la cadena de conexión de manera segura y compatible con SQL Server.
+import importlib
+from urllib.parse import quote_plus # Para construir la cadena de conexión de manera segura y compatible con SQL Server.
+
+
+def _load_environment():
+    """Carga las variables de entorno si python-dotenv está instalado."""
+    try:
+        load_dotenv = importlib.import_module("dotenv").load_dotenv
+        load_dotenv()
+    except ModuleNotFoundError:
+        print("⚠️ Falta la dependencia python-dotenv. Instálala con: pip install python-dotenv")
 
 # --------------------------------------------------------------------------------------------------------------------------------------
 # 1. CARGAR CONFIGURACIÓN desde .env
 # --------------------------------------------------------------------------------------------------------------------------------------
-load_dotenv()
+_load_environment()
+
+
+def _get_sqlalchemy():
+    """Carga SQLAlchemy bajo demanda para permitir un mensaje claro si no está instalado."""
+    try:
+        sqlalchemy = importlib.import_module("sqlalchemy")
+        return sqlalchemy.create_engine, sqlalchemy.text
+    except ModuleNotFoundError:
+        print("❌ Falta la dependencia SQLAlchemy. Instálala con: pip install sqlalchemy pyodbc")
+        return None, None
 
 def get_engine():
     """Configura y retorna el motor de conexión SQLAlchemy."""
+    create_engine, _ = _get_sqlalchemy()
+    if create_engine is None:
+        return None
+
     server = os.getenv('DB_SERVER')
     database = os.getenv('DB_NAME')
-    
+
     # Driver estándar para SQL Server en Windows. Es recomendable verificar que esté instalado en el entorno donde se ejecutará el script.
     driver = "ODBC Driver 17 for SQL Server"
-    
+
     # String de conexión para Windows Authentication (Trusted Connection).
-    params = urllib.parse.quote_plus(
+    params = quote_plus(
         f"DRIVER={{{driver}}};"
         f"SERVER={server};"
         f"DATABASE={database};"
         f"Trusted_Connection=yes;"
     )
-    
+
     conn_str = f"mssql+pyodbc:///?odbc_connect={params}"
-    
+
     try:
         # fast_executemany=True es la clave para obtener altas velocidades de carga.
         engine = create_engine(conn_str, fast_executemany=True)
@@ -53,6 +75,9 @@ def test_connection():
     engine = get_engine()
     if engine:
         try:
+            _, text = _get_sqlalchemy()
+            if text is None:
+                return
             with engine.connect() as conn:
                 result = conn.execute(text("SELECT @@VERSION")).fetchone()
                 print("=====================================================")

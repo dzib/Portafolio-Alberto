@@ -1,16 +1,22 @@
 # 📘 Documentación Técnica
 
-## Proyecto P1: Control de Inventarios & Fundamentos Relacionales (V1.0 - Retrofitting)
+## Proyecto P1: Control de Inventarios & Fundamentos Relacionales (V3.0)
 
 ---
 
-## 📌 Descripción general
+## Resumen Ejecutivo
 
-Este proyecto fundamenta el rigor transaccional y la lógica de
-normalización, manejando deliberadamente datos **no atómicos**
-para simular entornos legacy. Se enfoca en la remediación
-mediante un pipeline ETL que transforma ruido en
-**Inteligencia de Negocio**.
+Proyecto de ingeniería de datos enfocado en la simulación de entornos
+legacy mediante la generación deliberada de datos no atómicos y su
+posterior remediación mediante procesos ETL en SQL Server.
+
+## Descripción general
+
+Proceso fundamentado en el rigor transaccional y en la lógica de
+normalización, diseñado para manejar de forma deliberada datos
+**no atómicos** con el objetivo de simular entornos legacy. Su enfoque
+principal es la remediación, lograda a través de un pipeline ETL que
+convierte el ruido en **Inteligencia de Negocio**.
 
 ---
 
@@ -18,7 +24,11 @@ mediante un pipeline ETL que transforma ruido en
 
 *Generar un ecosistema capaz de ingerir y procesar un volumen de
 transacciones, demostrando eficiencia con una integración híbrida entre
-lenguajes de programación y motores de base de datos.
+lenguajes de programación y motores de base de datos. Aplicando principios
+de ingeniería de datos para garantizar la integridad, consistencia y calidad
+de los datos, mediante un pipeline capaz de transformar información
+operacional con problemas de calidad en activos analíticos confiables para la
+toma de decisiones.*
 
 ```mermaid
 %%{init: {'theme': 'dark'}}%%
@@ -52,7 +62,7 @@ E[Python: Matplotlib/Pandas]
 - **Fase 4: Pipeline ETL & Data Grooming (Script 04) 💎**
 
   - **Normalización 1NF:** Extracción atómica de atributos mediante
-  `SUBSTRING` y `CHARINDEX`.
+    `SUBSTRING` y `CHARINDEX`.
   - **Data Grooming:** Estandarización de capitalización (Formato
     Título) y corrección universal de acentos.
   - **Idempotencia:** Script diseñado para correr múltiples veces
@@ -63,26 +73,75 @@ E[Python: Matplotlib/Pandas]
   - Visualización de métricas críticas: Stock debajo del mínimo,
     tendencias de venta y semáforos operativos.
 
+### Valor de Negocio
+
+Este proyecto demuestra cómo una organización puede transformar
+información operativa con problemas de calidad en activos de datos
+confiables para la toma de decisiones.
+
+Este enfoque replica escenarios comunes en organizaciones que operan
+sobre sistemas heredados, permitiendo demostrar capacidades reales de
+ingeniería de datos orientadas a calidad, gobierno y explotación
+analítica de la información.
+
+#### Beneficios obtenidos
+
+- Mejora de calidad del dato.
+- Eliminación de redundancia.
+- Estandarización de registros.
+- Disponibilidad para análisis.
+- Integración con herramientas BI.
+
+### Arquitectura
+
+* [Arquitectura Lógica](architecture/01_logical_architecture.drawio)
+* [Arquitectura Física](architecture/02_physical_architecture.drawio)
+* [Arquitectura de Despliegue](architecture/03_deployment_architecture.drawio)
+
 ---
 
 ## **📊 Indicadores de Performance Final**
 
-| **Métrica** | **Anterior (Legacy)** | **Optimizado (Post-ETL)** |
-| :---------- | :-------------------- | :------------------------ |
-| **Atomicidad** | Datos no atómicos | Datos normalizados |
-| **Consistencia** | Ruido ortográfico | Grooming global |
-| **Performance Batch** | Carga no validada | ~1,800 ms (500+ registros) |
-| **Conectividad BI** | Datos aislados | Bridge ODBC activo |
+| Métrica          | Anterior           | Optimizado                 |
+| :---------------- | :----------------- | :------------------------- |
+| Atomicidad        | Datos no atómicos | Datos normalizados         |
+| Consistencia      | Ruido ortográfico | Grooming global            |
+| Performance Batch | Carga no validada  | ~1,800 ms (500+ registros) |
+| Conectividad BI   | Datos aislados     | Bridge ODBC activo         |
+
+### Estrategia de Calidad
+
+Se ejecutan validaciones automáticas:
+
+- Nulos.
+- Duplicados.
+- Integridad Referencial.
+- Reglas de Negocio.
 
 ---
 
+## Observabilidad y métricas
+
+Se implementó monitoreo de ejecución mediante registros de tiempo y
+volumen procesado para evaluar el desempeño del pipeline y documentar
+evidencias objetivas de rendimiento.
+
+| Métrica               | Resultado             |
+| ---------------------- | --------------------- |
+| Registros Procesados   | 3,200                 |
+| Tiempo ETL             | < 1 segundo           |
+| Tiempo Batch           | 1.7 segundos          |
+| Integridad Referencial | 100%                  |
+| Registros Rechazados   | 0                     |
+| Throughput Aproximado  | ≈1,900 registros/seg |
+
 ## 📊 Ejemplo de métricas de ejecución (V1.0)
 
-| **#** | **Dimensión** | **Registros** | **Operación** | **Rendimiento** |
-| :---: | :------------ | :----------- | :------------ | :-------------- |
-| 1 | Carga transaccional | 3,200 (total) | Inserción masiva | 1,776 ms |
-| 2 | Integridad | 100 % | Validación PK/FK y CHECK | Verificado |
-| 3 | Normalización | 500+ filas | Separación de metadata (ETL) | < 1 s |
+| # | Dim.           | Registros | Operación        | Rendimiento |
+| :-: | :------------- | :-------- | :---------------- | :---------- |
+| 1 | Carga          | 3,200     | Inserción masiva | 1,776 ms    |
+| 2 | Integridad     | 100 %     | PK/FK y CHECK     | Verificado  |
+| 3 | Normalización | 500+      | ETL metadata      | < 1 s       |
 
 ---
 
@@ -90,21 +149,44 @@ E[Python: Matplotlib/Pandas]
 
 ```text
 P1_Inventario/
+│
+├── architecture/
+│   ├── 01_logical_architecture.drawio
+│   ├── 02_physical_architecture.drawio
+│   └── 03_deployment_architecture.drawio
+│
+├── assets/
+│   ├── img/                                # Capturas de pantalla y diagramas ERD
+│   └── reports/
+│
 ├── Dashboard/
-│   └── 05_Dashboard_Operativo_P1.xlsx  # Reporte ejecutivo conectado vía ODBC.
-├── img/                             # Capturas de pantalla y diagramas ERD
-├── Scripts/
-│   ├── 01_Setup_DDL.sql             # Arquitectura de tablas y esquemas.
+│   └── 05_Dashboard_Operativo_P1.xlsx      # Reporte ejecutivo conectado vía ODBC.
+│
+├── data_sample/
+│
+├── docs/
+│   ├── decisions/
+│   ├── functional/
+│   ├── operations/
+│   └── technical/
+│
+├── scripts/
+│   ├── 01_Setup_DDL.sql
 │   ├── 02_DML_Seed.sql              # Datos semilla para validación inicial.
 │   ├── 03_Procesamiento_Batch.sql   # Stress test y simulación de volumen.
 │   ├── 04_ETL_Limpieza.sql          # Pipeline de normalización y Data Quality
 │   └── 05_BI_Analytics.sql          # Capa de vistas para consumo externo.
-└── README.md                         # Guía técnica del proyecto.
+│
+├── tests/
+│
+├── requirements.txt
+│
+└── README.md                        # Guía técnica del proyecto.
 ```
 
 ---
 
-## **🛠️ Key Engineering Features**
+## **🔓 Key Engineering Features**
 
 - **Idempotencia:** Scripts diseñados con `DROP IF EXISTS` y validaciones
   `NOT EXISTS` para despliegues continuos.
@@ -112,6 +194,9 @@ P1_Inventario/
   limpieza de caracteres especiales.
 - **Seguridad Transaccional:** Bloques `TRY…CATCH` con `ROLLBACK` automático
   para garantizar la integridad en cargas masivas.
+- **Calidad de Datos:** Framework de QA automatizado para detección de
+  nulos, duplicados, violaciones de reglas de negocio e inconsistencias
+  referenciales.
 
 ---
 
@@ -121,9 +206,25 @@ P1_Inventario/
 2. Configurar el **DSN de Sistema** en el Administrador de Orígenes de
    Datos ODBC (Driver 17) apuntando a `P1_Inventario`.
 3. Ejecutar los scripts en orden secuencial (**01 al 05**) en SQL Server
-  Management Studio o VS Code.
+   Management Studio o VS Code.
 4. Abrir el archivo `05_Dashboard_Operativo_P1.xlsx` y seleccionar
-  **Datos > Actualizar Todo**.
+   **Datos > Actualizar Todo**.
+5. Ejecutar los scripts contenidos en la carpeta `/tests`.
+6. Validar que todas las pruebas regresen cero incidencias.
+7. Actualizar el Dashboard para visualizar resultados finales.
+
+---
+
+## **🔧 Tecnologías**
+
+- SQL Server 2025
+- T-SQL
+- ODBC Driver 17
+- Excel
+- Power Query
+- Power BI
+- Git
+- Draw.io
 
 ---
 
@@ -132,7 +233,6 @@ P1_Inventario/
 ### Durante el desarrollo del Proyecto P1 (Inventario)
 
 Se resolvieron desafíos críticos mediante estándares de la industria
-
 
 1. **Gestión de Identidades en Ciclos de Stress Test**
    - **Problema:** Las cargas masivas repetidas no reiniciaban los contadores
@@ -175,12 +275,75 @@ Se resolvieron desafíos críticos mediante estándares de la industria
 
 ---
 
-## 📅 Próximos Pasos (Roadmap)
+### Componentes
 
-- Implementar **Fuzzy Matching** para detección de ciudades no catalogadas.
-- Automatizar el refresco del Dashboard mediante un `.bat` de ejecución diaria.
+| Componente | Responsabilidad |
+|------------|----------------|
+| Script 01 | Definición de arquitectura y objetos de base de datos |
+| Script 02 | Generación de datos semilla |
+| Script 03 | Simulación de carga masiva |
+| Script 04 | Limpieza, normalización y calidad de datos |
+| Script 05 | Exposición analítica mediante vistas |
+
+### 🏬 ADR Implementados
+
+#### Architecture Decision Records
+
+| ADR     | Descripción                                    |
+| ------- | ----------------------------------------------- |
+| ADR-001 | Segmentación por dominios y datos no atómicos |
+| ADR-002 | Vistas analíticas consolidadas                 |
+| ADR-003 | Framework de calidad de datos                   |
+| ADR-004 | Idempotencia y resiliencia transaccional        |
+
+### 🔎 QA Framework
+
+El marco de calidad del dato se basa en la validación automatizada de los datos
+antes de exponerlos a las capas analíticas y de visualización.
+
+| Validación                    | Objetivo                          |
+| ------------------------------ | --------------------------------- |
+| test_nulls.sql                 | Detectar nulos críticos          |
+| test_duplicates.sql            | Detectar duplicados               |
+| test_business_rules.sql        | Validar reglas operativas         |
+| test_referential_integrity.sql | Garantizar integridad referencial |
+
+Resultado esperado:
+
+- 0 registros con nulos críticos.
+- 0 registros duplicados.
+- 0 violaciones de reglas de negocio.
+- 0 registros huérfanos.
+
+## 📚 Evidencias de Ejecución
+
+| Evidencia | Descripción |
+|------------|------------|
+| 01_architecture.png | Diagramas de arquitectura |
+| 02_batch_execution.png | Ejecución de carga masiva |
+| 03_etl_execution.png | Proceso ETL |
+| 04_qa_validation.png | Validaciones QA |
+| 05_dashboard.png | Dashboard operativo |
 
 ---
 
-**Autor:** Alberto Dzib
-**Versión:** 2.1.0
+## 📅 Próximos Pasos (Roadmap)
+
+V2
+
+* Fuzzy Matching
+* Automatización Batch
+* Python Analytics Layer
+
+V3
+
+* API Layer
+* Dashboard Web
+* Observabilidad
+
+---
+
+**Autor:** Jesús Alberto Dzib Ku
+Ingeniero Electrónico | Especialidad en Mecatrónica Industrial
+Data Analytics • BI • Data Engineering
+**Versión:** 3.0.0

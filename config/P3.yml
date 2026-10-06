@@ -1,0 +1,39 @@
+# ==========================================
+# Configuración de Módulo - Dzib Standard V2.3.0
+# Módulo: P3_Retail_Ventas
+# ==========================================
+
+project: "P3_Retail_Ventas"
+
+environment:
+  name: "development"
+  version: "2.3.0"
+  module_target: "P3_Retail_Ventas"
+
+analytics:
+  engine: "Pandas & SQLAlchemy"
+  output_format: "Power BI Dataset / CSV"
+  performance_mode: "High-Throughput"
+
+score_weight:
+  architecture: 20
+  documentation: 25
+  qa: 25
+  evidence: 15
+  performance: 15
+
+required_docs:
+  - business_requirements.md
+  - business_rules.md
+  - kpis.md
+
+required_technical:
+  - components.md
+  - data_dictionary.md
+  - data_flow.md
+  - dependencies.md
+
+required_reports:
+  - benchmark_results.md
+  - performance_metrics.md
+  - qa_execution_results.md

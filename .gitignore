@@ -3,7 +3,7 @@
 # Basado en el generado por Visual Studio, con ajustes para proyectos mixtos.
 ################################################################################
 
-# Configuración de Visual 
+# Configuración de Visual
 .vs/
 bin/
 obj/
@@ -20,18 +20,26 @@ $RECYCLE.BIN/
 .vscode/
 *.code-workspace
 .history/
+.pytest_cache/
+htmlcov/
 
 # Entornos virtuales de Python
 .venv/
 .venv-1/
+.vs/
 env/
 venv/
+$tf/
 
 # Configuración y datos sensibles
+.coverage
 .env
 **/data/
 **/*.csv
 *.parquet
+
+# EXCEPCIÓN DZIB V13.0: Permitir explícitamente el sample de 100 filas
+!P4_Real_World_Ingestion/data_sample/sample_data.csv
 
 # Archivos de sistema
 .DS_Store
@@ -50,3 +58,4 @@ build/
 # *.jpeg
 # *.png
 # *.gif
+

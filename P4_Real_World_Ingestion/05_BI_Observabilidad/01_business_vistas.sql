@@ -3,10 +3,9 @@
 PROYECTO: P4_Real_World_Ingestion
 FASE: 4.5 (SQL) - Vistas Analíticas para Toma de Decisiones
 AUTOR: Alberto Dzib
-VERSIÓN: 1.0
+ESTÁNDAR: Dzib V13.0 (Resiliencia y Atomicidad)
 DESCRIPCIÓN: 
-    - Creación de vistas analíticas en el esquema Analytics para facilitar la toma de decisiones estratégicas.
-    - Materializar la lógica de negocio en SQL.
+    - Segmentación al esquema BI (Single Source of Truth para Power BI).
     - KPI_Shipping_Efficiency: Tasa de éxito de entregas por región.
     - KPI_Profit_Risk: Análisis de rentabilidad vs riesgo de entrega.
 ======================================================================================================================================
@@ -14,10 +13,19 @@ DESCRIPCIÓN:
 
 USE P4_Global_SupplyChain;
 GO
--- -- -----------------------------------------------------------------------------------------------------------------------------
+
+-- 0. SEGMENTACIÓN DE ESQUEMA (Obligatorio en V13.0)
+IF NOT EXISTS (SELECT 1 FROM sys.schemas WHERE name = 'BI')
+BEGIN
+    EXEC('CREATE SCHEMA BI');
+    PRINT '✅ Esquema BI creado exitosamente.';
+END
+GO
+
+-- -----------------------------------------------------------------------------------------------------------------------------
 -- 1. Vista de Eficiencia Logística por Región
--- -- -----------------------------------------------------------------------------------------------------------------------------
-CREATE OR ALTER VIEW Analytics.vw_Shipping_Efficiency AS
+-- -----------------------------------------------------------------------------------------------------------------------------
+CREATE OR ALTER VIEW BI.vw_Shipping_Efficiency AS
 SELECT 
     Order_Region,
     Delivery_Status,
@@ -28,20 +36,21 @@ WHERE Is_Anomaly = 0
 GROUP BY Order_Region, Delivery_Status;
 GO
 
--- -- -----------------------------------------------------------------------------------------------------------------------------
+-- -----------------------------------------------------------------------------------------------------------------------------
 -- 2. Vista de Rentabilidad por Categoría
--- -- -----------------------------------------------------------------------------------------------------------------------------
-CREATE OR ALTER VIEW Analytics.vw_Category_Performance AS
+-- -----------------------------------------------------------------------------------------------------------------------------
+CREATE OR ALTER VIEW BI.vw_Category_Performance AS
 SELECT 
     Category_Name,
-    SUM(Total_Sales) AS Total_Revenue,
-    SUM(Profit) AS Total_Profit,
-    (SUM(Profit) / NULLIF(SUM(Total_Sales), 0)) * 100 AS Profit_Margin_Pct
+    SUM(Sales_per_customer) AS Total_Revenue,
+    SUM(Benefit_per_order) AS Total_Profit,
+    -- Blindaje contra división por cero usando NULLIF
+    CAST((SUM(Benefit_per_order) / NULLIF(SUM(Sales_per_customer), 0)) * 100 AS DECIMAL(10,2)) AS Profit_Margin_Pct
 FROM Analytics.SupplyChain_Shipments
 WHERE Is_Anomaly = 0
 GROUP BY Category_Name;
 GO
 
 PRINT '==================================================================';
-PRINT '✅ Vistas analíticas creadas exitosamente en el esquema Analytics.';
+PRINT '✅ Vistas analíticas desplegadas exitosamente en el esquema BI.';
 PRINT '==================================================================';

@@ -1,8 +1,9 @@
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 python_files = ["test_*.py"]
-addopts = "-v"
+addopts = "-v --cov=tools --cov-report=term-missing --cov-report=html"
 
 [tool.ruff]
 line-length = 88
 target-version = "py312"
+
