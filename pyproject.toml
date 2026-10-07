@@ -6,3 +6,4 @@ addopts = "-v --cov=tools --cov-report=term-missing --cov-report=html"
 [tool.ruff]
 line-length = 88
 target-version = "py312"
+
