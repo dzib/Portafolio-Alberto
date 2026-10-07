@@ -5,7 +5,14 @@
 -- ==============================================================================
 
 -- Motor: Google Cloud BigQuery (Standard SQL)
-CREATE OR REPLACE TABLE `fintech.loan_count_by_year` AS
+DROP TABLE IF EXISTS fintech.loan_count_by_year;
+
+CREATE TABLE fintech.loan_count_by_year (
+    issue_year INT64,
+    total_loans INT64
+);
+
+INSERT INTO fintech.loan_count_by_year (issue_year, total_loans)
 SELECT 
     issue_year,
     COUNT(loan_id) AS total_loans
