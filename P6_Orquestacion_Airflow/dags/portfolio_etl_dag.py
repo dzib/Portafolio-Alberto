@@ -1,6 +1,6 @@
-from airflow import DAG
-from airflow.operators.empty import EmptyOperator
-from airflow.operators.python import PythonOperator
+from airflow import DAG  # type: ignore[import-not-found]
+from airflow.operators.empty import EmptyOperator  # type: ignore[import-not-found]
+from airflow.operators.python import PythonOperator  # type: ignore[import-not-found]
 from datetime import datetime, timedelta
 
 # Función de Python que simula nuestra validación de calidad (Testing)
