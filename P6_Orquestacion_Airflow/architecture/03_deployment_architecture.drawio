@@ -1,0 +1,41 @@
+<mxfile host="app.diagrams.net" modified="2026-10-08T00:00:00.000Z" agent="Mozilla/5.0" version="24.0.0" type="device">
+  <diagram name="Deployment Architecture" id="deployment-arch-p6">
+    <mxGraphModel dx="1000" dy="600" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- User / Browser -->
+        <mxCell id="user_node" value="Browser / Client&#xa;(http://localhost:8080)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="180" width="160" height="80" as="geometry" />
+        </mxCell>
+
+        <!-- Docker Compose Infrastructure -->
+        <mxCell id="docker_infra" value="Docker Compose Stack (One-Click Deployment)" style="swimlane;whiteSpace=wrap;html=1;fillColor=#f0f3f4;strokeColor=#2c3e50;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="280" y="60" width="480" height="340" as="geometry" />
+        </mxCell>
+
+        <mxCell id="port_mapping" value="Port 8080 Mapping" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="docker_infra" source="web_dep" target="user_node">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <translate dx="-150" dy="-100" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="web_dep" value="Airflow Webserver Service" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="docker_infra">
+          <mxGeometry x="40" y="60" width="180" height="60" as="geometry" />
+        </mxCell>
+
+        <mxCell id="sched_dep" value="Airflow Scheduler Service" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="docker_infra">
+          <mxGeometry x="260" y="60" width="180" height="60" as="geometry" />
+        </mxCell>
+
+        <mxCell id="volumes_box" value="Local Volumes:&#xa;./dags, ./logs, ./plugins" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundFill=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="docker_infra">
+          <mxGeometry x="150" y="180" width="180" height="80" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
