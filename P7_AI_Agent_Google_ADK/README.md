@@ -1,5 +1,7 @@
 # Agent Valley Night Market
 
+---
+
 ## Overview
 
 Conversational AI agent developed using Google Agent Development Kit (ADK),
@@ -57,15 +59,15 @@ agent-valley-nightmarket
 └── stage
 ```
 
-## Documentation
+## Documentación
 
-| Document | Description |
+| Documento | Descripción |
 |-----------|-------------|
-| architecture.md | Solution Architecture |
-| implementation.md | Technical Implementation |
+| architecture.md | Arquitectura de la solución |
+| implementation.md | Implementación técnica |
 | lessons-learned.md | Project Learnings |
 
-## Technologies
+## Tecnologías
 
 - Google Cloud Platform
 - Vertex AI
@@ -76,15 +78,15 @@ agent-valley-nightmarket
 - JavaScript
 - Cloud Shell
 
-## Features
+## Características
 
-- Real-time conversational interaction
-- Gemini Live integration
-- Cloud-native deployment
-- Audio and text communication
-- Vertex AI orchestration
+- Interacción conversacional en tiempo real
+- Integración de Gemini Live
+- Implementación nativa en la nube
+- Comunicación de audio y texto
+- Orquestación de IA de Vertex
 
-## Skills Demonstrated
+## Habilidades demostradas
 
 ### Cloud Engineering
 
@@ -142,16 +144,6 @@ Cloud Shell a través del repositorio oficial de Agent Valley Night Market."
 
 ![Running Agent Valley Night Market application with its conversational interface displayed in a web browser](../assets/P7/img/screenshots/project-created.png)
 
-## Author
-
-Jesús Alberto Dzib Ku
-
-Mérida, Yucatán, México
-
-LinkedIn: [Jesús Alberto Dzib Ku](https://linkedin.com/in/jesusalberto-dzib-ku)
-
-Portfolio: [Portafolio-Alberto](https://github.com/dzib/Portafolio-Alberto)
-
 ## Evidencias
 
 ## Configuración del entorno
@@ -165,3 +157,23 @@ Portfolio: [Portafolio-Alberto](https://github.com/dzib/Portafolio-Alberto)
 ## Demonstración
 
 ![Agent Valley Night Market demonstration running in a web browser with the conversational interface visible](../assets/P7/img/screenshots/demo.png)
+
+### Resultados del proyecto
+
+- He creado un agente conversacional de IA completamente funcional.
+- Servicios de Vertex AI configurados.
+- Se han implementado y probado los componentes de Google ADK.
+- Implementé un flujo de trabajo de IA nativo de la nube.
+
+- Proyecto creado y API habilitada.
+- Configuración completada
+"El código fuente completo y los scripts de despliegue se ejecutaron en
+Google Cloud Shell a través del repositorio oficial de Agent Valley Night Market."
+
+## Author
+
+Alberto Dzib
+
+LinkedIn: [Alberto Dzib](https://linkedin.com/in/alberto-dzib)
+
+Portfolio: [Portafolio-Alberto](https://github.com/dzib/Portafolio-Alberto)
