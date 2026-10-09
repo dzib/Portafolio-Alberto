@@ -148,6 +148,31 @@ graph LR
 
 ---
 
+### 🛡️ Gobernanza de Datos y Calidad Verificada (Dzib Standard V3.0)
+
+Este portafolio incorpora un sistema automatizado de control y auditoría interna
+ para garantizar la máxima calidad técnica:
+
+* **Integridad de Enlaces:** Verificación global automatizada que asegura un
+ **100% de enlaces internos y externos funcionales**
+  (0 enlaces rotos).
+* **Reportes de Cumplimiento:** Métricas de estructura, nomenclatura y formato
+ validadas mediante scripts ejecutables
+  en `reports/portfolio_compliance.csv`.
+* **Control Semántico:** Estandarización de tipos de datos, atomicidad rigurosa
+ y nomenclatura unificada en motores relacionales y cloud.
+
+### 🔍 Observabilidad y Resiliencia Operativa
+
+* **Monitoreo de Pipelines (Airflow):** Gestión de flujos automatizados con
+ manejo de reintentos automáticos, aislamiento en contenedores y control de
+  salud de tareas mediante Apache Airflow (`P6`).
+* **Stress Testing e I/O:** Pruebas de carga masiva en flujos de ingesta (`P4`)
+ con optimización de hardware para garantizar un rendimiento óptimo de
+escritura a escala industrial.
+
+---
+
 ## 📊 Métricas de Impacto y Performance (Hito v3.0)
 
 > *Benchmarks ejecutados en entorno local optimizado (SSD Expansion & Write Caching).*
@@ -367,13 +392,14 @@ graph LR
 
 ## 📁 Proyectos destacados
 
-### 🤖 \[P7\] AI Agent with Google ADK (v1.0.0) - Nuevo
+### 🤖 \[P7\] AI Agent with Google ADK (v5.4.0) - Release Oficial
 
 *Implementación de agentes inteligentes y analítica avanzada asistida por IA.*
 
-* **Arquitectura:** Diseño modular bajo Google ADK con flujos estructurados de gobernanza.
-* **Integración:** Coordinación de respuestas orientadas a datos operativos
-  y de nube.
+- **Arquitectura:** Diseño modular bajo Google ADK con flujos estructurados de
+  gobernanza y Vertex AI (Gemini Live).
+- **Trazabilidad:** Publicado bajo la versión oficial **v5.4.0** del
+  portafolio corporativo.
 
 ### 🔄 \[P6\] Orquestación de Procesos con Apache Airflow
 
