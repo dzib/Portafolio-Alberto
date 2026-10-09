@@ -1,5 +1,12 @@
 # Agent Valley Night Market
 
+## 🤖 P7_AI Agent with Google ADK (Inteligencia Artificial Aplicada)
+
+> Automatiza la atención y el análisis operativo del mercado mediante
+> asistentes inteligentes basados en Vertex AI y Gemini Live.
+> Optimiza la interacción con el usuario final y reduce los costos
+> operativos de soporte en un esquema escalable.
+
 ---
 
 ## Overview
