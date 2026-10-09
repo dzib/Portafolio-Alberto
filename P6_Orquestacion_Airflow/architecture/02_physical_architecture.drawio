@@ -1,0 +1,35 @@
+<mxfile host="app.diagrams.net" modified="2026-10-08T00:00:00.000Z" agent="Mozilla/5.0" version="24.0.0" type="device">
+  <diagram name="Physical Architecture" id="physical-arch-p6">
+    <mxGraphModel dx="1000" dy="600" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- Host Container -->
+        <mxCell id="host_box" value="Docker Engine / Host Environment (Windows 11 / WSL2)" style="swimlane;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="100" y="60" width="620" height="420" as="geometry" />
+        </mxCell>
+
+        <!-- Postgres Container -->
+        <mxCell id="pg_container" value="PostgreSQL 13&#xa;(Metadata DB + healthcheck)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontStyle=1;" vertex="1" parent="host_box">
+          <mxGeometry x="40" y="80" width="220" height="80" as="geometry" />
+        </mxCell>
+
+        <!-- Airflow Init Container -->
+        <mxCell id="init_container" value="airflow-init&#xa;(DB Migrate &amp; User Setup)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="host_box">
+          <mxGeometry x="330" y="80" width="240" height="80" as="geometry" />
+        </mxCell>
+
+        <!-- Webserver & Scheduler -->
+        <mxCell id="web_container" value="airflow-webserver&#xa;(Apache Airflow 2.7.2 - Port 8080)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="host_box">
+          <mxGeometry x="40" y="240" width="220" height="120" as="geometry" />
+        </mxCell>
+
+        <mxCell id="sched_container" value="airflow-scheduler&#xa;(LocalExecutor Tasks)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="host_box">
+          <mxGeometry x="330" y="240" width="240" height="120" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
