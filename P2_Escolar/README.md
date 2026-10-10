@@ -2,14 +2,22 @@
 
 ## Resiliencia, Atomicidad y Stress Testing (V2.2)
 
+
+### 🏫 \[P2\] Sistema de Control Escolar (Gestión Académica)
+
+"Resuelve la dispersión de calificaciones y la lentitud en la generación
+de reportes estudiantiles centralizando los datos bajo normalización
+estricta. Reduce en un 95% el tiempo de auditoría académica y acelera la
+toma de decisiones directivas."
+
+---
+
 ## 📌 Descripción general
 
 * Proyecto 2 del Portafolio de SQL, enfocado en la creación de un sistema
   de gestión académica para una institución educativa ficticia. El proyecto
   abarca desde la creación de tablas y carga masiva de datos, hasta la
   limpieza y transformación de datos para generar reportes analíticos.
-
----
 
 ## 🎯 Objetivo
 

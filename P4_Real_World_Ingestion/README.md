@@ -2,6 +2,13 @@
 
 ## Estado: ✅ Finalizado (FASE V4.5)
 
+## 🚀 P4_Real-World Ingestion & Supply Chain (Alta Concurrencia)
+
+"Mitiga los cuellos de botella en la ingesta masiva de datos logísticos
+procesando más de 23,000 registros por segundo. Asegura la disponibilidad
+continua de información crítica para la toma de decisiones operativas de
+última milla."
+
 ## 🎯 Objetivo
 
 Orquestar un pipeline híbrido de alto rendimiento para procesar

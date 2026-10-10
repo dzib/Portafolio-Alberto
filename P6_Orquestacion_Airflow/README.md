@@ -3,6 +3,15 @@
 
 > *"Automatización, tolerancia a fallos y despliegues idempotentes de punta a punta."*
 
+## 🔄 P6_Orquestacion_Airflow: Orquestación con Apache Airflow
+
+  (Resiliencia Operativa)
+
+"Elimina la dependencia de ejecuciones manuales propensas a fallos mediante
+pipelines de datos autogestionados y tolerantes a errores. Garantiza la entrega
+puntual y sin interrupciones de los datasets corporativos hacia las plataformas
+de Business Intelligence."
+
 ---
 
 ## 📋 Resumen Ejecutivo (Método STAR)

@@ -2,6 +2,14 @@
 
 ## Proyecto P1: Control de Inventarios & Fundamentos Relacionales (V3.0)
 
+🗂️ **P1: Inventario y Logística** (Gestión de Stock y Trazabilidad)
+
+> *"Elimina la obsolescencia de inventarios y los quiebres de stock
+> mediante un modelado relacional riguroso que automatiza el control de
+> existencias. Garantiza una visibilidad en tiempo real de la cadena de
+> suministro, optimizando los costos de almacenamiento operativo."*
+>
+
 ---
 
 ## Resumen Ejecutivo
@@ -102,8 +110,9 @@ analítica de la información.
 
 ## **📊 Indicadores de Performance Final**
 
+
 | Métrica          | Anterior           | Optimizado                 |
-| :---------------- | :----------------- | :------------------------- |
+| :------------------ | :------------------- | :--------------------------- |
 | Atomicidad        | Datos no atómicos | Datos normalizados         |
 | Consistencia      | Ruido ortográfico | Grooming global            |
 | Performance Batch | Carga no validada  | ~1,800 ms (500+ registros) |
@@ -126,8 +135,9 @@ Se implementó monitoreo de ejecución mediante registros de tiempo y
 volumen procesado para evaluar el desempeño del pipeline y documentar
 evidencias objetivas de rendimiento.
 
+
 | Métrica               | Resultado             |
-| ---------------------- | --------------------- |
+| ------------------------ | ----------------------- |
 | Registros Procesados   | 3,200                 |
 | Tiempo ETL             | < 1 segundo           |
 | Tiempo Batch           | 1.7 segundos          |
@@ -137,8 +147,9 @@ evidencias objetivas de rendimiento.
 
 ## 📊 Ejemplo de métricas de ejecución (V1.0)
 
+
 | # | Dim.           | Registros | Operación        | Rendimiento |
-| :-: | :------------- | :-------- | :---------------- | :---------- |
+| :-: | :--------------- | :---------- | :------------------ | :------------ |
 | 1 | Carga          | 3,200     | Inserción masiva | 1,776 ms    |
 | 2 | Integridad     | 100 %     | PK/FK y CHECK     | Verificado  |
 | 3 | Normalización | 500+      | ETL metadata      | < 1 s       |
@@ -277,20 +288,22 @@ Se resolvieron desafíos críticos mediante estándares de la industria
 
 ### Componentes
 
-| Componente | Responsabilidad |
-|------------|----------------|
-| Script 01 | Definición de arquitectura y objetos de base de datos |
-| Script 02 | Generación de datos semilla |
-| Script 03 | Simulación de carga masiva |
-| Script 04 | Limpieza, normalización y calidad de datos |
-| Script 05 | Exposición analítica mediante vistas |
+
+| Componente | Responsabilidad                                       |
+| ---------- | ----------------------------------------------------- |
+| Script 01  | Definición de arquitectura y objetos de base de datos |
+| Script 02  | Generación de datos semilla                           |
+| Script 03  | Simulación de carga masiva                            |
+| Script 04  | Limpieza, normalización y calidad de datos            |
+| Script 05  | Exposición analítica mediante vistas                  |
 
 ### 🏬 ADR Implementados
 
 #### Architecture Decision Records
 
+
 | ADR     | Descripción                                    |
-| ------- | ----------------------------------------------- |
+| --------- | ------------------------------------------------- |
 | ADR-001 | Segmentación por dominios y datos no atómicos |
 | ADR-002 | Vistas analíticas consolidadas                 |
 | ADR-003 | Framework de calidad de datos                   |
@@ -301,8 +314,9 @@ Se resolvieron desafíos críticos mediante estándares de la industria
 El marco de calidad del dato se basa en la validación automatizada de los datos
 antes de exponerlos a las capas analíticas y de visualización.
 
+
 | Validación                    | Objetivo                          |
-| ------------------------------ | --------------------------------- |
+| -------------------------------- | ----------------------------------- |
 | test_nulls.sql                 | Detectar nulos críticos          |
 | test_duplicates.sql            | Detectar duplicados               |
 | test_business_rules.sql        | Validar reglas operativas         |
@@ -317,13 +331,14 @@ Resultado esperado:
 
 ## 📚 Evidencias de Ejecución
 
-| Evidencia | Descripción |
-|------------|------------|
-| 01_architecture.png | Diagramas de arquitectura |
+
+| Evidencia              | Descripción               |
+| ------------------------ | ---------------------------- |
+| 01_architecture.png    | Diagramas de arquitectura  |
 | 02_batch_execution.png | Ejecución de carga masiva |
-| 03_etl_execution.png | Proceso ETL |
-| 04_qa_validation.png | Validaciones QA |
-| 05_dashboard.png | Dashboard operativo |
+| 03_etl_execution.png   | Proceso ETL                |
+| 04_qa_validation.png   | Validaciones QA            |
+| 05_dashboard.png       | Dashboard operativo        |
 
 ---
 

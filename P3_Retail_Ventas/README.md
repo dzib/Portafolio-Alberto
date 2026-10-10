@@ -1,5 +1,12 @@
 # 🐍 Proyecto 3: Pipeline Híbrido de Alto Rendimiento (Python + SQL Server)
 
+## 🛍️ [/P3_Retail_Ventas/](./) Retail & Análisis de Ventas (Inteligencia Comercial)
+
+"Transforma transacciones de punto de venta desestructuradas en tableros
+ejecutivos de rentabilidad por producto y región. Permite identificar patrones
+de compra estacionales para maximizar las campañas de marketing y la retención
+de clientes."
+
 ## 📌 Descripción General
 
 * Implementación de una arquitectura híbrida avanzada para el

@@ -1,5 +1,11 @@
 # Portafolio: Análisis y Agregación de Datos en BigQuery
 
+## ☁️ P5_BigQuery_Fintech — BigQuery Fintech Pipeline (Analítica Cloud y Escalabilidad)
+
+"Automatiza la agregación de datos financieros transaccionales en entornos cloud
+serverless mediante consultas idempotentes. Reduce la latencia analítica y
+garantiza la gobernanza estricta para auditorías regulatorias."
+
 ## 📌 Contexto del Proyecto
 
 Este proyecto demuestra habilidades prácticas en **Google Cloud BigQuery**
