@@ -1,6 +1,18 @@
 # src/config.py
 import os
-from dotenv import load_dotenv
+
+
+def load_dotenv():
+    """Carga variables desde .env si la dependencia está disponible."""
+    try:
+        dotenv = __import__("dotenv")
+        loader = getattr(dotenv, "load_dotenv", None)
+        if callable(loader):
+            return loader()
+    except ModuleNotFoundError:
+        return False
+    return False
+
 
 # Cargar variables desde el archivo .env
 load_dotenv()

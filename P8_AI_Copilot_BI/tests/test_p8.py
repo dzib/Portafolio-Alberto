@@ -1,6 +1,5 @@
 # tests/test_p8.py
-import pandas as pd
-import pytest
+import pandas as pd  # pyright: ignore[reportMissingModuleSource]
 from src.analytics import calcular_kpis
 from src.tools import validar_estructura_df, limpiar_valores_nulos
 
