@@ -79,10 +79,19 @@ a Azure sin almacenar contraseñas en texto plano.
 ## 🛠️ Estructura de Scripts
 
 - `scripts/setup_tenant_users.py`: Simulación de aprovisionamiento de
-    usuarios y grupos corporativos.
+  usuarios y grupos corporativos.
 - `scripts/assign_rbac_roles.py`: Automatización de asignación de roles y
-    políticas de seguridad.
+  políticas de seguridad.
 - `tests/test_compliance.py`: Pruebas automatizadas de validación de
-    esquemas y cumplimiento de accesos.
+  esquemas y cumplimiento de accesos.
 
-## 🏗️ Estructura del Módulo: `P9_Azure_IAM_Governance`
+---
+
+## 🚀 Ejecución y Pruebas
+
+Para validar la correcta configuración y las pruebas unitarias del módulo,
+ ejecuta en tu terminal:
+
+```PowerShell
+pytest P9_Azure_IAM_Governance/tests/test_compliance.py -v
+```
