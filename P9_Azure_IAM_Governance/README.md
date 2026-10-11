@@ -1,0 +1,51 @@
+# 🏗️ Estructura del Módulo: `P9_Azure_IAM_Governance`
+
+```text
+P9_Azure_IAM_Governance/
+│
+├── .env.example                 # Variables para Azure CLI / SDK
+├── README.md                    # Documentación y despliegue
+├── requirements.txt             # Dependencias (azure-identity,
+│                                azure-mgmt-authorization, etc.)
+│
+├── docs/                        # Gobierno y arquitectura
+│   ├── decisions/               # ADR-001: Menor privilegio (PoLP)
+│   ├── functional/              # Seguridad y segregación de funciones
+│   └── technical/               # Flujos de identidades
+│
+├── scripts/                     # Automatización Python / CLI / PowerShell
+│   ├── setup_tenant_users.py    # Simulación o gestión de creación
+│   │                            # de usuarios / grupos
+│   └── assign_rbac_roles.py     # Automatización de asignación
+│                                # de roles (Reader, Contributor, Owner)
+│
+└── tests/                       # Pruebas unitarias y de cumplimiento
+    └── test_iam_compliance.py   # Validación de políticas de seguridad
+```
+
+## 🔑 Conceptos Clave que Implementaremos en Código
+
+1. Microsoft Entra ID (Tenant & Directory):
+
+Creación y gestión lógica de usuarios miembros e invitados
+(Guest Users).
+
+Creación de Grupos de Seguridad y Grupos de Microsoft 365 para control
+de acceso basado en grupos. Es una buena práctica para no asignar
+permisos usuario por usuario.
+
+1. Control de Acceso Basado en Roles (Azure RBAC):
+
+Asignación de roles nativos (Owner, Contributor, Reader y
+Storage Blob Data Contributor) a nivel de suscripción, grupo de
+recursos o recurso específico (como un Data Lake o SQL Server).
+
+Uso del Principio de Menor Privilegio (PoLP): los usuarios y las
+aplicaciones de datos solo deben tener los permisos estrictamente
+necesarios para operar.
+
+1. Identidades Administradas y Service Principals (App Registrations):
+
+Configuración de credenciales y tokens para que tus pipelines ETL
+(como los de Python o Azure Data Factory) se conecten de forma segura
+a Azure sin almacenar contraseñas en texto plano.
