@@ -1,23 +1,44 @@
-# 📑 Proyecto 2: Sistema de Gestión Académica & ETL con CTE
+# 📘 Documentación Técnica
 
-## Resiliencia, Atomicidad y Stress Testing (V2.2)
+## Proyecto P02: Sistema de Gestión Académica & ETL con CTE (V2.2)
 
+🗂️ **P02: Sistema de Control Escolar** (Gestión Académica y Resiliencia)
 
-### 🏫 \[P2\] Sistema de Control Escolar (Gestión Académica)
-
-"Resuelve la dispersión de calificaciones y la lentitud en la generación
-de reportes estudiantiles centralizando los datos bajo normalización
-estricta. Reduce en un 95% el tiempo de auditoría académica y acelera la
-toma de decisiones directivas."
+> "Resuelve la dispersión de calificaciones y la lentitud en la generación
+> de reportes estudiantiles centralizando los datos bajo normalización
+> estricta. Reduce en un 95% el tiempo de auditoría académica y acelera la
+> toma de decisiones directivas."
 
 ---
 
+## 📑 Índice de Navegación Rápida
+
+- [Resumen Ejecutivo](#resumen-ejecutivo)
+- [Objetivo](#-objetivo)
+- [Arquitectura del Pipeline](#️-arquitectura-del-pipeline-01-05)
+- [Indicadores de Rendimiento](#-fase-5-analytics--business-intelligence-executive-view)
+- [Estructura del Repositorio](#estructura-del-repositorio)
+- [Guía de Ejecución](#-cómo-ejecutar)
+- [Retos Técnicos y Soluciones de Ingeniería](#-retos-técnicos-y-soluciones-de-ingeniería)
+- [Próximos Pasos](#-próximos-pasos)
+- [Glosario Técnico y de Impacto](#-glosario-técnico-y-de-impacto)
+
+---
+
+## Resumen Ejecutivo
+
+Proyecto 2 del Portafolio de SQL, enfocado en la creación de un sistema de
+ gestión académica para una institución educativa ficticia. El proyecto abarca
+ desde la creación de tablas y carga masiva de datos, hasta la limpieza y
+ transformación de datos para generar reportes analíticos.
+
 ## 📌 Descripción general
 
-* Proyecto 2 del Portafolio de SQL, enfocado en la creación de un sistema
-  de gestión académica para una institución educativa ficticia. El proyecto
-  abarca desde la creación de tablas y carga masiva de datos, hasta la
-  limpieza y transformación de datos para generar reportes analíticos.
+* Proyecto 2 del Portafolio de SQL, enfocado en el desarrollo de un sistema de
+ gestión académica. El proceso fundamentado en el rigor transaccional y en la
+ lógica de normalización, diseñado para manejar de forma estructurada catálogos
+ institucionales y transacciones académicas masivas, transformando datos
+ complejos en inteligencia de negocio.
 
 ## 🎯 Objetivo
 
@@ -67,9 +88,9 @@ toma de decisiones directivas."
 
 ## Arquitectura
 
-- architecture/01_logical_architecture.drawio
-- architecture/02_physical_architecture.drawio
-- architecture/03_deployment_architecture.drawio
+- [Arquitectura Lógica](architecture/01_logical_architecture.drawio)
+- [Arquitectura Física](architecture/02_physical_architecture.drawio)
+- [Arquitectura de Despliegue](architecture/03_deployment_architecture.drawio)
 
 ---
 
@@ -82,11 +103,6 @@ toma de decisiones directivas."
 
 ---
 
-## 📊 Evidencias de Ejecución
-
-> Métricas finales obtenidas del Script 05.
- > ![Resumen de Ejecución](../assets/P2/img/05-MetriEjecu-ReporteBI.png)
-
 ## 📊 Fase 5: Analytics & Business Intelligence (Executive View)
 
 ### 📈 Rendimiento por Facultad vs. Inversión (KPI Agregado) 🚀
@@ -94,25 +110,22 @@ toma de decisiones directivas."
 >> Para demostrar la madurez del sistema, sustituiremos la tabla
 >> anterior por una que cruce el **Rendimiento Académico** con la
 >> **Inversión (Presupuesto)**.
->>
 
+|   #   | Facultad         | Alumnos | Presupuesto | Promedio | Score Visual |
+| :---: | :--------------- | :-----: | :---------: | :------: | :----------: |
+| **1** | Administración   |   242   | $450,000.00 |  85.34   | `>>>>>>>>--` |
+| **2** | Humanidades      |   286   | $250,000.00 |  85.21   | `>>>>>>>>--` |
+| **3** | Ingeniería       |   230   | $500,000.00 |  84.69   | `>>>>>>>>--` |
+| **4** | Ciencias Exactas |   242   | $300,000.00 |  84.45   | `>>>>>>>>--` |
 
-| #     | Facultad         | Alumnos | Presupuesto | Promedio | Score        |
-| --- | --- | --- | --- | --- | --- |
-| **1** | Administración  | 242     | $450,000.00 | 85.34    | `>>>>>>>>--` |
-| **2** | Humanidades      | 286     | $250,000.00 | 85.21    | `>>>>>>>>--` |
-| **3** | Ingeniería      | 230     | $500,000.00 | 84.69    | `>>>>>>>>--` |
-| **4** | Ciencias Exactas | 242     | $300,000.00 | 84.45    | `>>>>>>>>--` |
-
-### 📈 Distribución de Estatus Académico (Segmentación)
-
+### Distribución de Estatus Académico (Segmentación)
 
 | Estatus Académico | Total | % Participación | Distribución Visual |
-| -------------------- | ------- | ------------------ | ---------------------- |
-| **Activo**         | 343   | 34.30%           | ¦¦¦¦¦¦         |
-| **Pendiente**      | 282   | 28.20%           | ¦¦¦¦¦           |
-| **Regular**        | 229   | 22.90%           | ¦¦¦¦             |
-| **Baja Temporal**  | 146   | 14.60%           | ¦¦                 |
+| :---------------- | :---: | :-------------: | :-----------------: |
+| **Activo**        |  343  |     34.30%      |       ¦¦¦¦¦¦        |
+| **Pendiente**     |  282  |     28.20%      |        ¦¦¦¦¦        |
+| **Regular**       |  229  |     22.90%      |        ¦¦¦¦         |
+| **Baja Temporal** |  146  |     14.60%      |         ¦¦          |
 
 > *Nota: Los datos reflejados corresponden al benchmark final tras la
 > normalización atómica del ETL .*
@@ -122,6 +135,45 @@ toma de decisiones directivas."
 > * *Legacy:* Gestión plana de alumnos por carrera.
 > * *Optimized (V2.1.0):* Análisis relacional por Facultades con métricas
 >   de Score Visual y control presupuestario.
+
+---
+
+## Estructura del Repositorio
+
+```text
+P02_Escolar/
+│
+├── architecture/
+│   ├── 01_logical_architecture.drawio
+│   ├── 02_physical_architecture.drawio
+│   └── 03_deployment_architecture.drawio
+│
+├── assets/
+│   └── img/
+│
+├── BI_Visualization/
+│   └── P2_Analytics_Executive_Dashboard.xlsx
+│
+├── data_sample/
+│
+├── docs/
+│   ├── decisions/
+│   ├── functional/
+│   ├── operations/
+│   └── technical/
+│
+├── scripts/
+│   ├── 01_Setup_DDL.sql
+│   ├── 02_DML_Seed_Data.sql
+│   ├── 03_QA-PosValidaciones.sql
+│   ├── 03_Stress_Test.sql
+│   ├── 04_ETL_Limpieza.sql
+│   └── 05_Reportes_BI.sql
+│
+├── tests/
+│
+└── README.md
+```
 
 ---
 
@@ -238,5 +290,50 @@ toma de decisiones directivas."
 
 ---
 
+## 📅 Próximos Pasos
+
+> (Roadmap)
+
+V.3.0
+
+* Integración de validaciones automatizadas mediante pytest conectadas al motor
+ SQL.
+
+* Automatización de reportes vía pipeline de orquestación.
+
+V3.0.0
+
+* Capa de servicios API para consulta externa de estatus escolar.
+
+* Observabilidad avanzada y logging centralizado.
+
+---
+
+## 📖 Glosario Técnico y de Impacto
+
+> (Para Reclutadores y Stakeholders)
+
+* *CTE (Common Table Expression):* Expresión de tabla temporal nombrada que
+ simplifica consultas complejas y optimiza el procesamiento de datos en una
+ sola pasada.
+
+* *Single-Pass Processing:* Técnica de diseño en pipelines donde los datos se
+ leen y transforman en una única iteración de memoria, reduciendo el consumo
+ de recursos.
+
+* *Idempotencia Senior:* Capacidad de un script de base de datos de ejecutarse
+ múltiples veces de forma segura sin duplicar registros ni corromper el estado
+ del sistema.
+
+* *SARGability:* Propiedad de las consultas SQL que permite al motor de base
+ de datos utilizar índices de manera eficiente para acelerar la recuperación
+ de registros.
+
+* *Eficiencia Presupuestaria:* KPI analítico que evalúa el rendimiento académico
+ promedio de los estudiantes en relación con los recursos financieros asignados
+ por facultad.
+
+---
+
 **Autor:** Alberto Dzib
-**Versión:** 2.1.0
+**Versión:** 2.2.0
