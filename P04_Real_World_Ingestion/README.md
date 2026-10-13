@@ -2,12 +2,28 @@
 
 ## Estado: ✅ Finalizado (FASE V4.5)
 
-## 🚀 P4_Real-World Ingestion & Supply Chain (Alta Concurrencia)
+### 🚀 P4_Real-World Ingestion & Supply Chain (Alta Concurrencia)
 
 "Mitiga los cuellos de botella en la ingesta masiva de datos logísticos
 procesando más de 23,000 registros por segundo. Asegura la disponibilidad
 continua de información crítica para la toma de decisiones operativas de
 última milla."
+
+---
+
+## 📑 Índice de Navegación Rápida
+
+- [Objetivo](#-objetivo)
+- [Retos Técnicos a Resolver](#-retos-técnicos-a-resolver)
+- [Estructura Completa del Proyecto](#️-estructura-completa-del-proyecto-modular--production-ready)
+- [Arquitectura y Trazabilidad](#-arquitectura-y-trazabilidad-daas--data-as-a-service)
+- [Changelog & Release Management](#-changelog--release-management)
+- [Evidencia Cuantitativa y Visual](#-evidencia-cuantitativa-y-visual)
+- [Bitácora de Troubleshooting](#-bitácora-de-troubleshooting--retos-superados)
+- [Próximos Pasos (Roadmap)](#-próximos-pasos-roadmap)
+- [Glosario Técnico y de Impacto](#-glosario-técnico-y-de-impacto-para-reclutadores-y-stakeholders)
+
+---
 
 ## 🎯 Objetivo
 
@@ -18,6 +34,7 @@ transformación y analítica avanzada. (Implementado desde DataCo
  Supply Chain Dataset hacia SQL Server utilizando SQLAlchemy y PyODBC.)
 
 ```mermaid
+%%{init: {'theme': 'dark'}}%%
 graph TD
     subgraph "Fase 01 & 02: Ingesta Pro"
     A[Kaggle Dataset: DataCo CSV] -->|Python 3.13 + SQLAlchemy| B[Staging.Kaggle_SupplyChain_Raw]
@@ -115,9 +132,7 @@ analítico escalable (PaaS) para herramientas de Business Intelligence.
 
 ![Arquitectura del pipeline](assets/diagrams/P4_pipeline.png)
 
-Fuente editable:
-
-assets/diagrams/P4_pipeline.drawio
+Fuente editable: assets/diagrams/P4_pipeline.drawio
 
 ### 🏗️ Diseño de Capas (Single Source of Truth)
 
@@ -149,6 +164,7 @@ assets/diagrams/P4_pipeline.drawio
     división por cero (`NULLIF`).
   * Script de auditoría matemática de anomalías
     (`02_QA_Anomaly_Check.sql`) integrado al pipeline de QA.
+
 * **Changed (Modificaciones de Arquitectura):**
 
   * Refactorización total de `01_clean_shipments.sql` hacia el estándar
@@ -156,6 +172,7 @@ assets/diagrams/P4_pipeline.drawio
   * Idempotencia destructiva implementada: el pipeline ahora realiza
     `DROP TABLE` condicional para garantizar la integridad exacta de las 16
     columnas analíticas requeridas.
+
 * **Removed (Depreciaciones):**
 
   * Eliminación del script de parches post-ingesta
@@ -196,7 +213,7 @@ V2.4.0 incorpora validaciones adicionales:
 
 
 |       **Métrica**       |   **Resultado**   |
-| :-------------------------: | :-----------------: |
+| :-----------------------: | :---------------: |
 |     **Volumen Total**     | 180,519 registros |
 |   **Tiempo de Ingesta**   |   7.56 segundos   |
 | **Tasa de Transferencia** | 23,866.62 reg/seg |
@@ -231,7 +248,7 @@ Staging.Kaggle_SupplyChain_Raw
 
 ---
 
-### Evidencias
+### Evidencias de Ejecución
 
 ## Evidencia 01 - Base de datos creada
 
@@ -295,6 +312,8 @@ Resultado esperado:
 ```text
 180519
 ```
+
+---
 
 ## 📝 Bitácora de Troubleshooting (🧠 Retos Superados)
 
@@ -368,5 +387,40 @@ Resultado esperado:
 
 ---
 
+## 📅 Próximos Pasos (Roadmap)
+
+### V4.6.0
+
+* Automatización completa de alertas por correo ante fallos en los logs de ejecución.
+
+* Integración de pruebas unitarias continuas con pytest en el script de
+ orquestación PowerShell.
+
+### V5.0.0
+
+* Migración parcial del pipeline de ingesta hacia Azure Cloud Data Factory para
+ interoperabilidad híbrida on-premise/cloud.
+
+
+---
+
+## 📖 Glosario Técnico y de Impacto (Para Reclutadores y Stakeholders)
+
+* *Alta Concurrencia:* Capacidad de un sistema de procesar múltiples solicitudes
+ y flujos de datos simultáneamente sin degradar el rendimiento operativo.
+
+* *Single-Pass Processing:* Metodología de transformación de datos donde la
+ información es leída y procesada en una sola iteración de memoria,
+ optimizando recursos de CPU.
+
+* *Orquestador Maestro:* Script centralizado (en este caso en PowerShell)
+ que automatiza la ejecución secuencial de todo el pipeline garantizando
+ trazabilidad y control de errores.
+
+* *SARGable (Search Argument-able):* Propiedad de una consulta SQL que permite
+ al motor de base de datos aprovechar índices existentes de forma óptima.
+
+---
+
 *Autor:* Alberto Dzib
-*Versión:* 2.4.0
+*Versión:* 4.5.0
