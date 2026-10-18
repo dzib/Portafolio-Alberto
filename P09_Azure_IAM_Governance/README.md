@@ -95,3 +95,15 @@ Para validar la correcta configuración y las pruebas unitarias del módulo,
 ```PowerShell
 pytest P9_Azure_IAM_Governance/tests/test_compliance.py -v
 ```
+
+---
+
+## Author
+
+Alberto Dzib
+
+LinkedIn: [Alberto Dzib](https://linkedin.com/in/alberto-dzib)
+
+Portfolio: [Portafolio-Alberto](https://github.com/dzib/Portafolio-Alberto)
+
+Versión: 1.0.0

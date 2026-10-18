@@ -1,4 +1,3 @@
-
 # 🤖 P8_AI_Copilot_BI — Copilot Analítico Local con IA y Multi-Source ETL
 
 > *"Automatiza la ingesta de fuentes heterogéneas (CSV y JSON), optimiza el
@@ -11,19 +10,19 @@
 ## 📋 Resumen Ejecutivo (Método STAR)
 
 - **Situación:** Los equipos directivos y analíticos pierden horas valiosas
-    transformando datos crudos dispersos en reportes ejecutivos e interpretando
-    tendencias de forma manual.
+  transformando datos crudos dispersos en reportes ejecutivos e interpretando
+  tendencias de forma manual.
 - **Tarea:** Diseñar y desplegar una arquitectura de datos robusta y un Agente
-    de IA local autónomo capaz de unificar fuentes heterogéneas, calcular
-    indicadores clave de rendimiento (KPIs) y redactar análisis de negocio
-    estructurados sin depender de APIs de pago.
+  de IA local autónomo capaz de unificar fuentes heterogéneas, calcular
+  indicadores clave de rendimiento (KPIs) y redactar análisis de negocio
+  estructurados sin depender de APIs de pago.
 - **Acción:** Se desarrolló una arquitectura modular en Python integrando un
-    generador multi-origen (`raw/`), un pipeline ETL de homologación con salida
-    en formato columnar **Parquet** (`processed/`), y un conector inteligente
-    con **Ollama** (`llama3.2`) operando en un entorno local seguro.
+  generador multi-origen (`raw/`), un pipeline ETL de homologación con salida
+  en formato columnar **Parquet** (`processed/`), y un conector inteligente
+  con **Ollama** (`llama3.2`) operando en un entorno local seguro.
 - **Resultado:** Un sistema automatizado de extremo a extremo que reduce el
-    tiempo de análisis exploratorio a segundos y entrega reportes listos para la
-    toma de decisiones gerenciales con gobernanza y atomicidad.
+  tiempo de análisis exploratorio a segundos y entrega reportes listos para la
+  toma de decisiones gerenciales con gobernanza y atomicidad.
 
 ---
 
@@ -64,7 +63,7 @@ graph TD
 P8_AI_Copilot_BI/
 │
 ├── architecture/          # Diagramas conceptuales y físicos
-├── data/                  
+├── data/                
 │   ├── raw/               # Fuentes heterogéneas (CSV, JSON)
 │   └── processed/         # Almacenamiento optimizado (Parquet)
 ├── docs/                  # Documentación técnica y de negocio
@@ -139,6 +138,14 @@ python P8_AI_Copilot_BI/src/main.py´
 pytest -v
 ```
 
-Autor: Jesús Alberto Dzib Ku
+---
+
+## Author
+
+Alberto Dzib
+
+LinkedIn: [Alberto Dzib](https://linkedin.com/in/alberto-dzib)
+
+Portfolio: [Portafolio-Alberto](https://github.com/dzib/Portafolio-Alberto)
 
 Versión: 2.0.0
