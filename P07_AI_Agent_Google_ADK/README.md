@@ -11,8 +11,8 @@
 ## 📑 Índice de Navegación Rápida
 
 - [Resumen Ejecutivo](#-resumen-ejecutivo)
-- [Stack Tecnológico](#-stack-tecnológico)
-- [Arquitectura de la Solución](#-arquitectura-de-la-solución)
+- [Stack Tecnológico](#stack-tecnológico)
+- [Arquitectura de la Solución](#arquitectura-de-la-solución)
 - [Estructura del Proyecto](#-estructura-del-proyecto)
 - [Evidencias de Ejecución](#-evidencias-de-ejecución)
 - [Glosario Técnico y de Impacto](#-glosario-técnico-y-de-impacto)
@@ -70,20 +70,6 @@ P07_AI_Agent_Google_ADK/
 ├── pyproject.toml / uv.lock      # Gestión moderna de dependencias de Python
 └── README.md                     # Documentación principal estandarizada
 ```
-
----
-
-### 📖 Glosario Técnico y de Impacto
-
-* *Google ADK:* Herramienta para la orquestación y desarrollo acelerado de agentes de IA.
-
-* *Vertex AI:* Plataforma unificada de Machine Learning en GCP para entrenar y desplegar modelos.
-
-* *Gemini Live:* Modelo multimodal avanzado de Google para interacciones conversacionales dinámicas (texto y voz).
-
-* *FastAPI:* Framework moderno y de alto rendimiento para construir APIs web en Python.
-
-* *Cloud Shell:* Entorno de línea de comandos interactivo en el navegador provisto por Google Cloud.
 
 ---
 
@@ -151,6 +137,17 @@ P07_AI_Agent_Google_ADK/
 
 ---
 
+## Evidencias de Ejecución
+
+> El código fuente completo y los scripts de despliegue se ejecutaron en Google Cloud Shell habilitando las APIs correspondientes a través del repositorio oficial de Agent Valley Night Market.
+
+  1. Configuración del Entorno (Cloud Shell)
+  2. Creación de Proyecto GCP
+  3. Habilitación de Vertex AI
+  4. Conexión con Gemini Live
+  5. Setup Completado
+  6. Aplicación en Ejecución (Demo)
+
 ## Project Evidence
 
 | Evidence | Description |
@@ -215,20 +212,9 @@ Google Cloud Shell a través del repositorio oficial de Agent Valley Night Marke
 
 ---
 
-## Evidencias de Ejecución
-
-El código fuente completo y los scripts de despliegue se ejecutaron en Google Cloud Shell habilitando las APIs correspondientes a través del repositorio oficial de Agent Valley Night Market.
-
-1. Configuración del Entorno (Cloud Shell)
-2. Creación de Proyecto GCP
-3. Habilitación de Vertex AI
-4. Conexión con Gemini Live
-5. Setup Completado
-6. Aplicación en Ejecución (Demo)
-
 ---
 
-## Glosario Técnico y de Impacto
+### 📖 Glosario Técnico y de Impacto
 
 * *Google ADK:* Herramienta para la orquestación y desarrollo acelerado de agentes de IA.
 
