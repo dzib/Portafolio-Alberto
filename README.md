@@ -1,3 +1,4 @@
+<!-- markdownlint-disable MD013 MD007 MD051 -->
 # 🚀 Enterprise Data Engineering Portfolio - 👷 Alberto Dzib 📊
 
 > "Construyendo sistemas que no solo procesan datos,
@@ -18,13 +19,235 @@
 >
 > 📖 ¡Bienvenido a mi portafolio!
 > **Ingeniero de Datos & Consultor Independiente** especializado en
-> arquitecturas de alto rendimiento, resiliencia de bases de datos y
-> migración de sistemas legacy. Experto en transformar entornos críticos y
-> metadatos desestructurados en ecosistemas de información optimizados
-> mediante el **Dzib Standard (V3.0.0).**
+> arquitecturas de alto rendimiento, resiliencia de bases de datos,
+> automatización cloud e infraestructura soberana. Experto en transformar
+> entornos críticos en ecosistemas de información optimizados mediante el
+> **Dzib Standard (V3.0.0).**
 
 **Core Stack:** `SQL Server 2025` | `Python 3.13` | `Git Flow` |
-`Excel BI (ODBC)` | `Google Cloud Platfor`
+`Excel BI (ODBC)` | `Google Cloud Platform` | `Azure & GCP` |
+`Docker & RustDesk` | `Power BI & Copilot`
+
+---
+---
+
+## 📌 Resumen Ejecutivo del Portafolio
+
+Este repositorio centraliza proyectos de nivel de producción
+ (*Production-Ready*) enfocados en ingeniería de datos, arquitectura de
+ canalizaciones híbridas, automatización de procesos, despliegue de agentes de
+ Inteligencia Artificial, gobernanza en la nube y pasarelas de infraestructura
+ auto-hospedadas. Cada módulo ha sido desarrollado bajo estrictos estándares de
+ control de versiones (Git Flow), documentación estandarizada (Método STAR) y
+ principios de resiliencia y atomicidad.
+
+---
+
+## 🏗️ Mapa de Módulos y Arquitectura del Portafolio
+
+| Módulo  | Nombre del Proyecto                               | Tecnologías Clave / Stack      | Enfoque Arquitectónico                                         |
+| :------ | :------------------------------------------------ | :----------------------------- | :------------------------------------------------------------- |
+| **P01** | `P01_Inventario`                                  | Python, SQL, ETL               | Automatización de inventarios y control de stock               |
+| **P02** | `P02_Escolar`                                     | Python, Pandas, Analytics      | Gestión y procesamiento de métricas escolares                  |
+| **P03** | `P03_Retail_Ventas`                               | SQL Server, Power BI, DAX      | Modelado dimensional y análisis de ventas retail               |
+| **P04** | `P04_Real_World_Ingestion`                        | Python, SQLAlchemy, ETL        | Ingesta de datos del mundo real y limpieza                     |
+| **P05** | `P05_BigQuery_Fintech`                            | BigQuery, SQL, Analytics       | Arquitectura de datos financieros en la nube                   |
+| **P06** | `P06_Orquestacion_Airflow`                        | Apache Airflow, Docker         | Orquestación enterprise de pipelines de datos                  |
+| **P07** | `P07_AI_Agent_Google_ADK`                         | Google ADK, FastAPI, Vertex AI | Agentes conversacionales inteligentes y despliegue             |
+| **P08** | `P08_AI_Copilot_BI`                               | Power BI, IA, Copilot          | Inteligencia de negocios asistida por IA                       |
+| **P09** | `P09_Azure_IAM_Governance`                        | Microsoft Azure, IAM           | Gobernanza de identidad y seguridad en la nube                 |
+| **P10** | `P10_Secure_OnPrem_Remote_Desktop_Infrastructure` | Docker Compose, RustDesk OSS   | Infraestructura auto-hospedada y segura de escritorios remotos |
+
+---
+
+## 🎯 Objetivos y Estándares Técnicos
+
+- **Gobernanza y DataOps:** Integración de pruebas automatizadas con `pytest` y
+ validación continua en `GitHub Actions`.
+- **Arquitectura Medallón Local:** Estructuración de laboratorios locales en el
+ disco `D:\` bajo capas lógicas (Raw, Bronze, Silver, Gold).
+- **Infraestructura Soberana:** Despliegue de microcontenedores Docker y redes
+ L2 para control remoto seguro y sin dependencias de terceros (P10).
+
+---
+
+### Diagrama de Arquitectura Global
+
+```mermaid
+graph LR
+    A[Fuentes: CSV/Kaggle/Faker] -- Python Ingestion --> B[(SQL Server 2025)]
+    B -- T-SQL ETL --> C{Data Warehouse Local}
+    C -- SQL Views --> D[Power BI / PyGWalker]
+    E[Dataset Financiero] -- GCP --> F[(BigQuery Serverless)]
+    F -- CTAS --> G[Tablas Agregadas Analíticas]
+    H[Apache Airflow] --> A
+    H --> B
+    I[Google ADK AI Agent] --> F
+    J[Azure IAM Governance] --> B
+    K[Docker RustDesk On-Prem] --> L[Plataforma Local D:\]
+    style A fill:#34A853,color:#fff
+    style B fill:#0078D4,color:#fff
+    style C fill:#FF6D00,color:#fff
+    style D fill:#F2C811,color:#000
+    style E fill:#0f9d58,color:#fff
+    style F fill:#4285f4,color:#fff
+    style G fill:#FF6D00,color:#fff
+    style H fill:#00acee,color:#fff
+    style I fill:#AB47BC,color:#fff
+    style J fill:#0078D4,color:#fff
+    style K fill:#24292e,color:#fff
+´´´
+
+---
+
+## 🏢 Casos de Negocio: Impacto de la Ingeniería de Datos
+
+### 🛒 Retail & Global Supply Chain
+* **Problema:** Inconsistencias en el estatus de entrega y pérdidas financieras ocultas por datos mal tipados.
+* **Solución:** Pipeline híbrido que ingesta 180,000 registros, detecta anomalías financieras mediante SQL dinámico y normaliza el riesgo de entrega.
+
+* **Impacto:** Visibilidad total del 100% de la cadena de suministro con métricas de eficiencia por región en tiempo real.
+### 🏭 Manufactura y Logística (Inspiración: AB InBev)
+* **Problema:** Cuellos de botella en la carga de inventarios masivos que retrasan la toma de decisiones operativa.
+* **Solución:** Optimización de I/O a nivel de hardware y uso de fast_executemany en Python para reducir tiempos de carga en un 90%.
+* **Impacto:** Reducción del tiempo de procesamiento de minutos a segundos, permitiendo reportes de inventario subsegundo.
+
+---
+
+## 📁 Proyectos Destacados (v3.0.0)
+
+### 🔐 [P10] Secure On-Premise Remote Infrastructure
+> Despliegue de servidor de control remoto privado mediante Docker.
+
+* **Arquitectura:** Contenedores aislados (hbbs/hbbr) con enrutamiento Relay
+ local, garantizando 0% de dependencia de servidores de terceros y alta ciberseguridad.
+* **Performance:** Consumo ultra bajo comprobado (0.07% CPU, <2MB RAM) validado
+ mediante telemetría docker stats.
+
+### ☁️ [P09] Azure IAM & Cloud Governance
+> Gestión de identidades, control de accesos y seguridad en entornos Microsoft Azure.
+
+* **Gobernanza:** Implementación de políticas de control de acceso basado en roles
+ (RBAC) y auditoría de seguridad en la nube.
+
+### 📊 [P08] AI Copilot Business Intelligence
+> Optimización de reportes ejecutivos e inteligencia de negocios asistida por IA.
+
+* **Analítica Avanzada:** Integración de flujos analíticos en Power BI
+ potenciados por capacidades de Copilot para la toma de decisiones gerenciales.
+
+### 🤖 [P7] AI Agent with Google ADK (v5.4.0)
+> Implementación de agentes inteligentes y analítica avanzada asistida por IA.
+
+* **Arquitectura:** Diseño modular bajo Google ADK con flujos estructurados de
+ gobernanza y Vertex AI (Gemini Live).
+* **Gobernanza:** Implementación de políticas de control de acceso basado en
+ roles (RBAC) y auditoría de seguridad en la nube.
+
+### 🔄 [P6] Orquestación de Procesos con Apache Airflow
+> Automatización y gestión de flujos de trabajo orientados a datos mediante contenedores Docker y DAGs.
+
+### ☁️ [P5] Google Cloud BigQuery: Fintech Analytics
+Procesamiento analítico en la nube y creación de tablas agregadas serverless con
+ CTAS e idempotencia.
+
+### 🛒 \[P4\] Global Supply Chain Analytics (v4.0.0)
+
+*Ingesta de datos reales (Kaggle) y visualización de vanguardia.*
+
+- **Performance:** Ingesta récord de **180,000 registros** a **23.8k reg/seg**.
+- **Ingeniería:** Detección de anomalías financieras e integridad post-DDL
+  mediante **SQL Dinámico**.
+- **BI:** Dashboard interactivo integrado en VS Code con **PyGWalker** para
+  análisis exploratorio.
+- **Key Skills:** Data Analytics, Troubleshooting de Entorno, Orquestación Transaccional.
+
+### 🐍 \[P3\] Pipeline Híbrido de Alto Rendimiento: Retail (v3.1.0)
+
+*Integración avanzada de Python y SQL para optimización de I/O y procesamiento
+  de flujos veloces.*
+
+- **Ingesta:** Generación y carga masiva de **50,000 registros** en **1.84
+  segundos** mediante subprocesos híbridos.
+- **ETL:** Normalización de metadatos no atómicos mediante **CTEs** y
+  actualización por lotes (809 ms).
+- **BI:** Reporte analítico automatizado en consola con **Pandas**,
+  logrando tiempos de respuesta de **0.53 s**.
+- **Key Skills:** Orquestación híbrida, Middleware ODBC,
+  Optimización de I/O en hardware.
+
+### 🎓 \[P2\] Sistema de Gestión Académica (P2_Escolar / v2.1.0)
+
+*Ecosistema escolar resiliente con triple extracción y analítica presupuestaria.*
+
+- **Estructura:** Diseño de esquemas segregados (`Catálogos`, `Operaciones`)
+  aplicando control transaccional estricto.
+- **Calidad:** Implementación de bloques **TRY/CATCH**, transacciones y
+  manejo de desbordamientos decimales.
+- **ETL:** Transformación de strings complejos en datos tipados (`DATETIME2`, `DECIMAL`).
+- **Key Skills:** Window Functions (RANK), Idempotencia (`RESEED`),
+  Constraints Nominados.
+
+### 📦 \[P1\] Control de Inventarios (v2.0 - Retrofitting)
+
+*De Fundamentos Relacionales a Pipeline para alta Eficiencia.*
+
+* **Resiliencia Atómica:** Capacidad de reconstrucción total del entorno tras
+  fallos críticos, optimizando el performance en un **80%**.
+* **ETL Senior:** Pipeline híbrido que procesa 1,000 registros en **31ms** ,
+  normalizando metadata sucia mediante CTEs y Single-Pass Processing.
+* **Business Intelligence:** Dashboard operativo omnicanal en Excel (Modo
+  Oscuro) conectado vía **ODBC**, con semaforización logística automatizada
+  para el control de stock crítico y análisis de tendencias de ventas.
+* **Stress Testing:** Simulación de carga masiva de 5,000 registros con
+  blindaje proactivo contra nulos.
+
+### 🧪 Ejecución Local de Pruebas (Pytest)
+
+Para verificar la integridad del repositorio y ejecutar el motor de pruebas
+unitarias localmente:
+
+```bash
+# Instalar dependencias del entorno de pruebas
+pip install pytest
+
+# Ejecutar pruebas globales y específicas de proyectos
+pytest -v
+```
+
+---
+
+#### 💎 El Valor de la Ingeniería: Transformación de Datos (ETL)
+
+*Simulación de migración de un sistema Legacy con datos no atómicos a una
+arquitectura optimizada para BI.*
+
+
+|   Dimensión    | Estado Legacy (Origen) | Estado Optimizado |
+| :------------: | :--------------------: | :---------------: |
+| **Atomicidad** |      `Prod_Ref_3       |        V3`        |
+| **Geografía**  |       `queretaro       |       QRO`        |
+|  **Estatus**   |        `PAGADO         |    COMPLETADO`    |
+| **Ubicación**  |    `Sucursal Norte     |      Merida`      |
+
+> **Impacto:** Esta normalización eliminó el 100% de los registros duplicados en
+> los reportes de ventas y redujo el tiempo de procesamiento de limpieza a
+> **309ms**.
+
+---
+
+## 📚 Decisiones de Arquitectura (ADRs)
+
+> Documentación formal de decisiones técnicas.
+> Las decisiones técnicas se documentan en formato ADR (Architecture Decision
+ Record) para garantizar la trazabilidad y el seguimiento de las elecciones arquitectónicas.
+
+El repositorio incluye registros formales de decisiones técnicas en `docs/decisions/`, incluyendo:
+
+- **ADR-001:** Adopción de BigQuery para analítica Fintech en P05.
+- **ADR-002 / ADR-003:** Automatización de calidad de datos mediante CI/CD y Pytest.
+- **ADR-004:** Adopción de Arquitectura Medallón para laboratorio local (D:\).
+- **ADR-005:** Infraestructura soberana On-Premise con Docker y RustDesk (P10).
 
 ---
 
@@ -109,8 +332,6 @@ En este portafolio se buscó aplicar un rigor de ingeniería en cada línea de c
 ### Matriz de Competencias Técnicas (Key Skills)
 
 <!-- markdownlint-disable MD013 -->
-
-
 |   Tecnología   |                                                           Badges                                                           |                                           Especialidad y Dominio                                           |
 | :---------------: | :--------------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------: |
 |   SQL Server   | ![SQL](https://learn.microsoft.com/en-us/training/achievements/configure-sql-server-resources-for-optimal-performance.svg) |            Arquitecturas de alto rendimiento,**Single-Pass Processing** , y normalización 1NF.            |
@@ -118,33 +339,7 @@ En este portafolio se buscó aplicar un rigor de ingeniería en cada línea de c
 |    Data Viz    |                          ![Dashboard](https://cdn-icons-png.flaticon.com/512/10397/10397128.png)                          |     Creación de dashboards interactivos, análisis exploratorio de datos (EDA) y reportes ejecutivos.     |
 |  Data Quality  |                         ![Data Quality](https://cdn-icons-png.flaticon.com/512/10179/10179085.png)                         |        **Data Cleansing** avanzado: corrección de acentos, capitalización y atomicidad semántica.        |
 | Infraestructura |               ![Tropy](https://learn.microsoft.com/en-us/training/achievements/understand-data-concepts.svg)               | Gestión de versiones, automatización de servicios de SO y configuración de entornos de alto rendimiento. |
-
 <!-- markdownlint-enable MD013 -->
-
----
-
-### Diagrama de Arquitectura Global
-
-```mermaid
-graph LR
-    A[Fuentes: CSV/Kaggle/Faker] -- Python Ingestion --> B[(SQL Server 2025)]
-    B -- T-SQL ETL --> C{Data Warehouse Local}
-    C -- SQL Views --> D[Power BI / PyGWalker]
-    E[Dataset Financiero] -- GCP --> F[(BigQuery Serverless)]
-    F -- CTAS --> G[Tablas Agregadas Analíticas]
-    H[Apache Airflow] --> A
-    H --> B
-    I[Google ADK AI Agent] --> F
-    style A fill:#34A853,color:#fff
-    style B fill:#0078D4,color:#fff
-    style C fill:#FF6D00,color:#fff
-    style D fill:#F2C811,color:#000
-    style E fill:#0f9d58,color:#fff
-    style F fill:#4285f4,color:#fff
-    style G fill:#FF6D00,color:#fff
-    style H fill:#00acee,color:#fff
-    style I fill:#AB47BC,color:#fff
-```
 
 ---
 
@@ -212,6 +407,13 @@ Se incluyen archivos de configuración clave: `.prettierrc`, `.prettierignore`,
 - `📁 P7_AI_Agent_Google_ADK`: Implementación de un agente de IA para
   automatización de procesos en la nube.
 - `📂 .github`: Contiene flujos de trabajo de CI/CD y plantillas de issues.
+- `📂 P8_Secure_On_Premise_Remote_Infrastructure`: Despliegue de servidor de
+ control remoto privado mediante Docker.
+- `📂 P9_Azure_IAM_Governance`: Gestión de identidades y gobernanza en
+  Microsoft Azure.
+- `📂 P10_Secure_On_Premise_Remote_Infrastructure`: Despliegue de servidor de
+- `📂 docs`: Documentación técnica, decisiones de arquitectura (ADRs) y
+  lineamientos de desarrollo.
 - `📂 .venv`: Entorno virtual de Python para reproducibilidad de dependencias.
 - `📂 .vscode`: Configuración de entorno de desarrollo para VS Code.
 - `📂 .github/workflows`: Contiene los flujos de integración continua (CI/CD)
@@ -222,72 +424,23 @@ Se incluyen archivos de configuración clave: `.prettierrc`, `.prettierignore`,
 - `📝 README Y DOCUMENTACIÓN :` Documentación por proyecto de sus
   estándares y "Lineamientos de Estructura" aplicados.
 
-```text
+```Plaintext
 SQL_Portafolio/
 ├── 📂 .github/workflows/         # Pipeline de Integración Continua (ci.yml)
 ├── 📂 tests/                     # Pruebas unitarias globales y calidad de datos
+├── 📂 docs/decisions/            # ADRs 001-005
 ├── 📂 P1_Inventario/             # Gestión de Stock y Fundamentos Relacionales
-│   ├── Scripts/                   # Pipeline SQL (01-05)
-│   ├── img/                       # Evidencias gráficas
-│   └── 📄 README.md
-│
-├── 📂 P2_Escolar/                 # Arquitectura Avanzada y ETL con CTEs
-│   ├── Scripts/                    # Pipeline SQL (01-05)
-│   ├── img/                        # Evidencias de métricas
-│   └── Documentacion.md
-│
-├── 📂 P3_Retail_Ventas/           # Pipeline Híbrido Big Data (Python + SQL)
-│   ├── Scripts/                    # Scripts .py y .sql
-│   ├── Datos/                      # Datasets generados (50k registros)
-│   ├── img/                        # Dashboards de Analítica
-│   └── 📄 README.md
-│
-├── 📂 P4_Real_World_Ingestion/    # Supply Chain & Observabilidad
-│   ├── 01_Setup_DDL/               # Esquemas y constraints
-│   ├── 02_Ingesta_Pro/             # Orquestación Python (23.8k reg/seg)
-│   ├── 03_Orquestacion_Trans/      # Lógica transaccional TRY/CATCH
-│   ├── 04_ETL_Cleaning/            # Normalización y detección de anomalías
-│   ├── 05_BI_Observabilidad/       # Vistas SQL y Dashboard PyGWalker
-│   ├── img/                        # Evidencias de performance y BI
-│   └──📄 README.md                # Documentación de la ingesta
-│
-├── 📁 P5_BigQuery_Fintech/
-│   ├── tests/                      # Pruebas unitarias específicas para BigQuery
-│   ├── Evidencia_Proyecto.pdf      # Presentación para Drive/OneDrive
-│   ├── query_citas.sql             # Script de SQL
-│   ├── loan_count_by_year.csv      # Los datos exportados
-│   ├── Script_BigQuery.sql         # El script de SQL para BigQuery
-│   ├──img/                         # Tu captura de la consola GCP
-│   └──📄 README.md                 # Presentación para GitHub
-│
-├── 📁 P6_Orquestacion_Airflow/     # Orquestación de pipelines y DAGs
-│   ├── dags/                       # Flujos de trabajo automatizados
-│   ├── image/                      # Evidencias visuales de Airflow
-│   ├── logs/                       # Logs de ejecución de Airflow
-│   ├── plugins/                    # Plugins personalizados de Airflow
-│   ├── docker-compose.yml          # Configuración de contenedores para Airflow
-│   │                                  Despliegue de infraestructura local
-│   └──📄 README.md                 # Documentación de orquestación
-│
-├── 📁P7_AI_Agent_Google_ADK/               # Implementación agent-valley-nightmarke
-│   ├── docs/
-│   │   ├── architecture/
-│   │   │   └── architecture.md              # Documentación profunda de diseño
-│   │   ├── screenshots/
-│   │   │   └── architecture-diagram.png     # Evidencia visual
-│   │   ├── implementation.md                # Bitácora técnica y retos superados
-│   │   └── lessons-learned.md               # Conclusiones y optimización
-│   │                                        de costos en Cloud
-│   ├── scripts/
-│   │   ├── setup_codelab.sh             # Scripts de configuración
-│   │   └── setup_project.sh
-│   └── 📄 README.md                     # Caso de estudio y resumen ejecutivo
-│
-├── 📄 README.md                 # Documentación maestra del portafolio
-├──  .prettierrc                 # Reglas de estilo de código (JSON)
-├──  .prettierignore             # Archivos ignorados por Prettier
-├──  .editorconfig               # Reglas universales de indentación y formato
-└──  .gitignore                  # Archivos ignorados por Git
+├── 📂 P2_Escolar/                # Arquitectura y ETL con CTEs
+├── 📂 P3_Retail_Ventas/          # Pipeline Híbrido Big Data (Python + SQL)
+├── 📂 P4_Real_World_Ingestion/   # Supply Chain & Observabilidad
+├── 📁 P5_BigQuery_Fintech/       # Cloud Data Warehousing con BigQuery
+├── 📁 P6_Orquestacion_Airflow/   # Orquestación de pipelines y DAGs
+├── 📁 P7_AI_Agent_Google_ADK/    # Agentes inteligentes con Google ADK
+├── 📁 P8_AI_Copilot_BI/          # Inteligencia de negocios con IA
+├── 📁 P9_Azure_IAM_Governance/   # Gobernanza de identidad en Azure
+├── 📁 P10_Secure_OnPrem_Remote_Desktop_Infrastructure/ # RustDesk
+├── 📄 README.md                  # Documentación maestra del portafolio
+└── 📄 .gitignore                 # Archivos ignorados por Git
 ```
 
 ### 📊 Diagrama de Estructura del Portafolio
@@ -390,139 +543,6 @@ graph LR
 
 ---
 
-## 📁 Proyectos destacados
-
-### 🔐 \[P10]\ Secure On-Premise Remote Infrastructure
-
-*Despliegue de servidor de control remoto privado mediante Docker.*
-
-- **Arquitectura:** Contenedores aislados (hbbs/hbbr) con enrutamiento Relay
- local, garantizando 0% de dependencia de servidores de terceros.
-
-- **Performance:** Consumo ultra bajo comprobado (0.07% CPU, <2MB RAM) validado
- mediante telemetría docker stats.
-
-Key Skills: Docker Compose, Networking Local, Port Mapping, Ciberseguridad On-Premise.
-
-### 🤖 \[P7\] AI Agent with Google ADK (v5.4.0) - Release Oficial
-
-*Implementación de agentes inteligentes y analítica avanzada asistida por IA.*
-
-- **Arquitectura:** Diseño modular bajo Google ADK con flujos estructurados de
-  gobernanza y Vertex AI (Gemini Live).
-- **Trazabilidad:** Publicado bajo la versión oficial **v5.4.0** del
-  portafolio corporativo.
-
-### 🔄 \[P6\] Orquestación de Procesos con Apache Airflow
-
-*Automatización y gestión de flujos de trabajo orientados a datos.*
-
-* **Orquestación:** Diseño y estructuración de DAGs para la ejecución
-  secuencial de tareas ETL.
-* **Resiliencia:** Manejo de reintentos automáticos ante fallos de conexión
-  y alertas operativas mediante Docker Compose local.
-
-### ☁️ \[P5\] Google Cloud BigQuery: Fintech Analytics (v1.0.0) - Nuevo
-
-*Procesamiento analítico en la nube y creación de tablas agregadas.*
-
-* **Performance:** Optimización de consultas analíticas utilizando el motor
-  serverless de BigQuery.
-* **Ingeniería:** Uso de sintaxis **CTAS**
-  (`CREATE OR REPLACE TABLE AS SELECT`) para la consolidación de métricas
-  financieras.
-* **Data Quality:** Idempotencia en la nube aplicando estándares de
-  nomenclatura, convención de nombres y tipado automático de esquemas.
-  Pruebas unitarias específicas (`test_pipeline_fintech.py`) para
-  validar esquemas e idempotencia.
-* **Key Skills:** Cloud Data Warehousing, Google Cloud Platform (GCP),
-  Análisis Exploratorio de Datos.
-
-### 🛒 \[P4\] Global Supply Chain Analytics (v4.0.0)
-
-*Ingesta de datos reales (Kaggle) y visualización de vanguardia.*
-
-- **Performance:** Ingesta récord de **180,000 registros** a **23.8k reg/seg**.
-- **Ingeniería:** Detección de anomalías financieras e integridad post-DDL
-  mediante **SQL Dinámico**.
-- **BI:** Dashboard interactivo integrado en VS Code con **PyGWalker** para
-  análisis exploratorio.
-- **Key Skills:** Data Analytics, Troubleshooting de Entorno, Orquestación Transaccional.
-
-### 🐍 \[P3\] Pipeline Híbrido de Alto Rendimiento: Retail (v3.1.0)
-
-*Integración avanzada de Python y SQL para optimización de I/O y procesamiento
-  de flujos veloces.*
-
-- **Ingesta:** Generación y carga masiva de **50,000 registros** en **1.84
-  segundos** mediante subprocesos híbridos.
-- **ETL:** Normalización de metadatos no atómicos mediante **CTEs** y
-  actualización por lotes (809 ms).
-- **BI:** Reporte analítico automatizado en consola con **Pandas**,
-  logrando tiempos de respuesta de **0.53 s**.
-- **Key Skills:** Orquestación híbrida, Middleware ODBC,
-  Optimización de I/O en hardware.
-
-### 🎓 \[P2\] Sistema de Gestión Académica (P2_Escolar / v2.1.0)
-
-*Ecosistema escolar resiliente con triple extracción y analítica presupuestaria.*
-
-- **Estructura:** Diseño de esquemas segregados (`Catálogos`, `Operaciones`)
-  aplicando control transaccional estricto.
-- **Calidad:** Implementación de bloques **TRY/CATCH**, transacciones y
-  manejo de desbordamientos decimales.
-- **ETL:** Transformación de strings complejos en datos tipados (`DATETIME2`, `DECIMAL`).
-- **Key Skills:** Window Functions (RANK), Idempotencia (`RESEED`),
-  Constraints Nominados.
-
-### 📦 \[P1\] Control de Inventarios (v2.0 - Retrofitting)
-
-*De Fundamentos Relacionales a Pipeline para alta Eficiencia.*
-
-* **Resiliencia Atómica:** Capacidad de reconstrucción total del entorno tras
-  fallos críticos, optimizando el performance en un **80%**.
-* **ETL Senior:** Pipeline híbrido que procesa 1,000 registros en **31ms** ,
-  normalizando metadata sucia mediante CTEs y Single-Pass Processing.
-* **Business Intelligence:** Dashboard operativo omnicanal en Excel (Modo
-  Oscuro) conectado vía **ODBC**, con semaforización logística automatizada
-  para el control de stock crítico y análisis de tendencias de ventas.
-* **Stress Testing:** Simulación de carga masiva de 5,000 registros con
-  blindaje proactivo contra nulos.
-
-### 🧪 Ejecución Local de Pruebas (Pytest)
-
-Para verificar la integridad del repositorio y ejecutar el motor de pruebas
-unitarias localmente:
-
-```bash
-# Instalar dependencias del entorno de pruebas
-pip install pytest
-
-# Ejecutar pruebas globales y específicas de proyectos
-pytest -v
-```
-
----
-
-#### 💎 El Valor de la Ingeniería: Transformación de Datos (ETL)
-
-*Simulación de migración de un sistema Legacy con datos no atómicos a una
-arquitectura optimizada para BI.*
-
-
-|   Dimensión   | Estado Legacy (Origen) | Estado Optimizado |
-| :--------------: | :----------------------: | :-----------------: |
-| **Atomicidad** |      `Prod_Ref_3      |        V3`        |
-| **Geografía** |       `queretaro       |       QRO`       |
-|  **Estatus**  |        `PAGADO        |    COMPLETADO`    |
-| **Ubicación** |    `Sucursal Norte    |      Merida`      |
-
-> **Impacto:** Esta normalización eliminó el 100% de los registros duplicados en
-> los reportes de ventas y redujo el tiempo de procesamiento de limpieza a
-> **309ms**.
-
----
-
 ## 🌐 Estándares aplicados
 
 En cada proyecto aplico rigor de ingeniería para asegurar código de nivel empresarial:
@@ -599,17 +619,15 @@ Mi meta es la automatización total y la integración con la nube:
   **Task Schedulers** y monitoreo de salud de datos.
 - [X]  **AI Integration:** Agentes inteligentes con Google ADK (P7).
 
-- []  **Dockerización (Próximo proyecto):** Implementación de contenedores
-  Docker para orquestar servicios de SQL Server y Python de forma portable.
-- []  **Visualización Avanzada:** Integración de los flujos analíticos actuales
-  con **Power BI** mediante DirectQuery.
+- [X]  **Dockerización e Infraestructura Soberana:** Contenedores para servicios
+ de red y escritorios remotos locales (P10).
+- []  **Visualización Avanzada:** Integración de flujos analíticos con
+ **Power BI** mediante DirectQuery.
 
 ## 🌍 Impacto Comunitario
 
-Este repositorio busca **democratizar el aprendizaje práctico** en
-ingeniería de datos. Al ofrecer casos reproducibles y abiertos, permite que
-cualquier persona pueda **demostrar sus habilidades técnicas** sin depender de
-información confidencial de empresas.
+> Este repositorio busca democratizar el aprendizaje práctico en ingeniería de
+ datos, ofreciendo casos reproducibles sin comprometer información confidencial.
 
 ---
 
@@ -639,6 +657,7 @@ Intelligence.
 
 **Autor:** **Jesús Alberto Dzib Ku**
 *Ingeniero de Datos | SQL & Python Developer*
+
 ⚖️ **Licencia MIT** © 2025-2026
 
 > “Construyendo sistemas que no solo procesan datos, sino que cuentan historias.”
