@@ -1,4 +1,6 @@
-# 🐍 Proyecto 3: Pipeline Híbrido de Alto Rendimiento (Python + SQL Server)
+# 📘 Documentación Técnica
+
+## 🐍 Proyecto P03: Pipeline Híbrido de Alto Rendimiento (Python + SQL Server) (V4.0.0)
 
 ## 🛍️ [/P3_Retail_Ventas/](./) Retail & Análisis de Ventas (Inteligencia Comercial)
 
@@ -7,7 +9,46 @@ ejecutivos de rentabilidad por producto y región. Permite identificar patrones
 de compra estacionales para maximizar las campañas de marketing y la retención
 de clientes."
 
+---
+
+## 📑 Índice de Navegación Rápida
+
+- [📘 Documentación Técnica](#-documentación-técnica)
+  - [🐍 Proyecto P03: Pipeline Híbrido de Alto Rendimiento (Python + SQL Server) (V4.0.0)](#-proyecto-p03-pipeline-híbrido-de-alto-rendimiento-python--sql-server-v400)
+  - [🛍️ /P3\_Retail\_Ventas/ Retail \& Análisis de Ventas (Inteligencia Comercial)](#️-p3_retail_ventas-retail--análisis-de-ventas-inteligencia-comercial)
+  - [📑 Índice de Navegación Rápida](#-índice-de-navegación-rápida)
+  - [Resumen Ejecutivo](#resumen-ejecutivo)
+  - [📌 Descripción General](#-descripción-general)
+  - [🎯 Objetivo](#-objetivo)
+  - [🏗️ Arquitectura Híbrida (Ecosistema estructurado)](#️-arquitectura-híbrida-ecosistema-estructurado)
+    - [Estructura del Repositorio](#estructura-del-repositorio)
+    - [📊 Evidencias de Rendimiento y Analítica](#-evidencias-de-rendimiento-y-analítica)
+    - [🏆 Cuadro de Honor: TOP 5 Vendedores (Ranking Global)](#-cuadro-de-honor-top-5-vendedores-ranking-global)
+    - [💳 Preferencias de Pago](#-preferencias-de-pago)
+    - [🧠 Retos Técnicos y Soluciones de Ingeniería](#-retos-técnicos-y-soluciones-de-ingeniería)
+  - [📅 Próximos Pasos (Roadmap)](#-próximos-pasos-roadmap)
+    - [V4.1.0](#v410)
+    - [V5.0.0](#v500)
+  - [📖 Glosario Técnico y de Impacto (Para Reclutadores y Stakeholders)](#-glosario-técnico-y-de-impacto-para-reclutadores-y-stakeholders)
+
+---
+
+## Resumen Ejecutivo
+
+Implementación de una arquitectura híbrida avanzada para el procesamiento de
+ Alto Rendimiento, integrando Python como motor de orquestación y generación
+ de datos, y SQL Server 2025 como motor de almacenamiento masivo, limpieza y
+ normalización. Arquitectura diseñada para alta disponibilidad, capaz de escalar
+ de 50k a 1M de registros manteniendo una tasa de ingesta de ~27,000 registros
+ por segundo.
+
+---
+
 ## 📌 Descripción General
+
+Proceso fundamentado en la alta concurrencia y el rendimiento de inserción por
+ lotes, resolviendo colisiones de llaves únicas y optimizando el flujo de
+ trabajo entre scripts de Python y procedimientos relacionales en T-SQL.
 
 * Implementación de una arquitectura híbrida avanzada para el
   procesamiento de Alto Rendimiento, integrando Python como motor de
@@ -16,17 +57,21 @@ de clientes."
 * Arquitectura diseñada para alta disponibilidad, capaz de escalar de
   50k a 1M de registros manteniendo una tasa de ingesta de ~27,000
   registros por segundo.
-
----
-
-### 🎯 Objetivo
-
 * Diseñar un ecosistema capaz de generar, ingerir y procesar un
   volumen de 50,000 transacciones en tiempo récord, demostrando la
   eficiencia de la integración híbrida entre lenguajes de
   programación y motores de base de datos.
 
+---
+
+## 🎯 Objetivo
+
+- Diseñar un ecosistema capaz de generar, ingerir y procesar un volumen de
+ 50,000 transacciones en tiempo récord, demostrando la eficiencia de la
+ integración híbrida entre lenguajes de programación y motores de base de datos.
+
 ```mermaid
+%%{init: {'theme': 'dark'}}%%
 graph LR
     A[Python: Faker/Pandas] -- SQLAlchemy/FastExec --> B[(SQL Server 2025)]
     B -- T-SQL ETL/CTEs --> C[Tablas Producción]
@@ -35,11 +80,9 @@ graph LR
 
 ---
 
-### 🏗️ Arquitectura Híbrida (Ecosistema estructurado)
+## 🏗️ Arquitectura Híbrida (Ecosistema estructurado)
 
-*El proyecto se divide en 3 fases críticas de ingeniería:
-
----
+* El proyecto se divide en 6 fases críticas de ingeniería:
 
 1. 01_GeneradorDatos (Python): Generación de dataset sintético de
    50,000 registros mediante la librería `Faker`, utilizando
@@ -62,6 +105,53 @@ graph LR
    respuesta sub-segundo (`0.53s`) en la generación de reportes de
    negocio Dashboard de BI en consola con formateo profesional de
    KPIs y consumo directo desde SQL.
+
+> *Arquitectura*
+
+* [Arquitectura Lógica](architecture/01_logical_architecture.drawio)
+
+* [Arquitectura Física](architecture/02_physical_architecture.drawio)
+
+* [Arquitectura de Despliegue](architecture/03_deployment_architecture.drawio)
+
+### Estructura del Repositorio
+
+
+```Plaintext
+P03_Retail_Ventas/
+│
+├── architecture/
+│   ├── 01_logical_architecture.drawio
+│   ├── 02_physical_architecture.drawio
+│   └── 03_deployment_architecture.drawio
+│
+├── assets/
+│   ├── diagrams/
+│   └── reports/
+│
+├── data_sample/
+│   └── Ventas_Retail_Masivo.csv
+│
+├── docs/
+│   ├── decisions/
+│   ├── functional/
+│   ├── operations/
+│   └── technical/
+│
+├── scripts/
+│   ├── 01_Estructura_P3.sql
+│   ├── 01_GeneradorDatos.py
+│   ├── 02_CargaLimpieza_P3.sql
+│   ├── 02_CargaSQL.py
+│   ├── 03_Analitica_Ventas.py
+│   └── 03_LimpiezaMetadata_P3.sql
+│
+├── tests/
+│
+├── requirements.txt
+│
+└── README.md
+```
 
 ---
 
@@ -123,6 +213,41 @@ graph LR
    - *Solución:* Uso estratégico del comando GO para separar lotes
      y captura inmediata de métricas para garantizar la trazabilidad
      total del proceso ETL.
+
+---
+
+## 📅 Próximos Pasos (Roadmap)
+
+### V4.1.0
+
+* Integración de pruebas unitarias con `pytest` para la validación automática
+ de scripts de Python.
+* Orquestación de tareas mediante programación de pipelines.
+
+### V5.0.0
+
+* Implementación de paneles ejecutivos en tiempo real conectados vía Power BI Services.
+
+* Logging centralizado y monitoreo de salud del pipeline.
+
+---
+
+## 📖 Glosario Técnico y de Impacto (Para Reclutadores y Stakeholders)
+
+* *Pipeline Híbrido:* Arquitectura que combina lenguajes de propósito general
+ (Python) para procesamiento flexible y motores especializados (SQL Server)
+ para almacenamiento relacional seguro.
+
+* *Fast_executemany:* Característica de optimización en controladores de bases de
+ datos que acelera drásticamente las inserciones masivas ejecutando comandos
+ parametrizados en lotes.
+
+* *Reproducibilidad:* Capacidad de un script de simulación de generar exactamente
+ el mismo conjunto de datos aleatorios utilizando una semilla fija (seed).
+
+* *Sub-segundo:* Tiempos de respuesta inferiores a un segundo, fundamentales
+ para garantizar una experiencia de usuario interactiva y fluida en tableros
+ de BI.
 
 ---
 

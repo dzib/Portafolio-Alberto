@@ -1,6 +1,6 @@
 # 📘 Documentación Técnica
 
-## Proyecto P1: Control de Inventarios & Fundamentos Relacionales (V3.0)
+## Proyecto P1: Control de Inventarios & Fundamentos Relacionales (V4.0.0)
 
 🗂️ **P1: Inventario y Logística** (Gestión de Stock y Trazabilidad)
 
@@ -8,7 +8,19 @@
 > mediante un modelado relacional riguroso que automatiza el control de
 > existencias. Garantiza una visibilidad en tiempo real de la cadena de
 > suministro, optimizando los costos de almacenamiento operativo."*
->
+
+---
+
+## 📑 Índice de Navegación Rápida
+
+- [Resumen Ejecutivo & Método STAR](#resumen-ejecutivo)
+- [Objetivo y Arquitectura](#-objetivo)
+- [Ciclo de Vida del Dato](#-ciclo-de-vida-del-dato)
+- [Indicadores de Performance](#-indicadores-de-performance-final)
+- [Estructura del Repositorio](#-estructura-del-repositorio-sincronizada)
+- [Guía de Ejecución](#-cómo-ejecutar)
+- [Retos Técnicos y Soluciones](#-retos-técnicos-y-soluciones-de-ingeniería)
+- [Glosario Técnico y de Impacto](#-glosario-técnico-y-de-impacto-para-reclutadores-y-stakeholders)
 
 ---
 
@@ -53,7 +65,9 @@ E[Python: Matplotlib/Pandas]
 
 ---
 
-## **🏗️ Ciclo de Vida del Dato (Evolución Técnica)**
+## **🏗️ Ciclo de Vida del Dato**
+
+> (Evolución Técnica)
 
 - **Fase 1: Arquitectura & Esquemas (Script 01)**
 
@@ -61,12 +75,14 @@ E[Python: Matplotlib/Pandas]
     `Operaciones` (Transacciones).
   - Implementación de integridad referencial (`PK`, `FK`) y
     restricciones `CHECK` para calidad de origen.
+
 - **Fase 2 y 3: Simulación de Carga Masiva (Scripts 02 y 03)**
 
   - Poblado de 500+ registros bajo estrés en < 2 segundos.
   - **Inyección de Datos Legacy:** Simulación intencional de
     datos compuestos (ej. `Mérida | YUC`) para probar el
     pipeline de limpieza.
+
 - **Fase 4: Pipeline ETL & Data Grooming (Script 04) 💎**
 
   - **Normalización 1NF:** Extracción atómica de atributos mediante
@@ -75,6 +91,7 @@ E[Python: Matplotlib/Pandas]
     Título) y corrección universal de acentos.
   - **Idempotencia:** Script diseñado para correr múltiples veces
     sin degradar la calidad del dato.
+
 - **Fase 5: Conectividad BI & Dashboard (Script 05)**
 
   - Vistas analíticas conectadas vía **ODBC** a Excel.
@@ -112,7 +129,7 @@ analítica de la información.
 
 
 | Métrica          | Anterior           | Optimizado                 |
-| :------------------ | :------------------- | :--------------------------- |
+| :--------------: | :----------------: | :------------------------: |
 | Atomicidad        | Datos no atómicos | Datos normalizados         |
 | Consistencia      | Ruido ortográfico | Grooming global            |
 | Performance Batch | Carga no validada  | ~1,800 ms (500+ registros) |
@@ -137,7 +154,7 @@ evidencias objetivas de rendimiento.
 
 
 | Métrica               | Resultado             |
-| ------------------------ | ----------------------- |
+| :-------------------: | :--------------------: |
 | Registros Procesados   | 3,200                 |
 | Tiempo ETL             | < 1 segundo           |
 | Tiempo Batch           | 1.7 segundos          |
@@ -228,14 +245,8 @@ P1_Inventario/
 
 ## **🔧 Tecnologías**
 
-- SQL Server 2025
-- T-SQL
-- ODBC Driver 17
-- Excel
-- Power Query
-- Power BI
-- Git
-- Draw.io
+- SQL Server 2025 | T-SQL | ODBC Driver 17 | Excel | Power Query |
+ Power BI | Git | Draw.io
 
 ---
 
@@ -288,7 +299,6 @@ Se resolvieron desafíos críticos mediante estándares de la industria
 
 ### Componentes
 
-
 | Componente | Responsabilidad                                       |
 | ---------- | ----------------------------------------------------- |
 | Script 01  | Definición de arquitectura y objetos de base de datos |
@@ -296,6 +306,8 @@ Se resolvieron desafíos críticos mediante estándares de la industria
 | Script 03  | Simulación de carga masiva                            |
 | Script 04  | Limpieza, normalización y calidad de datos            |
 | Script 05  | Exposición analítica mediante vistas                  |
+
+---
 
 ### 🏬 ADR Implementados
 
@@ -344,21 +356,42 @@ Resultado esperado:
 
 ## 📅 Próximos Pasos (Roadmap)
 
-V2
+V4.1.0
 
-* Fuzzy Matching
-* Automatización Batch
-* Python Analytics Layer
+* Fuzzy Matching avanzado
+* Automatización Batch programada
+* Capa de analítica en Python
 
-V3
+V5.0.0
 
-* API Layer
-* Dashboard Web
-* Observabilidad
+* Implementación de API Layer
+* Dashboard Web interactivo
+* Observabilidad avanzada
+
+---
+
+## 📖 Glosario Técnico y de Impacto (Para Reclutadores y Stakeholders)
+
+*Idempotencia:* Propiedad de un script o pipeline que permite ejecutarse múltiples
+ veces obteniendo siempre el mismo resultado sin corromper los datos o duplicar
+  registros.
+
+*Datos No Atómicos:* Información combinada en un solo campo (ej. "Mérida | YUC")
+ que viola las formas normales de bases de datos y dificulta el filtrado analítico.
+
+*Data Grooming:* Proceso sistemático de limpieza, corrección de acentos y
+ estandarización ortográfica aplicado a los datos antes de su consumo analítico.
+
+*Integridad Referencial:* Regla de base de datos que garantiza que las relaciones
+ entre tablas (como pedidos y clientes) no se rompan y sean siempre coherentes.
+
+*ODBC (Open Database Connectivity):* Estándar de conectividad que permite enlazar
+ bases de datos corporativas con herramientas de visualización como Excel o
+ Power BI.
 
 ---
 
 **Autor:** Jesús Alberto Dzib Ku
 Ingeniero Electrónico | Especialidad en Mecatrónica Industrial
 Data Analytics • BI • Data Engineering
-**Versión:** 3.0.0
+**Versión:** 4.0.0
