@@ -114,3 +114,9 @@ En las aplicaciones cliente de RustDesk que desearas conectar a este servidor pr
 
 * Ingresar la Key pública obtenida en los logs del contenedor hbbs.
 
+---
+
+## Evidencia de Rendimiento y Arquitectura Atómica
+
+![Consumo Ligero del Servidor](assets/images/servidorDockerLigero-benchmark.png)
+![Estructura de Archivos Persistente](assets/images/estructuraArchivosAisladoDocker-desktop.png)

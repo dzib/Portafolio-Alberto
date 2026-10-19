@@ -392,6 +392,18 @@ graph LR
 
 ## 📁 Proyectos destacados
 
+### 🔐 \[P10]\ Secure On-Premise Remote Infrastructure
+
+*Despliegue de servidor de control remoto privado mediante Docker.*
+
+- **Arquitectura:** Contenedores aislados (hbbs/hbbr) con enrutamiento Relay
+ local, garantizando 0% de dependencia de servidores de terceros.
+
+- **Performance:** Consumo ultra bajo comprobado (0.07% CPU, <2MB RAM) validado
+ mediante telemetría docker stats.
+
+Key Skills: Docker Compose, Networking Local, Port Mapping, Ciberseguridad On-Premise.
+
 ### 🤖 \[P7\] AI Agent with Google ADK (v5.4.0) - Release Oficial
 
 *Implementación de agentes inteligentes y analítica avanzada asistida por IA.*
