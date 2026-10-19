@@ -1,3 +1,4 @@
+<!-- markdownlint-disable MD013 MD007 MD051 -->
 # 🚀 Enterprise Data Engineering Portfolio - 👷 Alberto Dzib 📊
 
 > "Construyendo sistemas que no solo procesan datos,
@@ -28,14 +29,42 @@
 
 ---
 
+## 📌 Resumen Ejecutivo del Portafolio
+
+Este repositorio centraliza proyectos de nivel de producción
+ (*Production-Ready*) enfocados en ingeniería de datos, arquitectura de
+canalizaciones híbridas, automatización de procesos, despliegue de agentes de
+ Inteligencia Artificial y pasarelas de infraestructura auto-hospedadas.
+ Cada módulo ha sido desarrollado bajo estrictos estándares de control de
+  versiones (Git Flow), documentación estandarizada (Método STAR) y principios
+  de resiliencia y atomicidad.
+
+---
+
+## 🏗️ Mapa de Módulos y Arquitectura del Portafolio
+
+| Módulo  | Nombre del Proyecto                               | Tecnologías Clave / Stack      | Enfoque Arquitectónico                                         |
+| :------ | :------------------------------------------------ | :----------------------------- | :------------------------------------------------------------- |
+| **P01** | `P01_Inventario`                                  | Python, SQL, ETL               | Automatización de inventarios y control de stock               |
+| **P02** | `P02_Escolar`                                     | Python, Pandas, Analytics      | Gestión y procesamiento de métricas escolares                  |
+| **P03** | `P03_Retail_Ventas`                               | SQL Server, Power BI, DAX      | Modelado dimensional y análisis de ventas retail               |
+| **P04** | `P04_Real_World_Ingestion`                        | Python, SQLAlchemy, ETL        | Ingesta de datos del mundo real y limpieza                     |
+| **P05** | `P05_BigQuery_Fintech`                            | BigQuery, SQL, Analytics       | Arquitectura de datos financieros en la nube                   |
+| **P06** | `P06_Orquestacion_Airflow`                        | Apache Airflow, Docker         | Orquestación enterprise de pipelines de datos                  |
+| **P07** | `P07_AI_Agent_Google_ADK`                         | Google ADK, FastAPI, Vertex AI | Agentes conversacionales inteligentes y despliegue             |
+| **P08** | `P08_AI_Copilot_BI`                               | Power BI, IA, Copilot          | Inteligencia de negocios asistida por IA                       |
+| **P09** | `P09_Azure_IAM_Governance`                        | Microsoft Azure, IAM           | Gobernanza de identidad y seguridad en la nube                 |
+| **P10** | `P10_Secure_OnPrem_Remote_Desktop_Infrastructure` | Docker Compose, RustDesk OSS   | Infraestructura auto-hospedada y segura de escritorios remotos |
+
+---
+
 ## 📌 Incluye
 
 - Tablas jerárquicas y normalizadas.
 - Diversidad temporal en registros.
 - Ejemplos prácticos para dashboards y BI.
 - Pipelines validados mediante pruebas automatizadas (`pytest`).
-- Este portafolio aporta valor como base técnica para proyectos de
-  transformación digital y ciencia de datos.
+- Este portafolio aporta valor como base técnica para proyectos de transformación digital y ciencia de datos.
 
 ## -🔑 Propósito del Proyecto -
 
@@ -118,7 +147,6 @@ En este portafolio se buscó aplicar un rigor de ingeniería en cada línea de c
 |    Data Viz    |                          ![Dashboard](https://cdn-icons-png.flaticon.com/512/10397/10397128.png)                          |     Creación de dashboards interactivos, análisis exploratorio de datos (EDA) y reportes ejecutivos.     |
 |  Data Quality  |                         ![Data Quality](https://cdn-icons-png.flaticon.com/512/10179/10179085.png)                         |        **Data Cleansing** avanzado: corrección de acentos, capitalización y atomicidad semántica.        |
 | Infraestructura |               ![Tropy](https://learn.microsoft.com/en-us/training/achievements/understand-data-concepts.svg)               | Gestión de versiones, automatización de servicios de SO y configuración de entornos de alto rendimiento. |
-
 <!-- markdownlint-enable MD013 -->
 
 ---
@@ -161,15 +189,6 @@ Este portafolio incorpora un sistema automatizado de control y auditoría intern
   en `reports/portfolio_compliance.csv`.
 * **Control Semántico:** Estandarización de tipos de datos, atomicidad rigurosa
  y nomenclatura unificada en motores relacionales y cloud.
-
-### 🔍 Observabilidad y Resiliencia Operativa
-
-* **Monitoreo de Pipelines (Airflow):** Gestión de flujos automatizados con
- manejo de reintentos automáticos, aislamiento en contenedores y control de
-  salud de tareas mediante Apache Airflow (`P6`).
-* **Stress Testing e I/O:** Pruebas de carga masiva en flujos de ingesta (`P4`)
- con optimización de hardware para garantizar un rendimiento óptimo de
-escritura a escala industrial.
 
 ---
 
@@ -599,7 +618,7 @@ Mi meta es la automatización total y la integración con la nube:
   **Task Schedulers** y monitoreo de salud de datos.
 - [X]  **AI Integration:** Agentes inteligentes con Google ADK (P7).
 
-- []  **Dockerización (Próximo proyecto):** Implementación de contenedores
+- [X]  **Dockerización (Próximo proyecto):** Implementación de contenedores
   Docker para orquestar servicios de SQL Server y Python de forma portable.
 - []  **Visualización Avanzada:** Integración de los flujos analíticos actuales
   con **Power BI** mediante DirectQuery.
@@ -637,8 +656,26 @@ Intelligence.
 
 ---
 
-**Autor:** **Jesús Alberto Dzib Ku**
-*Ingeniero de Datos | SQL & Python Developer*
+## 📚 Glosario Técnico Global
+
+* **ETL / ELT:** Procesos de extracción, transformación y carga para la
+ integración de datos.
+* **Data Governance:** Políticas y controles de seguridad para la gestión de
+ accesos e identidades (IAM).
+* **Self-Hosted / On-Premises:** Despliegue de infraestructura autónoma en
+ servidores o entornos locales sin dependencia estricta de la nube pública.
+* **Orquestación:** Automatización y programación coordinada de flujos de
+ trabajo de datos complejos.
+
+---
+
+* **Autor:** Jesús Alberto Dzib Ku (Data Engineer & BI Specialist)
+* **Rol:** Ingeniero de Soluciones de Datos
+* **Espec* **Versión del Portafolio:** 2.5.0 (Enterprise Standard)
+* **Última Actualización:** Octubre 2026
+* **Licencia & Gobernanza:** Uso profesional para portafolio corporativo y de
+ ingeniería de software.
+
 ⚖️ **Licencia MIT** © 2025-2026
 
 > “Construyendo sistemas que no solo procesan datos, sino que cuentan historias.”
