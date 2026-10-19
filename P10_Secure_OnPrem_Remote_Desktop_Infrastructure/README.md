@@ -8,11 +8,11 @@
 
 ## 📋 Índice de Navegación Rápida
 
-  - [1. Resumen Ejecutivo (Método STAR)](#1-resumen-ejecutivo-método-star)
-  - [2. Arquitectura de la Solución](#2-arquitectura-de-la-solución)
-  - [3. Configuración de Infraestructura](#3-configuración-de-infraestructura-docker-composeyml)
-  - [4. Guía de Despliegue y Aprovisionamiento](#4-guía-de-despliegue-y-aprovisionamiento)
-  - [5. Configuración de Clientes](#5-configuración-de-clientes)
+- [1. Resumen Ejecutivo (Método STAR)](#-1-resumen-ejecutivo-método-star)
+- [2. Arquitectura de la Solución](#-2-arquitectura-de-la-solución)
+- [3. Configuración de Infraestructura](#-3-configuración-de-infraestructura)
+- [4. Guía de Despliegue y Aprovisionamiento](#-4-guía-de-despliegue-y-aprovisionamiento)
+- [5. Configuración de Clientes](#-5-configuración-de-clientes)
 
 ---
 
@@ -81,19 +81,19 @@ services:
 cd P10_Secure_OnPrem_Remote_Desktop_Infrastructure
 ```
 
-2. Iniciar los servicios en segundo plano:
+1. Iniciar los servicios en segundo plano:
 
 ```PowerShell
 docker compose up -d
 ```
 
-3. Verificar el estado de los contenedores:
+1. Verificar el estado de los contenedores:
 
 ```PowerShell
 docker ps
 ```
 
-4. Obtener la Clave Pública de Cifrado (Key):
+1. Obtener la Clave Pública de Cifrado (Key):
 
 
 ```PowerShell
