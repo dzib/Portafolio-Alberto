@@ -64,8 +64,7 @@ canalizaciones híbridas, automatización de procesos, despliegue de agentes de
 - Diversidad temporal en registros.
 - Ejemplos prácticos para dashboards y BI.
 - Pipelines validados mediante pruebas automatizadas (`pytest`).
-- Este portafolio aporta valor como base técnica para proyectos de
-  transformación digital y ciencia de datos.
+- Este portafolio aporta valor como base técnica para proyectos de transformación digital y ciencia de datos.
 
 ## -🔑 Propósito del Proyecto -
 
@@ -148,7 +147,6 @@ En este portafolio se buscó aplicar un rigor de ingeniería en cada línea de c
 |    Data Viz    |                          ![Dashboard](https://cdn-icons-png.flaticon.com/512/10397/10397128.png)                          |     Creación de dashboards interactivos, análisis exploratorio de datos (EDA) y reportes ejecutivos.     |
 |  Data Quality  |                         ![Data Quality](https://cdn-icons-png.flaticon.com/512/10179/10179085.png)                         |        **Data Cleansing** avanzado: corrección de acentos, capitalización y atomicidad semántica.        |
 | Infraestructura |               ![Tropy](https://learn.microsoft.com/en-us/training/achievements/understand-data-concepts.svg)               | Gestión de versiones, automatización de servicios de SO y configuración de entornos de alto rendimiento. |
-
 <!-- markdownlint-enable MD013 -->
 
 ---
@@ -191,15 +189,6 @@ Este portafolio incorpora un sistema automatizado de control y auditoría intern
   en `reports/portfolio_compliance.csv`.
 * **Control Semántico:** Estandarización de tipos de datos, atomicidad rigurosa
  y nomenclatura unificada en motores relacionales y cloud.
-
-### 🔍 Observabilidad y Resiliencia Operativa
-
-* **Monitoreo de Pipelines (Airflow):** Gestión de flujos automatizados con
- manejo de reintentos automáticos, aislamiento en contenedores y control de
-  salud de tareas mediante Apache Airflow (`P6`).
-* **Stress Testing e I/O:** Pruebas de carga masiva en flujos de ingesta (`P4`)
- con optimización de hardware para garantizar un rendimiento óptimo de
-escritura a escala industrial.
 
 ---
 
@@ -629,7 +618,7 @@ Mi meta es la automatización total y la integración con la nube:
   **Task Schedulers** y monitoreo de salud de datos.
 - [X]  **AI Integration:** Agentes inteligentes con Google ADK (P7).
 
-- []  **Dockerización (Próximo proyecto):** Implementación de contenedores
+- [X]  **Dockerización (Próximo proyecto):** Implementación de contenedores
   Docker para orquestar servicios de SQL Server y Python de forma portable.
 - []  **Visualización Avanzada:** Integración de los flujos analíticos actuales
   con **Power BI** mediante DirectQuery.
