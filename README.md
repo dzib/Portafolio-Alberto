@@ -1,3 +1,4 @@
+<!-- markdownlint-disable MD013 MD007 MD051 -->
 # 🚀 Enterprise Data Engineering Portfolio - 👷 Alberto Dzib 📊
 
 > "Construyendo sistemas que no solo procesan datos,
@@ -25,6 +26,35 @@
 
 **Core Stack:** `SQL Server 2025` | `Python 3.13` | `Git Flow` |
 `Excel BI (ODBC)` | `Google Cloud Platfor`
+
+---
+
+## 📌 Resumen Ejecutivo del Portafolio
+
+Este repositorio centraliza proyectos de nivel de producción
+ (*Production-Ready*) enfocados en ingeniería de datos, arquitectura de
+canalizaciones híbridas, automatización de procesos, despliegue de agentes de
+ Inteligencia Artificial y pasarelas de infraestructura auto-hospedadas.
+ Cada módulo ha sido desarrollado bajo estrictos estándares de control de
+  versiones (Git Flow), documentación estandarizada (Método STAR) y principios
+  de resiliencia y atomicidad.
+
+---
+
+## 🏗️ Mapa de Módulos y Arquitectura del Portafolio
+
+| Módulo  | Nombre del Proyecto                               | Tecnologías Clave / Stack      | Enfoque Arquitectónico                                         |
+| :------ | :------------------------------------------------ | :----------------------------- | :------------------------------------------------------------- |
+| **P01** | `P01_Inventario`                                  | Python, SQL, ETL               | Automatización de inventarios y control de stock               |
+| **P02** | `P02_Escolar`                                     | Python, Pandas, Analytics      | Gestión y procesamiento de métricas escolares                  |
+| **P03** | `P03_Retail_Ventas`                               | SQL Server, Power BI, DAX      | Modelado dimensional y análisis de ventas retail               |
+| **P04** | `P04_Real_World_Ingestion`                        | Python, SQLAlchemy, ETL        | Ingesta de datos del mundo real y limpieza                     |
+| **P05** | `P05_BigQuery_Fintech`                            | BigQuery, SQL, Analytics       | Arquitectura de datos financieros en la nube                   |
+| **P06** | `P06_Orquestacion_Airflow`                        | Apache Airflow, Docker         | Orquestación enterprise de pipelines de datos                  |
+| **P07** | `P07_AI_Agent_Google_ADK`                         | Google ADK, FastAPI, Vertex AI | Agentes conversacionales inteligentes y despliegue             |
+| **P08** | `P08_AI_Copilot_BI`                               | Power BI, IA, Copilot          | Inteligencia de negocios asistida por IA                       |
+| **P09** | `P09_Azure_IAM_Governance`                        | Microsoft Azure, IAM           | Gobernanza de identidad y seguridad en la nube                 |
+| **P10** | `P10_Secure_OnPrem_Remote_Desktop_Infrastructure` | Docker Compose, RustDesk OSS   | Infraestructura auto-hospedada y segura de escritorios remotos |
 
 ---
 
@@ -637,8 +667,26 @@ Intelligence.
 
 ---
 
-**Autor:** **Jesús Alberto Dzib Ku**
-*Ingeniero de Datos | SQL & Python Developer*
+## 📚 Glosario Técnico Global
+
+* **ETL / ELT:** Procesos de extracción, transformación y carga para la
+ integración de datos.
+* **Data Governance:** Políticas y controles de seguridad para la gestión de
+ accesos e identidades (IAM).
+* **Self-Hosted / On-Premises:** Despliegue de infraestructura autónoma en
+ servidores o entornos locales sin dependencia estricta de la nube pública.
+* **Orquestación:** Automatización y programación coordinada de flujos de
+ trabajo de datos complejos.
+
+---
+
+* **Autor:** Jesús Alberto Dzib Ku (Data Engineer & BI Specialist)
+* **Rol:** Ingeniero de Soluciones de Datos
+* **Espec* **Versión del Portafolio:** 2.5.0 (Enterprise Standard)
+* **Última Actualización:** Octubre 2026
+* **Licencia & Gobernanza:** Uso profesional para portafolio corporativo y de
+ ingeniería de software.
+
 ⚖️ **Licencia MIT** © 2025-2026
 
 > “Construyendo sistemas que no solo procesan datos, sino que cuentan historias.”
