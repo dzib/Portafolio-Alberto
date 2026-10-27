@@ -1,6 +1,12 @@
+<!-- markdownlint-disable MD013 MD007 MD051 -->
 # 📘 Documentación Técnica
 
 ## Proyecto P1: Control de Inventarios & Fundamentos Relacionales (V4.0.0)
+
+> 🧭 **Navegación del Portafolio:** [⬅️ Volver a la Raíz del Portafolio](../README.md) |
+ [📁 Ver Mapa de Módulos](../README.md)
+
+---
 
 🗂️ **P1: Inventario y Logística** (Gestión de Stock y Trazabilidad)
 
@@ -14,8 +20,8 @@
 ## 📑 Índice de Navegación Rápida
 
 - [Resumen Ejecutivo & Método STAR](#resumen-ejecutivo)
-- [Objetivo y Arquitectura](#-objetivo)
-- [Ciclo de Vida del Dato](#-ciclo-de-vida-del-dato)
+- [Objetivo](#-objetivo)
+- [Ciclo de Vida del Dato](#-Ciclo de Vida del Dato)
 - [Indicadores de Performance](#-indicadores-de-performance-final)
 - [Estructura del Repositorio](#-estructura-del-repositorio-sincronizada)
 - [Guía de Ejecución](#-cómo-ejecutar)
@@ -166,7 +172,7 @@ evidencias objetivas de rendimiento.
 
 
 | # | Dim.           | Registros | Operación        | Rendimiento |
-| :-: | :--------------- | :---------- | :------------------ | :------------ |
+| :-: | :-----------: | :-----: | :------------:- | :------------: |
 | 1 | Carga          | 3,200     | Inserción masiva | 1,776 ms    |
 | 2 | Integridad     | 100 %     | PK/FK y CHECK     | Verificado  |
 | 3 | Normalización | 500+      | ETL metadata      | < 1 s       |
@@ -300,7 +306,7 @@ Se resolvieron desafíos críticos mediante estándares de la industria
 ### Componentes
 
 | Componente | Responsabilidad                                       |
-| ---------- | ----------------------------------------------------- |
+| :--------: | ----------------------------------------------------- |
 | Script 01  | Definición de arquitectura y objetos de base de datos |
 | Script 02  | Generación de datos semilla                           |
 | Script 03  | Simulación de carga masiva                            |
@@ -315,7 +321,7 @@ Se resolvieron desafíos críticos mediante estándares de la industria
 
 
 | ADR     | Descripción                                    |
-| --------- | ------------------------------------------------- |
+| :------: | :-------------------------------------------: |
 | ADR-001 | Segmentación por dominios y datos no atómicos |
 | ADR-002 | Vistas analíticas consolidadas                 |
 | ADR-003 | Framework de calidad de datos                   |
@@ -328,7 +334,7 @@ antes de exponerlos a las capas analíticas y de visualización.
 
 
 | Validación                    | Objetivo                          |
-| -------------------------------- | ----------------------------------- |
+| :---------------------------:| :--------------------------------:|
 | test_nulls.sql                 | Detectar nulos críticos          |
 | test_duplicates.sql            | Detectar duplicados               |
 | test_business_rules.sql        | Validar reglas operativas         |
@@ -345,7 +351,7 @@ Resultado esperado:
 
 
 | Evidencia              | Descripción               |
-| ------------------------ | ---------------------------- |
+| :--------------------- | :------------------------ |
 | 01_architecture.png    | Diagramas de arquitectura  |
 | 02_batch_execution.png | Ejecución de carga masiva |
 | 03_etl_execution.png   | Proceso ETL                |
@@ -372,26 +378,32 @@ V5.0.0
 
 ## 📖 Glosario Técnico y de Impacto (Para Reclutadores y Stakeholders)
 
-*Idempotencia:* Propiedad de un script o pipeline que permite ejecutarse múltiples
+* *Idempotencia:* Propiedad de un script o pipeline que permite ejecutarse múltiples
  veces obteniendo siempre el mismo resultado sin corromper los datos o duplicar
   registros.
 
-*Datos No Atómicos:* Información combinada en un solo campo (ej. "Mérida | YUC")
+* *Datos No Atómicos:* Información combinada en un solo campo (ej. "Mérida | YUC")
  que viola las formas normales de bases de datos y dificulta el filtrado analítico.
 
-*Data Grooming:* Proceso sistemático de limpieza, corrección de acentos y
+* *Data Grooming:* Proceso sistemático de limpieza, corrección de acentos y
  estandarización ortográfica aplicado a los datos antes de su consumo analítico.
 
-*Integridad Referencial:* Regla de base de datos que garantiza que las relaciones
+* *Integridad Referencial:* Regla de base de datos que garantiza que las relaciones
  entre tablas (como pedidos y clientes) no se rompan y sean siempre coherentes.
 
-*ODBC (Open Database Connectivity):* Estándar de conectividad que permite enlazar
+* *ODBC (Open Database Connectivity):* Estándar de conectividad que permite enlazar
  bases de datos corporativas con herramientas de visualización como Excel o
  Power BI.
 
 ---
 
-**Autor:** Jesús Alberto Dzib Ku
-Ingeniero Electrónico | Especialidad en Mecatrónica Industrial
-Data Analytics • BI • Data Engineering
+## *👤 Autor y Gobernanza*
+
+* Autor: Jesús Alberto Dzib Ku (Data Engineer & BI Specialist)
+* Gobernanza: Equipo de Data Science
+* Estándar: The Dzib Standard (V3.0.0)
+* Licencia MIT © 2025-2026
+
+"Construyendo sistemas que no solo procesan datos, sino que cuentan historias de negocio y valor operativo."
+
 **Versión:** 4.0.0
