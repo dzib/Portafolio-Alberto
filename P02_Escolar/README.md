@@ -1,6 +1,11 @@
+<!-- markdownlint-disable MD013 MD007 MD051 -->
 # 📘 Documentación Técnica
 
-## Proyecto P02: Sistema de Gestión Académica & ETL con CTE (V2.2)
+## Proyecto P02: Sistema de Gestión Académica & ETL con CTE (V2.3.0)
+
+> 🧭 **Navegación del Portafolio:** [⬅️ Volver a la Raíz del Portafolio](../README.md) | [📁 Ver Mapa de Módulos](../README.md)
+
+---
 
 🗂️ **P02: Sistema de Control Escolar** (Gestión Académica y Resiliencia)
 
@@ -142,26 +147,20 @@ Proyecto 2 del Portafolio de SQL, enfocado en la creación de un sistema de
 
 ```text
 P02_Escolar/
-│
 ├── architecture/
 │   ├── 01_logical_architecture.drawio
 │   ├── 02_physical_architecture.drawio
 │   └── 03_deployment_architecture.drawio
-│
 ├── assets/
 │   └── img/
-│
 ├── BI_Visualization/
 │   └── P2_Analytics_Executive_Dashboard.xlsx
-│
 ├── data_sample/
-│
 ├── docs/
 │   ├── decisions/
 │   ├── functional/
 │   ├── operations/
 │   └── technical/
-│
 ├── scripts/
 │   ├── 01_Setup_DDL.sql
 │   ├── 02_DML_Seed_Data.sql
@@ -169,9 +168,7 @@ P02_Escolar/
 │   ├── 03_Stress_Test.sql
 │   ├── 04_ETL_Limpieza.sql
 │   └── 05_Reportes_BI.sql
-│
 ├── tests/
-│
 └── README.md
 ```
 
@@ -335,5 +332,13 @@ V3.0.0
 
 ---
 
-**Autor:** Alberto Dzib
-**Versión:** 2.2.0
+## *👤 Autor y Gobernanza*
+
+* Autor: Jesús Alberto Dzib Ku (Data Engineer & BI Specialist)
+* Gobernanza: Equipo de Data Science
+* Estándar: The Dzib Standard (V3.0.0)
+* Licencia MIT © 2025-2026
+
+"Construyendo sistemas que no solo procesan datos, sino que cuentan historias de negocio y valor operativo."
+
+Versión: 2.3.0
