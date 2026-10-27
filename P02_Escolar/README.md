@@ -1,8 +1,20 @@
+<!-- markdownlint-disable MD013 MD007 MD051 -->
 # 📘 Documentación Técnica
 
-## Proyecto P02: Sistema de Gestión Académica & ETL con CTE (V2.2)
+## Proyecto P02: Sistema de Gestión Académica & ETL con CTE (V2.3.0)
+<<<<<<< HEAD
+=======
 
-🗂️ **P02: Sistema de Control Escolar** (Gestión Académica y Resiliencia)
+> 🧭 **Navegación del Portafolio:** [⬅️ Volver a la Raíz del Portafolio](../README.md) | [📁 Ver Mapa de Módulos](../README.md)
+
+---
+>>>>>>> origin/feature/p03-standardization
+
+> 🧭 **Navegación del Portafolio:** [⬅️ Volver a la Raíz del Portafolio](../README.md) | [📁 Ver Mapa de Módulos](../README.md)
+
+---
+
+## 🗂️ **P02: Sistema de Control Escolar** (Gestión Académica y Resiliencia)
 
 > "Resuelve la dispersión de calificaciones y la lentitud en la generación
 > de reportes estudiantiles centralizando los datos bajo normalización
@@ -28,7 +40,7 @@
 ## Resumen Ejecutivo
 
 Proyecto 2 del Portafolio de SQL, enfocado en la creación de un sistema de
- gestión académica para una institución educativa ficticia. El proyecto abarca
+ gestión académica para una institución educativa ficticia. El poyecto abarca
  desde la creación de tablas y carga masiva de datos, hasta la limpieza y
  transformación de datos para generar reportes analíticos.
 
@@ -142,26 +154,20 @@ Proyecto 2 del Portafolio de SQL, enfocado en la creación de un sistema de
 
 ```text
 P02_Escolar/
-│
 ├── architecture/
 │   ├── 01_logical_architecture.drawio
 │   ├── 02_physical_architecture.drawio
 │   └── 03_deployment_architecture.drawio
-│
 ├── assets/
 │   └── img/
-│
 ├── BI_Visualization/
 │   └── P2_Analytics_Executive_Dashboard.xlsx
-│
 ├── data_sample/
-│
 ├── docs/
 │   ├── decisions/
 │   ├── functional/
 │   ├── operations/
 │   └── technical/
-│
 ├── scripts/
 │   ├── 01_Setup_DDL.sql
 │   ├── 02_DML_Seed_Data.sql
@@ -169,10 +175,9 @@ P02_Escolar/
 │   ├── 03_Stress_Test.sql
 │   ├── 04_ETL_Limpieza.sql
 │   └── 05_Reportes_BI.sql
-│
 ├── tests/
-│
 └── README.md
+
 ```
 
 ---
@@ -191,14 +196,28 @@ P02_Escolar/
 
 #### Versión 2.1.0
 
-### 1. **Consistencia Semántica en Dashboard Visual**
+* **Problemas:**
 
-* **Problema:** Los reportes de BI perdían coherencia al intentar
-  visualizar promedios en escala 0-100 dentro de barras de progreso
-  limitadas (Generación de `NULL`s).
-* **Solución:** Implementación de **Ingeniería de Defensa** mediante
-  `CAST`, `FLOOR` y `ABS` para normalizar escalas (1-10) y asegurar
-  que el `Score_Visual` nunca falle, incluso ante datos atípicos.
+1. **Consistencia Semántica en Dashboard Visual**
+
+* **Solución:** Implementación de Ingeniería de Defensa mediante `CAST` , `FLOOR` y `ABS` para normalizar escalas (1-10).
+* **Impacto:** Se garantizó la coherencia en la interpretación de los datos en el dashboard, mejorando la experiencia del usuario.
+
+1. Gestion de Identidades en Pruebas de Estrés
+
+* **Solución:** Se implemento DBCC CHECKIDENT ('Tabla', `RESEED`, `0`) para garantizar repetibilidad desde el ID 1.
+* **Impacto:** La gestión correcta de identidades en pruebas de estrés permitió mantener la consistencia referencial en todas las ejecuciones, evitando errores críticos en llaves foráneas y asegurando resultados confiables. Este ajuste incrementa la robustez del pipeline, facilita la repetibilidad de escenarios de prueba y aporta mayor credibilidad a los benchmarks de rendimiento.
+
+1. Manejo de Desbordamiento Aritmético (Overflow)
+
+* **Solución:** Uso de bloques BEGIN TRY/CATCH para asegurar Rollback automatico ante desbordamientos en DECIMAL (4,2) .
+* **Impacto:** Se garantizó el 100% de la integridad de los datos financieros/académicos evitando detenciones en el pipeline.
+
+1. Procesamiento de Datos No Atómicos (ETL)
+
+* **Solución:** Transformación mediante Common Table Expressions (CTEs) y funciones de cadena ( `CHARINDEX` , `SUBSTRING` ).
+* **Impacto:** La normalización de datos no atómicos permitió transformar información cruda en insumos analíticos confiables. Este proceso habilitó la trazabilidad temporal, el cálculo preciso de métricas y la creación de una vista operativa lista para BI, elevando la calidad de los reportes y la capacidad de tomar decisiones estratégicas.
+
 
 ### 2. **Jerarquía de Facultades y Eficiencia de Inversión**
 
@@ -335,5 +354,13 @@ V3.0.0
 
 ---
 
-**Autor:** Alberto Dzib
-**Versión:** 2.2.0
+## *👤 Autor y Gobernanza*
+
+* Autor: Jesús Alberto Dzib Ku (Data Engineer & BI Specialist)
+* Gobernanza: Equipo de Data Science
+* Estándar: The Dzib Standard (V3.0.0)
+* Licencia MIT © 2025-2026
+
+"Construyendo sistemas que no solo procesan datos, sino que cuentan historias de negocio y valor operativo."
+
+Versión: 2.3.0
