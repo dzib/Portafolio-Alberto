@@ -1,10 +1,13 @@
+<!-- markdownlint-disable MD013 MD007 MD051 -->
 # 📘 Documentación Técnica
 
-## ☁️ Proyecto P05: BigQuery Fintech — Cloud y Escalabilidad
+## ☁️ Proyecto P05: BigQuery Fintech — Cloud y Escalabilidad (V3.0.0)
 
-**Versión:** 3.0.0
+> 🧭 **Navegación del Portafolio:** [⬅️ Volver a la Raíz del Portafolio](../README.md) | [📁 Ver Mapa de Módulos](../README.md)
 
-🗂️ **P05: BigQuery Fintech** (Optimización Serverless y Costos Cloud)
+---
+
+🗂️☁️ **P05: BigQuery Fintech** (Optimización Serverless y Costos Cloud)
 
 > *"Automatiza la agregación de datos financieros transaccionales en entornos
 > cloud serverless mediante consultas idempotentes. Reduce la latencia analítica
@@ -14,9 +17,6 @@
 
 ## 📑 Índice de Navegación Rápida
 
-- [📘 Documentación Técnica](#-documentación-técnica)
-  - [☁️ Proyecto P05: BigQuery Fintech — Cloud y Escalabilidad](#️-proyecto-p05-bigquery-fintech--cloud-y-escalabilidad)
-  - [📑 Índice de Navegación Rápida](#-índice-de-navegación-rápida)
   - [📌 Contexto del Proyecto](#-contexto-del-proyecto)
   - [🎯 El Desafío](#-el-desafío)
     - [🖼️ Objetivo](#️-objetivo)
@@ -158,7 +158,7 @@ P5_BigQuery_Fintech/
 El script principal automatiza la agregación anual de préstamos mediante
 Standard SQL en Google Cloud:
 
-```sql
+```SQL
 CREATE OR REPLACE TABLE fintech.loan_count_by_year AS
 SELECT
     issue_year,
@@ -253,6 +253,13 @@ Integración de flujos de ingesta en tiempo real utilizando Google Cloud Pub/Sub
 
 ---
 
-* **Autor:** Jesús Alberto Dzib Ku
+## *👤 Autor y Gobernanza*
 
-Versión: 3.0.0
+* **Autor:** Jesús Alberto Dzib Ku (Data Engineer & BI Specialist)
+* **Gobernanza:** Equipo de Data Science
+* **Estándar:** The Dzib Standard (V3.0.0)
+* **Licencia:** MIT © 2025-2026
+
+"Construyendo sistemas que no solo procesan datos, sino que cuentan historias de negocio y valor operativo."
+
+**Versión:** 3.0.0
