@@ -1,8 +1,13 @@
+<!-- markdownlint-disable MD013 MD007 MD051 -->
 # 📘 Documentación Técnica
 
 ## 🐍 Proyecto P03: Pipeline Híbrido de Alto Rendimiento (Python + SQL Server) (V4.0.0)
 
-## 🛍️ [/P3_Retail_Ventas/](./) Retail & Análisis de Ventas (Inteligencia Comercial)
+> 🧭 **Navegación del Portafolio:** [⬅️ Volver a la Raíz del Portafolio](../README.md) | [📁 Ver Mapa de Módulos](../README.md)
+
+---
+
+## 🛍️ **P03: Retail & Análisis de Ventas** (Inteligencia Comercial)
 
 "Transforma transacciones de punto de venta desestructuradas en tableros
 ejecutivos de rentabilidad por producto y región. Permite identificar patrones
@@ -13,10 +18,6 @@ de clientes."
 
 ## 📑 Índice de Navegación Rápida
 
-- [📘 Documentación Técnica](#-documentación-técnica)
-  - [🐍 Proyecto P03: Pipeline Híbrido de Alto Rendimiento (Python + SQL Server) (V4.0.0)](#-proyecto-p03-pipeline-híbrido-de-alto-rendimiento-python--sql-server-v400)
-  - [🛍️ /P3\_Retail\_Ventas/ Retail \& Análisis de Ventas (Inteligencia Comercial)](#️-p3_retail_ventas-retail--análisis-de-ventas-inteligencia-comercial)
-  - [📑 Índice de Navegación Rápida](#-índice-de-navegación-rápida)
   - [Resumen Ejecutivo](#resumen-ejecutivo)
   - [📌 Descripción General](#-descripción-general)
   - [🎯 Objetivo](#-objetivo)
@@ -50,17 +51,8 @@ Proceso fundamentado en la alta concurrencia y el rendimiento de inserción por
  lotes, resolviendo colisiones de llaves únicas y optimizando el flujo de
  trabajo entre scripts de Python y procedimientos relacionales en T-SQL.
 
-* Implementación de una arquitectura híbrida avanzada para el
-  procesamiento de Alto Rendimiento, integrando Python como motor de
-  orquestación, generación de datos, SQL Server 2025 como motor de
-  almacenamiento masivo, limpieza y normalización.
-* Arquitectura diseñada para alta disponibilidad, capaz de escalar de
-  50k a 1M de registros manteniendo una tasa de ingesta de ~27,000
-  registros por segundo.
-* Diseñar un ecosistema capaz de generar, ingerir y procesar un
-  volumen de 50,000 transacciones en tiempo récord, demostrando la
-  eficiencia de la integración híbrida entre lenguajes de
-  programación y motores de base de datos.
+- **Integración Híbrida:** Python como motor de orquestación y SQL Server 2025 como motor de almacenamiento masivo y normalización.
+- **Escalabilidad:** Capacidad de procesar de 50k a 1M de registros con tasas de ingesta estables de ~27k reg/seg.
 
 ---
 
@@ -119,25 +111,20 @@ graph LR
 
 ```Plaintext
 P03_Retail_Ventas/
-│
 ├── architecture/
 │   ├── 01_logical_architecture.drawio
 │   ├── 02_physical_architecture.drawio
 │   └── 03_deployment_architecture.drawio
-│
 ├── assets/
 │   ├── diagrams/
 │   └── reports/
-│
 ├── data_sample/
 │   └── Ventas_Retail_Masivo.csv
-│
 ├── docs/
 │   ├── decisions/
 │   ├── functional/
 │   ├── operations/
 │   └── technical/
-│
 ├── scripts/
 │   ├── 01_Estructura_P3.sql
 │   ├── 01_GeneradorDatos.py
@@ -145,11 +132,8 @@ P03_Retail_Ventas/
 │   ├── 02_CargaSQL.py
 │   ├── 03_Analitica_Ventas.py
 │   └── 03_LimpiezaMetadata_P3.sql
-│
 ├── tests/
-│
 ├── requirements.txt
-│
 └── README.md
 ```
 
@@ -204,14 +188,14 @@ P03_Retail_Ventas/
    - *Problema:* Violación de restricciones de unicidad en el
      catálogo de productos debido a variaciones de precio en el
      origen.
-   - *Solución:* Implementación de lógica de agregación MAX() y
-     agrupamiento GROUP BY en la fase de carga SQL para asegurar la
+   - *Solución:* Implementación de lógica de agregación `MAX()` y
+     agrupamiento `GROUP BY` en la fase de carga SQL para asegurar la
      integridad referencial.
 4. *Captura de Métricas en Lotes Segmentados:*
    - *Problema:* Pérdida de contexto en variables de sistema como
-     @@ROWCOUNT tras instrucciones DDL.
-   - *Solución:* Uso estratégico del comando GO para separar lotes
-     y captura inmediata de métricas para garantizar la trazabilidad
+     `@@ROWCOUNT` tras instrucciones DDL.
+   - *Solución:* Uso estratégico del comando `GO` para separar lotes
+     y captura inmediata de métricas con `@@ROWCOUNT` para garantizar la trazabilidad
      total del proceso ETL.
 
 ---
@@ -251,5 +235,13 @@ P03_Retail_Ventas/
 
 ---
 
-*Autor:* Alberto Dzib
-*Versión:* 4.0.0
+## *👤 Autor y Gobernanza*
+
+* Autor: Jesús Alberto Dzib Ku (Data Engineer & BI Specialist)
+* Gobernanza: Equipo de Data Science
+* Estándar: The Dzib Standard (V3.0.0)
+* Licencia MIT © 2025-2026
+
+"Construyendo sistemas que no solo procesan datos, sino que cuentan historias de negocio y valor operativo."
+
+**Versión:** 4.0.0

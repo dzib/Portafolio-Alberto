@@ -2,6 +2,13 @@
 # 📘 Documentación Técnica
 
 ## Proyecto P02: Sistema de Gestión Académica & ETL con CTE (V2.3.0)
+<<<<<<< HEAD
+=======
+
+> 🧭 **Navegación del Portafolio:** [⬅️ Volver a la Raíz del Portafolio](../README.md) | [📁 Ver Mapa de Módulos](../README.md)
+
+---
+>>>>>>> origin/feature/p03-standardization
 
 > 🧭 **Navegación del Portafolio:** [⬅️ Volver a la Raíz del Portafolio](../README.md) | [📁 Ver Mapa de Módulos](../README.md)
 

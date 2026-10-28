@@ -1,17 +1,19 @@
+<!-- markdownlint-disable MD013 MD007 MD051 -->
 # 💎 P4: Global Supply Chain & Data Ingestion 🧮
 
-## Estado: ✅ Finalizado (FASE V4.5)
-
-### 🚀 P4_Real-World Ingestion & Supply Chain (Alta Concurrencia)
-
-"Mitiga los cuellos de botella en la ingesta masiva de datos logísticos
-procesando más de 23,000 registros por segundo. Asegura la disponibilidad
-continua de información crítica para la toma de decisiones operativas de
-última milla."
+> 🧭 **Navegación del Portafolio:** [⬅️ Volver a la Raíz del Portafolio](../README.md) | [📁 Ver Mapa de Módulos](../README.md)
 
 ---
 
-## 📑 Índice de Navegación Rápida
+## Estado: ✅ Finalizado (FASE V4.5)
+
+### 🚀 **P04: Global Supply Chain & Data Ingestion** (Alta Concurrencia)
+
+> *"Mitiga los cuellos de botella en la ingesta masiva de datos logísticos procesando más de 23,000 registros por segundo. Asegura la disponibilidad continua de información crítica para la toma de decisiones operativas de última milla."*
+
+---
+
+### 📑 Índice de Navegación Rápida
 
 - [Objetivo](#-objetivo)
 - [Retos Técnicos a Resolver](#-retos-técnicos-a-resolver)
@@ -56,12 +58,16 @@ graph TD
     style F fill:#ffd,stroke:#333,stroke-width:4px
 ```
 
+---
+
 ## 🚀 Retos Técnicos a Resolver
 
 - **Ingesta Masiva:**  Alcanzada una tasa de 23.8k reg/seg (180k registros en 7.5s).
 - **Data Cleansing:** Normalización y detección de anomalías mediante **T-SQL Dinámico.**
 - **Observabilidad:** Implementación de logs narrativos y métricas de
   performance en tiempo real.
+
+---
 
 ## 🏗️ Estructura Completa del Proyecto (Modular & Production-Ready)
 
@@ -86,40 +92,39 @@ El proyecto está diseñado bajo una arquitectura desacoplada y modular:
 
 ´´´text
 P4_Real_World_Ingestion/
-│
-├── 01_Setup_DDL/                   # Creación de esquemas y contratos iniciales
-├── 02_Ingesta_Pro/                 # Ingesta masiva (Python + SQLAlchemy)
+├── 01_Setup_DDL/                  # Creación de esquemas y contratos iniciales
+├── 02_Ingesta_Pro/                # Ingesta masiva (Python + SQLAlchemy)
 │   └── 02_bulk_load_kaggle.py
 ├── 03_Orquestacion_Transacciones/  # Cargas transaccionales y control con SQLcmd
 │   ├── 01_load_analytics.sql
 │   └── 02_Consulta_a_StagingExecution_Logs.sql
-├── 04_ETL_Cleaning/                # Procesamiento Single-Pass, limpieza y QA matemático
+├── 04_ETL_Cleaning/               # Procesamiento Single-Pass, limpieza y QA matemático
 │   ├── 01_clean_shipments.sql
 │   ├── 02_QA_Anomaly_Check.sql
 │   ├── 02_Verificacion_reg.sql
 │   └── 03_upgrade_execution_logs.sql
-├── 05_BI_Observabilidad/           # Capa semántica y observabilidad
+├── 05_BI_Observabilidad/          # Capa semántica y observabilidad
 │   ├── config/
-│   │   └── settings.py             # Configuración centralizada de entorno y conexión
+│   │   └── settings.py            # Configuración centralizada de entorno y conexión
 │   ├── logs/
-│   │   └── .gitkeep                # Trazabilidad de ejecución y auditoría
-│   ├── 01_business_vistas.sql      # Vistas corporativas para Power BI / PyGWalker
+│   │   └── .gitkeep               # Trazabilidad de ejecución y auditoría
+│   ├── 01_business_vistas.sql     # Vistas corporativas para Power BI / PyGWalker
 │   ├── 02_Interactive_Dashboard.ipynb
 │   ├── dashboard.py
 │   └── requirements.txt
-├── architecture/                   # Diagramas y modelos conceptuales
-├── assets/                         # Evidencias visuales y capturas
-├── data/                           # Almacenamiento local de datasets de trabajo
-├── data_sample/                    # Muestras de prueba rápida (sample_data.csv)
-├── docs/                           # Documentación técnica y bitácoras
-├── notebooks/                      # Jupyter Notebooks experimentales y de análisis
-├── scripts/                        # Utilidades y automatizaciones auxiliares
-├── tests/                          # Pruebas unitarias e integración de pipelines
-├── .env                            # Configuración de entorno
-├── .env.example                    # Plantilla pública de configuración
-├── Run_Pipeline.ps1                # Orquestador maestro automatizado (PowerShell)
-├── requirements.txt                # Dependencias de Python del módulo
-└── README.md                       # Documentación principal del proyecto
+├── architecture/                  # Diagramas y modelos conceptuales
+├── assets/                        # Evidencias visuales y capturas
+├── data/                          # Almacenamiento local de datasets de trabajo
+├── data_sample/                   # Muestras de prueba rápida (sample_data.csv)
+├── docs/                          # Documentación técnica y bitácoras
+├── notebooks/                     # Jupyter Notebooks experimentales y de análisis
+├── scripts/                       # Utilidades y automatizaciones auxiliares
+├── tests/                         # Pruebas unitarias e integración de pipelines
+├── .env                           # Configuración de entorno
+├── .env.example                   # Plantilla pública de configuración
+├── Run_Pipeline.ps1               # Orquestador maestro automatizado (PowerShell)
+├── requirements.txt               # Dependencias de Python del módulo
+└── README.md                      # Documentación principal del proyecto
 ´´´
 
 ---
@@ -164,7 +169,6 @@ Fuente editable: assets/diagrams/P4_pipeline.drawio
     división por cero (`NULLIF`).
   * Script de auditoría matemática de anomalías
     (`02_QA_Anomaly_Check.sql`) integrado al pipeline de QA.
-
 * **Changed (Modificaciones de Arquitectura):**
 
   * Refactorización total de `01_clean_shipments.sql` hacia el estándar
@@ -172,7 +176,6 @@ Fuente editable: assets/diagrams/P4_pipeline.drawio
   * Idempotencia destructiva implementada: el pipeline ahora realiza
     `DROP TABLE` condicional para garantizar la integridad exacta de las 16
     columnas analíticas requeridas.
-
 * **Removed (Depreciaciones):**
 
   * Eliminación del script de parches post-ingesta
@@ -186,10 +189,10 @@ Fuente editable: assets/diagrams/P4_pipeline.drawio
 ### Benchmark de Rendimiento
 
 
-| Ejecución | Tiempo |  Velocidad   |
-| :-------: | :----: | :----------: |
-|    V1     | 7.56 s | 23,866 reg/s |
-|    V2     | 9.68 s | 18,651 reg/s |
+| Ejecución | Tiempo |  Velocidad  |
+| :----------: | :------: | :------------: |
+|     V1     | 7.56 s | 23,866 reg/s |
+|     V2     | 9.68 s | 18,651 reg/s |
 
 Las diferencias de rendimiento se atribuyen a:
 
@@ -213,7 +216,7 @@ V2.4.0 incorpora validaciones adicionales:
 
 
 |       **Métrica**       |   **Resultado**   |
-| :-----------------------: | :---------------: |
+| :-------------------------: | :-----------------: |
 |     **Volumen Total**     | 180,519 registros |
 |   **Tiempo de Ingesta**   |   7.56 segundos   |
 | **Tasa de Transferencia** | 23,866.62 reg/seg |
@@ -392,35 +395,38 @@ Resultado esperado:
 ### V4.6.0
 
 * Automatización completa de alertas por correo ante fallos en los logs de ejecución.
-
 * Integración de pruebas unitarias continuas con pytest en el script de
- orquestación PowerShell.
+  orquestación PowerShell.
 
 ### V5.0.0
 
 * Migración parcial del pipeline de ingesta hacia Azure Cloud Data Factory para
- interoperabilidad híbrida on-premise/cloud.
-
+  interoperabilidad híbrida on-premise/cloud.
 
 ---
 
 ## 📖 Glosario Técnico y de Impacto (Para Reclutadores y Stakeholders)
 
 * *Alta Concurrencia:* Capacidad de un sistema de procesar múltiples solicitudes
- y flujos de datos simultáneamente sin degradar el rendimiento operativo.
-
+  y flujos de datos simultáneamente sin degradar el rendimiento operativo.
 * *Single-Pass Processing:* Metodología de transformación de datos donde la
- información es leída y procesada en una sola iteración de memoria,
- optimizando recursos de CPU.
-
+  información es leída y procesada en una sola iteración de memoria,
+  optimizando recursos de CPU.
 * *Orquestador Maestro:* Script centralizado (en este caso en PowerShell)
- que automatiza la ejecución secuencial de todo el pipeline garantizando
- trazabilidad y control de errores.
-
+  que automatiza la ejecución secuencial de todo el pipeline garantizando
+  trazabilidad y control de errores.
 * *SARGable (Search Argument-able):* Propiedad de una consulta SQL que permite
- al motor de base de datos aprovechar índices existentes de forma óptima.
+  al motor de base de datos aprovechar índices existentes de forma óptima.
 
 ---
 
-*Autor:* Alberto Dzib
-*Versión:* 4.5.0
+## *👤 Autor y Gobernanza*
+
+* **Autor:** Jesús Alberto Dzib Ku (Data Engineer & BI Specialist)
+* **Gobernanza:** Equipo de Data Science
+* **Estándar:** The Dzib Standard (V3.0.0)
+* **Licencia:** MIT © 2025-2026
+
+"Construyendo sistemas que no solo procesan datos, sino que cuentan historias de negocio y valor operativo."
+
+**Versión:** 4.5.0
